@@ -1,6 +1,7 @@
 # tum-adlr-ss25-12-FAST
 A small-scale control modeling project comparing FAST and Naïve action tokenization using Transformers in CartPole simulation.
 
+## 🧭 Project Overview 
 <div align="center">
   <img src="./documentations/flow chart.png" alt="Project Flowchart" style="width: 100%; max-width: 960px;"/>
 </div>
