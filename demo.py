@@ -1,15 +1,16 @@
 import gym
-import numpy as np
 
-# 创建环境
-env = gym.make('Pendulum-v1')
-obs = env.reset()
+def get_cartpole_tau(env_name="CartPole-v1"):
+    env = gym.make(env_name)
 
-for _ in range(2000):
-    action = env.action_space.sample()
+    # 尝试直接访问 tau 属性
+    if hasattr(env.unwrapped, 'tau'):
+        tau = env.unwrapped.tau
+        print(f"Detected control interval (tau): {tau} seconds")
+        return tau
+    else:
+        print("This environment does not expose 'tau'.")
+        return None
 
-    # 与环境交互
-    obs, reward, done, info = env.step(action)
-    env.render()
-
-env.close()
+# 用法
+get_cartpole_tau()
