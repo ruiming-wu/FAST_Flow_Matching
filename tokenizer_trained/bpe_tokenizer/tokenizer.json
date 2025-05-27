@@ -1,0 +1,4423 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": false,
+    "use_regex": true
+  },
+  "decoder": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": null,
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "\u0000": 0,
+      "\u0001": 1,
+      "\u0002": 2,
+      "\u0003": 3,
+      "\u0004": 4,
+      "\u0005": 5,
+      "\u0006": 6,
+      "\u0007": 7,
+      "\b": 8,
+      "\t": 9,
+      "\n": 10,
+      "\u000b": 11,
+      "\f": 12,
+      "\r": 13,
+      "\u000e": 14,
+      "\u000f": 15,
+      "\u0010": 16,
+      "\u0011": 17,
+      "\u0012": 18,
+      "\u0013": 19,
+      "\u0014": 20,
+      "\u0015": 21,
+      "\u0016": 22,
+      "\u0017": 23,
+      "\u0018": 24,
+      "\u0019": 25,
+      "\u001a": 26,
+      "\u001b": 27,
+      "\u001c": 28,
+      "\u001d": 29,
+      "\u001e": 30,
+      "\u001f": 31,
+      " ": 32,
+      "!": 33,
+      "\"": 34,
+      "#": 35,
+      "$": 36,
+      "%": 37,
+      "&": 38,
+      "'": 39,
+      "(": 40,
+      ")": 41,
+      "*": 42,
+      "+": 43,
+      ",": 44,
+      "-": 45,
+      ".": 46,
+      "/": 47,
+      "0": 48,
+      "1": 49,
+      "2": 50,
+      "3": 51,
+      "4": 52,
+      "5": 53,
+      "6": 54,
+      "7": 55,
+      "8": 56,
+      "9": 57,
+      ":": 58,
+      ";": 59,
+      "<": 60,
+      "=": 61,
+      ">": 62,
+      "?": 63,
+      "@": 64,
+      "A": 65,
+      "B": 66,
+      "C": 67,
+      "D": 68,
+      "E": 69,
+      "F": 70,
+      "G": 71,
+      "H": 72,
+      "I": 73,
+      "J": 74,
+      "K": 75,
+      "L": 76,
+      "M": 77,
+      "N": 78,
+      "O": 79,
+      "P": 80,
+      "Q": 81,
+      "R": 82,
+      "S": 83,
+      "T": 84,
+      "U": 85,
+      "V": 86,
+      "W": 87,
+      "X": 88,
+      "Y": 89,
+      "Z": 90,
+      "[": 91,
+      "\\": 92,
+      "]": 93,
+      "^": 94,
+      "_": 95,
+      "`": 96,
+      "a": 97,
+      "b": 98,
+      "c": 99,
+      "d": 100,
+      "e": 101,
+      "f": 102,
+      "g": 103,
+      "h": 104,
+      "i": 105,
+      "j": 106,
+      "k": 107,
+      "l": 108,
+      "m": 109,
+      "n": 110,
+      "o": 111,
+      "p": 112,
+      "q": 113,
+      "r": 114,
+      "s": 115,
+      "t": 116,
+      "u": 117,
+      "v": 118,
+      "w": 119,
+      "x": 120,
+      "y": 121,
+      "z": 122,
+      "{": 123,
+      "|": 124,
+      "}": 125,
+      "~": 126,
+      "": 127,
+      "": 128,
+      "": 129,
+      "": 130,
+      "": 131,
+      "": 132,
+      "": 133,
+      "": 134,
+      "": 135,
+      "": 136,
+      "": 137,
+      "": 138,
+      "": 139,
+      "": 140,
+      "": 141,
+      "": 142,
+      "Â": 143,
+      "Ā": 144,
+      "ā": 145,
+      "Ă": 146,
+      "ă": 147,
+      "Ą": 148,
+      "Ć": 149,
+      "ć": 150,
+      "ĉ": 151,
+      "ċ": 152,
+      "č": 153,
+      "Ď": 154,
+      "ď": 155,
+      "Đ": 156,
+      "đ": 157,
+      "Ē": 158,
+      "ē": 159,
+      "Ĕ": 160,
+      "ĕ": 161,
+      "Ė": 162,
+      "ė": 163,
+      "Ę": 164,
+      "ę": 165,
+      "Ě": 166,
+      "ě": 167,
+      "Ĝ": 168,
+      "ĝ": 169,
+      "Ğ": 170,
+      "ğ": 171,
+      "Ġ": 172,
+      "ġ": 173,
+      "Ģ": 174,
+      "ģ": 175,
+      "Ħ": 176,
+      "ħ": 177,
+      "ĩ": 178,
+      "Ī": 179,
+      "ī": 180,
+      "Į": 181,
+      "į": 182,
+      "İ": 183,
+      "GG": 184,
+      "GGGG": 185,
+      "GGGGGGGG": 186,
+      "GGGGGGGGGGGGGGGG": 187,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 188,
+      "FH": 189,
+      "GGGGGGGGGGGGGGGGGG": 190,
+      "GH": 191,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 192,
+      "GF": 193,
+      "FHFH": 194,
+      "GHGH": 195,
+      "GGGGGG": 196,
+      "EH": 197,
+      "GFGF": 198,
+      "FI": 199,
+      "GGGGGGGGGGGGGGGGGGGGGGGG": 200,
+      "EI": 201,
+      "FF": 202,
+      "HH": 203,
+      "GI": 204,
+      "GGGGGGG": 205,
+      "DH": 206,
+      "FJ": 207,
+      "GE": 208,
+      "FIFI": 209,
+      "EIEI": 210,
+      "DI": 211,
+      "EHEH": 212,
+      "EJ": 213,
+      "FHFHFHFH": 214,
+      "GGGGG": 215,
+      "FE": 216,
+      "II": 217,
+      "GJ": 218,
+      "HI": 219,
+      "GGGGGGGGGGGGGGGGGGGGGGG": 220,
+      "GGGGGGGGGGGGGGGGGGGGGG": 221,
+      "GGGGGGGGGG": 222,
+      "GHGHGHGH": 223,
+      "HJ": 224,
+      "FGF": 225,
+      "EE": 226,
+      "GD": 227,
+      "FD": 228,
+      "GFGFGFGF": 229,
+      "DHDH": 230,
+      "GFH": 231,
+      "CH": 232,
+      "GIGI": 233,
+      "DJ": 234,
+      "FK": 235,
+      "FJFJ": 236,
+      "GK": 237,
+      "FHFHFH": 238,
+      "HHHH": 239,
+      "GEGE": 240,
+      "CI": 241,
+      "GGGGGGGGG": 242,
+      "FEFE": 243,
+      "FFFF": 244,
+      "EK": 245,
+      "GC": 246,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 247,
+      "FGFGF": 248,
+      "GHGHGH": 249,
+      "GGGGGGGGGGGGGGGGGGGG": 250,
+      "GGGGGGGGGGGG": 251,
+      "HIHI": 252,
+      "HJHJ": 253,
+      "GGGGGGGGGGGGGGGGGGGGGGGGG": 254,
+      "CJ": 255,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 256,
+      "GJGJ": 257,
+      "DK": 258,
+      "GB": 259,
+      "GGG": 260,
+      "GGH": 261,
+      "EJEJ": 262,
+      "GGGGGGGGGGGGGGGGGGGGG": 263,
+      "GDGD": 264,
+      "GL": 265,
+      "ED": 266,
+      "FDFD": 267,
+      "GFGFGF": 268,
+      "DIDI": 269,
+      "GGF": 270,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 271,
+      "EIEIEIEI": 272,
+      "EHFH": 273,
+      "HK": 274,
+      "FC": 275,
+      "HGH": 276,
+      "FIFIFIFI": 277,
+      "IIII": 278,
+      "IJ": 279,
+      "FL": 280,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGH": 281,
+      "GGGGGGGGGGGGGGGGGGGGGGGGH": 282,
+      "EHEHEHEH": 283,
+      "EL": 284,
+      "GKGK": 285,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGG": 286,
+      "GCGC": 287,
+      "CK": 288,
+      "GGGGGGGGGGGGGGGGGGG": 289,
+      "GGGGGGGGGGGGGG": 290,
+      "BI": 291,
+      "BH": 292,
+      "DL": 293,
+      "GGGGGGGGGGG": 294,
+      "GGGGGGGGGGGGGGGGGGGGGGGGF": 295,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGG": 296,
+      "FHF": 297,
+      "FHGH": 298,
+      "BJ": 299,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGG": 300,
+      "EM": 301,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 302,
+      "FHFHFHFHFH": 303,
+      "FGGGGGGGGGGGGGGGGGGGGGGG": 304,
+      "HGHGHGHGH": 305,
+      "GGGGGGGGGGGGGGG": 306,
+      "GM": 307,
+      "GGGH": 308,
+      "FHFHF": 309,
+      "CL": 310,
+      "GGGGGGGGGGGGG": 311,
+      "AH": 312,
+      "BK": 313,
+      "GGGGGGGGGGGGGGGGG": 314,
+      "IK": 315,
+      "AI": 316,
+      "EEEE": 317,
+      "GFHFH": 318,
+      "GEH": 319,
+      "HL": 320,
+      "JJ": 321,
+      "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 322,
+      "FKFK": 323,
+      "FIFJ": 324,
+      "GIGIGIGI": 325,
+      "DM": 326,
+      "FM": 327,
+      "DHDHDHDH": 328,
+      "CHCH": 329,
+      "EC": 330,
+      "BL": 331,
+      "AJ": 332,
+      "GGGF": 333,
+      "GGGGH": 334,
+      "HFHFHFHFH": 335,
+      "EIEJ": 336,
+      "DIEH": 337,
+      "GGGGGGGGGGGGGGGGGGGGGGGH": 338,
+      "GO": 339,
+      "FIFH": 340,
+      "FEFEFEFE": 341,
+      "FGFGFGF": 342,
+      "AK": 343,
+      "CM": 344,
+      "GN": 345,
+      "FHFHGH": 346,
+      "FJFJFJFJ": 347,
+      "FB": 348,
+      "FHFI": 349,
+      "HHHHHHHH": 350,
+      "GGGGGGGGGGGGGGGGGGGGGGH": 351,
+      "EDED": 352,
+      "GGGGGGGGH": 353,
+      "HGHGH": 354,
+      "GHGHGHGHGH": 355,
+      "GEGEGEGE": 356,
+      "HIHIHIHI": 357,
+      "BM": 358,
+      "EHEHEH": 359,
+      "HJHJHJHJ": 360,
+      "EN": 361,
+      "HM": 362,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 363,
+      "DHEH": 364,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGG": 365,
+      "GFGFGFGFGF": 366,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 367,
+      "FN": 368,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 369,
+      "FIEIEIEIEI": 370,
+      "FCFC": 371,
+      "GA": 372,
+      "FHFHFHF": 373,
+      "EIEH": 374,
+      "GGGGGGGGGGGGGGGGGGGGGGGF": 375,
+      "FA": 376,
+      "FGFH": 377,
+      "HII": 378,
+      "GGGGGH": 379,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 380,
+      "GGGGGGH": 381,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 382,
+      "DD": 383,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 384,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFH": 385,
+      "EJEK": 386,
+      "FGFGFH": 387,
+      "HKHK": 388,
+      "DN": 389,
+      "FGGGGGGGGGGGGGGGGGGGGGGGG": 390,
+      "FGGGGGGGGGGGGGGGGGGGGGG": 391,
+      "GGGGGF": 392,
+      "FFFFFFFF": 393,
+      "GJGJGJGJ": 394,
+      "IM": 395,
+      "FFGF": 396,
+      "GQ": 397,
+      "GDH": 398,
+      "GDGDGDGD": 399,
+      "GFHFHFHFH": 400,
+      "FHEHEHEHEH": 401,
+      "GHGHGI": 402,
+      "FO": 403,
+      "FGG": 404,
+      "IL": 405,
+      "GHFHFHFHFH": 406,
+      "DJEI": 407,
+      "EGFGF": 408,
+      "EIEIEI": 409,
+      "AM": 410,
+      "EA": 411,
+      "HGGGGGGGGGGGGGGGGGGGGGGG": 412,
+      "JII": 413,
+      "FIFIFIFIFIFI": 414,
+      "DEE": 415,
+      "FFE": 416,
+      "HHH": 417,
+      "IJIJ": 418,
+      "GGGGGGGGGGGGGGGGGGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGG": 419,
+      "HEIEIEIEI": 420,
+      "FHGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 421,
+      "GHFHFH": 422,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 423,
+      "BN": 424,
+      "EO": 425,
+      "GGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 426,
+      "GHGGGGGGGGGGGGGGGGGGGGGG": 427,
+      "GGFGFGFGFGF": 428,
+      "GHGGGGGGGGGGGGGGGGGGGGGGG": 429,
+      "GGGGGGGGGGH": 430,
+      "GBGB": 431,
+      "FDFDFDFD": 432,
+      "IIIIIIII": 433,
+      "CN": 434,
+      "FGGGGGGGGGGGGGGGGGGGGG": 435,
+      "EIFH": 436,
+      "AC": 437,
+      "FGE": 438,
+      "HN": 439,
+      "EHEI": 440,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGI": 441,
+      "FFFFFF": 442,
+      "DC": 443,
+      "GFGGGGGGGGGGGGGGGGGGGGG": 444,
+      "HHGH": 445,
+      "DJDJ": 446,
+      "EHFHFGF": 447,
+      "AL": 448,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 449,
+      "GGGGGGGGGGGH": 450,
+      "GFHFHFH": 451,
+      "HGHGHGH": 452,
+      "JM": 453,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 454,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 455,
+      "FIFIFJ": 456,
+      "DP": 457,
+      "IH": 458,
+      "JK": 459,
+      "GGGGF": 460,
+      "FHFGF": 461,
+      "GHFH": 462,
+      "EHFGF": 463,
+      "FIEJ": 464,
+      "GHGHGHGGGGG": 465,
+      "DIDIDI": 466,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFHGGGGGGGGGGGGGGGGGGGGGGGG": 467,
+      "EGFGFGF": 468,
+      "HEHEHEHEH": 469,
+      "GGGGGGGGF": 470,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGFH": 471,
+      "FKFL": 472,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGFHGGGGGGGGGGGGGGGGGGGGGGG": 473,
+      "GFGGGGGGGGGGGGGGGGGGGGGG": 474,
+      "EHDHDHDHDH": 475,
+      "FIEI": 476,
+      "FJFJFJ": 477,
+      "EDEC": 478,
+      "BP": 479,
+      "EB": 480,
+      "GFGGGGGGGGGGGGGGGGGGGGGGG": 481,
+      "GJGI": 482,
+      "CICI": 483,
+      "GGGGGGGGGGGGGGGGGGGGHGH": 484,
+      "GLGM": 485,
+      "EFF": 486,
+      "IDH": 487,
+      "KM": 488,
+      "FHGGGGGGGGGGGGGGGGGGGGG": 489,
+      "EIDI": 490,
+      "DIEI": 491,
+      "GFGFGFGFGFGF": 492,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 493,
+      "GP": 494,
+      "HDHDHDHDH": 495,
+      "JL": 496,
+      "GGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 497,
+      "GHGGGGGGGGGGGGGGGGGGGGG": 498,
+      "HHI": 499,
+      "EJFI": 500,
+      "FHFHFHGH": 501,
+      "GEGEGE": 502,
+      "EJEJEK": 503,
+      "GKGKGKGK": 504,
+      "GCGCGCGC": 505,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFGHGGGGGGGGGGGGGGGGGGGGGGG": 506,
+      "FIFHGHGH": 507,
+      "DB": 508,
+      "HO": 509,
+      "IN": 510,
+      "KN": 511,
+      "GGGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 512,
+      "FHGGGGGGGGGGGGGGGGGGGGGG": 513,
+      "FHFHFGF": 514,
+      "EHFGFGF": 515,
+      "FIFIFI": 516,
+      "GGGGGGGGGGGGH": 517,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 518,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 519,
+      "CB": 520,
+      "IE": 521,
+      "EHGGGGGGGGGGGGGGGGGGGGGGG": 522,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 523,
+      "DHCH": 524,
+      "GFHEH": 525,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 526,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 527,
+      "EP": 528,
+      "EQ": 529,
+      "ER": 530,
+      "EGE": 531,
+      "FP": 532,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGG": 533,
+      "GEGEGFGFGF": 534,
+      "DKCL": 535,
+      "GGGGGGGGGGGGGGGGGGGGGGGGHFGGGGGGGGGGGGGGGGGGGGGGGG": 536,
+      "FHGHGGGGGGGGGGGGGGGGGGG": 537,
+      "GAG": 538,
+      "CO": 539,
+      "EGGGGGGGGGGGGGGGGGGGGGGG": 540,
+      "FGH": 541,
+      "GCH": 542,
+      "HFHFH": 543,
+      "FHE": 544,
+      "GFGFH": 545,
+      "FHFHGHGH": 546,
+      "FFGFGF": 547,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 548,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 549,
+      "FJFJFJFJFJ": 550,
+      "DQ": 551,
+      "FG": 552,
+      "FHGHGH": 553,
+      "FIGHGH": 554,
+      "FHFHFHFHFHFH": 555,
+      "GGGGGGGGGGGF": 556,
+      "DJCK": 557,
+      "GKGL": 558,
+      "AO": 559,
+      "DR": 560,
+      "EFE": 561,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFI": 562,
+      "EIFI": 563,
+      "GIGIGI": 564,
+      "HIHIHI": 565,
+      "EHFHF": 566,
+      "EHFHFGFGF": 567,
+      "AN": 568,
+      "BO": 569,
+      "DO": 570,
+      "HE": 571,
+      "HP": 572,
+      "HFHFHFHFHFH": 573,
+      "KL": 574,
+      "GGFGFGFH": 575,
+      "HHGHGH": 576,
+      "GGGGGGGGGGGGGGGGGGGGGGGGHGFGGGGGGGGGGGGGGGGGGGGGGG": 577,
+      "GQG": 578,
+      "CQ": 579,
+      "FGFHFH": 580,
+      "JH": 581,
+      "JI": 582,
+      "KCI": 583,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 584,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 585,
+      "GGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 586,
+      "GGGGGGGGGGGGGGGGGGGGGGGGI": 587,
+      "GHGHGHGHGHGHGHGH": 588,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 589,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGEHGGGGGGGGGGGGGGGGGGGGGGG": 590,
+      "HFHFHFHFHFHFHFH": 591,
+      "GOGQG": 592,
+      "FFEFEFEFEFE": 593,
+      "GGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 594,
+      "EG": 595,
+      "GS": 596,
+      "GT": 597,
+      "IO": 598,
+      "ICH": 599,
+      "JN": 600,
+      "JIJ": 601,
+      "GHGI": 602,
+      "EHDHDH": 603,
+      "FIGI": 604,
+      "GGGGGGGGGGGGGGGGGGGGGGGGHH": 605,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGH": 606,
+      "FFGGGGGGGGGGGGGGGGGGGGGGGG": 607,
+      "FEEEEE": 608,
+      "FGFGGGGGGGGGGGGGGGGGGGG": 609,
+      "FGFGGGGGGGGGGGGGGGGGGG": 610,
+      "FEFEFE": 611,
+      "EKEL": 612,
+      "GJGJGJ": 613,
+      "GBGC": 614,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGHFGGGGGGGGGGGGGGGGGGGGGGG": 615,
+      "GOGQGW": 616,
+      "CP": 617,
+      "DS": 618,
+      "FGFGFGFGF": 619,
+      "HDH": 620,
+      "HFIFIFIFIFIFI": 621,
+      "KK": 622,
+      "FIEIEI": 623,
+      "EIFHFHGH": 624,
+      "FFGGGGGGGGGGGGGGGGGGGGGGG": 625,
+      "FHFHFHFHFHFHFH": 626,
+      "GHGHGHGI": 627,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 628,
+      "GOGQGWG": 629,
+      "JCH": 630,
+      "GGGHGH": 631,
+      "GGFGFGF": 632,
+      "FHEH": 633,
+      "GGGGGGGH": 634,
+      "EIEIDJ": 635,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 636,
+      "GGHGH": 637,
+      "DIDIDIDI": 638,
+      "IJIK": 639,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGIFGGGGGGGGGGGGGGGGGGGGGGG": 640,
+      "FQ": 641,
+      "FGGGGGGG": 642,
+      "HFIFIFIFI": 643,
+      "HGIGIGIGI": 644,
+      "HFGGGGGGGGGGGGGGGGGGGGGG": 645,
+      "KQ": 646,
+      "LCJ": 647,
+      "GGFGFGFGF": 648,
+      "FHGGGGGGGGGGGGGGGGGGGGGGG": 649,
+      "EIEJEJ": 650,
+      "EHEHDI": 651,
+      "GGGGGGGGGGGGGGGGGGGGGGGFH": 652,
+      "FDFE": 653,
+      "CIBI": 654,
+      "GGGGGGGGGGGGGGGGGGGGGHGH": 655,
+      "HFHFHFHFHFHFHFHFH": 656,
+      "DIEHFHFHF": 657,
+      "GCGCGCGCGBGB": 658,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGG": 659,
+      "AP": 660,
+      "BB": 661,
+      "BQ": 662,
+      "CD": 663,
+      "DGE": 664,
+      "EGGGGGGGGGGGGGGGGGGGGGGGG": 665,
+      "FS": 666,
+      "FGGGF": 667,
+      "GR": 668,
+      "HEHEHEH": 669,
+      "HIIIIIIII": 670,
+      "JD": 671,
+      "JR": 672,
+      "JDH": 673,
+      "GGFGF": 674,
+      "GGGGGGGGGH": 675,
+      "FHFJ": 676,
+      "GGGGGGF": 677,
+      "GGGGGGGF": 678,
+      "EHFHFHF": 679,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 680,
+      "EIFHFH": 681,
+      "EIFHGH": 682,
+      "HHGI": 683,
+      "DHCHCH": 684,
+      "EIEIEIEJ": 685,
+      "HIGI": 686,
+      "GGGGGGGGGGGGGGGGGGGGGGHGH": 687,
+      "GHGHGHGHGHGHGHGHGH": 688,
+      "GKGJ": 689,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 690,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 691,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 692,
+      "GFHFHEH": 693,
+      "GGGGGGGGGGGGGGGGGGGGGGHGI": 694,
+      "DHEHFGFGF": 695,
+      "GOGQGWGu": 696,
+      "ES": 697,
+      "FGGH": 698,
+      "HEH": 699,
+      "HFHFHFH": 700,
+      "HGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 701,
+      "ID": 702,
+      "JO": 703,
+      "JQ": 704,
+      "GGFH": 705,
+      "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 706,
+      "EHFHFH": 707,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGF": 708,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGF": 709,
+      "DHDI": 710,
+      "GGGGGGGGGGGGGGGGGGGGGGFGF": 711,
+      "FKEL": 712,
+      "EKEM": 713,
+      "GGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 714,
+      "EJEJEJEJ": 715,
+      "HKHL": 716,
+      "GDGDGDGDGD": 717,
+      "FDFDFDFDFD": 718,
+      "GGGGGGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 719,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGG": 720,
+      "AA": 721,
+      "CG": 722,
+      "DE": 723,
+      "FEH": 724,
+      "IFIFIFIFI": 725,
+      "JP": 726,
+      "Âİ": 727,
+      "FHFHFI": 728,
+      "FIFHFHGH": 729,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGE": 730,
+      "EIFHFHFH": 731,
+      "FEGE": 732,
+      "GJHJ": 733,
+      "HIHJ": 734,
+      "GDGE": 735,
+      "FKFJ": 736,
+      "GCGB": 737,
+      "HJHJHJ": 738,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 739,
+      "GFGFGFGFH": 740,
+      "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 741,
+      "FKFKFKFL": 742,
+      "GGGGGGGGHGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 743,
+      "FHGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 744,
+      "CR": 745,
+      "FR": 746,
+      "FGEGEGEGE": 747,
+      "GU": 748,
+      "GDI": 749,
+      "HQ": 750,
+      "HR": 751,
+      "HFH": 752,
+      "IQ": 753,
+      "JCI": 754,
+      "JAH": 755,
+      "JIJIJ": 756,
+      "GGGFGF": 757,
+      "GGGGGGGGGF": 758,
+      "GGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 759,
+      "FIFK": 760,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGG": 761,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFFGGGGGGGGGGGGGGGGGGGGGGGG": 762,
+      "EIFHFHFHFH": 763,
+      "DHCI": 764,
+      "EJDJ": 765,
+      "III": 766,
+      "GGGGGGGGGGGGGGGGGGGGGGFH": 767,
+      "FGFGE": 768,
+      "DKCM": 769,
+      "EHFHGGGGGGGGGGGGGGGGGGG": 770,
+      "FHGHFH": 771,
+      "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 772,
+      "FIFHGHGHGH": 773,
+      "HHHHHHHHHHHH": 774,
+      "GGGGGGHGI": 775,
+      "GGGGGGGGFGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 776,
+      "GGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 777,
+      "AB": 778,
+      "CS": 779,
+      "FGGGGGGGGGGGGGGGGGGGG": 780,
+      "GFHFHFHFHFH": 781,
+      "HB": 782,
+      "HC": 783,
+      "HD": 784,
+      "HGG": 785,
+      "HIIII": 786,
+      "IGHGH": 787,
+      "IEIEIEIEI": 788,
+      "IGKGKGKGK": 789,
+      "GGGFH": 790,
+      "GGGGHGH": 791,
+      "GFFFFFFFFF": 792,
+      "FIFJFJ": 793,
+      "EIDJ": 794,
+      "DHEHEH": 795,
+      "DIFHFHFH": 796,
+      "FGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 797,
+      "GFGFGFGFGFGFGFGF": 798,
+      "DJDI": 799,
+      "EKFJ": 800,
+      "GHGHGHGGGGGG": 801,
+      "GGGGGGGGGGGGI": 802,
+      "FCFB": 803,
+      "HGHGHGHGHGHGHGHGH": 804,
+      "GOGL": 805,
+      "GGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 806,
+      "GGGGGGGGHFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 807,
+      "HJHJHJHJHJ": 808,
+      "HJHJHJHJHJHJ": 809,
+      "GEGEGFGFGFGGGGG": 810,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGEGGGGGGGGGGGGGGGGGGGGGGGG": 811,
+      "AQ": 812,
+      "AR": 813,
+      "CGCGCGCGCGBGB": 814,
+      "DA": 815,
+      "EGFGFGFGF": 816,
+      "FGGGGGG": 817,
+      "FDH": 818,
+      "FGGGGGGGGG": 819,
+      "FGGGGGF": 820,
+      "GEHEH": 821,
+      "IT": 822,
+      "IFJFJFJFJFJ": 823,
+      "JE": 824,
+      "KO": 825,
+      "Âį": 826,
+      "GFFFFF": 827,
+      "GHGHFH": 828,
+      "FFFGF": 829,
+      "GIGHGHGHGH": 830,
+      "FIFIEJ": 831,
+      "EIEIDI": 832,
+      "DIEHEH": 833,
+      "FEEE": 834,
+      "HIHHHH": 835,
+      "GGGGGGGGGGGGGGGGGGGGGGF": 836,
+      "GGGGGGGGGGGGGGGGGGGGGGFGE": 837,
+      "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 838,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 839,
+      "GJGJGK": 840,
+      "DKDL": 841,
+      "GGFGGGG": 842,
+      "GGFGFH": 843,
+      "FHFGGGGGGGGGGGGGGGGGGG": 844,
+      "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 845,
+      "HFHFHFHFHFHFH": 846,
+      "FCFCFB": 847,
+      "FHFHFHFGGGGGGGGG": 848,
+      "HIIJ": 849,
+      "GHFHFHFHFHFHFHFHFH": 850,
+      "GFHFHFHEI": 851,
+      "DIDIDICJ": 852,
+      "=@": 853,
+      "BS": 854,
+      "DG": 855,
+      "EGFH": 856,
+      "EGEH": 857,
+      "FT": 858,
+      "FU": 859,
+      "FGGGG": 860,
+      "FGGGGGGGG": 861,
+      "GAH": 862,
+      "HA": 863,
+      "IHH": 864,
+      "IBH": 865,
+      "IHIHIHIHI": 866,
+      "IDHEHFGFGF": 867,
+      "KP": 868,
+      "MM": 869,
+      "GGFHFH": 870,
+      "GGGGGGGGHH": 871,
+      "GGGGGGGGGFH": 872,
+      "FHEHEH": 873,
+      "FHFGFGF": 874,
+      "FHFHGGGGGGGGGGGGGGGGGG": 875,
+      "EIGH": 876,
+      "GIGHGH": 877,
+      "GEGF": 878,
+      "GEGFGF": 879,
+      "FIFIFIFJ": 880,
+      "FEFF": 881,
+      "GGGGGGGGGGHGHGHGHGH": 882,
+      "GIGIGHGHGHGGGGG": 883,
+      "DJCJ": 884,
+      "HHHHH": 885,
+      "GHGHGHFH": 886,
+      "GGGGGGGGGGGGGGGGGGGGGFGF": 887,
+      "GGGGGGGGGGGGGGGGGGGGFGFH": 888,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 889,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 890,
+      "GGHGHGH": 891,
+      "EJEJEJEK": 892,
+      "GDGDGD": 893,
+      "FDFDFD": 894,
+      "GFGFGFGGGGG": 895,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 896,
+      "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 897,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFFHGGGGGGGGGGGGGGGGGGGGGGG": 898,
+      "FHFHFHFHFHFIEJ": 899,
+      "FKFKFL": 900,
+      "FEFEFEFEFEFE": 901,
+      "GGGGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 902,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGIGGGGGGGGGGGGGGGGGGGGGGGG": 903,
+      "EHFGFGGGGGGGGGGGGGGGGG": 904,
+      "DIDIDICI": 905,
+      "HEHEHEHEHEHEH": 906,
+      "GEGEGEGD": 907,
+      "GGGGGGGGGGGGGGGGGGGGGGGGFIGGGGGGGGGGGGGGGGGGGGGGGG": 908,
+      "FEEEEEEEEE": 909,
+      "BR": 910,
+      "CT": 911,
+      "DGGGGGGGGGGGGGGGGGGGGGGGG": 912,
+      "Hr": 913,
+      "HEHEH": 914,
+      "HFHFI": 915,
+      "IC": 916,
+      "IR": 917,
+      "IGIGIGIGI": 918,
+      "IFJFJFJFJ": 919,
+      "JC": 920,
+      "MO": 921,
+      "NBK": 922,
+      "GGGGGGGGGHGH": 923,
+      "GGGGGGGGFHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 924,
+      "GGGGGGGGGGGGGGGGGGHGHGH": 925,
+      "GGGGGGGGGGGGGGGGGGFGFGFH": 926,
+      "GGGGGGGGGGGGGGGGGGGHGHGI": 927,
+      "GHGGGGGGGGGGGGGGGGGGGGGGGG": 928,
+      "FHFHGGGGGGGGGGGGGGGGGGG": 929,
+      "GHGHGGGGGG": 930,
+      "GFGFGE": 931,
+      "GGGGGGGGGGGGGGGGGGGGGGGGEH": 932,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGJ": 933,
+      "GGGGGGGGGGGGGGGGGGGGGGGGGGG": 934,
+      "FFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 935,
+      "EIEIEJ": 936,
+      "EJFIFI": 937,
+      "FHFHFHFHFHFHFHFH": 938,
+      "FEGF": 939,
+      "FEFFFF": 940,
+      "GJE": 941,
+      "EEE": 942,
+      "EEEFE": 943,
+      "CHBI": 944,
+      "GCGBGB": 945,
+      "GGGGGGGGGGGGGGGGGGGGGH": 946,
+      "GGGGGGGGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 947,
+      "GGGGGGGGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 948,
+      "DIDICI": 949,
+      "GGGGGGGGGGGGGGGGGGGGGGGGHEGGGGGGGGGGGGGGGGGGGGGGGG": 950,
+      "GKGKGKGL": 951,
+      "FHFGFH": 952,
+      "FHFGGH": 953,
+      "HGHGHGHGHGHGHGHGHGH": 954,
+      "GGGHGGGG": 955,
+      "IKIL": 956,
+      "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 957,
+      "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG": 958,
+      "GGGGGGGGGGGGGGGGGGGGGGGHGFGGGGGGGGGGGGGGGGGGGGGGGG": 959,
+      "GNGL": 960,
+      "FHEHEHEHEHEH": 961,
+      "GHFHFHFHFHFHFHFH": 962,
+      "GGGGGGGGGGGGGGGGGGGGGGGGHHGGGGGGGGGGGGGGGGGGGGGGGG": 963,
+      "EGF": 964,
+      "HS": 965,
+      "HT": 966,
+      "HCH": 967,
+      "HAH": 968,
+      "HFIFIFJ": 969,
+      "IP": 970,
+      "IAH": 971,
+      "KI": 972,
+      "LL": 973,
+      "LP": 974,
+      "MCI": 975,
+      "GGHH": 976,
+      "GGGHGHGH": 977,
+      "GGGGGGGGHGH": 978,
+      "FHGGGGGGGGGGGGGGGGGGGG": 979,
+      "GGGGGGGGGGGGGGGGGGGHGHGH": 980,
+      "GGGGGGGGGGGGGGGGGGFGFHFH": 981,
+      "GHFHFHFH": 982,
+      "EHFHFHFHF": 983,
+      "FIGH": 984,
+      "EIGI": 985,
+      "GIHHHH": 986,
+      "DHGGGGGGGGGGGGGGGGGGGGGGG": 987,
+      "GEGFGFGF": 988,
+      "DICI": 989,
+      "EHEHEIDI": 990,
+      "EJFJ": 991,
+      "GJFJ": 992,
+      "GGGGGGGGGGF": 993,
+      "GFGFGFGFGFGFGF": 994,
+      "DJDK": 995,
+      "HIHIHJ": 996,
+      "EHFHGGGGGGGGGGGGGGGGGGGG": 997,
+      "HGHGHGHGHGHGH": 998,
+      "FHFHFGGGGGGGGG": 999,
+      "EDEDEDEC": 1000,
+      "GEGEGEGEGEGE": 1001,
+      "DHEHFGFGFGF": 1002,
+      "GGGGGGGGGGGGGGGGGGGGGGGFGHGGGGGGGGGGGGGGGGGGGGGGGG": 1003,
+      "HKHKHL": 1004,
+      "FHEHEHEHEHEHEHEH": 1005,
+      "GGFGFGFGFGFGFGFGFGF": 1006,
+      "GJGIGHGHGH": 1007,
+      "HHIHIHIHIHI": 1008,
+      "FIGHGHGGGGGGGGGGGGGGGGG": 1009,
+      "GOGQGWGuF": 1010,
+      "CA": 1011,
+      "DAC": 1012,
+      "EGGH": 1013,
+      "EFFFFFF": 1014,
+      "FGGGGG": 1015,
+      "FGGF": 1016,
+      "FGGGGGGGGGGG": 1017,
+      "HFIFI": 1018,
+      "HEHFGFGF": 1019,
+      "IS": 1020,
+      "JS": 1021,
+      "MK": 1022,
+      "MCJ": 1023
+    },
+    "merges": [
+      [
+        "G",
+        "G"
+      ],
+      [
+        "GG",
+        "GG"
+      ],
+      [
+        "GGGG",
+        "GGGG"
+      ],
+      [
+        "GGGGGGGG",
+        "GGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "GGGGGGGGGGGGGGGG"
+      ],
+      [
+        "F",
+        "H"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "GG"
+      ],
+      [
+        "G",
+        "H"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "G",
+        "F"
+      ],
+      [
+        "FH",
+        "FH"
+      ],
+      [
+        "GH",
+        "GH"
+      ],
+      [
+        "GGGG",
+        "GG"
+      ],
+      [
+        "E",
+        "H"
+      ],
+      [
+        "GF",
+        "GF"
+      ],
+      [
+        "F",
+        "I"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "GGGGGGGG"
+      ],
+      [
+        "E",
+        "I"
+      ],
+      [
+        "F",
+        "F"
+      ],
+      [
+        "H",
+        "H"
+      ],
+      [
+        "G",
+        "I"
+      ],
+      [
+        "GGGGGG",
+        "G"
+      ],
+      [
+        "D",
+        "H"
+      ],
+      [
+        "F",
+        "J"
+      ],
+      [
+        "G",
+        "E"
+      ],
+      [
+        "FI",
+        "FI"
+      ],
+      [
+        "EI",
+        "EI"
+      ],
+      [
+        "D",
+        "I"
+      ],
+      [
+        "EH",
+        "EH"
+      ],
+      [
+        "E",
+        "J"
+      ],
+      [
+        "FHFH",
+        "FHFH"
+      ],
+      [
+        "GGGG",
+        "G"
+      ],
+      [
+        "F",
+        "E"
+      ],
+      [
+        "I",
+        "I"
+      ],
+      [
+        "G",
+        "J"
+      ],
+      [
+        "H",
+        "I"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "GGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "GGGGGG"
+      ],
+      [
+        "GGGGGGGG",
+        "GG"
+      ],
+      [
+        "GHGH",
+        "GHGH"
+      ],
+      [
+        "H",
+        "J"
+      ],
+      [
+        "F",
+        "GF"
+      ],
+      [
+        "E",
+        "E"
+      ],
+      [
+        "G",
+        "D"
+      ],
+      [
+        "F",
+        "D"
+      ],
+      [
+        "GFGF",
+        "GFGF"
+      ],
+      [
+        "DH",
+        "DH"
+      ],
+      [
+        "G",
+        "FH"
+      ],
+      [
+        "C",
+        "H"
+      ],
+      [
+        "GI",
+        "GI"
+      ],
+      [
+        "D",
+        "J"
+      ],
+      [
+        "F",
+        "K"
+      ],
+      [
+        "FJ",
+        "FJ"
+      ],
+      [
+        "G",
+        "K"
+      ],
+      [
+        "FHFH",
+        "FH"
+      ],
+      [
+        "HH",
+        "HH"
+      ],
+      [
+        "GE",
+        "GE"
+      ],
+      [
+        "C",
+        "I"
+      ],
+      [
+        "GGGGGGGG",
+        "G"
+      ],
+      [
+        "FE",
+        "FE"
+      ],
+      [
+        "FF",
+        "FF"
+      ],
+      [
+        "E",
+        "K"
+      ],
+      [
+        "G",
+        "C"
+      ],
+      [
+        "F",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "F",
+        "GFGF"
+      ],
+      [
+        "GHGH",
+        "GH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "GGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "HI",
+        "HI"
+      ],
+      [
+        "HJ",
+        "HJ"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "G"
+      ],
+      [
+        "C",
+        "J"
+      ],
+      [
+        "GH",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GJ",
+        "GJ"
+      ],
+      [
+        "D",
+        "K"
+      ],
+      [
+        "G",
+        "B"
+      ],
+      [
+        "GG",
+        "G"
+      ],
+      [
+        "GG",
+        "H"
+      ],
+      [
+        "EJ",
+        "EJ"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "GD",
+        "GD"
+      ],
+      [
+        "G",
+        "L"
+      ],
+      [
+        "E",
+        "D"
+      ],
+      [
+        "FD",
+        "FD"
+      ],
+      [
+        "GFGF",
+        "GF"
+      ],
+      [
+        "DI",
+        "DI"
+      ],
+      [
+        "GG",
+        "F"
+      ],
+      [
+        "GF",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EIEI",
+        "EIEI"
+      ],
+      [
+        "EH",
+        "FH"
+      ],
+      [
+        "H",
+        "K"
+      ],
+      [
+        "F",
+        "C"
+      ],
+      [
+        "H",
+        "GH"
+      ],
+      [
+        "FIFI",
+        "FIFI"
+      ],
+      [
+        "II",
+        "II"
+      ],
+      [
+        "I",
+        "J"
+      ],
+      [
+        "F",
+        "L"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "H"
+      ],
+      [
+        "EHEH",
+        "EHEH"
+      ],
+      [
+        "E",
+        "L"
+      ],
+      [
+        "GK",
+        "GK"
+      ],
+      [
+        "GF",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GC",
+        "GC"
+      ],
+      [
+        "C",
+        "K"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGG",
+        "G"
+      ],
+      [
+        "GGGGGGGG",
+        "GGGGGG"
+      ],
+      [
+        "B",
+        "I"
+      ],
+      [
+        "B",
+        "H"
+      ],
+      [
+        "D",
+        "L"
+      ],
+      [
+        "GGGGGGGGGG",
+        "G"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "F"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGH",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FH",
+        "F"
+      ],
+      [
+        "FH",
+        "GH"
+      ],
+      [
+        "B",
+        "J"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GFGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "E",
+        "M"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGG"
+      ],
+      [
+        "FHFHFHFH",
+        "FH"
+      ],
+      [
+        "F",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "H",
+        "GHGHGHGH"
+      ],
+      [
+        "GGGGGGGG",
+        "GGGGGGG"
+      ],
+      [
+        "G",
+        "M"
+      ],
+      [
+        "GG",
+        "GH"
+      ],
+      [
+        "FHFH",
+        "F"
+      ],
+      [
+        "C",
+        "L"
+      ],
+      [
+        "GGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "A",
+        "H"
+      ],
+      [
+        "B",
+        "K"
+      ],
+      [
+        "GGGGGGGGGGGGGGGG",
+        "G"
+      ],
+      [
+        "I",
+        "K"
+      ],
+      [
+        "A",
+        "I"
+      ],
+      [
+        "EE",
+        "EE"
+      ],
+      [
+        "G",
+        "FHFH"
+      ],
+      [
+        "G",
+        "EH"
+      ],
+      [
+        "H",
+        "L"
+      ],
+      [
+        "J",
+        "J"
+      ],
+      [
+        "FH",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FK",
+        "FK"
+      ],
+      [
+        "FI",
+        "FJ"
+      ],
+      [
+        "GIGI",
+        "GIGI"
+      ],
+      [
+        "D",
+        "M"
+      ],
+      [
+        "F",
+        "M"
+      ],
+      [
+        "DHDH",
+        "DHDH"
+      ],
+      [
+        "CH",
+        "CH"
+      ],
+      [
+        "E",
+        "C"
+      ],
+      [
+        "B",
+        "L"
+      ],
+      [
+        "A",
+        "J"
+      ],
+      [
+        "GG",
+        "GF"
+      ],
+      [
+        "GGGG",
+        "H"
+      ],
+      [
+        "H",
+        "FHFHFHFH"
+      ],
+      [
+        "EI",
+        "EJ"
+      ],
+      [
+        "DI",
+        "EH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "GH"
+      ],
+      [
+        "G",
+        "O"
+      ],
+      [
+        "FI",
+        "FH"
+      ],
+      [
+        "FEFE",
+        "FEFE"
+      ],
+      [
+        "FGFGF",
+        "GF"
+      ],
+      [
+        "A",
+        "K"
+      ],
+      [
+        "C",
+        "M"
+      ],
+      [
+        "G",
+        "N"
+      ],
+      [
+        "FHFH",
+        "GH"
+      ],
+      [
+        "FJFJ",
+        "FJFJ"
+      ],
+      [
+        "F",
+        "B"
+      ],
+      [
+        "FH",
+        "FI"
+      ],
+      [
+        "HHHH",
+        "HHHH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "H"
+      ],
+      [
+        "ED",
+        "ED"
+      ],
+      [
+        "GGGGGGGG",
+        "H"
+      ],
+      [
+        "H",
+        "GHGH"
+      ],
+      [
+        "GHGHGHGH",
+        "GH"
+      ],
+      [
+        "GEGE",
+        "GEGE"
+      ],
+      [
+        "HIHI",
+        "HIHI"
+      ],
+      [
+        "B",
+        "M"
+      ],
+      [
+        "EHEH",
+        "EH"
+      ],
+      [
+        "HJHJ",
+        "HJHJ"
+      ],
+      [
+        "E",
+        "N"
+      ],
+      [
+        "H",
+        "M"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGG"
+      ],
+      [
+        "DH",
+        "EH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGF",
+        "GGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GFGFGFGF",
+        "GF"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGG"
+      ],
+      [
+        "F",
+        "N"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "FI",
+        "EIEIEIEI"
+      ],
+      [
+        "FC",
+        "FC"
+      ],
+      [
+        "G",
+        "A"
+      ],
+      [
+        "FHFHFH",
+        "F"
+      ],
+      [
+        "EI",
+        "EH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "GF"
+      ],
+      [
+        "F",
+        "A"
+      ],
+      [
+        "F",
+        "GFH"
+      ],
+      [
+        "H",
+        "II"
+      ],
+      [
+        "GGGG",
+        "GH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "GGGGGG",
+        "H"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGGG"
+      ],
+      [
+        "D",
+        "D"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "FH"
+      ],
+      [
+        "EJ",
+        "EK"
+      ],
+      [
+        "FGF",
+        "GFH"
+      ],
+      [
+        "HK",
+        "HK"
+      ],
+      [
+        "D",
+        "N"
+      ],
+      [
+        "F",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "F",
+        "GGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGG",
+        "GF"
+      ],
+      [
+        "FFFF",
+        "FFFF"
+      ],
+      [
+        "GJGJ",
+        "GJGJ"
+      ],
+      [
+        "I",
+        "M"
+      ],
+      [
+        "FF",
+        "GF"
+      ],
+      [
+        "G",
+        "Q"
+      ],
+      [
+        "G",
+        "DH"
+      ],
+      [
+        "GDGD",
+        "GDGD"
+      ],
+      [
+        "G",
+        "FHFHFHFH"
+      ],
+      [
+        "FH",
+        "EHEHEHEH"
+      ],
+      [
+        "GHGH",
+        "GI"
+      ],
+      [
+        "F",
+        "O"
+      ],
+      [
+        "F",
+        "GG"
+      ],
+      [
+        "I",
+        "L"
+      ],
+      [
+        "GH",
+        "FHFHFHFH"
+      ],
+      [
+        "DJ",
+        "EI"
+      ],
+      [
+        "E",
+        "GFGF"
+      ],
+      [
+        "EIEI",
+        "EI"
+      ],
+      [
+        "A",
+        "M"
+      ],
+      [
+        "E",
+        "A"
+      ],
+      [
+        "H",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "J",
+        "II"
+      ],
+      [
+        "FIFIFIFI",
+        "FIFI"
+      ],
+      [
+        "D",
+        "EE"
+      ],
+      [
+        "FF",
+        "E"
+      ],
+      [
+        "HH",
+        "H"
+      ],
+      [
+        "IJ",
+        "IJ"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGH",
+        "GGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "H",
+        "EIEIEIEI"
+      ],
+      [
+        "FH",
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GH",
+        "FHFH"
+      ],
+      [
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGG"
+      ],
+      [
+        "B",
+        "N"
+      ],
+      [
+        "E",
+        "O"
+      ],
+      [
+        "GGGGGGGG",
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GH",
+        "GGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGF",
+        "GFGFGFGF"
+      ],
+      [
+        "GH",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGG",
+        "H"
+      ],
+      [
+        "GB",
+        "GB"
+      ],
+      [
+        "FDFD",
+        "FDFD"
+      ],
+      [
+        "IIII",
+        "IIII"
+      ],
+      [
+        "C",
+        "N"
+      ],
+      [
+        "F",
+        "GGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EI",
+        "FH"
+      ],
+      [
+        "A",
+        "C"
+      ],
+      [
+        "F",
+        "GE"
+      ],
+      [
+        "H",
+        "N"
+      ],
+      [
+        "EH",
+        "EI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GI"
+      ],
+      [
+        "FFFF",
+        "FF"
+      ],
+      [
+        "D",
+        "C"
+      ],
+      [
+        "GF",
+        "GGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "HH",
+        "GH"
+      ],
+      [
+        "DJ",
+        "DJ"
+      ],
+      [
+        "EHFH",
+        "FGF"
+      ],
+      [
+        "A",
+        "L"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "G"
+      ],
+      [
+        "GGGGGGGGGG",
+        "GH"
+      ],
+      [
+        "G",
+        "FHFHFH"
+      ],
+      [
+        "H",
+        "GHGHGH"
+      ],
+      [
+        "J",
+        "M"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGG"
+      ],
+      [
+        "FIFI",
+        "FJ"
+      ],
+      [
+        "D",
+        "P"
+      ],
+      [
+        "I",
+        "H"
+      ],
+      [
+        "J",
+        "K"
+      ],
+      [
+        "GGGG",
+        "F"
+      ],
+      [
+        "FH",
+        "FGF"
+      ],
+      [
+        "GH",
+        "FH"
+      ],
+      [
+        "EH",
+        "FGF"
+      ],
+      [
+        "FI",
+        "EJ"
+      ],
+      [
+        "GHGHGH",
+        "GGGGG"
+      ],
+      [
+        "DIDI",
+        "DI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGFH",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "E",
+        "GFGFGF"
+      ],
+      [
+        "H",
+        "EHEHEHEH"
+      ],
+      [
+        "GGGGGGGG",
+        "F"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GFH"
+      ],
+      [
+        "FK",
+        "FL"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGFH",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GF",
+        "GGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EH",
+        "DHDHDHDH"
+      ],
+      [
+        "FI",
+        "EI"
+      ],
+      [
+        "FJFJ",
+        "FJ"
+      ],
+      [
+        "ED",
+        "EC"
+      ],
+      [
+        "B",
+        "P"
+      ],
+      [
+        "E",
+        "B"
+      ],
+      [
+        "GF",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GJ",
+        "GI"
+      ],
+      [
+        "CI",
+        "CI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGG",
+        "HGH"
+      ],
+      [
+        "GL",
+        "GM"
+      ],
+      [
+        "E",
+        "FF"
+      ],
+      [
+        "I",
+        "DH"
+      ],
+      [
+        "K",
+        "M"
+      ],
+      [
+        "FH",
+        "GGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EI",
+        "DI"
+      ],
+      [
+        "DI",
+        "EI"
+      ],
+      [
+        "GFGFGFGF",
+        "GFGF"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGG"
+      ],
+      [
+        "G",
+        "P"
+      ],
+      [
+        "H",
+        "DHDHDHDH"
+      ],
+      [
+        "J",
+        "L"
+      ],
+      [
+        "GGGGGGGG",
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GH",
+        "GGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "HH",
+        "I"
+      ],
+      [
+        "EJ",
+        "FI"
+      ],
+      [
+        "FHFHFH",
+        "GH"
+      ],
+      [
+        "GEGE",
+        "GE"
+      ],
+      [
+        "EJEJ",
+        "EK"
+      ],
+      [
+        "GKGK",
+        "GKGK"
+      ],
+      [
+        "GCGC",
+        "GCGC"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGF",
+        "GHGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FIFH",
+        "GHGH"
+      ],
+      [
+        "D",
+        "B"
+      ],
+      [
+        "H",
+        "O"
+      ],
+      [
+        "I",
+        "N"
+      ],
+      [
+        "K",
+        "N"
+      ],
+      [
+        "GGGGGGGG",
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FH",
+        "GGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHFH",
+        "FGF"
+      ],
+      [
+        "EH",
+        "FGFGF"
+      ],
+      [
+        "FIFI",
+        "FI"
+      ],
+      [
+        "GGGGGGGGGGGG",
+        "H"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGG"
+      ],
+      [
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGG"
+      ],
+      [
+        "C",
+        "B"
+      ],
+      [
+        "I",
+        "E"
+      ],
+      [
+        "EH",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGG"
+      ],
+      [
+        "DH",
+        "CH"
+      ],
+      [
+        "GFH",
+        "EH"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGG"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "E",
+        "P"
+      ],
+      [
+        "E",
+        "Q"
+      ],
+      [
+        "E",
+        "R"
+      ],
+      [
+        "E",
+        "GE"
+      ],
+      [
+        "F",
+        "P"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "GEGE",
+        "GFGFGF"
+      ],
+      [
+        "DK",
+        "CL"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGH",
+        "FGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHGH",
+        "GGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GA",
+        "G"
+      ],
+      [
+        "C",
+        "O"
+      ],
+      [
+        "E",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "F",
+        "GH"
+      ],
+      [
+        "G",
+        "CH"
+      ],
+      [
+        "H",
+        "FHFH"
+      ],
+      [
+        "FH",
+        "E"
+      ],
+      [
+        "GF",
+        "GFH"
+      ],
+      [
+        "FHFH",
+        "GHGH"
+      ],
+      [
+        "FF",
+        "GFGF"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "FJFJFJFJ",
+        "FJ"
+      ],
+      [
+        "D",
+        "Q"
+      ],
+      [
+        "F",
+        "G"
+      ],
+      [
+        "FH",
+        "GHGH"
+      ],
+      [
+        "FI",
+        "GHGH"
+      ],
+      [
+        "FHFHFHFH",
+        "FHFH"
+      ],
+      [
+        "GGGGGGGGGG",
+        "GF"
+      ],
+      [
+        "DJ",
+        "CK"
+      ],
+      [
+        "GK",
+        "GL"
+      ],
+      [
+        "A",
+        "O"
+      ],
+      [
+        "D",
+        "R"
+      ],
+      [
+        "E",
+        "FE"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "FI"
+      ],
+      [
+        "EI",
+        "FI"
+      ],
+      [
+        "GIGI",
+        "GI"
+      ],
+      [
+        "HIHI",
+        "HI"
+      ],
+      [
+        "EHFH",
+        "F"
+      ],
+      [
+        "EHFH",
+        "FGFGF"
+      ],
+      [
+        "A",
+        "N"
+      ],
+      [
+        "B",
+        "O"
+      ],
+      [
+        "D",
+        "O"
+      ],
+      [
+        "H",
+        "E"
+      ],
+      [
+        "H",
+        "P"
+      ],
+      [
+        "H",
+        "FHFHFHFHFH"
+      ],
+      [
+        "K",
+        "L"
+      ],
+      [
+        "GG",
+        "FGFGFH"
+      ],
+      [
+        "HH",
+        "GHGH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGH",
+        "GFGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GQ",
+        "G"
+      ],
+      [
+        "C",
+        "Q"
+      ],
+      [
+        "F",
+        "GFHFH"
+      ],
+      [
+        "J",
+        "H"
+      ],
+      [
+        "J",
+        "I"
+      ],
+      [
+        "K",
+        "CI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGGGG"
+      ],
+      [
+        "GGGGGG",
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "I"
+      ],
+      [
+        "GHGHGHGH",
+        "GHGHGHGH"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGG",
+        "EHGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "HFHFHFHFH",
+        "FHFHFH"
+      ],
+      [
+        "GO",
+        "GQG"
+      ],
+      [
+        "FFE",
+        "FEFEFEFE"
+      ],
+      [
+        "GGGGGGGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGGGG"
+      ],
+      [
+        "E",
+        "G"
+      ],
+      [
+        "G",
+        "S"
+      ],
+      [
+        "G",
+        "T"
+      ],
+      [
+        "I",
+        "O"
+      ],
+      [
+        "I",
+        "CH"
+      ],
+      [
+        "J",
+        "N"
+      ],
+      [
+        "J",
+        "IJ"
+      ],
+      [
+        "GH",
+        "GI"
+      ],
+      [
+        "EH",
+        "DHDH"
+      ],
+      [
+        "FI",
+        "GI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "HH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGH"
+      ],
+      [
+        "FF",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FE",
+        "EEEE"
+      ],
+      [
+        "FGF",
+        "GGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FGF",
+        "GGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FEFE",
+        "FE"
+      ],
+      [
+        "EK",
+        "EL"
+      ],
+      [
+        "GJGJ",
+        "GJ"
+      ],
+      [
+        "GB",
+        "GC"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGH",
+        "FGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GOGQG",
+        "W"
+      ],
+      [
+        "C",
+        "P"
+      ],
+      [
+        "D",
+        "S"
+      ],
+      [
+        "F",
+        "GFGFGFGF"
+      ],
+      [
+        "H",
+        "DH"
+      ],
+      [
+        "H",
+        "FIFIFIFIFIFI"
+      ],
+      [
+        "K",
+        "K"
+      ],
+      [
+        "FI",
+        "EIEI"
+      ],
+      [
+        "EI",
+        "FHFHGH"
+      ],
+      [
+        "FF",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHFHFHFH",
+        "FHFHFH"
+      ],
+      [
+        "GHGHGH",
+        "GI"
+      ],
+      [
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "GOGQGW",
+        "G"
+      ],
+      [
+        "J",
+        "CH"
+      ],
+      [
+        "GG",
+        "GHGH"
+      ],
+      [
+        "GG",
+        "FGFGF"
+      ],
+      [
+        "FH",
+        "EH"
+      ],
+      [
+        "GGGGGG",
+        "GH"
+      ],
+      [
+        "EIEI",
+        "DJ"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "GGH",
+        "GH"
+      ],
+      [
+        "DIDI",
+        "DIDI"
+      ],
+      [
+        "IJ",
+        "IK"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGI",
+        "FGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "F",
+        "Q"
+      ],
+      [
+        "F",
+        "GGGGGGG"
+      ],
+      [
+        "H",
+        "FIFIFIFI"
+      ],
+      [
+        "H",
+        "GIGIGIGI"
+      ],
+      [
+        "H",
+        "FGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "K",
+        "Q"
+      ],
+      [
+        "L",
+        "CJ"
+      ],
+      [
+        "GG",
+        "FGFGFGF"
+      ],
+      [
+        "FH",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EI",
+        "EJEJ"
+      ],
+      [
+        "EHEH",
+        "DI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGG",
+        "FH"
+      ],
+      [
+        "FD",
+        "FE"
+      ],
+      [
+        "CI",
+        "BI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGG",
+        "GHGH"
+      ],
+      [
+        "HFHFHFHFH",
+        "FHFHFHFH"
+      ],
+      [
+        "DIEH",
+        "FHFHF"
+      ],
+      [
+        "GCGCGCGC",
+        "GBGB"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGH",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "A",
+        "P"
+      ],
+      [
+        "B",
+        "B"
+      ],
+      [
+        "B",
+        "Q"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "GE"
+      ],
+      [
+        "E",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "F",
+        "S"
+      ],
+      [
+        "F",
+        "GGGF"
+      ],
+      [
+        "G",
+        "R"
+      ],
+      [
+        "H",
+        "EHEHEH"
+      ],
+      [
+        "H",
+        "IIIIIIII"
+      ],
+      [
+        "J",
+        "D"
+      ],
+      [
+        "J",
+        "R"
+      ],
+      [
+        "J",
+        "DH"
+      ],
+      [
+        "GG",
+        "FGF"
+      ],
+      [
+        "GGGGGGGG",
+        "GH"
+      ],
+      [
+        "FH",
+        "FJ"
+      ],
+      [
+        "GGGGGG",
+        "F"
+      ],
+      [
+        "GGGGGG",
+        "GF"
+      ],
+      [
+        "EH",
+        "FHFHF"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "EI",
+        "FHFH"
+      ],
+      [
+        "EI",
+        "FHGH"
+      ],
+      [
+        "HH",
+        "GI"
+      ],
+      [
+        "DH",
+        "CHCH"
+      ],
+      [
+        "EIEI",
+        "EIEJ"
+      ],
+      [
+        "HI",
+        "GI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "HGH"
+      ],
+      [
+        "GHGHGHGH",
+        "GHGHGHGHGH"
+      ],
+      [
+        "GK",
+        "GJ"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGG"
+      ],
+      [
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GG"
+      ],
+      [
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "GFHFH",
+        "EH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGH",
+        "GI"
+      ],
+      [
+        "DHEH",
+        "FGFGF"
+      ],
+      [
+        "GOGQGWG",
+        "u"
+      ],
+      [
+        "E",
+        "S"
+      ],
+      [
+        "F",
+        "GGH"
+      ],
+      [
+        "H",
+        "EH"
+      ],
+      [
+        "H",
+        "FHFHFH"
+      ],
+      [
+        "H",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "I",
+        "D"
+      ],
+      [
+        "J",
+        "O"
+      ],
+      [
+        "J",
+        "Q"
+      ],
+      [
+        "GG",
+        "FH"
+      ],
+      [
+        "FH",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EH",
+        "FHFH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GF"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGF"
+      ],
+      [
+        "DH",
+        "DI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "FGF"
+      ],
+      [
+        "FK",
+        "EL"
+      ],
+      [
+        "EK",
+        "EM"
+      ],
+      [
+        "GGGGGGGGGGGG",
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EJEJ",
+        "EJEJ"
+      ],
+      [
+        "HK",
+        "HL"
+      ],
+      [
+        "GDGDGDGD",
+        "GD"
+      ],
+      [
+        "FDFDFDFD",
+        "FD"
+      ],
+      [
+        "GGGGGGGGGGGGH",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGF",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "A",
+        "A"
+      ],
+      [
+        "C",
+        "G"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "F",
+        "EH"
+      ],
+      [
+        "I",
+        "FIFIFIFI"
+      ],
+      [
+        "J",
+        "P"
+      ],
+      [
+        "Â",
+        "İ"
+      ],
+      [
+        "FHFH",
+        "FI"
+      ],
+      [
+        "FI",
+        "FHFHGH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GE"
+      ],
+      [
+        "EI",
+        "FHFHFH"
+      ],
+      [
+        "FE",
+        "GE"
+      ],
+      [
+        "GJ",
+        "HJ"
+      ],
+      [
+        "HI",
+        "HJ"
+      ],
+      [
+        "GD",
+        "GE"
+      ],
+      [
+        "FK",
+        "FJ"
+      ],
+      [
+        "GC",
+        "GB"
+      ],
+      [
+        "HJHJ",
+        "HJ"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "G"
+      ],
+      [
+        "GFGFGF",
+        "GFH"
+      ],
+      [
+        "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGGG"
+      ],
+      [
+        "FKFK",
+        "FKFL"
+      ],
+      [
+        "GGGGGGGGH",
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHGHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGG"
+      ],
+      [
+        "C",
+        "R"
+      ],
+      [
+        "F",
+        "R"
+      ],
+      [
+        "F",
+        "GEGEGEGE"
+      ],
+      [
+        "G",
+        "U"
+      ],
+      [
+        "G",
+        "DI"
+      ],
+      [
+        "H",
+        "Q"
+      ],
+      [
+        "H",
+        "R"
+      ],
+      [
+        "H",
+        "FH"
+      ],
+      [
+        "I",
+        "Q"
+      ],
+      [
+        "J",
+        "CI"
+      ],
+      [
+        "J",
+        "AH"
+      ],
+      [
+        "J",
+        "IJIJ"
+      ],
+      [
+        "GG",
+        "GFGF"
+      ],
+      [
+        "GGGGGGGG",
+        "GF"
+      ],
+      [
+        "GGGGGG",
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FI",
+        "FK"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "FFGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EI",
+        "FHFHFHFH"
+      ],
+      [
+        "DH",
+        "CI"
+      ],
+      [
+        "EJ",
+        "DJ"
+      ],
+      [
+        "II",
+        "I"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "FH"
+      ],
+      [
+        "FGF",
+        "GE"
+      ],
+      [
+        "DK",
+        "CM"
+      ],
+      [
+        "EHFH",
+        "GGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHGH",
+        "FH"
+      ],
+      [
+        "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGG"
+      ],
+      [
+        "FIFH",
+        "GHGHGH"
+      ],
+      [
+        "HHHHHHHH",
+        "HHHH"
+      ],
+      [
+        "GGGGGGH",
+        "GI"
+      ],
+      [
+        "GGGGGGGGF",
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGGGGGG"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "S"
+      ],
+      [
+        "F",
+        "GGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "G",
+        "FHFHFHFHFH"
+      ],
+      [
+        "H",
+        "B"
+      ],
+      [
+        "H",
+        "C"
+      ],
+      [
+        "H",
+        "D"
+      ],
+      [
+        "H",
+        "GG"
+      ],
+      [
+        "H",
+        "IIII"
+      ],
+      [
+        "I",
+        "GHGH"
+      ],
+      [
+        "I",
+        "EIEIEIEI"
+      ],
+      [
+        "I",
+        "GKGKGKGK"
+      ],
+      [
+        "GG",
+        "GFH"
+      ],
+      [
+        "GGGG",
+        "HGH"
+      ],
+      [
+        "GF",
+        "FFFFFFFF"
+      ],
+      [
+        "FI",
+        "FJFJ"
+      ],
+      [
+        "EI",
+        "DJ"
+      ],
+      [
+        "DH",
+        "EHEH"
+      ],
+      [
+        "DI",
+        "FHFHFH"
+      ],
+      [
+        "FGF",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GFGFGFGF",
+        "GFGFGFGF"
+      ],
+      [
+        "DJ",
+        "DI"
+      ],
+      [
+        "EK",
+        "FJ"
+      ],
+      [
+        "GHGHGH",
+        "GGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGG",
+        "I"
+      ],
+      [
+        "FC",
+        "FB"
+      ],
+      [
+        "HGHGHGHGH",
+        "GHGHGHGH"
+      ],
+      [
+        "GO",
+        "GL"
+      ],
+      [
+        "GGGGGGGGH",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGH",
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "HJHJHJHJ",
+        "HJ"
+      ],
+      [
+        "HJHJHJHJ",
+        "HJHJ"
+      ],
+      [
+        "GEGEGFGFGF",
+        "GGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGE",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "A",
+        "Q"
+      ],
+      [
+        "A",
+        "R"
+      ],
+      [
+        "C",
+        "GCGCGCGCGBGB"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "E",
+        "GFGFGFGF"
+      ],
+      [
+        "F",
+        "GGGGGG"
+      ],
+      [
+        "F",
+        "DH"
+      ],
+      [
+        "F",
+        "GGGGGGGGG"
+      ],
+      [
+        "F",
+        "GGGGGF"
+      ],
+      [
+        "G",
+        "EHEH"
+      ],
+      [
+        "I",
+        "T"
+      ],
+      [
+        "I",
+        "FJFJFJFJFJ"
+      ],
+      [
+        "J",
+        "E"
+      ],
+      [
+        "K",
+        "O"
+      ],
+      [
+        "Â",
+        "į"
+      ],
+      [
+        "GF",
+        "FFFF"
+      ],
+      [
+        "GHGH",
+        "FH"
+      ],
+      [
+        "FF",
+        "FGF"
+      ],
+      [
+        "GI",
+        "GHGHGHGH"
+      ],
+      [
+        "FIFI",
+        "EJ"
+      ],
+      [
+        "EIEI",
+        "DI"
+      ],
+      [
+        "DI",
+        "EHEH"
+      ],
+      [
+        "FE",
+        "EE"
+      ],
+      [
+        "HI",
+        "HHHH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "F"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGG",
+        "FGE"
+      ],
+      [
+        "FGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GG"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GG"
+      ],
+      [
+        "GJGJ",
+        "GK"
+      ],
+      [
+        "DK",
+        "DL"
+      ],
+      [
+        "GGF",
+        "GGGG"
+      ],
+      [
+        "GGF",
+        "GFH"
+      ],
+      [
+        "FHF",
+        "GGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGG"
+      ],
+      [
+        "HFHFHFHFH",
+        "FHFH"
+      ],
+      [
+        "FCFC",
+        "FB"
+      ],
+      [
+        "FHFHFHF",
+        "GGGGGGGGG"
+      ],
+      [
+        "HII",
+        "J"
+      ],
+      [
+        "GHFHFHFHFH",
+        "FHFHFHFH"
+      ],
+      [
+        "GFHFHFH",
+        "EI"
+      ],
+      [
+        "DIDIDI",
+        "CJ"
+      ],
+      [
+        "=",
+        "@"
+      ],
+      [
+        "B",
+        "S"
+      ],
+      [
+        "D",
+        "G"
+      ],
+      [
+        "E",
+        "GFH"
+      ],
+      [
+        "E",
+        "GEH"
+      ],
+      [
+        "F",
+        "T"
+      ],
+      [
+        "F",
+        "U"
+      ],
+      [
+        "F",
+        "GGGG"
+      ],
+      [
+        "F",
+        "GGGGGGGG"
+      ],
+      [
+        "G",
+        "AH"
+      ],
+      [
+        "H",
+        "A"
+      ],
+      [
+        "I",
+        "HH"
+      ],
+      [
+        "I",
+        "BH"
+      ],
+      [
+        "I",
+        "HIHIHIHI"
+      ],
+      [
+        "I",
+        "DHEHFGFGF"
+      ],
+      [
+        "K",
+        "P"
+      ],
+      [
+        "M",
+        "M"
+      ],
+      [
+        "GG",
+        "FHFH"
+      ],
+      [
+        "GGGGGGGG",
+        "HH"
+      ],
+      [
+        "GGGGGGGG",
+        "GFH"
+      ],
+      [
+        "FH",
+        "EHEH"
+      ],
+      [
+        "FH",
+        "FGFGF"
+      ],
+      [
+        "FHFH",
+        "GGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EI",
+        "GH"
+      ],
+      [
+        "GI",
+        "GHGH"
+      ],
+      [
+        "GE",
+        "GF"
+      ],
+      [
+        "GE",
+        "GFGF"
+      ],
+      [
+        "FIFI",
+        "FIFJ"
+      ],
+      [
+        "FE",
+        "FF"
+      ],
+      [
+        "GGGGGGGGGG",
+        "HGHGHGHGH"
+      ],
+      [
+        "GIGI",
+        "GHGHGHGGGGG"
+      ],
+      [
+        "DJ",
+        "CJ"
+      ],
+      [
+        "HHHH",
+        "H"
+      ],
+      [
+        "GHGHGH",
+        "FH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGG",
+        "GFGF"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGG",
+        "FGFH"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGGGG"
+      ],
+      [
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGG"
+      ],
+      [
+        "GGH",
+        "GHGH"
+      ],
+      [
+        "EJEJ",
+        "EJEK"
+      ],
+      [
+        "GDGD",
+        "GD"
+      ],
+      [
+        "FDFD",
+        "FD"
+      ],
+      [
+        "GFGFGF",
+        "GGGGG"
+      ],
+      [
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "G"
+      ],
+      [
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGF",
+        "FHGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHFHFHFHFH",
+        "FIEJ"
+      ],
+      [
+        "FKFK",
+        "FL"
+      ],
+      [
+        "FEFEFEFE",
+        "FEFE"
+      ],
+      [
+        "GGGGGGGGGGH",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGGI",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EHFGF",
+        "GGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "DIDIDI",
+        "CI"
+      ],
+      [
+        "HEHEHEHEH",
+        "EHEH"
+      ],
+      [
+        "GEGEGE",
+        "GD"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGFI",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FEEEEE",
+        "EEEE"
+      ],
+      [
+        "B",
+        "R"
+      ],
+      [
+        "C",
+        "T"
+      ],
+      [
+        "D",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "H",
+        "r"
+      ],
+      [
+        "H",
+        "EHEH"
+      ],
+      [
+        "H",
+        "FHFI"
+      ],
+      [
+        "I",
+        "C"
+      ],
+      [
+        "I",
+        "R"
+      ],
+      [
+        "I",
+        "GIGIGIGI"
+      ],
+      [
+        "I",
+        "FJFJFJFJ"
+      ],
+      [
+        "J",
+        "C"
+      ],
+      [
+        "M",
+        "O"
+      ],
+      [
+        "N",
+        "BK"
+      ],
+      [
+        "GGGGGGGG",
+        "GHGH"
+      ],
+      [
+        "GGGGGGGG",
+        "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGG",
+        "HGHGH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGG",
+        "FGFGFH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGG",
+        "GHGHGI"
+      ],
+      [
+        "GH",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "FHFH",
+        "GGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GHGH",
+        "GGGGGG"
+      ],
+      [
+        "GFGF",
+        "GE"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "EH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GJ"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGG"
+      ],
+      [
+        "FF",
+        "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "EIEI",
+        "EJ"
+      ],
+      [
+        "EJ",
+        "FIFI"
+      ],
+      [
+        "FHFHFHFH",
+        "FHFHFHFH"
+      ],
+      [
+        "FE",
+        "GF"
+      ],
+      [
+        "FE",
+        "FFFF"
+      ],
+      [
+        "GJ",
+        "E"
+      ],
+      [
+        "EE",
+        "E"
+      ],
+      [
+        "EE",
+        "EFE"
+      ],
+      [
+        "CH",
+        "BI"
+      ],
+      [
+        "GC",
+        "GBGB"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGG",
+        "GH"
+      ],
+      [
+        "GGGGGGGGGGGG",
+        "GHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGG",
+        "GFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "DIDI",
+        "CI"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGH",
+        "EGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GKGK",
+        "GKGL"
+      ],
+      [
+        "FHF",
+        "GFH"
+      ],
+      [
+        "FHF",
+        "GGH"
+      ],
+      [
+        "HGHGHGHGH",
+        "GHGHGHGHGH"
+      ],
+      [
+        "GGGH",
+        "GGGG"
+      ],
+      [
+        "IK",
+        "IL"
+      ],
+      [
+        "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGGG"
+      ],
+      [
+        "FHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+        "GGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGH",
+        "GFGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GN",
+        "GL"
+      ],
+      [
+        "FHEHEHEHEH",
+        "EH"
+      ],
+      [
+        "GHFHFHFHFH",
+        "FHFHFH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGGHH",
+        "GGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "E",
+        "GF"
+      ],
+      [
+        "H",
+        "S"
+      ],
+      [
+        "H",
+        "T"
+      ],
+      [
+        "H",
+        "CH"
+      ],
+      [
+        "H",
+        "AH"
+      ],
+      [
+        "H",
+        "FIFIFJ"
+      ],
+      [
+        "I",
+        "P"
+      ],
+      [
+        "I",
+        "AH"
+      ],
+      [
+        "K",
+        "I"
+      ],
+      [
+        "L",
+        "L"
+      ],
+      [
+        "L",
+        "P"
+      ],
+      [
+        "M",
+        "CI"
+      ],
+      [
+        "GG",
+        "HH"
+      ],
+      [
+        "GG",
+        "GHGHGH"
+      ],
+      [
+        "GGGGGGGG",
+        "HGH"
+      ],
+      [
+        "FH",
+        "GGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGG",
+        "GHGHGH"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGG",
+        "FGFHFH"
+      ],
+      [
+        "GH",
+        "FHFHFH"
+      ],
+      [
+        "EH",
+        "FHFHFHF"
+      ],
+      [
+        "FI",
+        "GH"
+      ],
+      [
+        "EI",
+        "GI"
+      ],
+      [
+        "GI",
+        "HHHH"
+      ],
+      [
+        "DH",
+        "GGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GE",
+        "GFGFGF"
+      ],
+      [
+        "DI",
+        "CI"
+      ],
+      [
+        "EHEH",
+        "EIDI"
+      ],
+      [
+        "EJ",
+        "FJ"
+      ],
+      [
+        "GJ",
+        "FJ"
+      ],
+      [
+        "GGGGGGGGGG",
+        "F"
+      ],
+      [
+        "GFGFGFGF",
+        "GFGFGF"
+      ],
+      [
+        "DJ",
+        "DK"
+      ],
+      [
+        "HIHI",
+        "HJ"
+      ],
+      [
+        "EHFH",
+        "GGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "HGHGHGHGH",
+        "GHGH"
+      ],
+      [
+        "FHFHF",
+        "GGGGGGGGG"
+      ],
+      [
+        "EDED",
+        "EDEC"
+      ],
+      [
+        "GEGEGEGE",
+        "GEGE"
+      ],
+      [
+        "DHEH",
+        "FGFGFGF"
+      ],
+      [
+        "GGGGGGGGGGGGGGGGGGGGGGGF",
+        "GHGGGGGGGGGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "HKHK",
+        "HL"
+      ],
+      [
+        "FHEHEHEHEH",
+        "EHEHEH"
+      ],
+      [
+        "GGFGFGFGFGF",
+        "GFGFGFGF"
+      ],
+      [
+        "GJGI",
+        "GHGHGH"
+      ],
+      [
+        "HHI",
+        "HIHIHIHI"
+      ],
+      [
+        "FIGHGH",
+        "GGGGGGGGGGGGGGGGG"
+      ],
+      [
+        "GOGQGWGu",
+        "F"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "D",
+        "AC"
+      ],
+      [
+        "E",
+        "GGH"
+      ],
+      [
+        "E",
+        "FFFFFF"
+      ],
+      [
+        "F",
+        "GGGGG"
+      ],
+      [
+        "F",
+        "GGF"
+      ],
+      [
+        "F",
+        "GGGGGGGGGGG"
+      ],
+      [
+        "H",
+        "FIFI"
+      ],
+      [
+        "H",
+        "EHFGFGF"
+      ],
+      [
+        "I",
+        "S"
+      ],
+      [
+        "J",
+        "S"
+      ],
+      [
+        "M",
+        "K"
+      ],
+      [
+        "M",
+        "CJ"
+      ]
+    ]
+  }
+}

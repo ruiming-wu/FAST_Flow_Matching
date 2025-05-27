@@ -1,93 +1,133 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader, random_split
+import numpy as np
+import random
+from torch.utils.data import DataLoader, Dataset, random_split
 
-from models.transformer_pi0 import Pi0FlowMatchingTransformer
+from models.transformer_pi0 import TransformerPi0
 
-# Define the dataset class
-class StateActionDataset(torch.utils.data.Dataset):
-    def __init__(self, states, target_actions):
-        self.states = states
-        self.target_actions = target_actions
+# ========== Flow Matching Loss ==========
+
+def flow_matching_loss(model, state, noisy_action, time_t, gt_action):
+    x_t = (1 - time_t) * noisy_action + time_t * gt_action  # (B, T, action_dim)
+    target_flow = gt_action - noisy_action                  # (B, T, action_dim)
+    pred_flow = model(state, x_t, time_t)                  # (B, T, action_dim)
+    loss = nn.functional.mse_loss(pred_flow, target_flow)
+    return loss
+
+# ========== Dataset Loader ==========
+
+class Pi0ChunkDataset(Dataset):
+    def __init__(self, npy_path):
+        data = np.load(npy_path)  # (N, 51, 5)
+
+        self.state = data[:, 0, :4]                      # (N, 4)
+        gt_action_flat = data[:, 1:, 4]                 # (N, 50)
+        self.gt_action = np.expand_dims(gt_action_flat, axis=-1).astype(np.float32)  # (N, 50, 1)
+
+        self.noisy_action = np.random.randn(*self.gt_action.shape).astype(np.float32)  # Gaussian noise (N, 50, 1)
+        self.time_t = np.random.rand(*self.gt_action.shape).astype(np.float32)         # random [0,1] (N, 50, 1)
 
     def __len__(self):
-        return len(self.states)
+        return len(self.state)
 
     def __getitem__(self, idx):
-        return self.states[idx], self.target_actions[idx]
+        return (torch.tensor(self.state[idx]),               # (4,)
+                torch.tensor(self.noisy_action[idx]),        # (50,1)
+                torch.tensor(self.time_t[idx]),             # (50,1)
+                torch.tensor(self.gt_action[idx]))          # (50,1)
 
-# Initialize the model
-model = Pi0FlowMatchingTransformer(input_dim=4, embed_dim=128, num_layers=4, num_heads=4, ff_dim=256, action_dim=1, max_seq_len=64)
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
+# ========== Training Script ==========
 
-# Define the optimizer and learning rate scheduler
-optimizer = optim.AdamW(model.parameters(), lr=1e-4, weight_decay=1e-2)
-scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
+def train_pi0():
+    # Set random seed
+    seed = 42
+    torch.manual_seed(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
 
-# Example data (replace with actual data loading logic)
-states = torch.randn(1000, 64, 4)  # 1000 samples, sequence length 64, state dimension 4
-target_actions = torch.randn(1000, 64, 1)  # 1000 samples, sequence length 64, action dimension 1
+    # Hyperparameters
+    state_dim = 4
+    action_dim = 1
+    chunk_len = 50
+    embed_dim = 128
+    num_epochs = 20
+    batch_size = 32
+    lr = 1e-4
 
-dataset = StateActionDataset(states, target_actions)
-train_size = int(0.8 * len(dataset))
-val_size = len(dataset) - train_size
-train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+    # Model
+    model = TransformerPi0(state_dim=state_dim,
+                            action_dim=action_dim,
+                            embed_dim=embed_dim,
+                            chunk_len=chunk_len)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model.to(device)
 
-train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
-val_loader = DataLoader(val_dataset, batch_size=16)
+    # Optimizer
+    optimizer = optim.AdamW(model.parameters(), lr=lr)
 
-# Training loop with Flow Matching Loss
-num_epochs = 10
-scaler = torch.cuda.amp.GradScaler()
+    # Dataset
+    dataset = Pi0ChunkDataset('data/chunks/new_all_chunks.npy')
+    total_size = len(dataset)
+    train_size = int(0.8 * total_size)
+    val_size = int(0.1 * total_size)
+    test_size = total_size - train_size - val_size
 
-for epoch in range(num_epochs):
-    model.train()
-    total_loss = 0
-    for states_batch, target_actions_batch in train_loader:
-        states_batch = states_batch.to(device)
-        target_actions_batch = target_actions_batch.to(device)
+    train_set, val_set, test_set = random_split(dataset, [train_size, val_size, test_size])
 
-        optimizer.zero_grad()
-        with torch.cuda.amp.autocast():
-            # Forward pass
-            predicted_actions = model(states_batch)  # (B, T, action_dim)
+    train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_set, batch_size=batch_size, shuffle=False)
+    test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=False)
 
-            # Compute flow (differences between consecutive steps)
-            input_flow = states_batch[:, 1:, :] - states_batch[:, :-1, :]  # (B, T-1, input_dim)
-            output_flow = predicted_actions[:, 1:, :] - predicted_actions[:, :-1, :]  # (B, T-1, action_dim)
+    # Training loop
+    best_val_loss = float('inf')
+    for epoch in range(num_epochs):
+        model.train()
+        total_loss = 0
+        for batch in train_loader:
+            state, noisy_action, time_t, gt_action = [x.to(device) for x in batch]
 
-            # Flow Matching Loss
-            loss = nn.functional.mse_loss(output_flow, input_flow)
+            optimizer.zero_grad()
+            loss = flow_matching_loss(model, state, noisy_action, time_t, gt_action)
+            loss.backward()
+            optimizer.step()
 
-        scaler.scale(loss).backward()
-        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-        scaler.step(optimizer)
-        scaler.update()
+            total_loss += loss.item()
 
-        total_loss += loss.item()
+        avg_train_loss = total_loss / len(train_loader)
 
-    scheduler.step()
-    print(f"Epoch {epoch + 1}/{num_epochs}, Training Loss: {total_loss / len(train_loader):.4f}")
+        # Validation
+        model.eval()
+        val_loss = 0
+        with torch.no_grad():
+            for batch in val_loader:
+                state, noisy_action, time_t, gt_action = [x.to(device) for x in batch]
+                loss = flow_matching_loss(model, state, noisy_action, time_t, gt_action)
+                val_loss += loss.item()
+        avg_val_loss = val_loss / len(val_loader)
 
-    # Validation
+        print(f"Epoch [{epoch + 1}/{num_epochs}] Train Loss: {avg_train_loss:.6f} | Val Loss: {avg_val_loss:.6f}")
+
+        # Save best checkpoint
+        if avg_val_loss < best_val_loss:
+            best_val_loss = avg_val_loss
+            torch.save(model.state_dict(), "best_tiny_pi0_flowmatching.pth")
+            print("Best model saved!")
+
+    # Final test evaluation
+    model.load_state_dict(torch.load("best_tiny_pi0_flowmatching.pth"))
     model.eval()
-    val_loss = 0
+    test_loss = 0
     with torch.no_grad():
-        for states_batch, target_actions_batch in val_loader:
-            states_batch = states_batch.to(device)
-            target_actions_batch = target_actions_batch.to(device)
+        for batch in test_loader:
+            state, noisy_action, time_t, gt_action = [x.to(device) for x in batch]
+            loss = flow_matching_loss(model, state, noisy_action, time_t, gt_action)
+            test_loss += loss.item()
+    avg_test_loss = test_loss / len(test_loader)
+    print(f"Final Test Loss: {avg_test_loss:.6f}")
 
-            predicted_actions = model(states_batch)
-
-            input_flow = states_batch[:, 1:, :] - states_batch[:, :-1, :]
-            output_flow = predicted_actions[:, 1:, :] - predicted_actions[:, :-1, :]
-
-            loss = nn.functional.mse_loss(output_flow, input_flow)
-            val_loss += loss.item()
-
-    print(f"Validation Loss: {val_loss / len(val_loader):.4f}")
-
-# Save the trained model
-torch.save(model.state_dict(), "pi0_transformer.pth")
+if __name__ == "__main__":
+    train_pi0()

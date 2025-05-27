@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, random_split
 
-from models.transformer_pi0_fast import Pi0FASTTransformer
+from ..models.transformer_pi0_fast import Pi0FASTTransformer
 
 # Define the dataset class
 class TokenSequenceDataset(torch.utils.data.Dataset):

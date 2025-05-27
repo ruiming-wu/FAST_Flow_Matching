@@ -1,84 +1,73 @@
-"""
-Pi0FlowMatchingTransformer: A Transformer-based model for mapping state sequences to continuous action sequences.
-
-This model is designed for tasks such as reinforcement learning or control systems, where the input is a sequence of states
-(e.g., from a CartPole environment) and the output is a sequence of continuous actions. The model uses a Transformer Encoder
-to capture temporal dependencies in the state sequence and outputs a corresponding action sequence.
-
-Author: Ruiming Wu
-Date: 2025-05-08
-
-Key Features:
-- Input:
-  - state_seq: (B, T, input_dim), where B is the batch size, T is the sequence length, and input_dim is the state dimension.
-- Output:
-  - action_out: (B, T, action_dim), where action_dim is the dimension of the continuous action.
-- Position embeddings to encode temporal order.
-- Transformer Encoder for capturing temporal dependencies.
-"""
-
 import torch
 import torch.nn as nn
 
-class Pi0FlowMatchingTransformer(nn.Module):
+class TransformerPi0(nn.Module):
     def __init__(self,
-                 input_dim=4,           # State dimension (e.g., CartPole = 4)
-                 embed_dim=128,         # Embedding dimension
-                 num_layers=4,          # Number of Transformer Encoder layers
-                 num_heads=4,           # Number of attention heads
-                 ff_dim=256,            # FeedForward network hidden dimension
-                 action_dim=1,          # Output action dimension (continuous value)
-                 max_seq_len=64):       # Maximum sequence length
+                 state_dim=4,          # e.g., CartPole state dim
+                 action_dim=1,         # e.g., CartPole action dim
+                 embed_dim=128,        # transformer embedding dim
+                 num_layers=4,         # transformer layers
+                 num_heads=4,          # attention heads
+                 ff_dim=256,           # feedforward hidden dim
+                 chunk_len=50):        # action chunk length
         super().__init__()
 
-        # State sequence embedding
-        self.input_embedding = nn.Linear(input_dim, embed_dim)  # Map state input to embedding space
-        self.position_embedding = nn.Embedding(max_seq_len, embed_dim)  # Positional embedding
-        self.input_dropout = nn.Dropout(0.1)
-        self.output_dropout = nn.Dropout(0.1)
+        # Embeddings
+        self.state_embedding = nn.Linear(state_dim, embed_dim)
+        self.action_embedding = nn.Linear(action_dim, embed_dim)
+        self.time_embedding = nn.Linear(1, embed_dim)  # scalar time → embed
 
-        # Transformer Encoder (non-autoregressive structure)
+        # Positional embedding
+        self.position_embedding = nn.Embedding(chunk_len + 1, embed_dim)  # +1 for state token
+
+        # Decoder-only transformer (self-attention only)
         encoder_layer = nn.TransformerEncoderLayer(
-            d_model=embed_dim, nhead=num_heads, dim_feedforward=ff_dim,
-            activation='gelu', batch_first=True, dropout=0.1
+            d_model=embed_dim,
+            nhead=num_heads,
+            dim_feedforward=ff_dim,
+            activation='gelu',
+            batch_first=True
         )
-        self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+        self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
 
-        # Output layer: Predict a continuous action (or velocity) for each time step
-        self.output_layer = nn.Linear(embed_dim, action_dim)
+        # Output: flow vector
+        self.flow_output = nn.Linear(embed_dim, action_dim)
 
-        # Initialize weights
-        self._init_weights()
-
-    def forward(self, state_seq):
+    def forward(self, state, noisy_action, time_t):
         """
-        Forward pass of the model.
-
         Args:
-            state_seq (torch.Tensor): Input state sequence of shape (B, T, input_dim).
-        
+            state: (B, state_dim)
+            noisy_action: (B, T, action_dim)
+            time_t: (B, T, 1) normalized [0,1]
+
         Returns:
-            torch.Tensor: Output action sequence of shape (B, T, action_dim).
+            flow: (B, T, action_dim)
         """
-        B, T, _ = state_seq.shape
+        B, T, _ = noisy_action.shape
 
-        # State embedding + positional embedding
-        x = self.input_embedding(state_seq)  # (B, T, embed_dim)
-        pos_ids = torch.arange(T, device=state_seq.device).unsqueeze(0)  # (1, T)
-        pos_embed = self.position_embedding(pos_ids)  # (1, T, embed_dim)
-        x = x + pos_embed  # (B, T, embed_dim)
+        # State embedding → expand across sequence
+        state_emb = self.state_embedding(state).unsqueeze(1)  # (B, 1, D)
 
-        # Transformer Encoder
-        encoded = self.encoder(x)  # (B, T, embed_dim)
+        # Action + time embedding
+        action_emb = self.action_embedding(noisy_action)  # (B, T, D)
+        time_emb = self.time_embedding(time_t)           # (B, T, D)
 
-        # Output action sequence
-        action_out = self.output_layer(encoded)  # (B, T, action_dim)
-        return action_out
+        # Positional embedding
+        pos_ids = torch.arange(T + 1, device=state.device).unsqueeze(0)
+        pos_emb = self.position_embedding(pos_ids)       # (1, T+1, D)
 
-    def _init_weights(self):
-        """
-        Initialize weights using Xavier initialization.
-        """
-        for name, param in self.named_parameters():
-            if param.dim() > 1:
-                nn.init.xavier_uniform_(param)
+        # Combine: [state] + [action + time]
+        combined = torch.cat([state_emb, action_emb + time_emb], dim=1)  # (B, T+1, D)
+        combined = combined + pos_emb  # add position info
+
+        # Causal mask
+        causal_mask = torch.triu(torch.ones(T + 1, T + 1, device=state.device), diagonal=1).bool()
+
+        # Decoder-only Transformer
+        output = self.transformer(combined, mask=causal_mask)
+
+        # Predict flow (skip state token, only action part)
+        flow = self.flow_output(output[:, 1:, :])  # (B, T, action_dim)
+
+        return flow
+

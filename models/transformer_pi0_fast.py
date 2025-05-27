@@ -1,27 +1,7 @@
-"""
-Pi0FASTTransformer: A Transformer-based model for autoregressive token sequence generation.
-
-This model is designed for tasks such as sequence generation or token prediction, where the input consists of a state vector
-and a token sequence, and the output is the logits for the next token in the sequence. The model uses a Transformer Decoder
-to capture dependencies in the token sequence while conditioning on the input state.
-
-Author: Ruiming Wu
-Date: 2025-05-08
-
-Key Features:
-- Input:
-  - state: (B, input_dim), where B is the batch size and input_dim is the state dimension.
-  - token_seq: (B, T), where T is the sequence length.
-- Output:
-  - logits: (B, T, vocab_size), where vocab_size is the size of the token vocabulary.
-- Position embeddings to encode temporal order.
-- Transformer Decoder for autoregressive sequence modeling.
-"""
-
 import torch
 import torch.nn as nn
 
-class Pi0FASTTransformer(nn.Module):
+class TransformerPi0FAST(nn.Module):
     def __init__(self, 
                  input_dim=4,              # State dimension (e.g., CartPole = 4)
                  embed_dim=128,            # Embedding dimension
@@ -59,17 +39,21 @@ class Pi0FASTTransformer(nn.Module):
         Forward pass of the model.
 
         Args:
-            state (torch.Tensor): Input state vector of shape (B, input_dim).
+            state (torch.Tensor): Input state sequence of shape (B, C, input_dim).
             token_seq (torch.Tensor): Input token sequence of shape (B, T).
 
         Returns:
             torch.Tensor: Logits for token classification of shape (B, T, vocab_size).
         """
-        B, T = token_seq.shape
+        B, C, input_dim = state.shape
+        B2, T = token_seq.shape
+        assert B == B2, "Batch size mismatch between state and token_seq"
 
-        # (B, 1, embed_dim), used as memory input for the Transformer Decoder
-        state_embed = self.state_embedding(state).unsqueeze(1)
-        state_embed = self.state_dropout(state_embed)
+        # State sequence embedding and encoding
+        state_embed = self.state_embedding(state)  # (B, C, embed_dim)
+        # Mean pooling over chunk dimension to get a single context vector
+        state_context = state_embed.mean(dim=1, keepdim=True)  # (B, 1, embed_dim)
+        state_context = self.state_dropout(state_context)
 
         # Token embedding + position embedding
         tok_embed = self.token_embedding(token_seq)                       # (B, T, embed_dim)
@@ -83,7 +67,7 @@ class Pi0FASTTransformer(nn.Module):
 
         # Transformer Decoder
         transformer_out = self.transformer(tgt=decoder_input,
-                                           memory=state_embed,
+                                           memory=state_context,
                                            tgt_mask=causal_mask)
 
         # Output logits (for CrossEntropyLoss)
