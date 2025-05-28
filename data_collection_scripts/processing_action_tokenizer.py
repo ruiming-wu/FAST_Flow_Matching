@@ -7,7 +7,7 @@ from scipy.fft import idct
 from tokenizers import ByteLevelBPETokenizer
 from tokenizers.trainers import BpeTrainer
 from transformers import PreTrainedTokenizerFast
-from transformers.processing_utils import ProcessorMixin
+from transformers import ProcessorMixin
 
 
 class UniversalActionProcessor(ProcessorMixin):
