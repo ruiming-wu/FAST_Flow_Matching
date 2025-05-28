@@ -1,0 +1,1498 @@
+[Info] 2025-05-28 12:02:53 Using device: cuda
+[Info] 2025-05-28 12:02:53 Hyperparameters: state_dim=4, action_dim=1, chunk_len=50, embed_dim=128, num_epochs=50, batch_size=64, lr=0.0001
+[Info] 2025-05-28 12:02:54 Baseline MSE (random noisy_action): 2.003203
+[Info] 2025-05-28 12:02:54 Model initialized: TransformerPi0
+[Info] 2025-05-28 12:02:54 Loading dataset...
+[Info] 2025-05-28 12:02:54 Dataset size: total=122600, train=98080, val=12260, test=12260
+[Info] 2025-05-28 12:02:56 Starting epoch 1/50 ...
+[Info] 2025-05-28 12:02:58 Epoch 1 | Batch 100/1533 | Batch Loss: 0.855030
+[Info] 2025-05-28 12:03:00 Epoch 1 | Batch 200/1533 | Batch Loss: 0.829556
+[Info] 2025-05-28 12:03:01 Epoch 1 | Batch 300/1533 | Batch Loss: 1.030428
+[Info] 2025-05-28 12:03:03 Epoch 1 | Batch 400/1533 | Batch Loss: 0.637126
+[Info] 2025-05-28 12:03:05 Epoch 1 | Batch 500/1533 | Batch Loss: 0.438476
+[Info] 2025-05-28 12:03:06 Epoch 1 | Batch 600/1533 | Batch Loss: 0.568255
+[Info] 2025-05-28 12:03:08 Epoch 1 | Batch 700/1533 | Batch Loss: 0.428481
+[Info] 2025-05-28 12:03:09 Epoch 1 | Batch 800/1533 | Batch Loss: 0.597391
+[Info] 2025-05-28 12:03:11 Epoch 1 | Batch 900/1533 | Batch Loss: 0.499308
+[Info] 2025-05-28 12:03:13 Epoch 1 | Batch 1000/1533 | Batch Loss: 0.497640
+[Info] 2025-05-28 12:03:15 Epoch 1 | Batch 1100/1533 | Batch Loss: 0.616775
+[Info] 2025-05-28 12:03:16 Epoch 1 | Batch 1200/1533 | Batch Loss: 0.588084
+[Info] 2025-05-28 12:03:18 Epoch 1 | Batch 1300/1533 | Batch Loss: 0.579634
+[Info] 2025-05-28 12:03:20 Epoch 1 | Batch 1400/1533 | Batch Loss: 0.410973
+[Info] 2025-05-28 12:03:21 Epoch 1 | Batch 1500/1533 | Batch Loss: 0.416371
+[Info] 2025-05-28 12:03:22 Epoch 1 | Batch 1533/1533 | Batch Loss: 0.443100
+[Info] 2025-05-28 12:03:22 Validating after epoch 1 ...
+[Info] 2025-05-28 12:03:22 Validation 20/192 | Batch Loss: 0.406935
+[Info] 2025-05-28 12:03:22 Validation 40/192 | Batch Loss: 0.464881
+[Info] 2025-05-28 12:03:22 Validation 60/192 | Batch Loss: 0.370811
+[Info] 2025-05-28 12:03:22 Validation 80/192 | Batch Loss: 0.294670
+[Info] 2025-05-28 12:03:22 Validation 100/192 | Batch Loss: 0.453190
+[Info] 2025-05-28 12:03:23 Validation 120/192 | Batch Loss: 0.409377
+[Info] 2025-05-28 12:03:23 Validation 140/192 | Batch Loss: 0.328281
+[Info] 2025-05-28 12:03:23 Validation 160/192 | Batch Loss: 0.388092
+[Info] 2025-05-28 12:03:23 Validation 180/192 | Batch Loss: 0.314124
+[Info] 2025-05-28 12:03:23 Validation 192/192 | Batch Loss: 0.516406
+[Info] 2025-05-28 12:03:23 Epoch [1/50] Train Loss: 0.682620 | Val Loss: 0.413042
+[Info] 2025-05-28 12:03:23 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:03:23 Starting epoch 2/50 ...
+[Info] 2025-05-28 12:03:25 Epoch 2 | Batch 100/1533 | Batch Loss: 0.412288
+[Info] 2025-05-28 12:03:27 Epoch 2 | Batch 200/1533 | Batch Loss: 0.582733
+[Info] 2025-05-28 12:03:29 Epoch 2 | Batch 300/1533 | Batch Loss: 0.419519
+[Info] 2025-05-28 12:03:30 Epoch 2 | Batch 400/1533 | Batch Loss: 0.405514
+[Info] 2025-05-28 12:03:32 Epoch 2 | Batch 500/1533 | Batch Loss: 0.452374
+[Info] 2025-05-28 12:03:33 Epoch 2 | Batch 600/1533 | Batch Loss: 0.366467
+[Info] 2025-05-28 12:03:34 Epoch 2 | Batch 700/1533 | Batch Loss: 0.374222
+[Info] 2025-05-28 12:03:36 Epoch 2 | Batch 800/1533 | Batch Loss: 0.418402
+[Info] 2025-05-28 12:03:37 Epoch 2 | Batch 900/1533 | Batch Loss: 0.354759
+[Info] 2025-05-28 12:03:39 Epoch 2 | Batch 1000/1533 | Batch Loss: 0.279032
+[Info] 2025-05-28 12:03:40 Epoch 2 | Batch 1100/1533 | Batch Loss: 0.328412
+[Info] 2025-05-28 12:03:41 Epoch 2 | Batch 1200/1533 | Batch Loss: 0.638610
+[Info] 2025-05-28 12:03:43 Epoch 2 | Batch 1300/1533 | Batch Loss: 0.434733
+[Info] 2025-05-28 12:03:44 Epoch 2 | Batch 1400/1533 | Batch Loss: 0.292337
+[Info] 2025-05-28 12:03:46 Epoch 2 | Batch 1500/1533 | Batch Loss: 0.344196
+[Info] 2025-05-28 12:03:47 Epoch 2 | Batch 1533/1533 | Batch Loss: 0.284818
+[Info] 2025-05-28 12:03:47 Validating after epoch 2 ...
+[Info] 2025-05-28 12:03:47 Validation 20/192 | Batch Loss: 0.354155
+[Info] 2025-05-28 12:03:47 Validation 40/192 | Batch Loss: 0.395760
+[Info] 2025-05-28 12:03:47 Validation 60/192 | Batch Loss: 0.323817
+[Info] 2025-05-28 12:03:47 Validation 80/192 | Batch Loss: 0.258860
+[Info] 2025-05-28 12:03:47 Validation 100/192 | Batch Loss: 0.381536
+[Info] 2025-05-28 12:03:47 Validation 120/192 | Batch Loss: 0.365840
+[Info] 2025-05-28 12:03:48 Validation 140/192 | Batch Loss: 0.279583
+[Info] 2025-05-28 12:03:48 Validation 160/192 | Batch Loss: 0.330309
+[Info] 2025-05-28 12:03:48 Validation 180/192 | Batch Loss: 0.272780
+[Info] 2025-05-28 12:03:48 Validation 192/192 | Batch Loss: 0.434818
+[Info] 2025-05-28 12:03:48 Epoch [2/50] Train Loss: 0.424380 | Val Loss: 0.354266
+[Info] 2025-05-28 12:03:48 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:03:48 Starting epoch 3/50 ...
+[Info] 2025-05-28 12:03:50 Epoch 3 | Batch 100/1533 | Batch Loss: 0.336839
+[Info] 2025-05-28 12:03:51 Epoch 3 | Batch 200/1533 | Batch Loss: 0.417275
+[Info] 2025-05-28 12:03:53 Epoch 3 | Batch 300/1533 | Batch Loss: 0.359850
+[Info] 2025-05-28 12:03:55 Epoch 3 | Batch 400/1533 | Batch Loss: 0.418424
+[Info] 2025-05-28 12:03:57 Epoch 3 | Batch 500/1533 | Batch Loss: 0.498527
+[Info] 2025-05-28 12:03:59 Epoch 3 | Batch 600/1533 | Batch Loss: 0.496459
+[Info] 2025-05-28 12:04:00 Epoch 3 | Batch 700/1533 | Batch Loss: 0.323337
+[Info] 2025-05-28 12:04:02 Epoch 3 | Batch 800/1533 | Batch Loss: 0.464896
+[Info] 2025-05-28 12:04:04 Epoch 3 | Batch 900/1533 | Batch Loss: 0.327322
+[Info] 2025-05-28 12:04:05 Epoch 3 | Batch 1000/1533 | Batch Loss: 0.404279
+[Info] 2025-05-28 12:04:07 Epoch 3 | Batch 1100/1533 | Batch Loss: 0.487469
+[Info] 2025-05-28 12:04:09 Epoch 3 | Batch 1200/1533 | Batch Loss: 0.373524
+[Info] 2025-05-28 12:04:10 Epoch 3 | Batch 1300/1533 | Batch Loss: 0.340370
+[Info] 2025-05-28 12:04:12 Epoch 3 | Batch 1400/1533 | Batch Loss: 0.331300
+[Info] 2025-05-28 12:04:14 Epoch 3 | Batch 1500/1533 | Batch Loss: 0.489169
+[Info] 2025-05-28 12:04:14 Epoch 3 | Batch 1533/1533 | Batch Loss: 0.342115
+[Info] 2025-05-28 12:04:14 Validating after epoch 3 ...
+[Info] 2025-05-28 12:04:15 Validation 20/192 | Batch Loss: 0.323768
+[Info] 2025-05-28 12:04:15 Validation 40/192 | Batch Loss: 0.339944
+[Info] 2025-05-28 12:04:15 Validation 60/192 | Batch Loss: 0.283015
+[Info] 2025-05-28 12:04:15 Validation 80/192 | Batch Loss: 0.234638
+[Info] 2025-05-28 12:04:15 Validation 100/192 | Batch Loss: 0.348339
+[Info] 2025-05-28 12:04:15 Validation 120/192 | Batch Loss: 0.345449
+[Info] 2025-05-28 12:04:15 Validation 140/192 | Batch Loss: 0.247119
+[Info] 2025-05-28 12:04:15 Validation 160/192 | Batch Loss: 0.288536
+[Info] 2025-05-28 12:04:16 Validation 180/192 | Batch Loss: 0.248027
+[Info] 2025-05-28 12:04:16 Validation 192/192 | Batch Loss: 0.374352
+[Info] 2025-05-28 12:04:16 Epoch [3/50] Train Loss: 0.375043 | Val Loss: 0.315252
+[Info] 2025-05-28 12:04:16 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:04:16 Starting epoch 4/50 ...
+[Info] 2025-05-28 12:04:17 Epoch 4 | Batch 100/1533 | Batch Loss: 0.460583
+[Info] 2025-05-28 12:04:19 Epoch 4 | Batch 200/1533 | Batch Loss: 0.371197
+[Info] 2025-05-28 12:04:21 Epoch 4 | Batch 300/1533 | Batch Loss: 0.276895
+[Info] 2025-05-28 12:04:23 Epoch 4 | Batch 400/1533 | Batch Loss: 0.353929
+[Info] 2025-05-28 12:04:24 Epoch 4 | Batch 500/1533 | Batch Loss: 0.330147
+[Info] 2025-05-28 12:04:26 Epoch 4 | Batch 600/1533 | Batch Loss: 0.316294
+[Info] 2025-05-28 12:04:28 Epoch 4 | Batch 700/1533 | Batch Loss: 0.408198
+[Info] 2025-05-28 12:04:29 Epoch 4 | Batch 800/1533 | Batch Loss: 0.362389
+[Info] 2025-05-28 12:04:31 Epoch 4 | Batch 900/1533 | Batch Loss: 0.385206
+[Info] 2025-05-28 12:04:32 Epoch 4 | Batch 1000/1533 | Batch Loss: 0.392305
+[Info] 2025-05-28 12:04:34 Epoch 4 | Batch 1100/1533 | Batch Loss: 0.314191
+[Info] 2025-05-28 12:04:35 Epoch 4 | Batch 1200/1533 | Batch Loss: 0.297474
+[Info] 2025-05-28 12:04:37 Epoch 4 | Batch 1300/1533 | Batch Loss: 0.359273
+[Info] 2025-05-28 12:04:39 Epoch 4 | Batch 1400/1533 | Batch Loss: 0.287058
+[Info] 2025-05-28 12:04:40 Epoch 4 | Batch 1500/1533 | Batch Loss: 0.342859
+[Info] 2025-05-28 12:04:41 Epoch 4 | Batch 1533/1533 | Batch Loss: 0.397782
+[Info] 2025-05-28 12:04:41 Validating after epoch 4 ...
+[Info] 2025-05-28 12:04:41 Validation 20/192 | Batch Loss: 0.293890
+[Info] 2025-05-28 12:04:41 Validation 40/192 | Batch Loss: 0.315040
+[Info] 2025-05-28 12:04:41 Validation 60/192 | Batch Loss: 0.261928
+[Info] 2025-05-28 12:04:41 Validation 80/192 | Batch Loss: 0.223071
+[Info] 2025-05-28 12:04:41 Validation 100/192 | Batch Loss: 0.321384
+[Info] 2025-05-28 12:04:41 Validation 120/192 | Batch Loss: 0.322781
+[Info] 2025-05-28 12:04:42 Validation 140/192 | Batch Loss: 0.216967
+[Info] 2025-05-28 12:04:42 Validation 160/192 | Batch Loss: 0.270263
+[Info] 2025-05-28 12:04:42 Validation 180/192 | Batch Loss: 0.231271
+[Info] 2025-05-28 12:04:42 Validation 192/192 | Batch Loss: 0.336168
+[Info] 2025-05-28 12:04:42 Epoch [4/50] Train Loss: 0.339035 | Val Loss: 0.289229
+[Info] 2025-05-28 12:04:42 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:04:42 Starting epoch 5/50 ...
+[Info] 2025-05-28 12:04:44 Epoch 5 | Batch 100/1533 | Batch Loss: 0.352464
+[Info] 2025-05-28 12:04:45 Epoch 5 | Batch 200/1533 | Batch Loss: 0.293867
+[Info] 2025-05-28 12:04:47 Epoch 5 | Batch 300/1533 | Batch Loss: 0.306748
+[Info] 2025-05-28 12:04:49 Epoch 5 | Batch 400/1533 | Batch Loss: 0.346307
+[Info] 2025-05-28 12:04:51 Epoch 5 | Batch 500/1533 | Batch Loss: 0.300652
+[Info] 2025-05-28 12:04:52 Epoch 5 | Batch 600/1533 | Batch Loss: 0.419343
+[Info] 2025-05-28 12:04:54 Epoch 5 | Batch 700/1533 | Batch Loss: 0.400008
+[Info] 2025-05-28 12:04:55 Epoch 5 | Batch 800/1533 | Batch Loss: 0.304266
+[Info] 2025-05-28 12:04:57 Epoch 5 | Batch 900/1533 | Batch Loss: 0.260758
+[Info] 2025-05-28 12:04:58 Epoch 5 | Batch 1000/1533 | Batch Loss: 0.320314
+[Info] 2025-05-28 12:05:01 Epoch 5 | Batch 1100/1533 | Batch Loss: 0.334568
+[Info] 2025-05-28 12:05:03 Epoch 5 | Batch 1200/1533 | Batch Loss: 0.259591
+[Info] 2025-05-28 12:05:05 Epoch 5 | Batch 1300/1533 | Batch Loss: 0.272651
+[Info] 2025-05-28 12:05:07 Epoch 5 | Batch 1400/1533 | Batch Loss: 0.272219
+[Info] 2025-05-28 12:05:10 Epoch 5 | Batch 1500/1533 | Batch Loss: 0.282415
+[Info] 2025-05-28 12:05:11 Epoch 5 | Batch 1533/1533 | Batch Loss: 0.350450
+[Info] 2025-05-28 12:05:11 Validating after epoch 5 ...
+[Info] 2025-05-28 12:05:11 Validation 20/192 | Batch Loss: 0.271241
+[Info] 2025-05-28 12:05:11 Validation 40/192 | Batch Loss: 0.288015
+[Info] 2025-05-28 12:05:11 Validation 60/192 | Batch Loss: 0.240301
+[Info] 2025-05-28 12:05:12 Validation 80/192 | Batch Loss: 0.213665
+[Info] 2025-05-28 12:05:12 Validation 100/192 | Batch Loss: 0.296232
+[Info] 2025-05-28 12:05:12 Validation 120/192 | Batch Loss: 0.300030
+[Info] 2025-05-28 12:05:12 Validation 140/192 | Batch Loss: 0.205133
+[Info] 2025-05-28 12:05:12 Validation 160/192 | Batch Loss: 0.247368
+[Info] 2025-05-28 12:05:12 Validation 180/192 | Batch Loss: 0.226544
+[Info] 2025-05-28 12:05:13 Validation 192/192 | Batch Loss: 0.305452
+[Info] 2025-05-28 12:05:13 Epoch [5/50] Train Loss: 0.314619 | Val Loss: 0.270293
+[Info] 2025-05-28 12:05:13 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:05:13 Starting epoch 6/50 ...
+[Info] 2025-05-28 12:05:15 Epoch 6 | Batch 100/1533 | Batch Loss: 0.273422
+[Info] 2025-05-28 12:05:17 Epoch 6 | Batch 200/1533 | Batch Loss: 0.206941
+[Info] 2025-05-28 12:05:19 Epoch 6 | Batch 300/1533 | Batch Loss: 0.342762
+[Info] 2025-05-28 12:05:22 Epoch 6 | Batch 400/1533 | Batch Loss: 0.350689
+[Info] 2025-05-28 12:05:23 Epoch 6 | Batch 500/1533 | Batch Loss: 0.292197
+[Info] 2025-05-28 12:05:25 Epoch 6 | Batch 600/1533 | Batch Loss: 0.268830
+[Info] 2025-05-28 12:05:27 Epoch 6 | Batch 700/1533 | Batch Loss: 0.303045
+[Info] 2025-05-28 12:05:29 Epoch 6 | Batch 800/1533 | Batch Loss: 0.248243
+[Info] 2025-05-28 12:05:31 Epoch 6 | Batch 900/1533 | Batch Loss: 0.315908
+[Info] 2025-05-28 12:05:33 Epoch 6 | Batch 1000/1533 | Batch Loss: 0.307821
+[Info] 2025-05-28 12:05:35 Epoch 6 | Batch 1100/1533 | Batch Loss: 0.283516
+[Info] 2025-05-28 12:05:36 Epoch 6 | Batch 1200/1533 | Batch Loss: 0.406722
+[Info] 2025-05-28 12:05:38 Epoch 6 | Batch 1300/1533 | Batch Loss: 0.295696
+[Info] 2025-05-28 12:05:40 Epoch 6 | Batch 1400/1533 | Batch Loss: 0.354877
+[Info] 2025-05-28 12:05:43 Epoch 6 | Batch 1500/1533 | Batch Loss: 0.301416
+[Info] 2025-05-28 12:05:44 Epoch 6 | Batch 1533/1533 | Batch Loss: 0.282094
+[Info] 2025-05-28 12:05:44 Validating after epoch 6 ...
+[Info] 2025-05-28 12:05:44 Validation 20/192 | Batch Loss: 0.263920
+[Info] 2025-05-28 12:05:44 Validation 40/192 | Batch Loss: 0.270029
+[Info] 2025-05-28 12:05:44 Validation 60/192 | Batch Loss: 0.221430
+[Info] 2025-05-28 12:05:45 Validation 80/192 | Batch Loss: 0.201824
+[Info] 2025-05-28 12:05:45 Validation 100/192 | Batch Loss: 0.275913
+[Info] 2025-05-28 12:05:45 Validation 120/192 | Batch Loss: 0.284217
+[Info] 2025-05-28 12:05:45 Validation 140/192 | Batch Loss: 0.201154
+[Info] 2025-05-28 12:05:45 Validation 160/192 | Batch Loss: 0.236854
+[Info] 2025-05-28 12:05:46 Validation 180/192 | Batch Loss: 0.221382
+[Info] 2025-05-28 12:05:46 Validation 192/192 | Batch Loss: 0.288365
+[Info] 2025-05-28 12:05:46 Epoch [6/50] Train Loss: 0.298145 | Val Loss: 0.258423
+[Info] 2025-05-28 12:05:46 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:05:46 Starting epoch 7/50 ...
+[Info] 2025-05-28 12:05:48 Epoch 7 | Batch 100/1533 | Batch Loss: 0.333086
+[Info] 2025-05-28 12:05:50 Epoch 7 | Batch 200/1533 | Batch Loss: 0.223552
+[Info] 2025-05-28 12:05:52 Epoch 7 | Batch 300/1533 | Batch Loss: 0.287362
+[Info] 2025-05-28 12:05:54 Epoch 7 | Batch 400/1533 | Batch Loss: 0.300564
+[Info] 2025-05-28 12:05:56 Epoch 7 | Batch 500/1533 | Batch Loss: 0.274874
+[Info] 2025-05-28 12:05:57 Epoch 7 | Batch 600/1533 | Batch Loss: 0.289542
+[Info] 2025-05-28 12:05:59 Epoch 7 | Batch 700/1533 | Batch Loss: 0.256557
+[Info] 2025-05-28 12:06:01 Epoch 7 | Batch 800/1533 | Batch Loss: 0.304590
+[Info] 2025-05-28 12:06:03 Epoch 7 | Batch 900/1533 | Batch Loss: 0.282614
+[Info] 2025-05-28 12:06:04 Epoch 7 | Batch 1000/1533 | Batch Loss: 0.316131
+[Info] 2025-05-28 12:06:06 Epoch 7 | Batch 1100/1533 | Batch Loss: 0.259811
+[Info] 2025-05-28 12:06:08 Epoch 7 | Batch 1200/1533 | Batch Loss: 0.274100
+[Info] 2025-05-28 12:06:10 Epoch 7 | Batch 1300/1533 | Batch Loss: 0.223118
+[Info] 2025-05-28 12:06:12 Epoch 7 | Batch 1400/1533 | Batch Loss: 0.253956
+[Info] 2025-05-28 12:06:13 Epoch 7 | Batch 1500/1533 | Batch Loss: 0.363461
+[Info] 2025-05-28 12:06:14 Epoch 7 | Batch 1533/1533 | Batch Loss: 0.326467
+[Info] 2025-05-28 12:06:14 Validating after epoch 7 ...
+[Info] 2025-05-28 12:06:14 Validation 20/192 | Batch Loss: 0.247358
+[Info] 2025-05-28 12:06:14 Validation 40/192 | Batch Loss: 0.260972
+[Info] 2025-05-28 12:06:15 Validation 60/192 | Batch Loss: 0.213439
+[Info] 2025-05-28 12:06:15 Validation 80/192 | Batch Loss: 0.197175
+[Info] 2025-05-28 12:06:15 Validation 100/192 | Batch Loss: 0.266040
+[Info] 2025-05-28 12:06:15 Validation 120/192 | Batch Loss: 0.270906
+[Info] 2025-05-28 12:06:15 Validation 140/192 | Batch Loss: 0.179574
+[Info] 2025-05-28 12:06:15 Validation 160/192 | Batch Loss: 0.225471
+[Info] 2025-05-28 12:06:15 Validation 180/192 | Batch Loss: 0.208174
+[Info] 2025-05-28 12:06:15 Validation 192/192 | Batch Loss: 0.289932
+[Info] 2025-05-28 12:06:15 Epoch [7/50] Train Loss: 0.284318 | Val Loss: 0.247824
+[Info] 2025-05-28 12:06:15 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:06:15 Starting epoch 8/50 ...
+[Info] 2025-05-28 12:06:17 Epoch 8 | Batch 100/1533 | Batch Loss: 0.245381
+[Info] 2025-05-28 12:06:19 Epoch 8 | Batch 200/1533 | Batch Loss: 0.366426
+[Info] 2025-05-28 12:06:21 Epoch 8 | Batch 300/1533 | Batch Loss: 0.272755
+[Info] 2025-05-28 12:06:23 Epoch 8 | Batch 400/1533 | Batch Loss: 0.333403
+[Info] 2025-05-28 12:06:25 Epoch 8 | Batch 500/1533 | Batch Loss: 0.295546
+[Info] 2025-05-28 12:06:27 Epoch 8 | Batch 600/1533 | Batch Loss: 0.286215
+[Info] 2025-05-28 12:06:28 Epoch 8 | Batch 700/1533 | Batch Loss: 0.212820
+[Info] 2025-05-28 12:06:30 Epoch 8 | Batch 800/1533 | Batch Loss: 0.190421
+[Info] 2025-05-28 12:06:32 Epoch 8 | Batch 900/1533 | Batch Loss: 0.242188
+[Info] 2025-05-28 12:06:34 Epoch 8 | Batch 1000/1533 | Batch Loss: 0.243953
+[Info] 2025-05-28 12:06:36 Epoch 8 | Batch 1100/1533 | Batch Loss: 0.383731
+[Info] 2025-05-28 12:06:38 Epoch 8 | Batch 1200/1533 | Batch Loss: 0.275285
+[Info] 2025-05-28 12:06:39 Epoch 8 | Batch 1300/1533 | Batch Loss: 0.211077
+[Info] 2025-05-28 12:06:41 Epoch 8 | Batch 1400/1533 | Batch Loss: 0.272071
+[Info] 2025-05-28 12:06:43 Epoch 8 | Batch 1500/1533 | Batch Loss: 0.319760
+[Info] 2025-05-28 12:06:44 Epoch 8 | Batch 1533/1533 | Batch Loss: 0.169043
+[Info] 2025-05-28 12:06:44 Validating after epoch 8 ...
+[Info] 2025-05-28 12:06:44 Validation 20/192 | Batch Loss: 0.250746
+[Info] 2025-05-28 12:06:44 Validation 40/192 | Batch Loss: 0.250821
+[Info] 2025-05-28 12:06:44 Validation 60/192 | Batch Loss: 0.204785
+[Info] 2025-05-28 12:06:44 Validation 80/192 | Batch Loss: 0.190997
+[Info] 2025-05-28 12:06:44 Validation 100/192 | Batch Loss: 0.262874
+[Info] 2025-05-28 12:06:44 Validation 120/192 | Batch Loss: 0.258764
+[Info] 2025-05-28 12:06:45 Validation 140/192 | Batch Loss: 0.172663
+[Info] 2025-05-28 12:06:45 Validation 160/192 | Batch Loss: 0.219061
+[Info] 2025-05-28 12:06:45 Validation 180/192 | Batch Loss: 0.199960
+[Info] 2025-05-28 12:06:45 Validation 192/192 | Batch Loss: 0.271090
+[Info] 2025-05-28 12:06:45 Epoch [8/50] Train Loss: 0.273168 | Val Loss: 0.238318
+[Info] 2025-05-28 12:06:45 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:06:45 Starting epoch 9/50 ...
+[Info] 2025-05-28 12:06:47 Epoch 9 | Batch 100/1533 | Batch Loss: 0.295917
+[Info] 2025-05-28 12:06:49 Epoch 9 | Batch 200/1533 | Batch Loss: 0.268899
+[Info] 2025-05-28 12:06:50 Epoch 9 | Batch 300/1533 | Batch Loss: 0.354212
+[Info] 2025-05-28 12:06:52 Epoch 9 | Batch 400/1533 | Batch Loss: 0.239273
+[Info] 2025-05-28 12:06:54 Epoch 9 | Batch 500/1533 | Batch Loss: 0.262966
+[Info] 2025-05-28 12:06:56 Epoch 9 | Batch 600/1533 | Batch Loss: 0.209570
+[Info] 2025-05-28 12:06:58 Epoch 9 | Batch 700/1533 | Batch Loss: 0.257108
+[Info] 2025-05-28 12:07:00 Epoch 9 | Batch 800/1533 | Batch Loss: 0.302783
+[Info] 2025-05-28 12:07:02 Epoch 9 | Batch 900/1533 | Batch Loss: 0.326191
+[Info] 2025-05-28 12:07:04 Epoch 9 | Batch 1000/1533 | Batch Loss: 0.191793
+[Info] 2025-05-28 12:07:05 Epoch 9 | Batch 1100/1533 | Batch Loss: 0.240386
+[Info] 2025-05-28 12:07:07 Epoch 9 | Batch 1200/1533 | Batch Loss: 0.276800
+[Info] 2025-05-28 12:07:09 Epoch 9 | Batch 1300/1533 | Batch Loss: 0.287612
+[Info] 2025-05-28 12:07:11 Epoch 9 | Batch 1400/1533 | Batch Loss: 0.231832
+[Info] 2025-05-28 12:07:13 Epoch 9 | Batch 1500/1533 | Batch Loss: 0.229512
+[Info] 2025-05-28 12:07:13 Epoch 9 | Batch 1533/1533 | Batch Loss: 0.281238
+[Info] 2025-05-28 12:07:13 Validating after epoch 9 ...
+[Info] 2025-05-28 12:07:13 Validation 20/192 | Batch Loss: 0.236309
+[Info] 2025-05-28 12:07:14 Validation 40/192 | Batch Loss: 0.254563
+[Info] 2025-05-28 12:07:14 Validation 60/192 | Batch Loss: 0.204856
+[Info] 2025-05-28 12:07:14 Validation 80/192 | Batch Loss: 0.192872
+[Info] 2025-05-28 12:07:14 Validation 100/192 | Batch Loss: 0.256604
+[Info] 2025-05-28 12:07:14 Validation 120/192 | Batch Loss: 0.256377
+[Info] 2025-05-28 12:07:14 Validation 140/192 | Batch Loss: 0.177845
+[Info] 2025-05-28 12:07:14 Validation 160/192 | Batch Loss: 0.211888
+[Info] 2025-05-28 12:07:15 Validation 180/192 | Batch Loss: 0.201516
+[Info] 2025-05-28 12:07:15 Validation 192/192 | Batch Loss: 0.259089
+[Info] 2025-05-28 12:07:15 Epoch [9/50] Train Loss: 0.264524 | Val Loss: 0.233393
+[Info] 2025-05-28 12:07:15 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:07:15 Starting epoch 10/50 ...
+[Info] 2025-05-28 12:07:16 Epoch 10 | Batch 100/1533 | Batch Loss: 0.191315
+[Info] 2025-05-28 12:07:18 Epoch 10 | Batch 200/1533 | Batch Loss: 0.201167
+[Info] 2025-05-28 12:07:20 Epoch 10 | Batch 300/1533 | Batch Loss: 0.256147
+[Info] 2025-05-28 12:07:22 Epoch 10 | Batch 400/1533 | Batch Loss: 0.325565
+[Info] 2025-05-28 12:07:24 Epoch 10 | Batch 500/1533 | Batch Loss: 0.268400
+[Info] 2025-05-28 12:07:26 Epoch 10 | Batch 600/1533 | Batch Loss: 0.312294
+[Info] 2025-05-28 12:07:28 Epoch 10 | Batch 700/1533 | Batch Loss: 0.370773
+[Info] 2025-05-28 12:07:29 Epoch 10 | Batch 800/1533 | Batch Loss: 0.195415
+[Info] 2025-05-28 12:07:31 Epoch 10 | Batch 900/1533 | Batch Loss: 0.208561
+[Info] 2025-05-28 12:07:33 Epoch 10 | Batch 1000/1533 | Batch Loss: 0.284460
+[Info] 2025-05-28 12:07:35 Epoch 10 | Batch 1100/1533 | Batch Loss: 0.276554
+[Info] 2025-05-28 12:07:36 Epoch 10 | Batch 1200/1533 | Batch Loss: 0.220666
+[Info] 2025-05-28 12:07:38 Epoch 10 | Batch 1300/1533 | Batch Loss: 0.242340
+[Info] 2025-05-28 12:07:41 Epoch 10 | Batch 1400/1533 | Batch Loss: 0.226778
+[Info] 2025-05-28 12:07:43 Epoch 10 | Batch 1500/1533 | Batch Loss: 0.224348
+[Info] 2025-05-28 12:07:43 Epoch 10 | Batch 1533/1533 | Batch Loss: 0.311724
+[Info] 2025-05-28 12:07:43 Validating after epoch 10 ...
+[Info] 2025-05-28 12:07:44 Validation 20/192 | Batch Loss: 0.230964
+[Info] 2025-05-28 12:07:44 Validation 40/192 | Batch Loss: 0.244975
+[Info] 2025-05-28 12:07:44 Validation 60/192 | Batch Loss: 0.193912
+[Info] 2025-05-28 12:07:44 Validation 80/192 | Batch Loss: 0.190152
+[Info] 2025-05-28 12:07:44 Validation 100/192 | Batch Loss: 0.243338
+[Info] 2025-05-28 12:07:44 Validation 120/192 | Batch Loss: 0.248955
+[Info] 2025-05-28 12:07:45 Validation 140/192 | Batch Loss: 0.170038
+[Info] 2025-05-28 12:07:45 Validation 160/192 | Batch Loss: 0.205671
+[Info] 2025-05-28 12:07:45 Validation 180/192 | Batch Loss: 0.197578
+[Info] 2025-05-28 12:07:45 Validation 192/192 | Batch Loss: 0.260044
+[Info] 2025-05-28 12:07:45 Epoch [10/50] Train Loss: 0.257361 | Val Loss: 0.228618
+[Info] 2025-05-28 12:07:45 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:07:45 Starting epoch 11/50 ...
+[Info] 2025-05-28 12:07:47 Epoch 11 | Batch 100/1533 | Batch Loss: 0.243345
+[Info] 2025-05-28 12:07:49 Epoch 11 | Batch 200/1533 | Batch Loss: 0.208316
+[Info] 2025-05-28 12:07:51 Epoch 11 | Batch 300/1533 | Batch Loss: 0.276951
+[Info] 2025-05-28 12:07:52 Epoch 11 | Batch 400/1533 | Batch Loss: 0.230164
+[Info] 2025-05-28 12:07:54 Epoch 11 | Batch 500/1533 | Batch Loss: 0.194766
+[Info] 2025-05-28 12:07:56 Epoch 11 | Batch 600/1533 | Batch Loss: 0.236726
+[Info] 2025-05-28 12:07:58 Epoch 11 | Batch 700/1533 | Batch Loss: 0.239623
+[Info] 2025-05-28 12:08:00 Epoch 11 | Batch 800/1533 | Batch Loss: 0.248030
+[Info] 2025-05-28 12:08:01 Epoch 11 | Batch 900/1533 | Batch Loss: 0.261677
+[Info] 2025-05-28 12:08:03 Epoch 11 | Batch 1000/1533 | Batch Loss: 0.272482
+[Info] 2025-05-28 12:08:05 Epoch 11 | Batch 1100/1533 | Batch Loss: 0.206396
+[Info] 2025-05-28 12:08:07 Epoch 11 | Batch 1200/1533 | Batch Loss: 0.241264
+[Info] 2025-05-28 12:08:09 Epoch 11 | Batch 1300/1533 | Batch Loss: 0.299356
+[Info] 2025-05-28 12:08:11 Epoch 11 | Batch 1400/1533 | Batch Loss: 0.305097
+[Info] 2025-05-28 12:08:12 Epoch 11 | Batch 1500/1533 | Batch Loss: 0.212947
+[Info] 2025-05-28 12:08:13 Epoch 11 | Batch 1533/1533 | Batch Loss: 0.163973
+[Info] 2025-05-28 12:08:13 Validating after epoch 11 ...
+[Info] 2025-05-28 12:08:13 Validation 20/192 | Batch Loss: 0.221630
+[Info] 2025-05-28 12:08:13 Validation 40/192 | Batch Loss: 0.235385
+[Info] 2025-05-28 12:08:13 Validation 60/192 | Batch Loss: 0.194104
+[Info] 2025-05-28 12:08:13 Validation 80/192 | Batch Loss: 0.183311
+[Info] 2025-05-28 12:08:14 Validation 100/192 | Batch Loss: 0.236940
+[Info] 2025-05-28 12:08:14 Validation 120/192 | Batch Loss: 0.235718
+[Info] 2025-05-28 12:08:14 Validation 140/192 | Batch Loss: 0.153472
+[Info] 2025-05-28 12:08:14 Validation 160/192 | Batch Loss: 0.195233
+[Info] 2025-05-28 12:08:14 Validation 180/192 | Batch Loss: 0.188132
+[Info] 2025-05-28 12:08:14 Validation 192/192 | Batch Loss: 0.239963
+[Info] 2025-05-28 12:08:14 Epoch [11/50] Train Loss: 0.250694 | Val Loss: 0.218598
+[Info] 2025-05-28 12:08:14 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:08:14 Starting epoch 12/50 ...
+[Info] 2025-05-28 12:08:16 Epoch 12 | Batch 100/1533 | Batch Loss: 0.263364
+[Info] 2025-05-28 12:08:18 Epoch 12 | Batch 200/1533 | Batch Loss: 0.256488
+[Info] 2025-05-28 12:08:20 Epoch 12 | Batch 300/1533 | Batch Loss: 0.213143
+[Info] 2025-05-28 12:08:21 Epoch 12 | Batch 400/1533 | Batch Loss: 0.229244
+[Info] 2025-05-28 12:08:23 Epoch 12 | Batch 500/1533 | Batch Loss: 0.185804
+[Info] 2025-05-28 12:08:25 Epoch 12 | Batch 600/1533 | Batch Loss: 0.253450
+[Info] 2025-05-28 12:08:27 Epoch 12 | Batch 700/1533 | Batch Loss: 0.226057
+[Info] 2025-05-28 12:08:29 Epoch 12 | Batch 800/1533 | Batch Loss: 0.343852
+[Info] 2025-05-28 12:08:31 Epoch 12 | Batch 900/1533 | Batch Loss: 0.241358
+[Info] 2025-05-28 12:08:32 Epoch 12 | Batch 1000/1533 | Batch Loss: 0.252233
+[Info] 2025-05-28 12:08:34 Epoch 12 | Batch 1100/1533 | Batch Loss: 0.252787
+[Info] 2025-05-28 12:08:36 Epoch 12 | Batch 1200/1533 | Batch Loss: 0.193726
+[Info] 2025-05-28 12:08:38 Epoch 12 | Batch 1300/1533 | Batch Loss: 0.237502
+[Info] 2025-05-28 12:08:40 Epoch 12 | Batch 1400/1533 | Batch Loss: 0.265361
+[Info] 2025-05-28 12:08:42 Epoch 12 | Batch 1500/1533 | Batch Loss: 0.288688
+[Info] 2025-05-28 12:08:43 Epoch 12 | Batch 1533/1533 | Batch Loss: 0.197029
+[Info] 2025-05-28 12:08:43 Validating after epoch 12 ...
+[Info] 2025-05-28 12:08:43 Validation 20/192 | Batch Loss: 0.209195
+[Info] 2025-05-28 12:08:44 Validation 40/192 | Batch Loss: 0.225538
+[Info] 2025-05-28 12:08:44 Validation 60/192 | Batch Loss: 0.190210
+[Info] 2025-05-28 12:08:44 Validation 80/192 | Batch Loss: 0.177478
+[Info] 2025-05-28 12:08:44 Validation 100/192 | Batch Loss: 0.231716
+[Info] 2025-05-28 12:08:44 Validation 120/192 | Batch Loss: 0.226342
+[Info] 2025-05-28 12:08:44 Validation 140/192 | Batch Loss: 0.150455
+[Info] 2025-05-28 12:08:45 Validation 160/192 | Batch Loss: 0.192882
+[Info] 2025-05-28 12:08:45 Validation 180/192 | Batch Loss: 0.184077
+[Info] 2025-05-28 12:08:45 Validation 192/192 | Batch Loss: 0.239758
+[Info] 2025-05-28 12:08:45 Epoch [12/50] Train Loss: 0.243268 | Val Loss: 0.212139
+[Info] 2025-05-28 12:08:45 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:08:45 Starting epoch 13/50 ...
+[Info] 2025-05-28 12:08:47 Epoch 13 | Batch 100/1533 | Batch Loss: 0.263090
+[Info] 2025-05-28 12:08:49 Epoch 13 | Batch 200/1533 | Batch Loss: 0.158221
+[Info] 2025-05-28 12:08:51 Epoch 13 | Batch 300/1533 | Batch Loss: 0.256708
+[Info] 2025-05-28 12:08:53 Epoch 13 | Batch 400/1533 | Batch Loss: 0.224394
+[Info] 2025-05-28 12:08:55 Epoch 13 | Batch 500/1533 | Batch Loss: 0.362779
+[Info] 2025-05-28 12:08:57 Epoch 13 | Batch 600/1533 | Batch Loss: 0.252919
+[Info] 2025-05-28 12:08:59 Epoch 13 | Batch 700/1533 | Batch Loss: 0.276414
+[Info] 2025-05-28 12:09:00 Epoch 13 | Batch 800/1533 | Batch Loss: 0.217928
+[Info] 2025-05-28 12:09:02 Epoch 13 | Batch 900/1533 | Batch Loss: 0.242190
+[Info] 2025-05-28 12:09:04 Epoch 13 | Batch 1000/1533 | Batch Loss: 0.188544
+[Info] 2025-05-28 12:09:06 Epoch 13 | Batch 1100/1533 | Batch Loss: 0.226892
+[Info] 2025-05-28 12:09:08 Epoch 13 | Batch 1200/1533 | Batch Loss: 0.192242
+[Info] 2025-05-28 12:09:10 Epoch 13 | Batch 1300/1533 | Batch Loss: 0.226365
+[Info] 2025-05-28 12:09:11 Epoch 13 | Batch 1400/1533 | Batch Loss: 0.285444
+[Info] 2025-05-28 12:09:14 Epoch 13 | Batch 1500/1533 | Batch Loss: 0.277435
+[Info] 2025-05-28 12:09:14 Epoch 13 | Batch 1533/1533 | Batch Loss: 0.188146
+[Info] 2025-05-28 12:09:14 Validating after epoch 13 ...
+[Info] 2025-05-28 12:09:14 Validation 20/192 | Batch Loss: 0.203701
+[Info] 2025-05-28 12:09:14 Validation 40/192 | Batch Loss: 0.215498
+[Info] 2025-05-28 12:09:15 Validation 60/192 | Batch Loss: 0.169819
+[Info] 2025-05-28 12:09:15 Validation 80/192 | Batch Loss: 0.163792
+[Info] 2025-05-28 12:09:15 Validation 100/192 | Batch Loss: 0.216635
+[Info] 2025-05-28 12:09:15 Validation 120/192 | Batch Loss: 0.227363
+[Info] 2025-05-28 12:09:15 Validation 140/192 | Batch Loss: 0.135774
+[Info] 2025-05-28 12:09:15 Validation 160/192 | Batch Loss: 0.183474
+[Info] 2025-05-28 12:09:16 Validation 180/192 | Batch Loss: 0.180508
+[Info] 2025-05-28 12:09:16 Validation 192/192 | Batch Loss: 0.223695
+[Info] 2025-05-28 12:09:16 Epoch [13/50] Train Loss: 0.235481 | Val Loss: 0.203102
+[Info] 2025-05-28 12:09:16 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:09:16 Starting epoch 14/50 ...
+[Info] 2025-05-28 12:09:18 Epoch 14 | Batch 100/1533 | Batch Loss: 0.273530
+[Info] 2025-05-28 12:09:20 Epoch 14 | Batch 200/1533 | Batch Loss: 0.210079
+[Info] 2025-05-28 12:09:22 Epoch 14 | Batch 300/1533 | Batch Loss: 0.211286
+[Info] 2025-05-28 12:09:24 Epoch 14 | Batch 400/1533 | Batch Loss: 0.196548
+[Info] 2025-05-28 12:09:25 Epoch 14 | Batch 500/1533 | Batch Loss: 0.200850
+[Info] 2025-05-28 12:09:27 Epoch 14 | Batch 600/1533 | Batch Loss: 0.268389
+[Info] 2025-05-28 12:09:29 Epoch 14 | Batch 700/1533 | Batch Loss: 0.224946
+[Info] 2025-05-28 12:09:31 Epoch 14 | Batch 800/1533 | Batch Loss: 0.264968
+[Info] 2025-05-28 12:09:33 Epoch 14 | Batch 900/1533 | Batch Loss: 0.256933
+[Info] 2025-05-28 12:09:34 Epoch 14 | Batch 1000/1533 | Batch Loss: 0.174719
+[Info] 2025-05-28 12:09:36 Epoch 14 | Batch 1100/1533 | Batch Loss: 0.230554
+[Info] 2025-05-28 12:09:38 Epoch 14 | Batch 1200/1533 | Batch Loss: 0.194781
+[Info] 2025-05-28 12:09:40 Epoch 14 | Batch 1300/1533 | Batch Loss: 0.222897
+[Info] 2025-05-28 12:09:42 Epoch 14 | Batch 1400/1533 | Batch Loss: 0.259933
+[Info] 2025-05-28 12:09:44 Epoch 14 | Batch 1500/1533 | Batch Loss: 0.219770
+[Info] 2025-05-28 12:09:44 Epoch 14 | Batch 1533/1533 | Batch Loss: 0.200404
+[Info] 2025-05-28 12:09:44 Validating after epoch 14 ...
+[Info] 2025-05-28 12:09:45 Validation 20/192 | Batch Loss: 0.206830
+[Info] 2025-05-28 12:09:45 Validation 40/192 | Batch Loss: 0.214874
+[Info] 2025-05-28 12:09:45 Validation 60/192 | Batch Loss: 0.186797
+[Info] 2025-05-28 12:09:45 Validation 80/192 | Batch Loss: 0.165569
+[Info] 2025-05-28 12:09:45 Validation 100/192 | Batch Loss: 0.210198
+[Info] 2025-05-28 12:09:45 Validation 120/192 | Batch Loss: 0.223846
+[Info] 2025-05-28 12:09:45 Validation 140/192 | Batch Loss: 0.145331
+[Info] 2025-05-28 12:09:46 Validation 160/192 | Batch Loss: 0.176407
+[Info] 2025-05-28 12:09:46 Validation 180/192 | Batch Loss: 0.179634
+[Info] 2025-05-28 12:09:46 Validation 192/192 | Batch Loss: 0.217895
+[Info] 2025-05-28 12:09:46 Epoch [14/50] Train Loss: 0.228560 | Val Loss: 0.199656
+[Info] 2025-05-28 12:09:46 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:09:46 Starting epoch 15/50 ...
+[Info] 2025-05-28 12:09:48 Epoch 15 | Batch 100/1533 | Batch Loss: 0.282938
+[Info] 2025-05-28 12:09:50 Epoch 15 | Batch 200/1533 | Batch Loss: 0.224670
+[Info] 2025-05-28 12:09:52 Epoch 15 | Batch 300/1533 | Batch Loss: 0.252570
+[Info] 2025-05-28 12:09:55 Epoch 15 | Batch 400/1533 | Batch Loss: 0.193529
+[Info] 2025-05-28 12:09:56 Epoch 15 | Batch 500/1533 | Batch Loss: 0.186900
+[Info] 2025-05-28 12:09:58 Epoch 15 | Batch 600/1533 | Batch Loss: 0.266133
+[Info] 2025-05-28 12:10:00 Epoch 15 | Batch 700/1533 | Batch Loss: 0.233315
+[Info] 2025-05-28 12:10:02 Epoch 15 | Batch 800/1533 | Batch Loss: 0.235734
+[Info] 2025-05-28 12:10:04 Epoch 15 | Batch 900/1533 | Batch Loss: 0.264939
+[Info] 2025-05-28 12:10:06 Epoch 15 | Batch 1000/1533 | Batch Loss: 0.302297
+[Info] 2025-05-28 12:10:07 Epoch 15 | Batch 1100/1533 | Batch Loss: 0.255851
+[Info] 2025-05-28 12:10:09 Epoch 15 | Batch 1200/1533 | Batch Loss: 0.181940
+[Info] 2025-05-28 12:10:11 Epoch 15 | Batch 1300/1533 | Batch Loss: 0.221226
+[Info] 2025-05-28 12:10:13 Epoch 15 | Batch 1400/1533 | Batch Loss: 0.236535
+[Info] 2025-05-28 12:10:15 Epoch 15 | Batch 1500/1533 | Batch Loss: 0.221053
+[Info] 2025-05-28 12:10:16 Epoch 15 | Batch 1533/1533 | Batch Loss: 0.209158
+[Info] 2025-05-28 12:10:16 Validating after epoch 15 ...
+[Info] 2025-05-28 12:10:16 Validation 20/192 | Batch Loss: 0.186553
+[Info] 2025-05-28 12:10:16 Validation 40/192 | Batch Loss: 0.204708
+[Info] 2025-05-28 12:10:17 Validation 60/192 | Batch Loss: 0.173674
+[Info] 2025-05-28 12:10:17 Validation 80/192 | Batch Loss: 0.153755
+[Info] 2025-05-28 12:10:17 Validation 100/192 | Batch Loss: 0.209038
+[Info] 2025-05-28 12:10:17 Validation 120/192 | Batch Loss: 0.212477
+[Info] 2025-05-28 12:10:17 Validation 140/192 | Batch Loss: 0.131600
+[Info] 2025-05-28 12:10:17 Validation 160/192 | Batch Loss: 0.170327
+[Info] 2025-05-28 12:10:17 Validation 180/192 | Batch Loss: 0.175963
+[Info] 2025-05-28 12:10:18 Validation 192/192 | Batch Loss: 0.215040
+[Info] 2025-05-28 12:10:18 Epoch [15/50] Train Loss: 0.223215 | Val Loss: 0.191932
+[Info] 2025-05-28 12:10:18 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:10:18 Starting epoch 16/50 ...
+[Info] 2025-05-28 12:10:20 Epoch 16 | Batch 100/1533 | Batch Loss: 0.187275
+[Info] 2025-05-28 12:10:21 Epoch 16 | Batch 200/1533 | Batch Loss: 0.281198
+[Info] 2025-05-28 12:10:23 Epoch 16 | Batch 300/1533 | Batch Loss: 0.209008
+[Info] 2025-05-28 12:10:25 Epoch 16 | Batch 400/1533 | Batch Loss: 0.298745
+[Info] 2025-05-28 12:10:27 Epoch 16 | Batch 500/1533 | Batch Loss: 0.220689
+[Info] 2025-05-28 12:10:30 Epoch 16 | Batch 600/1533 | Batch Loss: 0.318084
+[Info] 2025-05-28 12:10:32 Epoch 16 | Batch 700/1533 | Batch Loss: 0.231481
+[Info] 2025-05-28 12:10:34 Epoch 16 | Batch 800/1533 | Batch Loss: 0.182792
+[Info] 2025-05-28 12:10:36 Epoch 16 | Batch 900/1533 | Batch Loss: 0.265709
+[Info] 2025-05-28 12:10:38 Epoch 16 | Batch 1000/1533 | Batch Loss: 0.237990
+[Info] 2025-05-28 12:10:40 Epoch 16 | Batch 1100/1533 | Batch Loss: 0.171935
+[Info] 2025-05-28 12:10:42 Epoch 16 | Batch 1200/1533 | Batch Loss: 0.255715
+[Info] 2025-05-28 12:10:44 Epoch 16 | Batch 1300/1533 | Batch Loss: 0.245416
+[Info] 2025-05-28 12:10:46 Epoch 16 | Batch 1400/1533 | Batch Loss: 0.381169
+[Info] 2025-05-28 12:10:47 Epoch 16 | Batch 1500/1533 | Batch Loss: 0.171406
+[Info] 2025-05-28 12:10:48 Epoch 16 | Batch 1533/1533 | Batch Loss: 0.200976
+[Info] 2025-05-28 12:10:48 Validating after epoch 16 ...
+[Info] 2025-05-28 12:10:48 Validation 20/192 | Batch Loss: 0.188744
+[Info] 2025-05-28 12:10:48 Validation 40/192 | Batch Loss: 0.200951
+[Info] 2025-05-28 12:10:49 Validation 60/192 | Batch Loss: 0.172605
+[Info] 2025-05-28 12:10:49 Validation 80/192 | Batch Loss: 0.153160
+[Info] 2025-05-28 12:10:49 Validation 100/192 | Batch Loss: 0.209121
+[Info] 2025-05-28 12:10:49 Validation 120/192 | Batch Loss: 0.207879
+[Info] 2025-05-28 12:10:49 Validation 140/192 | Batch Loss: 0.131035
+[Info] 2025-05-28 12:10:49 Validation 160/192 | Batch Loss: 0.168948
+[Info] 2025-05-28 12:10:49 Validation 180/192 | Batch Loss: 0.173933
+[Info] 2025-05-28 12:10:50 Validation 192/192 | Batch Loss: 0.213271
+[Info] 2025-05-28 12:10:50 Epoch [16/50] Train Loss: 0.218368 | Val Loss: 0.189074
+[Info] 2025-05-28 12:10:50 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:10:50 Starting epoch 17/50 ...
+[Info] 2025-05-28 12:10:51 Epoch 17 | Batch 100/1533 | Batch Loss: 0.208263
+[Info] 2025-05-28 12:10:53 Epoch 17 | Batch 200/1533 | Batch Loss: 0.210174
+[Info] 2025-05-28 12:10:55 Epoch 17 | Batch 300/1533 | Batch Loss: 0.189874
+[Info] 2025-05-28 12:10:57 Epoch 17 | Batch 400/1533 | Batch Loss: 0.262327
+[Info] 2025-05-28 12:10:59 Epoch 17 | Batch 500/1533 | Batch Loss: 0.241999
+[Info] 2025-05-28 12:11:01 Epoch 17 | Batch 600/1533 | Batch Loss: 0.224559
+[Info] 2025-05-28 12:11:03 Epoch 17 | Batch 700/1533 | Batch Loss: 0.224123
+[Info] 2025-05-28 12:11:04 Epoch 17 | Batch 800/1533 | Batch Loss: 0.204523
+[Info] 2025-05-28 12:11:06 Epoch 17 | Batch 900/1533 | Batch Loss: 0.289281
+[Info] 2025-05-28 12:11:08 Epoch 17 | Batch 1000/1533 | Batch Loss: 0.231857
+[Info] 2025-05-28 12:11:10 Epoch 17 | Batch 1100/1533 | Batch Loss: 0.164808
+[Info] 2025-05-28 12:11:12 Epoch 17 | Batch 1200/1533 | Batch Loss: 0.238318
+[Info] 2025-05-28 12:11:13 Epoch 17 | Batch 1300/1533 | Batch Loss: 0.170941
+[Info] 2025-05-28 12:11:15 Epoch 17 | Batch 1400/1533 | Batch Loss: 0.231546
+[Info] 2025-05-28 12:11:17 Epoch 17 | Batch 1500/1533 | Batch Loss: 0.244844
+[Info] 2025-05-28 12:11:18 Epoch 17 | Batch 1533/1533 | Batch Loss: 0.292583
+[Info] 2025-05-28 12:11:18 Validating after epoch 17 ...
+[Info] 2025-05-28 12:11:18 Validation 20/192 | Batch Loss: 0.188009
+[Info] 2025-05-28 12:11:18 Validation 40/192 | Batch Loss: 0.200594
+[Info] 2025-05-28 12:11:18 Validation 60/192 | Batch Loss: 0.177050
+[Info] 2025-05-28 12:11:18 Validation 80/192 | Batch Loss: 0.154187
+[Info] 2025-05-28 12:11:19 Validation 100/192 | Batch Loss: 0.201594
+[Info] 2025-05-28 12:11:19 Validation 120/192 | Batch Loss: 0.204578
+[Info] 2025-05-28 12:11:19 Validation 140/192 | Batch Loss: 0.129032
+[Info] 2025-05-28 12:11:19 Validation 160/192 | Batch Loss: 0.165971
+[Info] 2025-05-28 12:11:19 Validation 180/192 | Batch Loss: 0.165257
+[Info] 2025-05-28 12:11:19 Validation 192/192 | Batch Loss: 0.202224
+[Info] 2025-05-28 12:11:19 Epoch [17/50] Train Loss: 0.213974 | Val Loss: 0.185271
+[Info] 2025-05-28 12:11:19 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:11:19 Starting epoch 18/50 ...
+[Info] 2025-05-28 12:11:21 Epoch 18 | Batch 100/1533 | Batch Loss: 0.210835
+[Info] 2025-05-28 12:11:23 Epoch 18 | Batch 200/1533 | Batch Loss: 0.173451
+[Info] 2025-05-28 12:11:25 Epoch 18 | Batch 300/1533 | Batch Loss: 0.261024
+[Info] 2025-05-28 12:11:27 Epoch 18 | Batch 400/1533 | Batch Loss: 0.229724
+[Info] 2025-05-28 12:11:29 Epoch 18 | Batch 500/1533 | Batch Loss: 0.196422
+[Info] 2025-05-28 12:11:31 Epoch 18 | Batch 600/1533 | Batch Loss: 0.208248
+[Info] 2025-05-28 12:11:32 Epoch 18 | Batch 700/1533 | Batch Loss: 0.135820
+[Info] 2025-05-28 12:11:34 Epoch 18 | Batch 800/1533 | Batch Loss: 0.196829
+[Info] 2025-05-28 12:11:36 Epoch 18 | Batch 900/1533 | Batch Loss: 0.220166
+[Info] 2025-05-28 12:11:38 Epoch 18 | Batch 1000/1533 | Batch Loss: 0.239452
+[Info] 2025-05-28 12:11:40 Epoch 18 | Batch 1100/1533 | Batch Loss: 0.202522
+[Info] 2025-05-28 12:11:42 Epoch 18 | Batch 1200/1533 | Batch Loss: 0.233279
+[Info] 2025-05-28 12:11:43 Epoch 18 | Batch 1300/1533 | Batch Loss: 0.192319
+[Info] 2025-05-28 12:11:45 Epoch 18 | Batch 1400/1533 | Batch Loss: 0.218829
+[Info] 2025-05-28 12:11:47 Epoch 18 | Batch 1500/1533 | Batch Loss: 0.150657
+[Info] 2025-05-28 12:11:48 Epoch 18 | Batch 1533/1533 | Batch Loss: 0.276407
+[Info] 2025-05-28 12:11:48 Validating after epoch 18 ...
+[Info] 2025-05-28 12:11:48 Validation 20/192 | Batch Loss: 0.178912
+[Info] 2025-05-28 12:11:48 Validation 40/192 | Batch Loss: 0.193400
+[Info] 2025-05-28 12:11:48 Validation 60/192 | Batch Loss: 0.169841
+[Info] 2025-05-28 12:11:48 Validation 80/192 | Batch Loss: 0.154455
+[Info] 2025-05-28 12:11:48 Validation 100/192 | Batch Loss: 0.205865
+[Info] 2025-05-28 12:11:48 Validation 120/192 | Batch Loss: 0.202349
+[Info] 2025-05-28 12:11:49 Validation 140/192 | Batch Loss: 0.129344
+[Info] 2025-05-28 12:11:49 Validation 160/192 | Batch Loss: 0.159000
+[Info] 2025-05-28 12:11:49 Validation 180/192 | Batch Loss: 0.166919
+[Info] 2025-05-28 12:11:49 Validation 192/192 | Batch Loss: 0.212677
+[Info] 2025-05-28 12:11:49 Epoch [18/50] Train Loss: 0.210117 | Val Loss: 0.181995
+[Info] 2025-05-28 12:11:49 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:11:49 Starting epoch 19/50 ...
+[Info] 2025-05-28 12:11:51 Epoch 19 | Batch 100/1533 | Batch Loss: 0.189398
+[Info] 2025-05-28 12:11:53 Epoch 19 | Batch 200/1533 | Batch Loss: 0.196123
+[Info] 2025-05-28 12:11:55 Epoch 19 | Batch 300/1533 | Batch Loss: 0.191973
+[Info] 2025-05-28 12:11:56 Epoch 19 | Batch 400/1533 | Batch Loss: 0.258838
+[Info] 2025-05-28 12:11:58 Epoch 19 | Batch 500/1533 | Batch Loss: 0.224146
+[Info] 2025-05-28 12:12:00 Epoch 19 | Batch 600/1533 | Batch Loss: 0.175099
+[Info] 2025-05-28 12:12:02 Epoch 19 | Batch 700/1533 | Batch Loss: 0.214608
+[Info] 2025-05-28 12:12:04 Epoch 19 | Batch 800/1533 | Batch Loss: 0.197317
+[Info] 2025-05-28 12:12:06 Epoch 19 | Batch 900/1533 | Batch Loss: 0.190418
+[Info] 2025-05-28 12:12:08 Epoch 19 | Batch 1000/1533 | Batch Loss: 0.170815
+[Info] 2025-05-28 12:12:11 Epoch 19 | Batch 1100/1533 | Batch Loss: 0.249772
+[Info] 2025-05-28 12:12:13 Epoch 19 | Batch 1200/1533 | Batch Loss: 0.178953
+[Info] 2025-05-28 12:12:15 Epoch 19 | Batch 1300/1533 | Batch Loss: 0.160402
+[Info] 2025-05-28 12:12:17 Epoch 19 | Batch 1400/1533 | Batch Loss: 0.164635
+[Info] 2025-05-28 12:12:19 Epoch 19 | Batch 1500/1533 | Batch Loss: 0.192260
+[Info] 2025-05-28 12:12:20 Epoch 19 | Batch 1533/1533 | Batch Loss: 0.222409
+[Info] 2025-05-28 12:12:20 Validating after epoch 19 ...
+[Info] 2025-05-28 12:12:20 Validation 20/192 | Batch Loss: 0.179412
+[Info] 2025-05-28 12:12:20 Validation 40/192 | Batch Loss: 0.192059
+[Info] 2025-05-28 12:12:21 Validation 60/192 | Batch Loss: 0.173408
+[Info] 2025-05-28 12:12:21 Validation 80/192 | Batch Loss: 0.152951
+[Info] 2025-05-28 12:12:21 Validation 100/192 | Batch Loss: 0.199614
+[Info] 2025-05-28 12:12:21 Validation 120/192 | Batch Loss: 0.201369
+[Info] 2025-05-28 12:12:21 Validation 140/192 | Batch Loss: 0.125605
+[Info] 2025-05-28 12:12:21 Validation 160/192 | Batch Loss: 0.165852
+[Info] 2025-05-28 12:12:21 Validation 180/192 | Batch Loss: 0.156472
+[Info] 2025-05-28 12:12:22 Validation 192/192 | Batch Loss: 0.201222
+[Info] 2025-05-28 12:12:22 Epoch [19/50] Train Loss: 0.206643 | Val Loss: 0.179597
+[Info] 2025-05-28 12:12:22 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:12:22 Starting epoch 20/50 ...
+[Info] 2025-05-28 12:12:24 Epoch 20 | Batch 100/1533 | Batch Loss: 0.229681
+[Info] 2025-05-28 12:12:26 Epoch 20 | Batch 200/1533 | Batch Loss: 0.206912
+[Info] 2025-05-28 12:12:28 Epoch 20 | Batch 300/1533 | Batch Loss: 0.237748
+[Info] 2025-05-28 12:12:30 Epoch 20 | Batch 400/1533 | Batch Loss: 0.231275
+[Info] 2025-05-28 12:12:32 Epoch 20 | Batch 500/1533 | Batch Loss: 0.189665
+[Info] 2025-05-28 12:12:34 Epoch 20 | Batch 600/1533 | Batch Loss: 0.192786
+[Info] 2025-05-28 12:12:36 Epoch 20 | Batch 700/1533 | Batch Loss: 0.250265
+[Info] 2025-05-28 12:12:38 Epoch 20 | Batch 800/1533 | Batch Loss: 0.178496
+[Info] 2025-05-28 12:12:40 Epoch 20 | Batch 900/1533 | Batch Loss: 0.182686
+[Info] 2025-05-28 12:12:42 Epoch 20 | Batch 1000/1533 | Batch Loss: 0.194728
+[Info] 2025-05-28 12:12:45 Epoch 20 | Batch 1100/1533 | Batch Loss: 0.212440
+[Info] 2025-05-28 12:12:47 Epoch 20 | Batch 1200/1533 | Batch Loss: 0.227594
+[Info] 2025-05-28 12:12:49 Epoch 20 | Batch 1300/1533 | Batch Loss: 0.225144
+[Info] 2025-05-28 12:12:50 Epoch 20 | Batch 1400/1533 | Batch Loss: 0.223764
+[Info] 2025-05-28 12:12:52 Epoch 20 | Batch 1500/1533 | Batch Loss: 0.260418
+[Info] 2025-05-28 12:12:53 Epoch 20 | Batch 1533/1533 | Batch Loss: 0.256307
+[Info] 2025-05-28 12:12:53 Validating after epoch 20 ...
+[Info] 2025-05-28 12:12:53 Validation 20/192 | Batch Loss: 0.175415
+[Info] 2025-05-28 12:12:53 Validation 40/192 | Batch Loss: 0.188051
+[Info] 2025-05-28 12:12:54 Validation 60/192 | Batch Loss: 0.162732
+[Info] 2025-05-28 12:12:54 Validation 80/192 | Batch Loss: 0.144818
+[Info] 2025-05-28 12:12:54 Validation 100/192 | Batch Loss: 0.185073
+[Info] 2025-05-28 12:12:54 Validation 120/192 | Batch Loss: 0.194551
+[Info] 2025-05-28 12:12:54 Validation 140/192 | Batch Loss: 0.120824
+[Info] 2025-05-28 12:12:54 Validation 160/192 | Batch Loss: 0.158520
+[Info] 2025-05-28 12:12:54 Validation 180/192 | Batch Loss: 0.154824
+[Info] 2025-05-28 12:12:54 Validation 192/192 | Batch Loss: 0.185633
+[Info] 2025-05-28 12:12:54 Epoch [20/50] Train Loss: 0.203525 | Val Loss: 0.175207
+[Info] 2025-05-28 12:12:54 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:12:54 Starting epoch 21/50 ...
+[Info] 2025-05-28 12:12:57 Epoch 21 | Batch 100/1533 | Batch Loss: 0.187791
+[Info] 2025-05-28 12:12:59 Epoch 21 | Batch 200/1533 | Batch Loss: 0.168688
+[Info] 2025-05-28 12:13:01 Epoch 21 | Batch 300/1533 | Batch Loss: 0.199873
+[Info] 2025-05-28 12:13:03 Epoch 21 | Batch 400/1533 | Batch Loss: 0.223436
+[Info] 2025-05-28 12:13:05 Epoch 21 | Batch 500/1533 | Batch Loss: 0.178439
+[Info] 2025-05-28 12:13:08 Epoch 21 | Batch 600/1533 | Batch Loss: 0.208416
+[Info] 2025-05-28 12:13:10 Epoch 21 | Batch 700/1533 | Batch Loss: 0.267631
+[Info] 2025-05-28 12:13:12 Epoch 21 | Batch 800/1533 | Batch Loss: 0.177169
+[Info] 2025-05-28 12:13:14 Epoch 21 | Batch 900/1533 | Batch Loss: 0.193567
+[Info] 2025-05-28 12:13:16 Epoch 21 | Batch 1000/1533 | Batch Loss: 0.160630
+[Info] 2025-05-28 12:13:18 Epoch 21 | Batch 1100/1533 | Batch Loss: 0.149360
+[Info] 2025-05-28 12:13:20 Epoch 21 | Batch 1200/1533 | Batch Loss: 0.177568
+[Info] 2025-05-28 12:13:22 Epoch 21 | Batch 1300/1533 | Batch Loss: 0.206869
+[Info] 2025-05-28 12:13:24 Epoch 21 | Batch 1400/1533 | Batch Loss: 0.219737
+[Info] 2025-05-28 12:13:26 Epoch 21 | Batch 1500/1533 | Batch Loss: 0.196295
+[Info] 2025-05-28 12:13:27 Epoch 21 | Batch 1533/1533 | Batch Loss: 0.253030
+[Info] 2025-05-28 12:13:27 Validating after epoch 21 ...
+[Info] 2025-05-28 12:13:27 Validation 20/192 | Batch Loss: 0.173367
+[Info] 2025-05-28 12:13:27 Validation 40/192 | Batch Loss: 0.189180
+[Info] 2025-05-28 12:13:27 Validation 60/192 | Batch Loss: 0.163732
+[Info] 2025-05-28 12:13:28 Validation 80/192 | Batch Loss: 0.149753
+[Info] 2025-05-28 12:13:28 Validation 100/192 | Batch Loss: 0.198714
+[Info] 2025-05-28 12:13:28 Validation 120/192 | Batch Loss: 0.202073
+[Info] 2025-05-28 12:13:28 Validation 140/192 | Batch Loss: 0.124261
+[Info] 2025-05-28 12:13:28 Validation 160/192 | Batch Loss: 0.157655
+[Info] 2025-05-28 12:13:29 Validation 180/192 | Batch Loss: 0.154065
+[Info] 2025-05-28 12:13:29 Validation 192/192 | Batch Loss: 0.202822
+[Info] 2025-05-28 12:13:29 Epoch [21/50] Train Loss: 0.200929 | Val Loss: 0.176966
+[Info] 2025-05-28 12:13:29 Starting epoch 22/50 ...
+[Info] 2025-05-28 12:13:31 Epoch 22 | Batch 100/1533 | Batch Loss: 0.219968
+[Info] 2025-05-28 12:13:33 Epoch 22 | Batch 200/1533 | Batch Loss: 0.155243
+[Info] 2025-05-28 12:13:35 Epoch 22 | Batch 300/1533 | Batch Loss: 0.141281
+[Info] 2025-05-28 12:13:37 Epoch 22 | Batch 400/1533 | Batch Loss: 0.219462
+[Info] 2025-05-28 12:13:40 Epoch 22 | Batch 500/1533 | Batch Loss: 0.183378
+[Info] 2025-05-28 12:13:42 Epoch 22 | Batch 600/1533 | Batch Loss: 0.189046
+[Info] 2025-05-28 12:13:44 Epoch 22 | Batch 700/1533 | Batch Loss: 0.184215
+[Info] 2025-05-28 12:13:46 Epoch 22 | Batch 800/1533 | Batch Loss: 0.180580
+[Info] 2025-05-28 12:13:48 Epoch 22 | Batch 900/1533 | Batch Loss: 0.172139
+[Info] 2025-05-28 12:13:51 Epoch 22 | Batch 1000/1533 | Batch Loss: 0.221898
+[Info] 2025-05-28 12:13:53 Epoch 22 | Batch 1100/1533 | Batch Loss: 0.146867
+[Info] 2025-05-28 12:13:55 Epoch 22 | Batch 1200/1533 | Batch Loss: 0.147523
+[Info] 2025-05-28 12:13:57 Epoch 22 | Batch 1300/1533 | Batch Loss: 0.208691
+[Info] 2025-05-28 12:13:59 Epoch 22 | Batch 1400/1533 | Batch Loss: 0.159175
+[Info] 2025-05-28 12:14:01 Epoch 22 | Batch 1500/1533 | Batch Loss: 0.159751
+[Info] 2025-05-28 12:14:02 Epoch 22 | Batch 1533/1533 | Batch Loss: 0.244510
+[Info] 2025-05-28 12:14:02 Validating after epoch 22 ...
+[Info] 2025-05-28 12:14:02 Validation 20/192 | Batch Loss: 0.171413
+[Info] 2025-05-28 12:14:02 Validation 40/192 | Batch Loss: 0.177387
+[Info] 2025-05-28 12:14:02 Validation 60/192 | Batch Loss: 0.153134
+[Info] 2025-05-28 12:14:03 Validation 80/192 | Batch Loss: 0.140429
+[Info] 2025-05-28 12:14:03 Validation 100/192 | Batch Loss: 0.183790
+[Info] 2025-05-28 12:14:03 Validation 120/192 | Batch Loss: 0.192508
+[Info] 2025-05-28 12:14:03 Validation 140/192 | Batch Loss: 0.121303
+[Info] 2025-05-28 12:14:03 Validation 160/192 | Batch Loss: 0.156238
+[Info] 2025-05-28 12:14:03 Validation 180/192 | Batch Loss: 0.150613
+[Info] 2025-05-28 12:14:03 Validation 192/192 | Batch Loss: 0.193254
+[Info] 2025-05-28 12:14:03 Epoch [22/50] Train Loss: 0.197954 | Val Loss: 0.170975
+[Info] 2025-05-28 12:14:03 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:14:03 Starting epoch 23/50 ...
+[Info] 2025-05-28 12:14:05 Epoch 23 | Batch 100/1533 | Batch Loss: 0.211159
+[Info] 2025-05-28 12:14:07 Epoch 23 | Batch 200/1533 | Batch Loss: 0.218835
+[Info] 2025-05-28 12:14:09 Epoch 23 | Batch 300/1533 | Batch Loss: 0.136416
+[Info] 2025-05-28 12:14:11 Epoch 23 | Batch 400/1533 | Batch Loss: 0.208353
+[Info] 2025-05-28 12:14:13 Epoch 23 | Batch 500/1533 | Batch Loss: 0.141382
+[Info] 2025-05-28 12:14:15 Epoch 23 | Batch 600/1533 | Batch Loss: 0.195762
+[Info] 2025-05-28 12:14:17 Epoch 23 | Batch 700/1533 | Batch Loss: 0.189234
+[Info] 2025-05-28 12:14:19 Epoch 23 | Batch 800/1533 | Batch Loss: 0.178740
+[Info] 2025-05-28 12:14:21 Epoch 23 | Batch 900/1533 | Batch Loss: 0.198149
+[Info] 2025-05-28 12:14:23 Epoch 23 | Batch 1000/1533 | Batch Loss: 0.191227
+[Info] 2025-05-28 12:14:25 Epoch 23 | Batch 1100/1533 | Batch Loss: 0.225463
+[Info] 2025-05-28 12:14:27 Epoch 23 | Batch 1200/1533 | Batch Loss: 0.149189
+[Info] 2025-05-28 12:14:29 Epoch 23 | Batch 1300/1533 | Batch Loss: 0.219344
+[Info] 2025-05-28 12:14:31 Epoch 23 | Batch 1400/1533 | Batch Loss: 0.183915
+[Info] 2025-05-28 12:14:33 Epoch 23 | Batch 1500/1533 | Batch Loss: 0.211019
+[Info] 2025-05-28 12:14:34 Epoch 23 | Batch 1533/1533 | Batch Loss: 0.189621
+[Info] 2025-05-28 12:14:34 Validating after epoch 23 ...
+[Info] 2025-05-28 12:14:34 Validation 20/192 | Batch Loss: 0.164720
+[Info] 2025-05-28 12:14:34 Validation 40/192 | Batch Loss: 0.180678
+[Info] 2025-05-28 12:14:34 Validation 60/192 | Batch Loss: 0.162825
+[Info] 2025-05-28 12:14:34 Validation 80/192 | Batch Loss: 0.139758
+[Info] 2025-05-28 12:14:35 Validation 100/192 | Batch Loss: 0.184465
+[Info] 2025-05-28 12:14:35 Validation 120/192 | Batch Loss: 0.191431
+[Info] 2025-05-28 12:14:35 Validation 140/192 | Batch Loss: 0.120580
+[Info] 2025-05-28 12:14:35 Validation 160/192 | Batch Loss: 0.150799
+[Info] 2025-05-28 12:14:35 Validation 180/192 | Batch Loss: 0.152620
+[Info] 2025-05-28 12:14:35 Validation 192/192 | Batch Loss: 0.196463
+[Info] 2025-05-28 12:14:35 Epoch [23/50] Train Loss: 0.195573 | Val Loss: 0.169500
+[Info] 2025-05-28 12:14:35 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:14:35 Starting epoch 24/50 ...
+[Info] 2025-05-28 12:14:38 Epoch 24 | Batch 100/1533 | Batch Loss: 0.216179
+[Info] 2025-05-28 12:14:40 Epoch 24 | Batch 200/1533 | Batch Loss: 0.216686
+[Info] 2025-05-28 12:14:43 Epoch 24 | Batch 300/1533 | Batch Loss: 0.148992
+[Info] 2025-05-28 12:14:45 Epoch 24 | Batch 400/1533 | Batch Loss: 0.170267
+[Info] 2025-05-28 12:14:47 Epoch 24 | Batch 500/1533 | Batch Loss: 0.228422
+[Info] 2025-05-28 12:14:50 Epoch 24 | Batch 600/1533 | Batch Loss: 0.238108
+[Info] 2025-05-28 12:14:51 Epoch 24 | Batch 700/1533 | Batch Loss: 0.204789
+[Info] 2025-05-28 12:14:54 Epoch 24 | Batch 800/1533 | Batch Loss: 0.202996
+[Info] 2025-05-28 12:14:56 Epoch 24 | Batch 900/1533 | Batch Loss: 0.172319
+[Info] 2025-05-28 12:14:58 Epoch 24 | Batch 1000/1533 | Batch Loss: 0.264036
+[Info] 2025-05-28 12:15:00 Epoch 24 | Batch 1100/1533 | Batch Loss: 0.214971
+[Info] 2025-05-28 12:15:03 Epoch 24 | Batch 1200/1533 | Batch Loss: 0.252312
+[Info] 2025-05-28 12:15:05 Epoch 24 | Batch 1300/1533 | Batch Loss: 0.174898
+[Info] 2025-05-28 12:15:08 Epoch 24 | Batch 1400/1533 | Batch Loss: 0.181718
+[Info] 2025-05-28 12:15:10 Epoch 24 | Batch 1500/1533 | Batch Loss: 0.157964
+[Info] 2025-05-28 12:15:11 Epoch 24 | Batch 1533/1533 | Batch Loss: 0.126282
+[Info] 2025-05-28 12:15:11 Validating after epoch 24 ...
+[Info] 2025-05-28 12:15:11 Validation 20/192 | Batch Loss: 0.167583
+[Info] 2025-05-28 12:15:11 Validation 40/192 | Batch Loss: 0.178617
+[Info] 2025-05-28 12:15:11 Validation 60/192 | Batch Loss: 0.153080
+[Info] 2025-05-28 12:15:11 Validation 80/192 | Batch Loss: 0.142142
+[Info] 2025-05-28 12:15:11 Validation 100/192 | Batch Loss: 0.193194
+[Info] 2025-05-28 12:15:11 Validation 120/192 | Batch Loss: 0.190212
+[Info] 2025-05-28 12:15:12 Validation 140/192 | Batch Loss: 0.120863
+[Info] 2025-05-28 12:15:12 Validation 160/192 | Batch Loss: 0.151987
+[Info] 2025-05-28 12:15:12 Validation 180/192 | Batch Loss: 0.148299
+[Info] 2025-05-28 12:15:12 Validation 192/192 | Batch Loss: 0.188854
+[Info] 2025-05-28 12:15:12 Epoch [24/50] Train Loss: 0.193055 | Val Loss: 0.169862
+[Info] 2025-05-28 12:15:12 Starting epoch 25/50 ...
+[Info] 2025-05-28 12:15:14 Epoch 25 | Batch 100/1533 | Batch Loss: 0.198702
+[Info] 2025-05-28 12:15:17 Epoch 25 | Batch 200/1533 | Batch Loss: 0.212590
+[Info] 2025-05-28 12:15:19 Epoch 25 | Batch 300/1533 | Batch Loss: 0.165577
+[Info] 2025-05-28 12:15:22 Epoch 25 | Batch 400/1533 | Batch Loss: 0.183512
+[Info] 2025-05-28 12:15:24 Epoch 25 | Batch 500/1533 | Batch Loss: 0.164179
+[Info] 2025-05-28 12:15:26 Epoch 25 | Batch 600/1533 | Batch Loss: 0.203346
+[Info] 2025-05-28 12:15:28 Epoch 25 | Batch 700/1533 | Batch Loss: 0.178780
+[Info] 2025-05-28 12:15:30 Epoch 25 | Batch 800/1533 | Batch Loss: 0.186922
+[Info] 2025-05-28 12:15:31 Epoch 25 | Batch 900/1533 | Batch Loss: 0.142638
+[Info] 2025-05-28 12:15:34 Epoch 25 | Batch 1000/1533 | Batch Loss: 0.144768
+[Info] 2025-05-28 12:15:36 Epoch 25 | Batch 1100/1533 | Batch Loss: 0.211162
+[Info] 2025-05-28 12:15:38 Epoch 25 | Batch 1200/1533 | Batch Loss: 0.205342
+[Info] 2025-05-28 12:15:40 Epoch 25 | Batch 1300/1533 | Batch Loss: 0.224799
+[Info] 2025-05-28 12:15:43 Epoch 25 | Batch 1400/1533 | Batch Loss: 0.158921
+[Info] 2025-05-28 12:15:45 Epoch 25 | Batch 1500/1533 | Batch Loss: 0.194147
+[Info] 2025-05-28 12:15:46 Epoch 25 | Batch 1533/1533 | Batch Loss: 0.203582
+[Info] 2025-05-28 12:15:46 Validating after epoch 25 ...
+[Info] 2025-05-28 12:15:46 Validation 20/192 | Batch Loss: 0.161759
+[Info] 2025-05-28 12:15:46 Validation 40/192 | Batch Loss: 0.177891
+[Info] 2025-05-28 12:15:46 Validation 60/192 | Batch Loss: 0.149697
+[Info] 2025-05-28 12:15:46 Validation 80/192 | Batch Loss: 0.136279
+[Info] 2025-05-28 12:15:47 Validation 100/192 | Batch Loss: 0.184556
+[Info] 2025-05-28 12:15:47 Validation 120/192 | Batch Loss: 0.190559
+[Info] 2025-05-28 12:15:47 Validation 140/192 | Batch Loss: 0.119432
+[Info] 2025-05-28 12:15:47 Validation 160/192 | Batch Loss: 0.150979
+[Info] 2025-05-28 12:15:47 Validation 180/192 | Batch Loss: 0.147191
+[Info] 2025-05-28 12:15:47 Validation 192/192 | Batch Loss: 0.186701
+[Info] 2025-05-28 12:15:47 Epoch [25/50] Train Loss: 0.191172 | Val Loss: 0.166062
+[Info] 2025-05-28 12:15:47 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:15:47 Starting epoch 26/50 ...
+[Info] 2025-05-28 12:15:49 Epoch 26 | Batch 100/1533 | Batch Loss: 0.185060
+[Info] 2025-05-28 12:15:52 Epoch 26 | Batch 200/1533 | Batch Loss: 0.211732
+[Info] 2025-05-28 12:15:54 Epoch 26 | Batch 300/1533 | Batch Loss: 0.182744
+[Info] 2025-05-28 12:15:56 Epoch 26 | Batch 400/1533 | Batch Loss: 0.217415
+[Info] 2025-05-28 12:15:58 Epoch 26 | Batch 500/1533 | Batch Loss: 0.250556
+[Info] 2025-05-28 12:16:00 Epoch 26 | Batch 600/1533 | Batch Loss: 0.208427
+[Info] 2025-05-28 12:16:02 Epoch 26 | Batch 700/1533 | Batch Loss: 0.205371
+[Info] 2025-05-28 12:16:04 Epoch 26 | Batch 800/1533 | Batch Loss: 0.236085
+[Info] 2025-05-28 12:16:07 Epoch 26 | Batch 900/1533 | Batch Loss: 0.137227
+[Info] 2025-05-28 12:16:09 Epoch 26 | Batch 1000/1533 | Batch Loss: 0.145685
+[Info] 2025-05-28 12:16:11 Epoch 26 | Batch 1100/1533 | Batch Loss: 0.192670
+[Info] 2025-05-28 12:16:13 Epoch 26 | Batch 1200/1533 | Batch Loss: 0.170588
+[Info] 2025-05-28 12:16:15 Epoch 26 | Batch 1300/1533 | Batch Loss: 0.203644
+[Info] 2025-05-28 12:16:18 Epoch 26 | Batch 1400/1533 | Batch Loss: 0.185179
+[Info] 2025-05-28 12:16:20 Epoch 26 | Batch 1500/1533 | Batch Loss: 0.182719
+[Info] 2025-05-28 12:16:21 Epoch 26 | Batch 1533/1533 | Batch Loss: 0.226727
+[Info] 2025-05-28 12:16:21 Validating after epoch 26 ...
+[Info] 2025-05-28 12:16:21 Validation 20/192 | Batch Loss: 0.162912
+[Info] 2025-05-28 12:16:21 Validation 40/192 | Batch Loss: 0.178866
+[Info] 2025-05-28 12:16:22 Validation 60/192 | Batch Loss: 0.153575
+[Info] 2025-05-28 12:16:22 Validation 80/192 | Batch Loss: 0.139287
+[Info] 2025-05-28 12:16:22 Validation 100/192 | Batch Loss: 0.177278
+[Info] 2025-05-28 12:16:22 Validation 120/192 | Batch Loss: 0.187569
+[Info] 2025-05-28 12:16:23 Validation 140/192 | Batch Loss: 0.114983
+[Info] 2025-05-28 12:16:23 Validation 160/192 | Batch Loss: 0.149651
+[Info] 2025-05-28 12:16:23 Validation 180/192 | Batch Loss: 0.147790
+[Info] 2025-05-28 12:16:23 Validation 192/192 | Batch Loss: 0.194478
+[Info] 2025-05-28 12:16:23 Epoch [26/50] Train Loss: 0.188934 | Val Loss: 0.165412
+[Info] 2025-05-28 12:16:23 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:16:23 Starting epoch 27/50 ...
+[Info] 2025-05-28 12:16:27 Epoch 27 | Batch 100/1533 | Batch Loss: 0.202394
+[Info] 2025-05-28 12:16:30 Epoch 27 | Batch 200/1533 | Batch Loss: 0.192984
+[Info] 2025-05-28 12:16:32 Epoch 27 | Batch 300/1533 | Batch Loss: 0.197778
+[Info] 2025-05-28 12:16:35 Epoch 27 | Batch 400/1533 | Batch Loss: 0.250101
+[Info] 2025-05-28 12:16:38 Epoch 27 | Batch 500/1533 | Batch Loss: 0.167925
+[Info] 2025-05-28 12:16:40 Epoch 27 | Batch 600/1533 | Batch Loss: 0.242604
+[Info] 2025-05-28 12:16:44 Epoch 27 | Batch 700/1533 | Batch Loss: 0.187413
+[Info] 2025-05-28 12:16:48 Epoch 27 | Batch 800/1533 | Batch Loss: 0.201670
+[Info] 2025-05-28 12:16:50 Epoch 27 | Batch 900/1533 | Batch Loss: 0.207496
+[Info] 2025-05-28 12:16:52 Epoch 27 | Batch 1000/1533 | Batch Loss: 0.213749
+[Info] 2025-05-28 12:16:54 Epoch 27 | Batch 1100/1533 | Batch Loss: 0.188403
+[Info] 2025-05-28 12:16:57 Epoch 27 | Batch 1200/1533 | Batch Loss: 0.181608
+[Info] 2025-05-28 12:16:59 Epoch 27 | Batch 1300/1533 | Batch Loss: 0.178332
+[Info] 2025-05-28 12:17:01 Epoch 27 | Batch 1400/1533 | Batch Loss: 0.190419
+[Info] 2025-05-28 12:17:03 Epoch 27 | Batch 1500/1533 | Batch Loss: 0.231953
+[Info] 2025-05-28 12:17:04 Epoch 27 | Batch 1533/1533 | Batch Loss: 0.210425
+[Info] 2025-05-28 12:17:04 Validating after epoch 27 ...
+[Info] 2025-05-28 12:17:04 Validation 20/192 | Batch Loss: 0.158579
+[Info] 2025-05-28 12:17:04 Validation 40/192 | Batch Loss: 0.172326
+[Info] 2025-05-28 12:17:04 Validation 60/192 | Batch Loss: 0.150937
+[Info] 2025-05-28 12:17:04 Validation 80/192 | Batch Loss: 0.135571
+[Info] 2025-05-28 12:17:04 Validation 100/192 | Batch Loss: 0.178585
+[Info] 2025-05-28 12:17:05 Validation 120/192 | Batch Loss: 0.185221
+[Info] 2025-05-28 12:17:05 Validation 140/192 | Batch Loss: 0.117824
+[Info] 2025-05-28 12:17:05 Validation 160/192 | Batch Loss: 0.146993
+[Info] 2025-05-28 12:17:05 Validation 180/192 | Batch Loss: 0.142681
+[Info] 2025-05-28 12:17:05 Validation 192/192 | Batch Loss: 0.183433
+[Info] 2025-05-28 12:17:05 Epoch [27/50] Train Loss: 0.187437 | Val Loss: 0.162041
+[Info] 2025-05-28 12:17:05 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:17:05 Starting epoch 28/50 ...
+[Info] 2025-05-28 12:17:07 Epoch 28 | Batch 100/1533 | Batch Loss: 0.170570
+[Info] 2025-05-28 12:17:09 Epoch 28 | Batch 200/1533 | Batch Loss: 0.166208
+[Info] 2025-05-28 12:17:11 Epoch 28 | Batch 300/1533 | Batch Loss: 0.216333
+[Info] 2025-05-28 12:17:13 Epoch 28 | Batch 400/1533 | Batch Loss: 0.163967
+[Info] 2025-05-28 12:17:15 Epoch 28 | Batch 500/1533 | Batch Loss: 0.182990
+[Info] 2025-05-28 12:17:17 Epoch 28 | Batch 600/1533 | Batch Loss: 0.170506
+[Info] 2025-05-28 12:17:19 Epoch 28 | Batch 700/1533 | Batch Loss: 0.198579
+[Info] 2025-05-28 12:17:21 Epoch 28 | Batch 800/1533 | Batch Loss: 0.187554
+[Info] 2025-05-28 12:17:23 Epoch 28 | Batch 900/1533 | Batch Loss: 0.227410
+[Info] 2025-05-28 12:17:25 Epoch 28 | Batch 1000/1533 | Batch Loss: 0.128041
+[Info] 2025-05-28 12:17:26 Epoch 28 | Batch 1100/1533 | Batch Loss: 0.132971
+[Info] 2025-05-28 12:17:28 Epoch 28 | Batch 1200/1533 | Batch Loss: 0.202719
+[Info] 2025-05-28 12:17:31 Epoch 28 | Batch 1300/1533 | Batch Loss: 0.269020
+[Info] 2025-05-28 12:17:33 Epoch 28 | Batch 1400/1533 | Batch Loss: 0.215572
+[Info] 2025-05-28 12:17:35 Epoch 28 | Batch 1500/1533 | Batch Loss: 0.184093
+[Info] 2025-05-28 12:17:36 Epoch 28 | Batch 1533/1533 | Batch Loss: 0.243532
+[Info] 2025-05-28 12:17:36 Validating after epoch 28 ...
+[Info] 2025-05-28 12:17:36 Validation 20/192 | Batch Loss: 0.164150
+[Info] 2025-05-28 12:17:36 Validation 40/192 | Batch Loss: 0.176584
+[Info] 2025-05-28 12:17:36 Validation 60/192 | Batch Loss: 0.148644
+[Info] 2025-05-28 12:17:36 Validation 80/192 | Batch Loss: 0.139503
+[Info] 2025-05-28 12:17:36 Validation 100/192 | Batch Loss: 0.182033
+[Info] 2025-05-28 12:17:37 Validation 120/192 | Batch Loss: 0.179400
+[Info] 2025-05-28 12:17:37 Validation 140/192 | Batch Loss: 0.118298
+[Info] 2025-05-28 12:17:37 Validation 160/192 | Batch Loss: 0.148152
+[Info] 2025-05-28 12:17:37 Validation 180/192 | Batch Loss: 0.144830
+[Info] 2025-05-28 12:17:37 Validation 192/192 | Batch Loss: 0.180227
+[Info] 2025-05-28 12:17:37 Epoch [28/50] Train Loss: 0.185606 | Val Loss: 0.161956
+[Info] 2025-05-28 12:17:37 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:17:37 Starting epoch 29/50 ...
+[Info] 2025-05-28 12:17:39 Epoch 29 | Batch 100/1533 | Batch Loss: 0.170056
+[Info] 2025-05-28 12:17:41 Epoch 29 | Batch 200/1533 | Batch Loss: 0.222850
+[Info] 2025-05-28 12:17:43 Epoch 29 | Batch 300/1533 | Batch Loss: 0.212660
+[Info] 2025-05-28 12:17:45 Epoch 29 | Batch 400/1533 | Batch Loss: 0.199749
+[Info] 2025-05-28 12:17:48 Epoch 29 | Batch 500/1533 | Batch Loss: 0.184038
+[Info] 2025-05-28 12:17:50 Epoch 29 | Batch 600/1533 | Batch Loss: 0.158115
+[Info] 2025-05-28 12:17:52 Epoch 29 | Batch 700/1533 | Batch Loss: 0.195333
+[Info] 2025-05-28 12:17:54 Epoch 29 | Batch 800/1533 | Batch Loss: 0.189814
+[Info] 2025-05-28 12:17:56 Epoch 29 | Batch 900/1533 | Batch Loss: 0.177687
+[Info] 2025-05-28 12:17:58 Epoch 29 | Batch 1000/1533 | Batch Loss: 0.184860
+[Info] 2025-05-28 12:18:00 Epoch 29 | Batch 1100/1533 | Batch Loss: 0.137699
+[Info] 2025-05-28 12:18:02 Epoch 29 | Batch 1200/1533 | Batch Loss: 0.181878
+[Info] 2025-05-28 12:18:04 Epoch 29 | Batch 1300/1533 | Batch Loss: 0.194030
+[Info] 2025-05-28 12:18:07 Epoch 29 | Batch 1400/1533 | Batch Loss: 0.125818
+[Info] 2025-05-28 12:18:09 Epoch 29 | Batch 1500/1533 | Batch Loss: 0.144286
+[Info] 2025-05-28 12:18:10 Epoch 29 | Batch 1533/1533 | Batch Loss: 0.206545
+[Info] 2025-05-28 12:18:10 Validating after epoch 29 ...
+[Info] 2025-05-28 12:18:10 Validation 20/192 | Batch Loss: 0.157398
+[Info] 2025-05-28 12:18:10 Validation 40/192 | Batch Loss: 0.166980
+[Info] 2025-05-28 12:18:10 Validation 60/192 | Batch Loss: 0.144239
+[Info] 2025-05-28 12:18:10 Validation 80/192 | Batch Loss: 0.135625
+[Info] 2025-05-28 12:18:11 Validation 100/192 | Batch Loss: 0.176823
+[Info] 2025-05-28 12:18:11 Validation 120/192 | Batch Loss: 0.181115
+[Info] 2025-05-28 12:18:11 Validation 140/192 | Batch Loss: 0.116557
+[Info] 2025-05-28 12:18:11 Validation 160/192 | Batch Loss: 0.149483
+[Info] 2025-05-28 12:18:11 Validation 180/192 | Batch Loss: 0.136527
+[Info] 2025-05-28 12:18:11 Validation 192/192 | Batch Loss: 0.179807
+[Info] 2025-05-28 12:18:11 Epoch [29/50] Train Loss: 0.183544 | Val Loss: 0.160157
+[Info] 2025-05-28 12:18:11 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:18:11 Starting epoch 30/50 ...
+[Info] 2025-05-28 12:18:13 Epoch 30 | Batch 100/1533 | Batch Loss: 0.194934
+[Info] 2025-05-28 12:18:15 Epoch 30 | Batch 200/1533 | Batch Loss: 0.175371
+[Info] 2025-05-28 12:18:18 Epoch 30 | Batch 300/1533 | Batch Loss: 0.174334
+[Info] 2025-05-28 12:18:20 Epoch 30 | Batch 400/1533 | Batch Loss: 0.222715
+[Info] 2025-05-28 12:18:22 Epoch 30 | Batch 500/1533 | Batch Loss: 0.211833
+[Info] 2025-05-28 12:18:24 Epoch 30 | Batch 600/1533 | Batch Loss: 0.180902
+[Info] 2025-05-28 12:18:26 Epoch 30 | Batch 700/1533 | Batch Loss: 0.214263
+[Info] 2025-05-28 12:18:27 Epoch 30 | Batch 800/1533 | Batch Loss: 0.197603
+[Info] 2025-05-28 12:18:30 Epoch 30 | Batch 900/1533 | Batch Loss: 0.143229
+[Info] 2025-05-28 12:18:31 Epoch 30 | Batch 1000/1533 | Batch Loss: 0.211919
+[Info] 2025-05-28 12:18:34 Epoch 30 | Batch 1100/1533 | Batch Loss: 0.163564
+[Info] 2025-05-28 12:18:36 Epoch 30 | Batch 1200/1533 | Batch Loss: 0.154216
+[Info] 2025-05-28 12:18:38 Epoch 30 | Batch 1300/1533 | Batch Loss: 0.161076
+[Info] 2025-05-28 12:18:40 Epoch 30 | Batch 1400/1533 | Batch Loss: 0.184608
+[Info] 2025-05-28 12:18:42 Epoch 30 | Batch 1500/1533 | Batch Loss: 0.223406
+[Info] 2025-05-28 12:18:43 Epoch 30 | Batch 1533/1533 | Batch Loss: 0.156121
+[Info] 2025-05-28 12:18:43 Validating after epoch 30 ...
+[Info] 2025-05-28 12:18:43 Validation 20/192 | Batch Loss: 0.151743
+[Info] 2025-05-28 12:18:43 Validation 40/192 | Batch Loss: 0.169550
+[Info] 2025-05-28 12:18:43 Validation 60/192 | Batch Loss: 0.135600
+[Info] 2025-05-28 12:18:43 Validation 80/192 | Batch Loss: 0.134605
+[Info] 2025-05-28 12:18:43 Validation 100/192 | Batch Loss: 0.174058
+[Info] 2025-05-28 12:18:44 Validation 120/192 | Batch Loss: 0.182741
+[Info] 2025-05-28 12:18:44 Validation 140/192 | Batch Loss: 0.111880
+[Info] 2025-05-28 12:18:44 Validation 160/192 | Batch Loss: 0.149202
+[Info] 2025-05-28 12:18:44 Validation 180/192 | Batch Loss: 0.139437
+[Info] 2025-05-28 12:18:44 Validation 192/192 | Batch Loss: 0.182858
+[Info] 2025-05-28 12:18:44 Epoch [30/50] Train Loss: 0.182300 | Val Loss: 0.159383
+[Info] 2025-05-28 12:18:44 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:18:44 Starting epoch 31/50 ...
+[Info] 2025-05-28 12:18:46 Epoch 31 | Batch 100/1533 | Batch Loss: 0.134593
+[Info] 2025-05-28 12:18:48 Epoch 31 | Batch 200/1533 | Batch Loss: 0.215778
+[Info] 2025-05-28 12:18:50 Epoch 31 | Batch 300/1533 | Batch Loss: 0.206333
+[Info] 2025-05-28 12:18:52 Epoch 31 | Batch 400/1533 | Batch Loss: 0.216841
+[Info] 2025-05-28 12:18:55 Epoch 31 | Batch 500/1533 | Batch Loss: 0.175413
+[Info] 2025-05-28 12:18:57 Epoch 31 | Batch 600/1533 | Batch Loss: 0.184767
+[Info] 2025-05-28 12:18:59 Epoch 31 | Batch 700/1533 | Batch Loss: 0.121596
+[Info] 2025-05-28 12:19:01 Epoch 31 | Batch 800/1533 | Batch Loss: 0.173510
+[Info] 2025-05-28 12:19:03 Epoch 31 | Batch 900/1533 | Batch Loss: 0.147163
+[Info] 2025-05-28 12:19:05 Epoch 31 | Batch 1000/1533 | Batch Loss: 0.210356
+[Info] 2025-05-28 12:19:07 Epoch 31 | Batch 1100/1533 | Batch Loss: 0.163726
+[Info] 2025-05-28 12:19:09 Epoch 31 | Batch 1200/1533 | Batch Loss: 0.193484
+[Info] 2025-05-28 12:19:11 Epoch 31 | Batch 1300/1533 | Batch Loss: 0.140232
+[Info] 2025-05-28 12:19:13 Epoch 31 | Batch 1400/1533 | Batch Loss: 0.176207
+[Info] 2025-05-28 12:19:15 Epoch 31 | Batch 1500/1533 | Batch Loss: 0.193197
+[Info] 2025-05-28 12:19:16 Epoch 31 | Batch 1533/1533 | Batch Loss: 0.200393
+[Info] 2025-05-28 12:19:16 Validating after epoch 31 ...
+[Info] 2025-05-28 12:19:16 Validation 20/192 | Batch Loss: 0.155508
+[Info] 2025-05-28 12:19:16 Validation 40/192 | Batch Loss: 0.170760
+[Info] 2025-05-28 12:19:17 Validation 60/192 | Batch Loss: 0.139910
+[Info] 2025-05-28 12:19:17 Validation 80/192 | Batch Loss: 0.131788
+[Info] 2025-05-28 12:19:17 Validation 100/192 | Batch Loss: 0.174335
+[Info] 2025-05-28 12:19:17 Validation 120/192 | Batch Loss: 0.178679
+[Info] 2025-05-28 12:19:17 Validation 140/192 | Batch Loss: 0.116958
+[Info] 2025-05-28 12:19:17 Validation 160/192 | Batch Loss: 0.143078
+[Info] 2025-05-28 12:19:17 Validation 180/192 | Batch Loss: 0.137971
+[Info] 2025-05-28 12:19:18 Validation 192/192 | Batch Loss: 0.179989
+[Info] 2025-05-28 12:19:18 Epoch [31/50] Train Loss: 0.180978 | Val Loss: 0.156787
+[Info] 2025-05-28 12:19:18 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:19:18 Starting epoch 32/50 ...
+[Info] 2025-05-28 12:19:20 Epoch 32 | Batch 100/1533 | Batch Loss: 0.227330
+[Info] 2025-05-28 12:19:21 Epoch 32 | Batch 200/1533 | Batch Loss: 0.157889
+[Info] 2025-05-28 12:19:23 Epoch 32 | Batch 300/1533 | Batch Loss: 0.195656
+[Info] 2025-05-28 12:19:25 Epoch 32 | Batch 400/1533 | Batch Loss: 0.220680
+[Info] 2025-05-28 12:19:27 Epoch 32 | Batch 500/1533 | Batch Loss: 0.141232
+[Info] 2025-05-28 12:19:29 Epoch 32 | Batch 600/1533 | Batch Loss: 0.153300
+[Info] 2025-05-28 12:19:31 Epoch 32 | Batch 700/1533 | Batch Loss: 0.207032
+[Info] 2025-05-28 12:19:33 Epoch 32 | Batch 800/1533 | Batch Loss: 0.200049
+[Info] 2025-05-28 12:19:35 Epoch 32 | Batch 900/1533 | Batch Loss: 0.140183
+[Info] 2025-05-28 12:19:37 Epoch 32 | Batch 1000/1533 | Batch Loss: 0.223630
+[Info] 2025-05-28 12:19:39 Epoch 32 | Batch 1100/1533 | Batch Loss: 0.205331
+[Info] 2025-05-28 12:19:41 Epoch 32 | Batch 1200/1533 | Batch Loss: 0.216859
+[Info] 2025-05-28 12:19:42 Epoch 32 | Batch 1300/1533 | Batch Loss: 0.167085
+[Info] 2025-05-28 12:19:44 Epoch 32 | Batch 1400/1533 | Batch Loss: 0.178939
+[Info] 2025-05-28 12:19:46 Epoch 32 | Batch 1500/1533 | Batch Loss: 0.135007
+[Info] 2025-05-28 12:19:47 Epoch 32 | Batch 1533/1533 | Batch Loss: 0.225614
+[Info] 2025-05-28 12:19:47 Validating after epoch 32 ...
+[Info] 2025-05-28 12:19:47 Validation 20/192 | Batch Loss: 0.155316
+[Info] 2025-05-28 12:19:47 Validation 40/192 | Batch Loss: 0.163699
+[Info] 2025-05-28 12:19:47 Validation 60/192 | Batch Loss: 0.146845
+[Info] 2025-05-28 12:19:47 Validation 80/192 | Batch Loss: 0.130282
+[Info] 2025-05-28 12:19:47 Validation 100/192 | Batch Loss: 0.172125
+[Info] 2025-05-28 12:19:48 Validation 120/192 | Batch Loss: 0.174332
+[Info] 2025-05-28 12:19:48 Validation 140/192 | Batch Loss: 0.111764
+[Info] 2025-05-28 12:19:48 Validation 160/192 | Batch Loss: 0.147017
+[Info] 2025-05-28 12:19:48 Validation 180/192 | Batch Loss: 0.140049
+[Info] 2025-05-28 12:19:48 Validation 192/192 | Batch Loss: 0.179174
+[Info] 2025-05-28 12:19:48 Epoch [32/50] Train Loss: 0.179609 | Val Loss: 0.156807
+[Info] 2025-05-28 12:19:48 Starting epoch 33/50 ...
+[Info] 2025-05-28 12:19:50 Epoch 33 | Batch 100/1533 | Batch Loss: 0.168536
+[Info] 2025-05-28 12:19:52 Epoch 33 | Batch 200/1533 | Batch Loss: 0.177188
+[Info] 2025-05-28 12:19:54 Epoch 33 | Batch 300/1533 | Batch Loss: 0.145831
+[Info] 2025-05-28 12:19:55 Epoch 33 | Batch 400/1533 | Batch Loss: 0.153378
+[Info] 2025-05-28 12:19:57 Epoch 33 | Batch 500/1533 | Batch Loss: 0.142731
+[Info] 2025-05-28 12:19:59 Epoch 33 | Batch 600/1533 | Batch Loss: 0.179858
+[Info] 2025-05-28 12:20:02 Epoch 33 | Batch 700/1533 | Batch Loss: 0.118050
+[Info] 2025-05-28 12:20:04 Epoch 33 | Batch 800/1533 | Batch Loss: 0.164093
+[Info] 2025-05-28 12:20:06 Epoch 33 | Batch 900/1533 | Batch Loss: 0.252051
+[Info] 2025-05-28 12:20:08 Epoch 33 | Batch 1000/1533 | Batch Loss: 0.174025
+[Info] 2025-05-28 12:20:10 Epoch 33 | Batch 1100/1533 | Batch Loss: 0.252185
+[Info] 2025-05-28 12:20:12 Epoch 33 | Batch 1200/1533 | Batch Loss: 0.160761
+[Info] 2025-05-28 12:20:15 Epoch 33 | Batch 1300/1533 | Batch Loss: 0.154988
+[Info] 2025-05-28 12:20:17 Epoch 33 | Batch 1400/1533 | Batch Loss: 0.181068
+[Info] 2025-05-28 12:20:19 Epoch 33 | Batch 1500/1533 | Batch Loss: 0.184090
+[Info] 2025-05-28 12:20:20 Epoch 33 | Batch 1533/1533 | Batch Loss: 0.273450
+[Info] 2025-05-28 12:20:20 Validating after epoch 33 ...
+[Info] 2025-05-28 12:20:20 Validation 20/192 | Batch Loss: 0.150223
+[Info] 2025-05-28 12:20:20 Validation 40/192 | Batch Loss: 0.168615
+[Info] 2025-05-28 12:20:20 Validation 60/192 | Batch Loss: 0.145303
+[Info] 2025-05-28 12:20:20 Validation 80/192 | Batch Loss: 0.129515
+[Info] 2025-05-28 12:20:21 Validation 100/192 | Batch Loss: 0.173290
+[Info] 2025-05-28 12:20:21 Validation 120/192 | Batch Loss: 0.173812
+[Info] 2025-05-28 12:20:21 Validation 140/192 | Batch Loss: 0.110262
+[Info] 2025-05-28 12:20:21 Validation 160/192 | Batch Loss: 0.142112
+[Info] 2025-05-28 12:20:21 Validation 180/192 | Batch Loss: 0.136520
+[Info] 2025-05-28 12:20:22 Validation 192/192 | Batch Loss: 0.172097
+[Info] 2025-05-28 12:20:22 Epoch [33/50] Train Loss: 0.178728 | Val Loss: 0.155287
+[Info] 2025-05-28 12:20:22 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:20:22 Starting epoch 34/50 ...
+[Info] 2025-05-28 12:20:24 Epoch 34 | Batch 100/1533 | Batch Loss: 0.095814
+[Info] 2025-05-28 12:20:26 Epoch 34 | Batch 200/1533 | Batch Loss: 0.162769
+[Info] 2025-05-28 12:20:28 Epoch 34 | Batch 300/1533 | Batch Loss: 0.179856
+[Info] 2025-05-28 12:20:30 Epoch 34 | Batch 400/1533 | Batch Loss: 0.195360
+[Info] 2025-05-28 12:20:32 Epoch 34 | Batch 500/1533 | Batch Loss: 0.194028
+[Info] 2025-05-28 12:20:34 Epoch 34 | Batch 600/1533 | Batch Loss: 0.203184
+[Info] 2025-05-28 12:20:36 Epoch 34 | Batch 700/1533 | Batch Loss: 0.155795
+[Info] 2025-05-28 12:20:38 Epoch 34 | Batch 800/1533 | Batch Loss: 0.140083
+[Info] 2025-05-28 12:20:40 Epoch 34 | Batch 900/1533 | Batch Loss: 0.180421
+[Info] 2025-05-28 12:20:43 Epoch 34 | Batch 1000/1533 | Batch Loss: 0.183111
+[Info] 2025-05-28 12:20:46 Epoch 34 | Batch 1100/1533 | Batch Loss: 0.185145
+[Info] 2025-05-28 12:20:48 Epoch 34 | Batch 1200/1533 | Batch Loss: 0.185144
+[Info] 2025-05-28 12:20:51 Epoch 34 | Batch 1300/1533 | Batch Loss: 0.120068
+[Info] 2025-05-28 12:20:53 Epoch 34 | Batch 1400/1533 | Batch Loss: 0.270614
+[Info] 2025-05-28 12:20:56 Epoch 34 | Batch 1500/1533 | Batch Loss: 0.176187
+[Info] 2025-05-28 12:20:56 Epoch 34 | Batch 1533/1533 | Batch Loss: 0.234083
+[Info] 2025-05-28 12:20:56 Validating after epoch 34 ...
+[Info] 2025-05-28 12:20:57 Validation 20/192 | Batch Loss: 0.158118
+[Info] 2025-05-28 12:20:57 Validation 40/192 | Batch Loss: 0.165358
+[Info] 2025-05-28 12:20:57 Validation 60/192 | Batch Loss: 0.136769
+[Info] 2025-05-28 12:20:57 Validation 80/192 | Batch Loss: 0.130037
+[Info] 2025-05-28 12:20:57 Validation 100/192 | Batch Loss: 0.173138
+[Info] 2025-05-28 12:20:57 Validation 120/192 | Batch Loss: 0.177136
+[Info] 2025-05-28 12:20:58 Validation 140/192 | Batch Loss: 0.110356
+[Info] 2025-05-28 12:20:58 Validation 160/192 | Batch Loss: 0.146511
+[Info] 2025-05-28 12:20:58 Validation 180/192 | Batch Loss: 0.139895
+[Info] 2025-05-28 12:20:58 Validation 192/192 | Batch Loss: 0.175286
+[Info] 2025-05-28 12:20:58 Epoch [34/50] Train Loss: 0.176776 | Val Loss: 0.155964
+[Info] 2025-05-28 12:20:58 Starting epoch 35/50 ...
+[Info] 2025-05-28 12:21:00 Epoch 35 | Batch 100/1533 | Batch Loss: 0.219523
+[Info] 2025-05-28 12:21:02 Epoch 35 | Batch 200/1533 | Batch Loss: 0.200524
+[Info] 2025-05-28 12:21:05 Epoch 35 | Batch 300/1533 | Batch Loss: 0.223120
+[Info] 2025-05-28 12:21:07 Epoch 35 | Batch 400/1533 | Batch Loss: 0.175763
+[Info] 2025-05-28 12:21:10 Epoch 35 | Batch 500/1533 | Batch Loss: 0.198304
+[Info] 2025-05-28 12:21:13 Epoch 35 | Batch 600/1533 | Batch Loss: 0.157160
+[Info] 2025-05-28 12:21:16 Epoch 35 | Batch 700/1533 | Batch Loss: 0.137217
+[Info] 2025-05-28 12:21:18 Epoch 35 | Batch 800/1533 | Batch Loss: 0.223582
+[Info] 2025-05-28 12:21:20 Epoch 35 | Batch 900/1533 | Batch Loss: 0.151128
+[Info] 2025-05-28 12:21:22 Epoch 35 | Batch 1000/1533 | Batch Loss: 0.158311
+[Info] 2025-05-28 12:21:24 Epoch 35 | Batch 1100/1533 | Batch Loss: 0.189680
+[Info] 2025-05-28 12:21:26 Epoch 35 | Batch 1200/1533 | Batch Loss: 0.187814
+[Info] 2025-05-28 12:21:28 Epoch 35 | Batch 1300/1533 | Batch Loss: 0.167222
+[Info] 2025-05-28 12:21:30 Epoch 35 | Batch 1400/1533 | Batch Loss: 0.129760
+[Info] 2025-05-28 12:21:32 Epoch 35 | Batch 1500/1533 | Batch Loss: 0.173473
+[Info] 2025-05-28 12:21:33 Epoch 35 | Batch 1533/1533 | Batch Loss: 0.144017
+[Info] 2025-05-28 12:21:33 Validating after epoch 35 ...
+[Info] 2025-05-28 12:21:33 Validation 20/192 | Batch Loss: 0.149687
+[Info] 2025-05-28 12:21:33 Validation 40/192 | Batch Loss: 0.161179
+[Info] 2025-05-28 12:21:33 Validation 60/192 | Batch Loss: 0.135604
+[Info] 2025-05-28 12:21:33 Validation 80/192 | Batch Loss: 0.128610
+[Info] 2025-05-28 12:21:34 Validation 100/192 | Batch Loss: 0.167266
+[Info] 2025-05-28 12:21:34 Validation 120/192 | Batch Loss: 0.173474
+[Info] 2025-05-28 12:21:34 Validation 140/192 | Batch Loss: 0.112727
+[Info] 2025-05-28 12:21:34 Validation 160/192 | Batch Loss: 0.143746
+[Info] 2025-05-28 12:21:34 Validation 180/192 | Batch Loss: 0.132649
+[Info] 2025-05-28 12:21:34 Validation 192/192 | Batch Loss: 0.170205
+[Info] 2025-05-28 12:21:34 Epoch [35/50] Train Loss: 0.175838 | Val Loss: 0.152257
+[Info] 2025-05-28 12:21:34 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:21:34 Starting epoch 36/50 ...
+[Info] 2025-05-28 12:21:36 Epoch 36 | Batch 100/1533 | Batch Loss: 0.145106
+[Info] 2025-05-28 12:21:38 Epoch 36 | Batch 200/1533 | Batch Loss: 0.122274
+[Info] 2025-05-28 12:21:40 Epoch 36 | Batch 300/1533 | Batch Loss: 0.195974
+[Info] 2025-05-28 12:21:42 Epoch 36 | Batch 400/1533 | Batch Loss: 0.202735
+[Info] 2025-05-28 12:21:44 Epoch 36 | Batch 500/1533 | Batch Loss: 0.164719
+[Info] 2025-05-28 12:21:46 Epoch 36 | Batch 600/1533 | Batch Loss: 0.160554
+[Info] 2025-05-28 12:21:48 Epoch 36 | Batch 700/1533 | Batch Loss: 0.182434
+[Info] 2025-05-28 12:21:50 Epoch 36 | Batch 800/1533 | Batch Loss: 0.154841
+[Info] 2025-05-28 12:21:52 Epoch 36 | Batch 900/1533 | Batch Loss: 0.214926
+[Info] 2025-05-28 12:21:54 Epoch 36 | Batch 1000/1533 | Batch Loss: 0.128906
+[Info] 2025-05-28 12:21:55 Epoch 36 | Batch 1100/1533 | Batch Loss: 0.152530
+[Info] 2025-05-28 12:21:57 Epoch 36 | Batch 1200/1533 | Batch Loss: 0.155015
+[Info] 2025-05-28 12:21:59 Epoch 36 | Batch 1300/1533 | Batch Loss: 0.141839
+[Info] 2025-05-28 12:22:01 Epoch 36 | Batch 1400/1533 | Batch Loss: 0.212640
+[Info] 2025-05-28 12:22:03 Epoch 36 | Batch 1500/1533 | Batch Loss: 0.197117
+[Info] 2025-05-28 12:22:03 Epoch 36 | Batch 1533/1533 | Batch Loss: 0.232435
+[Info] 2025-05-28 12:22:03 Validating after epoch 36 ...
+[Info] 2025-05-28 12:22:03 Validation 20/192 | Batch Loss: 0.148741
+[Info] 2025-05-28 12:22:04 Validation 40/192 | Batch Loss: 0.158498
+[Info] 2025-05-28 12:22:04 Validation 60/192 | Batch Loss: 0.137812
+[Info] 2025-05-28 12:22:04 Validation 80/192 | Batch Loss: 0.131909
+[Info] 2025-05-28 12:22:04 Validation 100/192 | Batch Loss: 0.167238
+[Info] 2025-05-28 12:22:04 Validation 120/192 | Batch Loss: 0.174202
+[Info] 2025-05-28 12:22:04 Validation 140/192 | Batch Loss: 0.112829
+[Info] 2025-05-28 12:22:04 Validation 160/192 | Batch Loss: 0.136733
+[Info] 2025-05-28 12:22:05 Validation 180/192 | Batch Loss: 0.136626
+[Info] 2025-05-28 12:22:05 Validation 192/192 | Batch Loss: 0.169356
+[Info] 2025-05-28 12:22:05 Epoch [36/50] Train Loss: 0.174445 | Val Loss: 0.151855
+[Info] 2025-05-28 12:22:05 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:22:05 Starting epoch 37/50 ...
+[Info] 2025-05-28 12:22:07 Epoch 37 | Batch 100/1533 | Batch Loss: 0.179449
+[Info] 2025-05-28 12:22:09 Epoch 37 | Batch 200/1533 | Batch Loss: 0.190414
+[Info] 2025-05-28 12:22:11 Epoch 37 | Batch 300/1533 | Batch Loss: 0.181500
+[Info] 2025-05-28 12:22:13 Epoch 37 | Batch 400/1533 | Batch Loss: 0.179432
+[Info] 2025-05-28 12:22:15 Epoch 37 | Batch 500/1533 | Batch Loss: 0.160339
+[Info] 2025-05-28 12:22:17 Epoch 37 | Batch 600/1533 | Batch Loss: 0.154584
+[Info] 2025-05-28 12:22:18 Epoch 37 | Batch 700/1533 | Batch Loss: 0.207088
+[Info] 2025-05-28 12:22:20 Epoch 37 | Batch 800/1533 | Batch Loss: 0.176222
+[Info] 2025-05-28 12:22:22 Epoch 37 | Batch 900/1533 | Batch Loss: 0.202940
+[Info] 2025-05-28 12:22:24 Epoch 37 | Batch 1000/1533 | Batch Loss: 0.229376
+[Info] 2025-05-28 12:22:26 Epoch 37 | Batch 1100/1533 | Batch Loss: 0.164478
+[Info] 2025-05-28 12:22:28 Epoch 37 | Batch 1200/1533 | Batch Loss: 0.148809
+[Info] 2025-05-28 12:22:30 Epoch 37 | Batch 1300/1533 | Batch Loss: 0.214456
+[Info] 2025-05-28 12:22:32 Epoch 37 | Batch 1400/1533 | Batch Loss: 0.193705
+[Info] 2025-05-28 12:22:33 Epoch 37 | Batch 1500/1533 | Batch Loss: 0.193402
+[Info] 2025-05-28 12:22:34 Epoch 37 | Batch 1533/1533 | Batch Loss: 0.143104
+[Info] 2025-05-28 12:22:34 Validating after epoch 37 ...
+[Info] 2025-05-28 12:22:34 Validation 20/192 | Batch Loss: 0.153142
+[Info] 2025-05-28 12:22:34 Validation 40/192 | Batch Loss: 0.158490
+[Info] 2025-05-28 12:22:34 Validation 60/192 | Batch Loss: 0.147232
+[Info] 2025-05-28 12:22:35 Validation 80/192 | Batch Loss: 0.136353
+[Info] 2025-05-28 12:22:35 Validation 100/192 | Batch Loss: 0.175305
+[Info] 2025-05-28 12:22:35 Validation 120/192 | Batch Loss: 0.170888
+[Info] 2025-05-28 12:22:35 Validation 140/192 | Batch Loss: 0.114673
+[Info] 2025-05-28 12:22:35 Validation 160/192 | Batch Loss: 0.139982
+[Info] 2025-05-28 12:22:35 Validation 180/192 | Batch Loss: 0.135638
+[Info] 2025-05-28 12:22:35 Validation 192/192 | Batch Loss: 0.172196
+[Info] 2025-05-28 12:22:35 Epoch [37/50] Train Loss: 0.173410 | Val Loss: 0.155350
+[Info] 2025-05-28 12:22:35 Starting epoch 38/50 ...
+[Info] 2025-05-28 12:22:37 Epoch 38 | Batch 100/1533 | Batch Loss: 0.207494
+[Info] 2025-05-28 12:22:39 Epoch 38 | Batch 200/1533 | Batch Loss: 0.182437
+[Info] 2025-05-28 12:22:41 Epoch 38 | Batch 300/1533 | Batch Loss: 0.185154
+[Info] 2025-05-28 12:22:43 Epoch 38 | Batch 400/1533 | Batch Loss: 0.156900
+[Info] 2025-05-28 12:22:45 Epoch 38 | Batch 500/1533 | Batch Loss: 0.161495
+[Info] 2025-05-28 12:22:47 Epoch 38 | Batch 600/1533 | Batch Loss: 0.154070
+[Info] 2025-05-28 12:22:49 Epoch 38 | Batch 700/1533 | Batch Loss: 0.160511
+[Info] 2025-05-28 12:22:51 Epoch 38 | Batch 800/1533 | Batch Loss: 0.168356
+[Info] 2025-05-28 12:22:53 Epoch 38 | Batch 900/1533 | Batch Loss: 0.222052
+[Info] 2025-05-28 12:22:54 Epoch 38 | Batch 1000/1533 | Batch Loss: 0.156982
+[Info] 2025-05-28 12:22:56 Epoch 38 | Batch 1100/1533 | Batch Loss: 0.162454
+[Info] 2025-05-28 12:22:58 Epoch 38 | Batch 1200/1533 | Batch Loss: 0.190131
+[Info] 2025-05-28 12:23:00 Epoch 38 | Batch 1300/1533 | Batch Loss: 0.157466
+[Info] 2025-05-28 12:23:02 Epoch 38 | Batch 1400/1533 | Batch Loss: 0.124380
+[Info] 2025-05-28 12:23:04 Epoch 38 | Batch 1500/1533 | Batch Loss: 0.224121
+[Info] 2025-05-28 12:23:05 Epoch 38 | Batch 1533/1533 | Batch Loss: 0.222247
+[Info] 2025-05-28 12:23:05 Validating after epoch 38 ...
+[Info] 2025-05-28 12:23:05 Validation 20/192 | Batch Loss: 0.142332
+[Info] 2025-05-28 12:23:05 Validation 40/192 | Batch Loss: 0.164698
+[Info] 2025-05-28 12:23:05 Validation 60/192 | Batch Loss: 0.138999
+[Info] 2025-05-28 12:23:05 Validation 80/192 | Batch Loss: 0.125973
+[Info] 2025-05-28 12:23:05 Validation 100/192 | Batch Loss: 0.164793
+[Info] 2025-05-28 12:23:05 Validation 120/192 | Batch Loss: 0.170903
+[Info] 2025-05-28 12:23:06 Validation 140/192 | Batch Loss: 0.106393
+[Info] 2025-05-28 12:23:06 Validation 160/192 | Batch Loss: 0.139992
+[Info] 2025-05-28 12:23:06 Validation 180/192 | Batch Loss: 0.130627
+[Info] 2025-05-28 12:23:06 Validation 192/192 | Batch Loss: 0.160744
+[Info] 2025-05-28 12:23:06 Epoch [38/50] Train Loss: 0.172450 | Val Loss: 0.149392
+[Info] 2025-05-28 12:23:06 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:23:06 Starting epoch 39/50 ...
+[Info] 2025-05-28 12:23:08 Epoch 39 | Batch 100/1533 | Batch Loss: 0.166538
+[Info] 2025-05-28 12:23:10 Epoch 39 | Batch 200/1533 | Batch Loss: 0.212124
+[Info] 2025-05-28 12:23:12 Epoch 39 | Batch 300/1533 | Batch Loss: 0.207371
+[Info] 2025-05-28 12:23:14 Epoch 39 | Batch 400/1533 | Batch Loss: 0.119693
+[Info] 2025-05-28 12:23:16 Epoch 39 | Batch 500/1533 | Batch Loss: 0.231420
+[Info] 2025-05-28 12:23:18 Epoch 39 | Batch 600/1533 | Batch Loss: 0.161044
+[Info] 2025-05-28 12:23:20 Epoch 39 | Batch 700/1533 | Batch Loss: 0.150238
+[Info] 2025-05-28 12:23:22 Epoch 39 | Batch 800/1533 | Batch Loss: 0.171519
+[Info] 2025-05-28 12:23:24 Epoch 39 | Batch 900/1533 | Batch Loss: 0.170025
+[Info] 2025-05-28 12:23:25 Epoch 39 | Batch 1000/1533 | Batch Loss: 0.161872
+[Info] 2025-05-28 12:23:27 Epoch 39 | Batch 1100/1533 | Batch Loss: 0.131070
+[Info] 2025-05-28 12:23:29 Epoch 39 | Batch 1200/1533 | Batch Loss: 0.178509
+[Info] 2025-05-28 12:23:31 Epoch 39 | Batch 1300/1533 | Batch Loss: 0.188650
+[Info] 2025-05-28 12:23:33 Epoch 39 | Batch 1400/1533 | Batch Loss: 0.183566
+[Info] 2025-05-28 12:23:35 Epoch 39 | Batch 1500/1533 | Batch Loss: 0.172006
+[Info] 2025-05-28 12:23:35 Epoch 39 | Batch 1533/1533 | Batch Loss: 0.140113
+[Info] 2025-05-28 12:23:35 Validating after epoch 39 ...
+[Info] 2025-05-28 12:23:35 Validation 20/192 | Batch Loss: 0.154683
+[Info] 2025-05-28 12:23:35 Validation 40/192 | Batch Loss: 0.158810
+[Info] 2025-05-28 12:23:36 Validation 60/192 | Batch Loss: 0.136955
+[Info] 2025-05-28 12:23:36 Validation 80/192 | Batch Loss: 0.133237
+[Info] 2025-05-28 12:23:36 Validation 100/192 | Batch Loss: 0.172658
+[Info] 2025-05-28 12:23:36 Validation 120/192 | Batch Loss: 0.173402
+[Info] 2025-05-28 12:23:36 Validation 140/192 | Batch Loss: 0.115661
+[Info] 2025-05-28 12:23:36 Validation 160/192 | Batch Loss: 0.141151
+[Info] 2025-05-28 12:23:36 Validation 180/192 | Batch Loss: 0.131473
+[Info] 2025-05-28 12:23:36 Validation 192/192 | Batch Loss: 0.177130
+[Info] 2025-05-28 12:23:36 Epoch [39/50] Train Loss: 0.171362 | Val Loss: 0.151486
+[Info] 2025-05-28 12:23:36 Starting epoch 40/50 ...
+[Info] 2025-05-28 12:23:38 Epoch 40 | Batch 100/1533 | Batch Loss: 0.165177
+[Info] 2025-05-28 12:23:40 Epoch 40 | Batch 200/1533 | Batch Loss: 0.196314
+[Info] 2025-05-28 12:23:42 Epoch 40 | Batch 300/1533 | Batch Loss: 0.132369
+[Info] 2025-05-28 12:23:43 Epoch 40 | Batch 400/1533 | Batch Loss: 0.122141
+[Info] 2025-05-28 12:23:45 Epoch 40 | Batch 500/1533 | Batch Loss: 0.178732
+[Info] 2025-05-28 12:23:47 Epoch 40 | Batch 600/1533 | Batch Loss: 0.142333
+[Info] 2025-05-28 12:23:49 Epoch 40 | Batch 700/1533 | Batch Loss: 0.172895
+[Info] 2025-05-28 12:23:50 Epoch 40 | Batch 800/1533 | Batch Loss: 0.155457
+[Info] 2025-05-28 12:23:52 Epoch 40 | Batch 900/1533 | Batch Loss: 0.163520
+[Info] 2025-05-28 12:23:54 Epoch 40 | Batch 1000/1533 | Batch Loss: 0.120221
+[Info] 2025-05-28 12:23:55 Epoch 40 | Batch 1100/1533 | Batch Loss: 0.187312
+[Info] 2025-05-28 12:23:57 Epoch 40 | Batch 1200/1533 | Batch Loss: 0.169170
+[Info] 2025-05-28 12:23:59 Epoch 40 | Batch 1300/1533 | Batch Loss: 0.142139
+[Info] 2025-05-28 12:24:01 Epoch 40 | Batch 1400/1533 | Batch Loss: 0.155175
+[Info] 2025-05-28 12:24:03 Epoch 40 | Batch 1500/1533 | Batch Loss: 0.156344
+[Info] 2025-05-28 12:24:03 Epoch 40 | Batch 1533/1533 | Batch Loss: 0.194811
+[Info] 2025-05-28 12:24:03 Validating after epoch 40 ...
+[Info] 2025-05-28 12:24:04 Validation 20/192 | Batch Loss: 0.150782
+[Info] 2025-05-28 12:24:04 Validation 40/192 | Batch Loss: 0.168355
+[Info] 2025-05-28 12:24:04 Validation 60/192 | Batch Loss: 0.135298
+[Info] 2025-05-28 12:24:04 Validation 80/192 | Batch Loss: 0.128926
+[Info] 2025-05-28 12:24:04 Validation 100/192 | Batch Loss: 0.170647
+[Info] 2025-05-28 12:24:04 Validation 120/192 | Batch Loss: 0.170400
+[Info] 2025-05-28 12:24:04 Validation 140/192 | Batch Loss: 0.105511
+[Info] 2025-05-28 12:24:05 Validation 160/192 | Batch Loss: 0.137614
+[Info] 2025-05-28 12:24:05 Validation 180/192 | Batch Loss: 0.139714
+[Info] 2025-05-28 12:24:05 Validation 192/192 | Batch Loss: 0.177665
+[Info] 2025-05-28 12:24:05 Epoch [40/50] Train Loss: 0.170377 | Val Loss: 0.151735
+[Info] 2025-05-28 12:24:05 Starting epoch 41/50 ...
+[Info] 2025-05-28 12:24:07 Epoch 41 | Batch 100/1533 | Batch Loss: 0.152416
+[Info] 2025-05-28 12:24:09 Epoch 41 | Batch 200/1533 | Batch Loss: 0.160556
+[Info] 2025-05-28 12:24:11 Epoch 41 | Batch 300/1533 | Batch Loss: 0.131964
+[Info] 2025-05-28 12:24:13 Epoch 41 | Batch 400/1533 | Batch Loss: 0.192775
+[Info] 2025-05-28 12:24:14 Epoch 41 | Batch 500/1533 | Batch Loss: 0.119384
+[Info] 2025-05-28 12:24:16 Epoch 41 | Batch 600/1533 | Batch Loss: 0.205784
+[Info] 2025-05-28 12:24:18 Epoch 41 | Batch 700/1533 | Batch Loss: 0.165208
+[Info] 2025-05-28 12:24:20 Epoch 41 | Batch 800/1533 | Batch Loss: 0.131500
+[Info] 2025-05-28 12:24:22 Epoch 41 | Batch 900/1533 | Batch Loss: 0.171234
+[Info] 2025-05-28 12:24:24 Epoch 41 | Batch 1000/1533 | Batch Loss: 0.151560
+[Info] 2025-05-28 12:24:26 Epoch 41 | Batch 1100/1533 | Batch Loss: 0.181008
+[Info] 2025-05-28 12:24:28 Epoch 41 | Batch 1200/1533 | Batch Loss: 0.190897
+[Info] 2025-05-28 12:24:30 Epoch 41 | Batch 1300/1533 | Batch Loss: 0.143271
+[Info] 2025-05-28 12:24:32 Epoch 41 | Batch 1400/1533 | Batch Loss: 0.184480
+[Info] 2025-05-28 12:24:34 Epoch 41 | Batch 1500/1533 | Batch Loss: 0.157434
+[Info] 2025-05-28 12:24:34 Epoch 41 | Batch 1533/1533 | Batch Loss: 0.268365
+[Info] 2025-05-28 12:24:34 Validating after epoch 41 ...
+[Info] 2025-05-28 12:24:35 Validation 20/192 | Batch Loss: 0.149449
+[Info] 2025-05-28 12:24:35 Validation 40/192 | Batch Loss: 0.153972
+[Info] 2025-05-28 12:24:35 Validation 60/192 | Batch Loss: 0.138170
+[Info] 2025-05-28 12:24:35 Validation 80/192 | Batch Loss: 0.123882
+[Info] 2025-05-28 12:24:35 Validation 100/192 | Batch Loss: 0.164930
+[Info] 2025-05-28 12:24:35 Validation 120/192 | Batch Loss: 0.170367
+[Info] 2025-05-28 12:24:36 Validation 140/192 | Batch Loss: 0.108021
+[Info] 2025-05-28 12:24:36 Validation 160/192 | Batch Loss: 0.140466
+[Info] 2025-05-28 12:24:36 Validation 180/192 | Batch Loss: 0.126203
+[Info] 2025-05-28 12:24:36 Validation 192/192 | Batch Loss: 0.160044
+[Info] 2025-05-28 12:24:36 Epoch [41/50] Train Loss: 0.169606 | Val Loss: 0.147141
+[Info] 2025-05-28 12:24:36 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:24:36 Starting epoch 42/50 ...
+[Info] 2025-05-28 12:24:38 Epoch 42 | Batch 100/1533 | Batch Loss: 0.184295
+[Info] 2025-05-28 12:24:41 Epoch 42 | Batch 200/1533 | Batch Loss: 0.146072
+[Info] 2025-05-28 12:24:43 Epoch 42 | Batch 300/1533 | Batch Loss: 0.165558
+[Info] 2025-05-28 12:24:46 Epoch 42 | Batch 400/1533 | Batch Loss: 0.158739
+[Info] 2025-05-28 12:24:48 Epoch 42 | Batch 500/1533 | Batch Loss: 0.207949
+[Info] 2025-05-28 12:24:50 Epoch 42 | Batch 600/1533 | Batch Loss: 0.199170
+[Info] 2025-05-28 12:24:51 Epoch 42 | Batch 700/1533 | Batch Loss: 0.183375
+[Info] 2025-05-28 12:24:53 Epoch 42 | Batch 800/1533 | Batch Loss: 0.172829
+[Info] 2025-05-28 12:24:55 Epoch 42 | Batch 900/1533 | Batch Loss: 0.207003
+[Info] 2025-05-28 12:24:57 Epoch 42 | Batch 1000/1533 | Batch Loss: 0.171119
+[Info] 2025-05-28 12:24:59 Epoch 42 | Batch 1100/1533 | Batch Loss: 0.159043
+[Info] 2025-05-28 12:25:01 Epoch 42 | Batch 1200/1533 | Batch Loss: 0.143828
+[Info] 2025-05-28 12:25:03 Epoch 42 | Batch 1300/1533 | Batch Loss: 0.121207
+[Info] 2025-05-28 12:25:05 Epoch 42 | Batch 1400/1533 | Batch Loss: 0.159245
+[Info] 2025-05-28 12:25:08 Epoch 42 | Batch 1500/1533 | Batch Loss: 0.165073
+[Info] 2025-05-28 12:25:08 Epoch 42 | Batch 1533/1533 | Batch Loss: 0.166387
+[Info] 2025-05-28 12:25:08 Validating after epoch 42 ...
+[Info] 2025-05-28 12:25:08 Validation 20/192 | Batch Loss: 0.143095
+[Info] 2025-05-28 12:25:09 Validation 40/192 | Batch Loss: 0.157940
+[Info] 2025-05-28 12:25:09 Validation 60/192 | Batch Loss: 0.143453
+[Info] 2025-05-28 12:25:09 Validation 80/192 | Batch Loss: 0.122870
+[Info] 2025-05-28 12:25:09 Validation 100/192 | Batch Loss: 0.162340
+[Info] 2025-05-28 12:25:09 Validation 120/192 | Batch Loss: 0.165699
+[Info] 2025-05-28 12:25:10 Validation 140/192 | Batch Loss: 0.109599
+[Info] 2025-05-28 12:25:10 Validation 160/192 | Batch Loss: 0.138927
+[Info] 2025-05-28 12:25:10 Validation 180/192 | Batch Loss: 0.124121
+[Info] 2025-05-28 12:25:10 Validation 192/192 | Batch Loss: 0.160426
+[Info] 2025-05-28 12:25:10 Epoch [42/50] Train Loss: 0.168540 | Val Loss: 0.146853
+[Info] 2025-05-28 12:25:10 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:25:10 Starting epoch 43/50 ...
+[Info] 2025-05-28 12:25:12 Epoch 43 | Batch 100/1533 | Batch Loss: 0.217461
+[Info] 2025-05-28 12:25:15 Epoch 43 | Batch 200/1533 | Batch Loss: 0.162952
+[Info] 2025-05-28 12:25:17 Epoch 43 | Batch 300/1533 | Batch Loss: 0.092061
+[Info] 2025-05-28 12:25:19 Epoch 43 | Batch 400/1533 | Batch Loss: 0.117622
+[Info] 2025-05-28 12:25:21 Epoch 43 | Batch 500/1533 | Batch Loss: 0.103193
+[Info] 2025-05-28 12:25:24 Epoch 43 | Batch 600/1533 | Batch Loss: 0.221838
+[Info] 2025-05-28 12:25:26 Epoch 43 | Batch 700/1533 | Batch Loss: 0.163332
+[Info] 2025-05-28 12:25:28 Epoch 43 | Batch 800/1533 | Batch Loss: 0.149668
+[Info] 2025-05-28 12:25:30 Epoch 43 | Batch 900/1533 | Batch Loss: 0.128364
+[Info] 2025-05-28 12:25:33 Epoch 43 | Batch 1000/1533 | Batch Loss: 0.157545
+[Info] 2025-05-28 12:25:35 Epoch 43 | Batch 1100/1533 | Batch Loss: 0.193767
+[Info] 2025-05-28 12:25:37 Epoch 43 | Batch 1200/1533 | Batch Loss: 0.201851
+[Info] 2025-05-28 12:25:39 Epoch 43 | Batch 1300/1533 | Batch Loss: 0.147050
+[Info] 2025-05-28 12:25:41 Epoch 43 | Batch 1400/1533 | Batch Loss: 0.149582
+[Info] 2025-05-28 12:25:43 Epoch 43 | Batch 1500/1533 | Batch Loss: 0.135428
+[Info] 2025-05-28 12:25:44 Epoch 43 | Batch 1533/1533 | Batch Loss: 0.185472
+[Info] 2025-05-28 12:25:44 Validating after epoch 43 ...
+[Info] 2025-05-28 12:25:44 Validation 20/192 | Batch Loss: 0.142437
+[Info] 2025-05-28 12:25:44 Validation 40/192 | Batch Loss: 0.152761
+[Info] 2025-05-28 12:25:44 Validation 60/192 | Batch Loss: 0.140268
+[Info] 2025-05-28 12:25:44 Validation 80/192 | Batch Loss: 0.122966
+[Info] 2025-05-28 12:25:45 Validation 100/192 | Batch Loss: 0.164108
+[Info] 2025-05-28 12:25:45 Validation 120/192 | Batch Loss: 0.170789
+[Info] 2025-05-28 12:25:45 Validation 140/192 | Batch Loss: 0.104793
+[Info] 2025-05-28 12:25:45 Validation 160/192 | Batch Loss: 0.139589
+[Info] 2025-05-28 12:25:45 Validation 180/192 | Batch Loss: 0.128289
+[Info] 2025-05-28 12:25:45 Validation 192/192 | Batch Loss: 0.160172
+[Info] 2025-05-28 12:25:45 Epoch [43/50] Train Loss: 0.167602 | Val Loss: 0.146758
+[Info] 2025-05-28 12:25:45 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:25:45 Starting epoch 44/50 ...
+[Info] 2025-05-28 12:25:48 Epoch 44 | Batch 100/1533 | Batch Loss: 0.152660
+[Info] 2025-05-28 12:25:50 Epoch 44 | Batch 200/1533 | Batch Loss: 0.160844
+[Info] 2025-05-28 12:25:52 Epoch 44 | Batch 300/1533 | Batch Loss: 0.179883
+[Info] 2025-05-28 12:25:54 Epoch 44 | Batch 400/1533 | Batch Loss: 0.204610
+[Info] 2025-05-28 12:25:56 Epoch 44 | Batch 500/1533 | Batch Loss: 0.132908
+[Info] 2025-05-28 12:25:59 Epoch 44 | Batch 600/1533 | Batch Loss: 0.127544
+[Info] 2025-05-28 12:26:01 Epoch 44 | Batch 700/1533 | Batch Loss: 0.100914
+[Info] 2025-05-28 12:26:03 Epoch 44 | Batch 800/1533 | Batch Loss: 0.154743
+[Info] 2025-05-28 12:26:06 Epoch 44 | Batch 900/1533 | Batch Loss: 0.168361
+[Info] 2025-05-28 12:26:08 Epoch 44 | Batch 1000/1533 | Batch Loss: 0.128411
+[Info] 2025-05-28 12:26:10 Epoch 44 | Batch 1100/1533 | Batch Loss: 0.148712
+[Info] 2025-05-28 12:26:12 Epoch 44 | Batch 1200/1533 | Batch Loss: 0.152100
+[Info] 2025-05-28 12:26:15 Epoch 44 | Batch 1300/1533 | Batch Loss: 0.178379
+[Info] 2025-05-28 12:26:17 Epoch 44 | Batch 1400/1533 | Batch Loss: 0.169555
+[Info] 2025-05-28 12:26:19 Epoch 44 | Batch 1500/1533 | Batch Loss: 0.197835
+[Info] 2025-05-28 12:26:20 Epoch 44 | Batch 1533/1533 | Batch Loss: 0.142656
+[Info] 2025-05-28 12:26:20 Validating after epoch 44 ...
+[Info] 2025-05-28 12:26:20 Validation 20/192 | Batch Loss: 0.146919
+[Info] 2025-05-28 12:26:20 Validation 40/192 | Batch Loss: 0.161319
+[Info] 2025-05-28 12:26:20 Validation 60/192 | Batch Loss: 0.137841
+[Info] 2025-05-28 12:26:21 Validation 80/192 | Batch Loss: 0.128870
+[Info] 2025-05-28 12:26:21 Validation 100/192 | Batch Loss: 0.165660
+[Info] 2025-05-28 12:26:21 Validation 120/192 | Batch Loss: 0.168203
+[Info] 2025-05-28 12:26:21 Validation 140/192 | Batch Loss: 0.110567
+[Info] 2025-05-28 12:26:21 Validation 160/192 | Batch Loss: 0.139995
+[Info] 2025-05-28 12:26:21 Validation 180/192 | Batch Loss: 0.131998
+[Info] 2025-05-28 12:26:21 Validation 192/192 | Batch Loss: 0.166386
+[Info] 2025-05-28 12:26:21 Epoch [44/50] Train Loss: 0.166668 | Val Loss: 0.148768
+[Info] 2025-05-28 12:26:21 Starting epoch 45/50 ...
+[Info] 2025-05-28 12:26:23 Epoch 45 | Batch 100/1533 | Batch Loss: 0.194412
+[Info] 2025-05-28 12:26:25 Epoch 45 | Batch 200/1533 | Batch Loss: 0.144507
+[Info] 2025-05-28 12:26:27 Epoch 45 | Batch 300/1533 | Batch Loss: 0.177553
+[Info] 2025-05-28 12:26:29 Epoch 45 | Batch 400/1533 | Batch Loss: 0.161708
+[Info] 2025-05-28 12:26:32 Epoch 45 | Batch 500/1533 | Batch Loss: 0.176419
+[Info] 2025-05-28 12:26:34 Epoch 45 | Batch 600/1533 | Batch Loss: 0.179856
+[Info] 2025-05-28 12:26:36 Epoch 45 | Batch 700/1533 | Batch Loss: 0.161653
+[Info] 2025-05-28 12:26:39 Epoch 45 | Batch 800/1533 | Batch Loss: 0.158056
+[Info] 2025-05-28 12:26:41 Epoch 45 | Batch 900/1533 | Batch Loss: 0.126387
+[Info] 2025-05-28 12:26:44 Epoch 45 | Batch 1000/1533 | Batch Loss: 0.150982
+[Info] 2025-05-28 12:26:46 Epoch 45 | Batch 1100/1533 | Batch Loss: 0.141648
+[Info] 2025-05-28 12:26:48 Epoch 45 | Batch 1200/1533 | Batch Loss: 0.175919
+[Info] 2025-05-28 12:26:50 Epoch 45 | Batch 1300/1533 | Batch Loss: 0.175800
+[Info] 2025-05-28 12:26:52 Epoch 45 | Batch 1400/1533 | Batch Loss: 0.151099
+[Info] 2025-05-28 12:26:54 Epoch 45 | Batch 1500/1533 | Batch Loss: 0.151975
+[Info] 2025-05-28 12:26:54 Epoch 45 | Batch 1533/1533 | Batch Loss: 0.130635
+[Info] 2025-05-28 12:26:54 Validating after epoch 45 ...
+[Info] 2025-05-28 12:26:55 Validation 20/192 | Batch Loss: 0.138341
+[Info] 2025-05-28 12:26:55 Validation 40/192 | Batch Loss: 0.162125
+[Info] 2025-05-28 12:26:55 Validation 60/192 | Batch Loss: 0.133323
+[Info] 2025-05-28 12:26:55 Validation 80/192 | Batch Loss: 0.121001
+[Info] 2025-05-28 12:26:55 Validation 100/192 | Batch Loss: 0.156997
+[Info] 2025-05-28 12:26:55 Validation 120/192 | Batch Loss: 0.171465
+[Info] 2025-05-28 12:26:55 Validation 140/192 | Batch Loss: 0.101704
+[Info] 2025-05-28 12:26:56 Validation 160/192 | Batch Loss: 0.130843
+[Info] 2025-05-28 12:26:56 Validation 180/192 | Batch Loss: 0.127906
+[Info] 2025-05-28 12:26:56 Validation 192/192 | Batch Loss: 0.156619
+[Info] 2025-05-28 12:26:56 Epoch [45/50] Train Loss: 0.165950 | Val Loss: 0.144251
+[Info] 2025-05-28 12:26:56 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:26:56 Starting epoch 46/50 ...
+[Info] 2025-05-28 12:26:58 Epoch 46 | Batch 100/1533 | Batch Loss: 0.150093
+[Info] 2025-05-28 12:27:00 Epoch 46 | Batch 200/1533 | Batch Loss: 0.172328
+[Info] 2025-05-28 12:27:02 Epoch 46 | Batch 300/1533 | Batch Loss: 0.115625
+[Info] 2025-05-28 12:27:04 Epoch 46 | Batch 400/1533 | Batch Loss: 0.158169
+[Info] 2025-05-28 12:27:06 Epoch 46 | Batch 500/1533 | Batch Loss: 0.175732
+[Info] 2025-05-28 12:27:08 Epoch 46 | Batch 600/1533 | Batch Loss: 0.169841
+[Info] 2025-05-28 12:27:10 Epoch 46 | Batch 700/1533 | Batch Loss: 0.148764
+[Info] 2025-05-28 12:27:12 Epoch 46 | Batch 800/1533 | Batch Loss: 0.173503
+[Info] 2025-05-28 12:27:14 Epoch 46 | Batch 900/1533 | Batch Loss: 0.121129
+[Info] 2025-05-28 12:27:16 Epoch 46 | Batch 1000/1533 | Batch Loss: 0.163319
+[Info] 2025-05-28 12:27:19 Epoch 46 | Batch 1100/1533 | Batch Loss: 0.159423
+[Info] 2025-05-28 12:27:21 Epoch 46 | Batch 1200/1533 | Batch Loss: 0.124781
+[Info] 2025-05-28 12:27:23 Epoch 46 | Batch 1300/1533 | Batch Loss: 0.186304
+[Info] 2025-05-28 12:27:25 Epoch 46 | Batch 1400/1533 | Batch Loss: 0.164544
+[Info] 2025-05-28 12:27:28 Epoch 46 | Batch 1500/1533 | Batch Loss: 0.159326
+[Info] 2025-05-28 12:27:28 Epoch 46 | Batch 1533/1533 | Batch Loss: 0.152895
+[Info] 2025-05-28 12:27:28 Validating after epoch 46 ...
+[Info] 2025-05-28 12:27:29 Validation 20/192 | Batch Loss: 0.147124
+[Info] 2025-05-28 12:27:29 Validation 40/192 | Batch Loss: 0.154322
+[Info] 2025-05-28 12:27:29 Validation 60/192 | Batch Loss: 0.142401
+[Info] 2025-05-28 12:27:29 Validation 80/192 | Batch Loss: 0.123096
+[Info] 2025-05-28 12:27:29 Validation 100/192 | Batch Loss: 0.154602
+[Info] 2025-05-28 12:27:29 Validation 120/192 | Batch Loss: 0.165635
+[Info] 2025-05-28 12:27:29 Validation 140/192 | Batch Loss: 0.107798
+[Info] 2025-05-28 12:27:30 Validation 160/192 | Batch Loss: 0.139719
+[Info] 2025-05-28 12:27:30 Validation 180/192 | Batch Loss: 0.124314
+[Info] 2025-05-28 12:27:30 Validation 192/192 | Batch Loss: 0.157870
+[Info] 2025-05-28 12:27:30 Epoch [46/50] Train Loss: 0.165217 | Val Loss: 0.144798
+[Info] 2025-05-28 12:27:30 Starting epoch 47/50 ...
+[Info] 2025-05-28 12:27:32 Epoch 47 | Batch 100/1533 | Batch Loss: 0.167355
+[Info] 2025-05-28 12:27:34 Epoch 47 | Batch 200/1533 | Batch Loss: 0.148250
+[Info] 2025-05-28 12:27:36 Epoch 47 | Batch 300/1533 | Batch Loss: 0.159385
+[Info] 2025-05-28 12:27:38 Epoch 47 | Batch 400/1533 | Batch Loss: 0.165703
+[Info] 2025-05-28 12:27:40 Epoch 47 | Batch 500/1533 | Batch Loss: 0.195911
+[Info] 2025-05-28 12:27:42 Epoch 47 | Batch 600/1533 | Batch Loss: 0.170778
+[Info] 2025-05-28 12:27:44 Epoch 47 | Batch 700/1533 | Batch Loss: 0.135845
+[Info] 2025-05-28 12:27:47 Epoch 47 | Batch 800/1533 | Batch Loss: 0.228916
+[Info] 2025-05-28 12:27:50 Epoch 47 | Batch 900/1533 | Batch Loss: 0.224245
+[Info] 2025-05-28 12:27:53 Epoch 47 | Batch 1000/1533 | Batch Loss: 0.159832
+[Info] 2025-05-28 12:27:55 Epoch 47 | Batch 1100/1533 | Batch Loss: 0.187596
+[Info] 2025-05-28 12:27:57 Epoch 47 | Batch 1200/1533 | Batch Loss: 0.163950
+[Info] 2025-05-28 12:27:59 Epoch 47 | Batch 1300/1533 | Batch Loss: 0.171393
+[Info] 2025-05-28 12:28:01 Epoch 47 | Batch 1400/1533 | Batch Loss: 0.170555
+[Info] 2025-05-28 12:28:04 Epoch 47 | Batch 1500/1533 | Batch Loss: 0.131943
+[Info] 2025-05-28 12:28:05 Epoch 47 | Batch 1533/1533 | Batch Loss: 0.177215
+[Info] 2025-05-28 12:28:05 Validating after epoch 47 ...
+[Info] 2025-05-28 12:28:05 Validation 20/192 | Batch Loss: 0.142277
+[Info] 2025-05-28 12:28:05 Validation 40/192 | Batch Loss: 0.160960
+[Info] 2025-05-28 12:28:05 Validation 60/192 | Batch Loss: 0.132872
+[Info] 2025-05-28 12:28:05 Validation 80/192 | Batch Loss: 0.127303
+[Info] 2025-05-28 12:28:05 Validation 100/192 | Batch Loss: 0.166768
+[Info] 2025-05-28 12:28:05 Validation 120/192 | Batch Loss: 0.167159
+[Info] 2025-05-28 12:28:06 Validation 140/192 | Batch Loss: 0.112724
+[Info] 2025-05-28 12:28:06 Validation 160/192 | Batch Loss: 0.132461
+[Info] 2025-05-28 12:28:06 Validation 180/192 | Batch Loss: 0.126736
+[Info] 2025-05-28 12:28:06 Validation 192/192 | Batch Loss: 0.169499
+[Info] 2025-05-28 12:28:06 Epoch [47/50] Train Loss: 0.164168 | Val Loss: 0.145339
+[Info] 2025-05-28 12:28:06 Starting epoch 48/50 ...
+[Info] 2025-05-28 12:28:08 Epoch 48 | Batch 100/1533 | Batch Loss: 0.177798
+[Info] 2025-05-28 12:28:10 Epoch 48 | Batch 200/1533 | Batch Loss: 0.184184
+[Info] 2025-05-28 12:28:12 Epoch 48 | Batch 300/1533 | Batch Loss: 0.164352
+[Info] 2025-05-28 12:28:14 Epoch 48 | Batch 400/1533 | Batch Loss: 0.123625
+[Info] 2025-05-28 12:28:16 Epoch 48 | Batch 500/1533 | Batch Loss: 0.157897
+[Info] 2025-05-28 12:28:18 Epoch 48 | Batch 600/1533 | Batch Loss: 0.165681
+[Info] 2025-05-28 12:28:21 Epoch 48 | Batch 700/1533 | Batch Loss: 0.150976
+[Info] 2025-05-28 12:28:23 Epoch 48 | Batch 800/1533 | Batch Loss: 0.130213
+[Info] 2025-05-28 12:28:25 Epoch 48 | Batch 900/1533 | Batch Loss: 0.147094
+[Info] 2025-05-28 12:28:27 Epoch 48 | Batch 1000/1533 | Batch Loss: 0.161377
+[Info] 2025-05-28 12:28:29 Epoch 48 | Batch 1100/1533 | Batch Loss: 0.144029
+[Info] 2025-05-28 12:28:31 Epoch 48 | Batch 1200/1533 | Batch Loss: 0.139052
+[Info] 2025-05-28 12:28:32 Epoch 48 | Batch 1300/1533 | Batch Loss: 0.155660
+[Info] 2025-05-28 12:28:34 Epoch 48 | Batch 1400/1533 | Batch Loss: 0.163987
+[Info] 2025-05-28 12:28:36 Epoch 48 | Batch 1500/1533 | Batch Loss: 0.183845
+[Info] 2025-05-28 12:28:37 Epoch 48 | Batch 1533/1533 | Batch Loss: 0.158586
+[Info] 2025-05-28 12:28:37 Validating after epoch 48 ...
+[Info] 2025-05-28 12:28:37 Validation 20/192 | Batch Loss: 0.139405
+[Info] 2025-05-28 12:28:37 Validation 40/192 | Batch Loss: 0.159669
+[Info] 2025-05-28 12:28:37 Validation 60/192 | Batch Loss: 0.132722
+[Info] 2025-05-28 12:28:37 Validation 80/192 | Batch Loss: 0.121527
+[Info] 2025-05-28 12:28:37 Validation 100/192 | Batch Loss: 0.158002
+[Info] 2025-05-28 12:28:38 Validation 120/192 | Batch Loss: 0.169575
+[Info] 2025-05-28 12:28:38 Validation 140/192 | Batch Loss: 0.101904
+[Info] 2025-05-28 12:28:38 Validation 160/192 | Batch Loss: 0.130034
+[Info] 2025-05-28 12:28:38 Validation 180/192 | Batch Loss: 0.135645
+[Info] 2025-05-28 12:28:38 Validation 192/192 | Batch Loss: 0.156488
+[Info] 2025-05-28 12:28:38 Epoch [48/50] Train Loss: 0.163450 | Val Loss: 0.143927
+[Info] 2025-05-28 12:28:38 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:28:38 Starting epoch 49/50 ...
+[Info] 2025-05-28 12:28:40 Epoch 49 | Batch 100/1533 | Batch Loss: 0.162978
+[Info] 2025-05-28 12:28:42 Epoch 49 | Batch 200/1533 | Batch Loss: 0.174594
+[Info] 2025-05-28 12:28:44 Epoch 49 | Batch 300/1533 | Batch Loss: 0.113809
+[Info] 2025-05-28 12:28:47 Epoch 49 | Batch 400/1533 | Batch Loss: 0.143882
+[Info] 2025-05-28 12:28:49 Epoch 49 | Batch 500/1533 | Batch Loss: 0.164422
+[Info] 2025-05-28 12:28:51 Epoch 49 | Batch 600/1533 | Batch Loss: 0.175849
+[Info] 2025-05-28 12:28:53 Epoch 49 | Batch 700/1533 | Batch Loss: 0.152590
+[Info] 2025-05-28 12:28:55 Epoch 49 | Batch 800/1533 | Batch Loss: 0.239257
+[Info] 2025-05-28 12:28:57 Epoch 49 | Batch 900/1533 | Batch Loss: 0.146677
+[Info] 2025-05-28 12:28:59 Epoch 49 | Batch 1000/1533 | Batch Loss: 0.137414
+[Info] 2025-05-28 12:29:01 Epoch 49 | Batch 1100/1533 | Batch Loss: 0.133574
+[Info] 2025-05-28 12:29:03 Epoch 49 | Batch 1200/1533 | Batch Loss: 0.162556
+[Info] 2025-05-28 12:29:06 Epoch 49 | Batch 1300/1533 | Batch Loss: 0.179517
+[Info] 2025-05-28 12:29:08 Epoch 49 | Batch 1400/1533 | Batch Loss: 0.221473
+[Info] 2025-05-28 12:29:10 Epoch 49 | Batch 1500/1533 | Batch Loss: 0.167640
+[Info] 2025-05-28 12:29:11 Epoch 49 | Batch 1533/1533 | Batch Loss: 0.185333
+[Info] 2025-05-28 12:29:11 Validating after epoch 49 ...
+[Info] 2025-05-28 12:29:11 Validation 20/192 | Batch Loss: 0.141602
+[Info] 2025-05-28 12:29:11 Validation 40/192 | Batch Loss: 0.160811
+[Info] 2025-05-28 12:29:11 Validation 60/192 | Batch Loss: 0.131724
+[Info] 2025-05-28 12:29:12 Validation 80/192 | Batch Loss: 0.125736
+[Info] 2025-05-28 12:29:12 Validation 100/192 | Batch Loss: 0.158286
+[Info] 2025-05-28 12:29:12 Validation 120/192 | Batch Loss: 0.172615
+[Info] 2025-05-28 12:29:12 Validation 140/192 | Batch Loss: 0.103270
+[Info] 2025-05-28 12:29:12 Validation 160/192 | Batch Loss: 0.131535
+[Info] 2025-05-28 12:29:12 Validation 180/192 | Batch Loss: 0.137513
+[Info] 2025-05-28 12:29:12 Validation 192/192 | Batch Loss: 0.160389
+[Info] 2025-05-28 12:29:12 Epoch [49/50] Train Loss: 0.162662 | Val Loss: 0.144903
+[Info] 2025-05-28 12:29:12 Starting epoch 50/50 ...
+[Info] 2025-05-28 12:29:14 Epoch 50 | Batch 100/1533 | Batch Loss: 0.186381
+[Info] 2025-05-28 12:29:16 Epoch 50 | Batch 200/1533 | Batch Loss: 0.215141
+[Info] 2025-05-28 12:29:19 Epoch 50 | Batch 300/1533 | Batch Loss: 0.123004
+[Info] 2025-05-28 12:29:21 Epoch 50 | Batch 400/1533 | Batch Loss: 0.167207
+[Info] 2025-05-28 12:29:23 Epoch 50 | Batch 500/1533 | Batch Loss: 0.140483
+[Info] 2025-05-28 12:29:25 Epoch 50 | Batch 600/1533 | Batch Loss: 0.170064
+[Info] 2025-05-28 12:29:28 Epoch 50 | Batch 700/1533 | Batch Loss: 0.171919
+[Info] 2025-05-28 12:29:31 Epoch 50 | Batch 800/1533 | Batch Loss: 0.176953
+[Info] 2025-05-28 12:29:33 Epoch 50 | Batch 900/1533 | Batch Loss: 0.170025
+[Info] 2025-05-28 12:29:36 Epoch 50 | Batch 1000/1533 | Batch Loss: 0.144736
+[Info] 2025-05-28 12:29:38 Epoch 50 | Batch 1100/1533 | Batch Loss: 0.129214
+[Info] 2025-05-28 12:29:40 Epoch 50 | Batch 1200/1533 | Batch Loss: 0.167770
+[Info] 2025-05-28 12:29:43 Epoch 50 | Batch 1300/1533 | Batch Loss: 0.169938
+[Info] 2025-05-28 12:29:45 Epoch 50 | Batch 1400/1533 | Batch Loss: 0.167626
+[Info] 2025-05-28 12:29:47 Epoch 50 | Batch 1500/1533 | Batch Loss: 0.145925
+[Info] 2025-05-28 12:29:47 Epoch 50 | Batch 1533/1533 | Batch Loss: 0.187922
+[Info] 2025-05-28 12:29:47 Validating after epoch 50 ...
+[Info] 2025-05-28 12:29:48 Validation 20/192 | Batch Loss: 0.136152
+[Info] 2025-05-28 12:29:48 Validation 40/192 | Batch Loss: 0.155488
+[Info] 2025-05-28 12:29:48 Validation 60/192 | Batch Loss: 0.132503
+[Info] 2025-05-28 12:29:48 Validation 80/192 | Batch Loss: 0.119858
+[Info] 2025-05-28 12:29:48 Validation 100/192 | Batch Loss: 0.155000
+[Info] 2025-05-28 12:29:48 Validation 120/192 | Batch Loss: 0.163419
+[Info] 2025-05-28 12:29:48 Validation 140/192 | Batch Loss: 0.098145
+[Info] 2025-05-28 12:29:49 Validation 160/192 | Batch Loss: 0.128109
+[Info] 2025-05-28 12:29:49 Validation 180/192 | Batch Loss: 0.122876
+[Info] 2025-05-28 12:29:49 Validation 192/192 | Batch Loss: 0.156151
+[Info] 2025-05-28 12:29:49 Epoch [50/50] Train Loss: 0.161960 | Val Loss: 0.140999
+[Info] 2025-05-28 12:29:49 Best model saved at training\trained_models\transformerpi0_120228052025.pth!
+[Info] 2025-05-28 12:29:49 Loading best model for final test evaluation...
+[Info] 2025-05-28 12:29:50 Final Test Loss: 0.143599
+[Info] 2025-05-28 12:29:50 Training finished. Total time: 0:26:56.873532

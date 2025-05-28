@@ -4,6 +4,8 @@ import torch.optim as optim
 import numpy as np
 import random
 from torch.utils.data import DataLoader, Dataset, random_split
+import os
+from datetime import datetime
 
 from models.transformer_pi0 import TransformerPi0
 
@@ -26,7 +28,7 @@ class Pi0ChunkDataset(Dataset):
         gt_action_flat = data[:, 1:, 4]                 # (N, 50)
         self.gt_action = np.expand_dims(gt_action_flat, axis=-1).astype(np.float32)  # (N, 50, 1)
 
-        self.noisy_action = np.random.randn(*self.gt_action.shape).astype(np.float32)  # Gaussian noise (N, 50, 1)
+        self.noisy_action = np.clip(np.random.randn(*self.gt_action.shape).astype(np.float32), -3.0, 3.0)
         self.time_t = np.random.rand(*self.gt_action.shape).astype(np.float32)         # random [0,1] (N, 50, 1)
 
     def __len__(self):
@@ -42,7 +44,7 @@ class Pi0ChunkDataset(Dataset):
 
 def train_pi0():
     # Set random seed
-    seed = 42
+    seed = 27
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
@@ -54,9 +56,45 @@ def train_pi0():
     action_dim = 1
     chunk_len = 50
     embed_dim = 128
-    num_epochs = 20
-    batch_size = 32
+    num_epochs = 50
+    batch_size = 64
     lr = 1e-4
+
+    start_time = datetime.now()
+
+    # Log file setup
+    log_dir = os.path.join("training", "log")
+    os.makedirs(log_dir, exist_ok=True)
+    model_dir = os.path.join("training", "trained_models")
+    os.makedirs(model_dir, exist_ok=True)
+    time_str = start_time.strftime("%H%M%d%m%Y")
+    model_name = "transformerpi0"
+    log_name = f"{model_name}_{time_str}"
+    log_file_path = os.path.join(log_dir, f"{log_name}.txt")
+    model_save_path = os.path.join(model_dir, f"{log_name}.pth")
+    log_file = open(log_file_path, "w", encoding="utf-8")
+
+    def log_print(msg):
+        now_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        log_line = f"[Info] {now_str} {msg}"
+        print(log_line)
+        log_file.write(log_line + "\n")
+        log_file.flush()
+
+    log_print(f"Using device: {'cuda' if torch.cuda.is_available() else 'cpu'}")
+    log_print(f"Hyperparameters: state_dim={state_dim}, action_dim={action_dim}, chunk_len={chunk_len}, embed_dim={embed_dim}, num_epochs={num_epochs}, batch_size={batch_size}, lr={lr}")
+
+    def compute_baseline_mse(npy_path):
+        data = np.load(npy_path)  # (N, 51, 5)
+        gt_action = np.expand_dims(data[:, 1:, 4], axis=-1).astype(np.float32)  # (N, 50, 1)
+        noisy_action = np.random.randn(*gt_action.shape).astype(np.float32)     # (N, 50, 1)
+        target_flow = gt_action - noisy_action
+        baseline_mse = np.mean((target_flow) ** 2)
+        log_print(f"Baseline MSE (random noisy_action): {baseline_mse:.6f}")
+        return baseline_mse
+    
+    # Baseline calculation
+    baseline_mse = compute_baseline_mse('data/chunks/new_all_chunks.npy')
 
     # Model
     model = TransformerPi0(state_dim=state_dim,
@@ -65,16 +103,17 @@ def train_pi0():
                             chunk_len=chunk_len)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.to(device)
-
-    # Optimizer
-    optimizer = optim.AdamW(model.parameters(), lr=lr)
+    log_print(f"Model initialized: {model.__class__.__name__}")
 
     # Dataset
+    log_print("Loading dataset...")
     dataset = Pi0ChunkDataset('data/chunks/new_all_chunks.npy')
     total_size = len(dataset)
     train_size = int(0.8 * total_size)
     val_size = int(0.1 * total_size)
     test_size = total_size - train_size - val_size
+
+    log_print(f"Dataset size: total={total_size}, train={train_size}, val={val_size}, test={test_size}")
 
     train_set, val_set, test_set = random_split(dataset, [train_size, val_size, test_size])
 
@@ -82,12 +121,16 @@ def train_pi0():
     val_loader = DataLoader(val_set, batch_size=batch_size, shuffle=False)
     test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=False)
 
+    # Optimizer
+    optimizer = optim.AdamW(model.parameters(), lr=lr)
+
     # Training loop
     best_val_loss = float('inf')
     for epoch in range(num_epochs):
         model.train()
         total_loss = 0
-        for batch in train_loader:
+        log_print(f"Starting epoch {epoch + 1}/{num_epochs} ...")
+        for batch_idx, batch in enumerate(train_loader):
             state, noisy_action, time_t, gt_action = [x.to(device) for x in batch]
 
             optimizer.zero_grad()
@@ -97,28 +140,37 @@ def train_pi0():
 
             total_loss += loss.item()
 
+            # 每100个batch打印一次进度
+            if (batch_idx + 1) % 100 == 0 or (batch_idx + 1) == len(train_loader):
+                log_print(f"Epoch {epoch + 1} | Batch {batch_idx + 1}/{len(train_loader)} | Batch Loss: {loss.item():.6f}")
+
         avg_train_loss = total_loss / len(train_loader)
 
         # Validation
         model.eval()
         val_loss = 0
+        log_print(f"Validating after epoch {epoch + 1} ...")
         with torch.no_grad():
-            for batch in val_loader:
+            for val_batch_idx, batch in enumerate(val_loader):
                 state, noisy_action, time_t, gt_action = [x.to(device) for x in batch]
                 loss = flow_matching_loss(model, state, noisy_action, time_t, gt_action)
                 val_loss += loss.item()
+                # 每20个batch打印一次验证进度
+                if (val_batch_idx + 1) % 20 == 0 or (val_batch_idx + 1) == len(val_loader):
+                    log_print(f"Validation {val_batch_idx + 1}/{len(val_loader)} | Batch Loss: {loss.item():.6f}")
         avg_val_loss = val_loss / len(val_loader)
 
-        print(f"Epoch [{epoch + 1}/{num_epochs}] Train Loss: {avg_train_loss:.6f} | Val Loss: {avg_val_loss:.6f}")
+        log_print(f"Epoch [{epoch + 1}/{num_epochs}] Train Loss: {avg_train_loss:.6f} | Val Loss: {avg_val_loss:.6f}")
 
         # Save best checkpoint
         if avg_val_loss < best_val_loss:
             best_val_loss = avg_val_loss
-            torch.save(model.state_dict(), "best_tiny_pi0_flowmatching.pth")
-            print("Best model saved!")
+            torch.save(model.state_dict(), model_save_path)
+            log_print(f"Best model saved at {model_save_path}!")
 
     # Final test evaluation
-    model.load_state_dict(torch.load("best_tiny_pi0_flowmatching.pth"))
+    log_print("Loading best model for final test evaluation...")
+    model.load_state_dict(torch.load(model_save_path))
     model.eval()
     test_loss = 0
     with torch.no_grad():
@@ -127,7 +179,13 @@ def train_pi0():
             loss = flow_matching_loss(model, state, noisy_action, time_t, gt_action)
             test_loss += loss.item()
     avg_test_loss = test_loss / len(test_loader)
-    print(f"Final Test Loss: {avg_test_loss:.6f}")
+    log_print(f"Final Test Loss: {avg_test_loss:.6f}")
+
+    end_time = datetime.now()
+    total_time = end_time - start_time
+    log_print(f"Training finished. Total time: {str(total_time)}")
+
+    log_file.close()
 
 if __name__ == "__main__":
     train_pi0()
