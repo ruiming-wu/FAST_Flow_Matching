@@ -33,6 +33,9 @@ class TransformerPi0(nn.Module):
         # Output: flow vector
         self.flow_output = nn.Linear(embed_dim, action_dim)
 
+        # Weight initialization
+        self._init_weights()
+
     def forward(self, state, noisy_action, time_t):
         """
         Args:
@@ -71,3 +74,10 @@ class TransformerPi0(nn.Module):
 
         return flow
 
+    def _init_weights(self):
+        """
+        Xavier initialization for all weights
+        """
+        for name, param in self.named_parameters():
+            if param.dim() > 1:
+                nn.init.xavier_uniform_(param)

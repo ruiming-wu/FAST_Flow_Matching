@@ -2,82 +2,95 @@ import torch
 import torch.nn as nn
 
 class TransformerPi0FAST(nn.Module):
-    def __init__(self, 
-                 input_dim=4,              # State dimension (e.g., CartPole = 4)
-                 embed_dim=128,            # Embedding dimension
-                 num_layers=4,             # Number of Transformer Decoder layers
-                 num_heads=4,              # Number of attention heads
-                 ff_dim=256,               # FeedForward network hidden dimension
-                 vocab_size=512,           # Token vocabulary size (e.g., from BPE encoding)
-                 max_seq_len=64):          # Maximum token sequence length
+    def __init__(self,
+                 state_dim=4,           # state dimension
+                 embed_dim=128,         # transformer embedding dimension
+                 num_layers=4,          # number of transformer layers
+                 num_heads=4,           # number of attention heads
+                 ff_dim=256,            # feedforward hidden dimension
+                 vocab_size=1024,       # token vocabulary size
+                 max_seq_len=64):       # max token sequence length
         super().__init__()
 
-        # State embedding (used as memory input for the Transformer Decoder)
-        self.state_embedding = nn.Linear(input_dim, embed_dim)
+        # state embedding
+        self.state_embedding = nn.Linear(state_dim, embed_dim)
         self.state_dropout = nn.Dropout(0.1)
 
-        # Token embedding + position embedding
+        # token embedding and position embedding
         self.token_embedding = nn.Embedding(vocab_size, embed_dim)
         self.position_embedding = nn.Embedding(max_seq_len, embed_dim)
 
-        # Decoder-only Transformer (GPT-like structure)
+        # decoder-only transformer
         decoder_layer = nn.TransformerDecoderLayer(
-            d_model=embed_dim, nhead=num_heads, dim_feedforward=ff_dim,
-            batch_first=True, activation="gelu", dropout=0.1
+            d_model=embed_dim,
+            nhead=num_heads,
+            dim_feedforward=ff_dim,
+            batch_first=True,
+            activation="gelu",
+            dropout=0.1
         )
         self.transformer = nn.TransformerDecoder(decoder_layer, num_layers=num_layers)
 
-        # Output layer: logits for token classification
+        # output layer: token classification logits
         self.output_layer = nn.Linear(embed_dim, vocab_size)
         self.output_dropout = nn.Dropout(0.1)
 
-        # Initialize weights
+        # weight initialization
         self._init_weights()
 
-    def forward(self, state, token_seq):
+    def forward(self, state, token_seq, attention_mask=None):
         """
-        Forward pass of the model.
-
         Args:
-            state (torch.Tensor): Input state sequence of shape (B, C, input_dim).
-            token_seq (torch.Tensor): Input token sequence of shape (B, T).
+            state: (B, state_dim)
+            token_seq: (B, T, 1) or (B, T), token id sequence
+            attention_mask: (B, T), 1 for valid token, 0 for pad
 
         Returns:
-            torch.Tensor: Logits for token classification of shape (B, T, vocab_size).
+            logits: (B, T, vocab_size)
         """
-        B, C, input_dim = state.shape
+        # support (B, T, 1) input
+        if token_seq.dim() == 3 and token_seq.shape[-1] == 1:
+            token_seq = token_seq.squeeze(-1)  # (B, T)
+
+        B, state_dim = state.shape
         B2, T = token_seq.shape
         assert B == B2, "Batch size mismatch between state and token_seq"
 
-        # State sequence embedding and encoding
-        state_embed = self.state_embedding(state)  # (B, C, embed_dim)
-        # Mean pooling over chunk dimension to get a single context vector
-        state_context = state_embed.mean(dim=1, keepdim=True)  # (B, 1, embed_dim)
-        state_context = self.state_dropout(state_context)
+        # state embedding
+        state_emb = self.state_embedding(state).unsqueeze(1)  # (B, 1, D)
+        state_emb = self.state_dropout(state_emb)             # (B, 1, D)
 
-        # Token embedding + position embedding
-        tok_embed = self.token_embedding(token_seq)                       # (B, T, embed_dim)
+        # token embedding + position embedding
+        token_emb = self.token_embedding(token_seq)           # (B, T, D)
         pos_ids = torch.arange(T, device=token_seq.device).unsqueeze(0)  # (1, T)
-        pos_embed = self.position_embedding(pos_ids)                     # (1, T, embed_dim)
-        decoder_input = tok_embed + pos_embed                            # (B, T, embed_dim)
+        pos_emb = self.position_embedding(pos_ids)            # (1, T, D)
+        decoder_input = token_emb + pos_emb                   # (B, T, D)
 
-        # Causal mask: lower triangular mask (ensures autoregressive behavior)
+        # causal mask for autoregressive decoding
         causal_mask = torch.triu(torch.ones(T, T, device=token_seq.device), diagonal=1).bool()
-        assert causal_mask.shape == (T, T), "Causal mask shape mismatch"
 
-        # Transformer Decoder
-        transformer_out = self.transformer(tgt=decoder_input,
-                                           memory=state_context,
-                                           tgt_mask=causal_mask)
+        # padding mask
+        if attention_mask is not None:
+            padding_mask = attention_mask == 0  # (B, T), True for pad
+        else:
+            padding_mask = None
 
-        # Output logits (for CrossEntropyLoss)
-        logits = self.output_layer(transformer_out)  # (B, T, vocab_size)
+        # transformer decoder
+        output = self.transformer(
+            tgt=decoder_input,
+            memory=state_emb,
+            tgt_mask=causal_mask,
+            tgt_key_padding_mask=padding_mask
+        )  # (B, T, D)
+
+        # output logits
+        logits = self.output_layer(output)      # (B, T, vocab_size)
         logits = self.output_dropout(logits)
         return logits
 
     def _init_weights(self):
         """
-        Initialize weights using Xavier initialization.
+        Xavier initialization for all weights
         """
         for name, param in self.named_parameters():
             if param.dim() > 1:
