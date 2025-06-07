@@ -6,6 +6,7 @@ import random
 from torch.utils.data import DataLoader, Dataset, random_split
 import os
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 from models.transformer_pi0 import TransformerPi0
 
@@ -44,7 +45,7 @@ class Pi0ChunkDataset(Dataset):
 
 def train_pi0():
     # Set random seed
-    seed = 27
+    seed = 99
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
@@ -56,9 +57,9 @@ def train_pi0():
     action_dim = 1
     chunk_len = 50
     embed_dim = 128
-    num_epochs = 50
+    num_epochs = 300
     batch_size = 64
-    lr = 1e-4
+    lr = 1.5e-4
 
     start_time = datetime.now()
 
@@ -124,8 +125,18 @@ def train_pi0():
     # Optimizer
     optimizer = optim.AdamW(model.parameters(), lr=lr)
 
+    # 新建loss图片保存目录
+    loss_pic_dir = os.path.join("training", "loss_pics")
+    os.makedirs(loss_pic_dir, exist_ok=True)
+    loss_pic_path = os.path.join(loss_pic_dir, f"{log_name}.png")
+
+    train_loss_list = []
+    val_loss_list = []
+
     # Training loop
     best_val_loss = float('inf')
+    best_epoch = 0
+    early_stop_patience = 20
     for epoch in range(num_epochs):
         model.train()
         total_loss = 0
@@ -140,11 +151,12 @@ def train_pi0():
 
             total_loss += loss.item()
 
-            # 每100个batch打印一次进度
-            if (batch_idx + 1) % 100 == 0 or (batch_idx + 1) == len(train_loader):
+            # 每400个batch打印一次进度
+            if (batch_idx + 1) % 400 == 0 or (batch_idx + 1) == len(train_loader):
                 log_print(f"Epoch {epoch + 1} | Batch {batch_idx + 1}/{len(train_loader)} | Batch Loss: {loss.item():.6f}")
 
         avg_train_loss = total_loss / len(train_loader)
+        train_loss_list.append(avg_train_loss)
 
         # Validation
         model.eval()
@@ -155,22 +167,29 @@ def train_pi0():
                 state, noisy_action, time_t, gt_action = [x.to(device) for x in batch]
                 loss = flow_matching_loss(model, state, noisy_action, time_t, gt_action)
                 val_loss += loss.item()
-                # 每20个batch打印一次验证进度
-                if (val_batch_idx + 1) % 20 == 0 or (val_batch_idx + 1) == len(val_loader):
+                # 每100个batch打印一次验证进度
+                if (val_batch_idx + 1) % 100 == 0 or (val_batch_idx + 1) == len(val_loader):
                     log_print(f"Validation {val_batch_idx + 1}/{len(val_loader)} | Batch Loss: {loss.item():.6f}")
         avg_val_loss = val_loss / len(val_loader)
+        val_loss_list.append(avg_val_loss)
 
         log_print(f"Epoch [{epoch + 1}/{num_epochs}] Train Loss: {avg_train_loss:.6f} | Val Loss: {avg_val_loss:.6f}")
 
         # Save best checkpoint
         if avg_val_loss < best_val_loss:
             best_val_loss = avg_val_loss
+            best_epoch = epoch
             torch.save(model.state_dict(), model_save_path)
             log_print(f"Best model saved at {model_save_path}!")
+        
+        # Early stopping
+        if epoch - best_epoch >= early_stop_patience:
+            log_print(f"No improvement for {early_stop_patience} epochs. Early stopping at epoch {epoch + 1}.")
+            break
 
     # Final test evaluation
     log_print("Loading best model for final test evaluation...")
-    model.load_state_dict(torch.load(model_save_path))
+    model.load_state_dict(torch.load(model_save_path, map_location=device, weights_only=True))
     model.eval()
     test_loss = 0
     with torch.no_grad():
@@ -180,6 +199,21 @@ def train_pi0():
             test_loss += loss.item()
     avg_test_loss = test_loss / len(test_loader)
     log_print(f"Final Test Loss: {avg_test_loss:.6f}")
+
+    # ====== 绘制loss曲线并保存 ======
+    plt.figure(figsize=(8, 5))
+    plt.plot(train_loss_list, label="Train Loss")
+    plt.plot(val_loss_list, label="Val Loss")
+    plt.axhline(baseline_mse, color='gray', linestyle='--', label="Baseline MSE")
+    plt.axhline(avg_test_loss, color='red', linestyle=':', label=f"Test Loss ({avg_test_loss:.4f})")
+    plt.title("Loss Curve")
+    plt.xlabel("Epoch")
+    plt.ylabel("MSE Loss")
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(loss_pic_path)
+    plt.close()
+    log_print(f"Loss curve saved to {loss_pic_path}")
 
     end_time = datetime.now()
     total_time = end_time - start_time
