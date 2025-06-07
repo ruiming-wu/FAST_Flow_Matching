@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from models.transformer_pi0 import TransformerPi0
 
-def infer_action_sequence(model_path, state_vec, chunk_len=50, device='cpu', num_steps=10):
+def infer_pi0_action_sequence(model_path, state_vec, chunk_len=50, device='cpu', num_steps=10):
     # 超参数（需与训练一致）
     state_dim = 4
     action_dim = 1
@@ -22,7 +22,7 @@ def infer_action_sequence(model_path, state_vec, chunk_len=50, device='cpu', num
         ff_dim=ff_dim,
         chunk_len=chunk_len
     ).to(device)
-    model.load_state_dict(torch.load(model_path, map_location=device))
+    model.load_state_dict(torch.load(model_path, map_location=device,weights_only=True))
     model.eval()
 
     # 2. 构造输入
@@ -49,9 +49,9 @@ def infer_action_sequence(model_path, state_vec, chunk_len=50, device='cpu', num
 
 # ====== 用法示例 ======
 if __name__ == "__main__":
-    model_path = "training/trained_models/transformerpi0_120228052025.pth"
-    current_state = np.array([0.005, 0.0, -0.005, 0.0])
-    pred_actions = infer_action_sequence(model_path, current_state, chunk_len=50, device='cuda' if torch.cuda.is_available() else 'cpu')
+    model_path = "training/trained_models/transformerpi0_134404062025.pth"
+    current_state = np.array([0.005, 0.0, -0.01, 0.0])
+    pred_actions = infer_pi0_action_sequence(model_path, current_state, chunk_len=50, device='cuda' if torch.cuda.is_available() else 'cpu')
     print("Predicted action sequence shape:", pred_actions.shape)
     print("First 5 actions:\n", pred_actions[:5])
 
