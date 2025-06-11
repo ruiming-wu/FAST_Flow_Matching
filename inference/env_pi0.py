@@ -16,7 +16,7 @@ def run_pi0_in_env(
     replan_interval=16
 ):
     # 环境初始化
-    env = gym.make("InvertedPendulum-v5", render_mode="human" if render else None)
+    env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode="human" if render else None)
     if seed is not None:
         env.reset(seed=seed)
         np.random.seed(seed)
@@ -101,5 +101,5 @@ if __name__ == "__main__":
         render=True,         # True可视化环境
         random_init=True,    # True为随机初始状态
         seed=None,           # 可指定随机种子
-        replan_interval=25   # 每16步重新推理一次
+        replan_interval=50   # 每16步重新推理一次
     )

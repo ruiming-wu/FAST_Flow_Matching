@@ -1,24 +1,51 @@
 import numpy as np
-import torch
+import gymnasium as gym
+import matplotlib.pyplot as plt
 
-if torch.cuda.is_available():
-    print("CUDA is available!")
-    print("Current device:", torch.cuda.current_device())
-    print("Device name:", torch.cuda.get_device_name(torch.cuda.current_device()))
-else:
-    print("CUDA is NOT available. Using CPU.")
-    try:
-        import torch.backends.cudnn as cudnn
-        print("cudnn enabled:", cudnn.enabled)
-    except Exception as e:
-        print("cudnn check failed:", e)
-    # 检查常见原因
-    import sys
-    print("Python version:", sys.version)
-    print("PyTorch version:", torch.__version__)
-    try:
-        import numpy
-        print("Numpy version:", numpy.__version__)
-    except ImportError:
-        print("Numpy not installed.")
-    print("Possible reasons: No compatible GPU, CUDA driver not installed, or PyTorch not built with CUDA.")
+if __name__ == "__main__":
+
+    env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode=None)
+    obs, _ = env.reset(options={"qpos": np.array([0, -1e-6]), "qvel": np.array([1e-6, -1e-6])})
+    print("Initial observation:", obs)
+
+    obs_list, reward_list = [], []
+    t = 0
+    done = False
+
+    while not done and t < 200:
+        action = np.zeros(1)
+        obs_list.append(obs)
+        obs, reward, terminated, truncated, info = env.step(action)
+        reward_list.append(reward)
+        t += 1
+        if terminated or truncated:
+            print(f"Episode finished at step {t}")
+            done = True
+
+    env.close()
+
+    obs_arr = np.array(obs_list)
+    reward_arr = np.array(reward_list)
+    print("Final state:", obs_arr[-1])
+    print("Total reward:", reward_arr.sum())
+    print("Episode length:", len(obs_arr))
+
+    plt.figure(figsize=(10, 5))
+    plt.subplot(2, 1, 1)
+    plt.plot(obs_arr[:, 1], label="theta")
+    plt.plot(obs_arr[:, 3], label="theta_dot")
+    plt.title("Pendulum Angle and Angular Velocity")
+    plt.xlabel("Step")
+    plt.legend()
+    plt.grid(True)
+
+    plt.subplot(2, 1, 2)
+    plt.plot(reward_arr, label="reward")
+    plt.title("Reward per Step")
+    plt.xlabel("Step")
+    plt.legend()
+    plt.grid(True)
+
+    plt.tight_layout()
+    plt.show()
+

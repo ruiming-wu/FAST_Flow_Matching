@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 data/chunks/new_all_chunks.npy
-=======
-data/chunks/new_all_chunks.npy
->>>>>>> 5d8d996a3296721a148c2c132f3cfa019e8f34af
+*.pyc
