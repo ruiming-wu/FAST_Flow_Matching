@@ -31,10 +31,7 @@ We use the **Gymnasium MuJoCo `InvertedPendulum-v5`** environment, with custom m
   - **Outer loop**: keeps cart velocity at 0 → outputs desired pole angle ∈ [-0.3 rad, 0.3 rad]
   - **Inner loop**: minimizes angle error → outputs final force ∈ [-3 N, 3 N]
 - **Base parameters** (subject to random perturbation ±10% during data collection):
-  base_params = {
-      "Kp1": -3.0, "Ki1": -0.01, "Kd1": -0.15,
-      "Kp2":  0.08, "Ki2":  0.05, "Kd2":  0.0
-  }
+      Kp1 = -3.0, Ki1 = -0.01, Kd1 = -0.15, Kp2 = 0.08, Ki2 = 0.05, Kd2 = 0.0
 
 ### Trajectory Generation
 - **Length**: 100 time steps (~2 seconds)
