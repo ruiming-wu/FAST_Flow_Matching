@@ -14,4 +14,5 @@ for fname in os.listdir(trajs_dir):
         except Exception as e:
             print(f"文件 {fname} 加载失败，错误信息：{e}")
 
+print("批量检查完成。")
 
