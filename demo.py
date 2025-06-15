@@ -1,47 +1,34 @@
 import numpy as np
-import gymnasium as gym
 import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
+    # 加载轨迹文件
+    data = np.load("data/trajs/00001.npy")  # shape: (200, 5)
+    obs = data[:, :4]  # 4维状态
+    act = data[:, 4]   # 1维动作
+    print("Observation shape:", obs.shape)
+    print("Action shape:", act.shape)
 
-    env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode=None)
-    obs, _ = env.reset(options={"qpos": np.array([0, -1e-6]), "qvel": np.array([1e-6, -1e-6])})
-    print("Initial observation:", obs)
-
-    obs_list, reward_list = [], []
-    t = 0
-    done = False
-
-    while not done and t < 200:
-        action = np.zeros(1)
-        obs_list.append(obs)
-        obs, reward, terminated, truncated, info = env.step(action)
-        reward_list.append(reward)
-        t += 1
-        if terminated or truncated:
-            print(f"Episode finished at step {t}")
-            done = True
-
-    env.close()
-
-    obs_arr = np.array(obs_list)
-    reward_arr = np.array(reward_list)
-    print("Final state:", obs_arr[-1])
-    print("Total reward:", reward_arr.sum())
-    print("Episode length:", len(obs_arr))
-
-    plt.figure(figsize=(10, 5))
-    plt.subplot(2, 1, 1)
-    plt.plot(obs_arr[:, 1], label="theta")
-    plt.plot(obs_arr[:, 3], label="theta_dot")
+    plt.figure(figsize=(12, 8))
+    plt.subplot(3, 1, 1)
+    plt.plot(obs[:, 1], label="theta")
+    plt.plot(obs[:, 3], label="theta_dot")
     plt.title("Pendulum Angle and Angular Velocity")
     plt.xlabel("Step")
     plt.legend()
     plt.grid(True)
 
-    plt.subplot(2, 1, 2)
-    plt.plot(reward_arr, label="reward")
-    plt.title("Reward per Step")
+    plt.subplot(3, 1, 2)
+    plt.plot(obs[:, 0], label="pos")
+    plt.plot(obs[:, 2], label="vel")
+    plt.title("Cart Position and Velocity")
+    plt.xlabel("Step")
+    plt.legend()
+    plt.grid(True)
+
+    plt.subplot(3, 1, 3)
+    plt.plot(act, label="Action")
+    plt.title("Action Sequence")
     plt.xlabel("Step")
     plt.legend()
     plt.grid(True)
