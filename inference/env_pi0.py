@@ -93,7 +93,7 @@ def run_pi0_in_env(
     print(f"Total reward: {reward_arr.sum():.2f}")
 
 if __name__ == "__main__":
-    model_path = "training/trained_models/transformerpi0_222107062025.pth"
+    model_path = "train/trained_models/transformerpi0_222107062025.pth"
     run_pi0_in_env(
         model_path=model_path,
         chunk_len=50,
@@ -101,5 +101,5 @@ if __name__ == "__main__":
         render=True,         # True可视化环境
         random_init=True,    # True为随机初始状态
         seed=None,           # 可指定随机种子
-        replan_interval=50   # 每16步重新推理一次
+        replan_interval=25   # 每16步重新推理一次
     )

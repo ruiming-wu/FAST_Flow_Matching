@@ -1,0 +1,1996 @@
+[Info] 2025-06-10 23:39:46 Using device: cuda
+[Info] 2025-06-10 23:39:46 Hyperparameters: state_dim=4, embed_dim=128, num_layers=4, num_heads=4, ff_dim=256, vocab_size=2048, max_seq_len=32, num_epochs=200, batch_size=32, lr=0.00015
+[Info] 2025-06-10 23:39:46 Dataset size: total=12138, train=9710, val=1213, test=1215
+[Info] 2025-06-10 23:39:46 Model initialized: TransformerPi0FAST
+[Info] 2025-06-10 23:39:48 Starting epoch 1/200 ...
+[Info] 2025-06-10 23:39:52 Epoch 1 | Batch 100/304 | Batch Loss: 2.855438
+[Info] 2025-06-10 23:39:55 Epoch 1 | Batch 200/304 | Batch Loss: 2.278722
+[Info] 2025-06-10 23:39:58 Epoch 1 | Batch 300/304 | Batch Loss: 2.037735
+[Info] 2025-06-10 23:39:59 Epoch 1 | Batch 304/304 | Batch Loss: 1.423360
+[Info] 2025-06-10 23:39:59 Validating after epoch 1 ...
+[Info] 2025-06-10 23:39:59 Validation 20/38 | Batch Loss: 0.974935
+[Info] 2025-06-10 23:39:59 Validation 38/38 | Batch Loss: 0.998264
+[Info] 2025-06-10 23:39:59 Epoch [1/200] Train Loss: 3.059664 | Val Loss: 1.231930
+[Info] 2025-06-10 23:39:59 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:39:59 Starting epoch 2/200 ...
+[Info] 2025-06-10 23:40:02 Epoch 2 | Batch 100/304 | Batch Loss: 1.370163
+[Info] 2025-06-10 23:40:06 Epoch 2 | Batch 200/304 | Batch Loss: 1.267235
+[Info] 2025-06-10 23:40:09 Epoch 2 | Batch 300/304 | Batch Loss: 1.336443
+[Info] 2025-06-10 23:40:09 Epoch 2 | Batch 304/304 | Batch Loss: 0.990681
+[Info] 2025-06-10 23:40:09 Validating after epoch 2 ...
+[Info] 2025-06-10 23:40:09 Validation 20/38 | Batch Loss: 0.509649
+[Info] 2025-06-10 23:40:09 Validation 38/38 | Batch Loss: 0.596780
+[Info] 2025-06-10 23:40:09 Epoch [2/200] Train Loss: 1.490226 | Val Loss: 0.693720
+[Info] 2025-06-10 23:40:09 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:40:09 Starting epoch 3/200 ...
+[Info] 2025-06-10 23:40:12 Epoch 3 | Batch 100/304 | Batch Loss: 1.613716
+[Info] 2025-06-10 23:40:15 Epoch 3 | Batch 200/304 | Batch Loss: 0.936364
+[Info] 2025-06-10 23:40:19 Epoch 3 | Batch 300/304 | Batch Loss: 0.838119
+[Info] 2025-06-10 23:40:19 Epoch 3 | Batch 304/304 | Batch Loss: 1.154325
+[Info] 2025-06-10 23:40:19 Validating after epoch 3 ...
+[Info] 2025-06-10 23:40:19 Validation 20/38 | Batch Loss: 0.297216
+[Info] 2025-06-10 23:40:19 Validation 38/38 | Batch Loss: 0.374246
+[Info] 2025-06-10 23:40:19 Epoch [3/200] Train Loss: 1.113310 | Val Loss: 0.415470
+[Info] 2025-06-10 23:40:19 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:40:19 Starting epoch 4/200 ...
+[Info] 2025-06-10 23:40:23 Epoch 4 | Batch 100/304 | Batch Loss: 1.039004
+[Info] 2025-06-10 23:40:26 Epoch 4 | Batch 200/304 | Batch Loss: 1.050767
+[Info] 2025-06-10 23:40:29 Epoch 4 | Batch 300/304 | Batch Loss: 0.885907
+[Info] 2025-06-10 23:40:29 Epoch 4 | Batch 304/304 | Batch Loss: 0.638223
+[Info] 2025-06-10 23:40:29 Validating after epoch 4 ...
+[Info] 2025-06-10 23:40:29 Validation 20/38 | Batch Loss: 0.187981
+[Info] 2025-06-10 23:40:30 Validation 38/38 | Batch Loss: 0.256752
+[Info] 2025-06-10 23:40:30 Epoch [4/200] Train Loss: 0.910860 | Val Loss: 0.275432
+[Info] 2025-06-10 23:40:30 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:40:30 Starting epoch 5/200 ...
+[Info] 2025-06-10 23:40:33 Epoch 5 | Batch 100/304 | Batch Loss: 0.883985
+[Info] 2025-06-10 23:40:36 Epoch 5 | Batch 200/304 | Batch Loss: 0.796268
+[Info] 2025-06-10 23:40:39 Epoch 5 | Batch 300/304 | Batch Loss: 0.739433
+[Info] 2025-06-10 23:40:39 Epoch 5 | Batch 304/304 | Batch Loss: 0.690259
+[Info] 2025-06-10 23:40:39 Validating after epoch 5 ...
+[Info] 2025-06-10 23:40:39 Validation 20/38 | Batch Loss: 0.127939
+[Info] 2025-06-10 23:40:39 Validation 38/38 | Batch Loss: 0.190606
+[Info] 2025-06-10 23:40:39 Epoch [5/200] Train Loss: 0.797025 | Val Loss: 0.202348
+[Info] 2025-06-10 23:40:39 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:40:39 Starting epoch 6/200 ...
+[Info] 2025-06-10 23:40:42 Epoch 6 | Batch 100/304 | Batch Loss: 0.733282
+[Info] 2025-06-10 23:40:46 Epoch 6 | Batch 200/304 | Batch Loss: 0.837467
+[Info] 2025-06-10 23:40:49 Epoch 6 | Batch 300/304 | Batch Loss: 0.709848
+[Info] 2025-06-10 23:40:49 Epoch 6 | Batch 304/304 | Batch Loss: 0.793774
+[Info] 2025-06-10 23:40:49 Validating after epoch 6 ...
+[Info] 2025-06-10 23:40:49 Validation 20/38 | Batch Loss: 0.097449
+[Info] 2025-06-10 23:40:49 Validation 38/38 | Batch Loss: 0.153886
+[Info] 2025-06-10 23:40:49 Epoch [6/200] Train Loss: 0.738679 | Val Loss: 0.162766
+[Info] 2025-06-10 23:40:49 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:40:49 Starting epoch 7/200 ...
+[Info] 2025-06-10 23:40:53 Epoch 7 | Batch 100/304 | Batch Loss: 0.603944
+[Info] 2025-06-10 23:40:56 Epoch 7 | Batch 200/304 | Batch Loss: 0.718018
+[Info] 2025-06-10 23:40:59 Epoch 7 | Batch 300/304 | Batch Loss: 0.665164
+[Info] 2025-06-10 23:40:59 Epoch 7 | Batch 304/304 | Batch Loss: 0.628246
+[Info] 2025-06-10 23:40:59 Validating after epoch 7 ...
+[Info] 2025-06-10 23:41:00 Validation 20/38 | Batch Loss: 0.083713
+[Info] 2025-06-10 23:41:00 Validation 38/38 | Batch Loss: 0.135804
+[Info] 2025-06-10 23:41:00 Epoch [7/200] Train Loss: 0.712008 | Val Loss: 0.144404
+[Info] 2025-06-10 23:41:00 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:41:00 Starting epoch 8/200 ...
+[Info] 2025-06-10 23:41:03 Epoch 8 | Batch 100/304 | Batch Loss: 0.723775
+[Info] 2025-06-10 23:41:06 Epoch 8 | Batch 200/304 | Batch Loss: 0.601581
+[Info] 2025-06-10 23:41:09 Epoch 8 | Batch 300/304 | Batch Loss: 0.628686
+[Info] 2025-06-10 23:41:09 Epoch 8 | Batch 304/304 | Batch Loss: 0.774982
+[Info] 2025-06-10 23:41:09 Validating after epoch 8 ...
+[Info] 2025-06-10 23:41:09 Validation 20/38 | Batch Loss: 0.078621
+[Info] 2025-06-10 23:41:09 Validation 38/38 | Batch Loss: 0.129220
+[Info] 2025-06-10 23:41:09 Epoch [8/200] Train Loss: 0.700952 | Val Loss: 0.137653
+[Info] 2025-06-10 23:41:09 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:41:09 Starting epoch 9/200 ...
+[Info] 2025-06-10 23:41:13 Epoch 9 | Batch 100/304 | Batch Loss: 0.674979
+[Info] 2025-06-10 23:41:16 Epoch 9 | Batch 200/304 | Batch Loss: 0.715013
+[Info] 2025-06-10 23:41:19 Epoch 9 | Batch 300/304 | Batch Loss: 0.714784
+[Info] 2025-06-10 23:41:20 Epoch 9 | Batch 304/304 | Batch Loss: 0.716823
+[Info] 2025-06-10 23:41:20 Validating after epoch 9 ...
+[Info] 2025-06-10 23:41:20 Validation 20/38 | Batch Loss: 0.076261
+[Info] 2025-06-10 23:41:20 Validation 38/38 | Batch Loss: 0.125882
+[Info] 2025-06-10 23:41:20 Epoch [9/200] Train Loss: 0.689664 | Val Loss: 0.134450
+[Info] 2025-06-10 23:41:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:41:20 Starting epoch 10/200 ...
+[Info] 2025-06-10 23:41:23 Epoch 10 | Batch 100/304 | Batch Loss: 0.769851
+[Info] 2025-06-10 23:41:26 Epoch 10 | Batch 200/304 | Batch Loss: 0.632735
+[Info] 2025-06-10 23:41:28 Epoch 10 | Batch 300/304 | Batch Loss: 0.595224
+[Info] 2025-06-10 23:41:28 Epoch 10 | Batch 304/304 | Batch Loss: 0.606449
+[Info] 2025-06-10 23:41:28 Validating after epoch 10 ...
+[Info] 2025-06-10 23:41:29 Validation 20/38 | Batch Loss: 0.075525
+[Info] 2025-06-10 23:41:29 Validation 38/38 | Batch Loss: 0.125000
+[Info] 2025-06-10 23:41:29 Epoch [10/200] Train Loss: 0.685738 | Val Loss: 0.133524
+[Info] 2025-06-10 23:41:29 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:41:29 Starting epoch 11/200 ...
+[Info] 2025-06-10 23:41:32 Epoch 11 | Batch 100/304 | Batch Loss: 0.915262
+[Info] 2025-06-10 23:41:35 Epoch 11 | Batch 200/304 | Batch Loss: 0.766276
+[Info] 2025-06-10 23:41:38 Epoch 11 | Batch 300/304 | Batch Loss: 0.519216
+[Info] 2025-06-10 23:41:39 Epoch 11 | Batch 304/304 | Batch Loss: 0.655037
+[Info] 2025-06-10 23:41:39 Validating after epoch 11 ...
+[Info] 2025-06-10 23:41:39 Validation 20/38 | Batch Loss: 0.075525
+[Info] 2025-06-10 23:41:39 Validation 38/38 | Batch Loss: 0.125000
+[Info] 2025-06-10 23:41:39 Epoch [11/200] Train Loss: 0.682531 | Val Loss: 0.133524
+[Info] 2025-06-10 23:41:39 Starting epoch 12/200 ...
+[Info] 2025-06-10 23:41:42 Epoch 12 | Batch 100/304 | Batch Loss: 0.667123
+[Info] 2025-06-10 23:41:44 Epoch 12 | Batch 200/304 | Batch Loss: 0.816649
+[Info] 2025-06-10 23:41:47 Epoch 12 | Batch 300/304 | Batch Loss: 0.682802
+[Info] 2025-06-10 23:41:47 Epoch 12 | Batch 304/304 | Batch Loss: 0.649197
+[Info] 2025-06-10 23:41:47 Validating after epoch 12 ...
+[Info] 2025-06-10 23:41:48 Validation 20/38 | Batch Loss: 0.074844
+[Info] 2025-06-10 23:41:48 Validation 38/38 | Batch Loss: 0.124116
+[Info] 2025-06-10 23:41:48 Epoch [12/200] Train Loss: 0.688494 | Val Loss: 0.132577
+[Info] 2025-06-10 23:41:48 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:41:48 Starting epoch 13/200 ...
+[Info] 2025-06-10 23:41:51 Epoch 13 | Batch 100/304 | Batch Loss: 0.619781
+[Info] 2025-06-10 23:41:54 Epoch 13 | Batch 200/304 | Batch Loss: 0.636241
+[Info] 2025-06-10 23:41:56 Epoch 13 | Batch 300/304 | Batch Loss: 0.685334
+[Info] 2025-06-10 23:41:57 Epoch 13 | Batch 304/304 | Batch Loss: 0.571893
+[Info] 2025-06-10 23:41:57 Validating after epoch 13 ...
+[Info] 2025-06-10 23:41:57 Validation 20/38 | Batch Loss: 0.072192
+[Info] 2025-06-10 23:41:57 Validation 38/38 | Batch Loss: 0.120327
+[Info] 2025-06-10 23:41:57 Epoch [13/200] Train Loss: 0.686537 | Val Loss: 0.128834
+[Info] 2025-06-10 23:41:57 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:41:57 Starting epoch 14/200 ...
+[Info] 2025-06-10 23:42:00 Epoch 14 | Batch 100/304 | Batch Loss: 0.647578
+[Info] 2025-06-10 23:42:03 Epoch 14 | Batch 200/304 | Batch Loss: 0.776045
+[Info] 2025-06-10 23:42:05 Epoch 14 | Batch 300/304 | Batch Loss: 0.692484
+[Info] 2025-06-10 23:42:06 Epoch 14 | Batch 304/304 | Batch Loss: 0.807096
+[Info] 2025-06-10 23:42:06 Validating after epoch 14 ...
+[Info] 2025-06-10 23:42:06 Validation 20/38 | Batch Loss: 0.068628
+[Info] 2025-06-10 23:42:06 Validation 38/38 | Batch Loss: 0.115697
+[Info] 2025-06-10 23:42:06 Epoch [14/200] Train Loss: 0.684065 | Val Loss: 0.124067
+[Info] 2025-06-10 23:42:06 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:42:06 Starting epoch 15/200 ...
+[Info] 2025-06-10 23:42:09 Epoch 15 | Batch 100/304 | Batch Loss: 0.721897
+[Info] 2025-06-10 23:42:11 Epoch 15 | Batch 200/304 | Batch Loss: 0.652637
+[Info] 2025-06-10 23:42:14 Epoch 15 | Batch 300/304 | Batch Loss: 0.759821
+[Info] 2025-06-10 23:42:14 Epoch 15 | Batch 304/304 | Batch Loss: 0.676479
+[Info] 2025-06-10 23:42:14 Validating after epoch 15 ...
+[Info] 2025-06-10 23:42:14 Validation 20/38 | Batch Loss: 0.063691
+[Info] 2025-06-10 23:42:14 Validation 38/38 | Batch Loss: 0.108646
+[Info] 2025-06-10 23:42:14 Epoch [15/200] Train Loss: 0.672241 | Val Loss: 0.117256
+[Info] 2025-06-10 23:42:14 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:42:14 Starting epoch 16/200 ...
+[Info] 2025-06-10 23:42:17 Epoch 16 | Batch 100/304 | Batch Loss: 0.687354
+[Info] 2025-06-10 23:42:20 Epoch 16 | Batch 200/304 | Batch Loss: 0.656739
+[Info] 2025-06-10 23:42:23 Epoch 16 | Batch 300/304 | Batch Loss: 0.694306
+[Info] 2025-06-10 23:42:23 Epoch 16 | Batch 304/304 | Batch Loss: 0.591728
+[Info] 2025-06-10 23:42:23 Validating after epoch 16 ...
+[Info] 2025-06-10 23:42:23 Validation 20/38 | Batch Loss: 0.057026
+[Info] 2025-06-10 23:42:23 Validation 38/38 | Batch Loss: 0.098932
+[Info] 2025-06-10 23:42:23 Epoch [16/200] Train Loss: 0.668083 | Val Loss: 0.107469
+[Info] 2025-06-10 23:42:23 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:42:23 Starting epoch 17/200 ...
+[Info] 2025-06-10 23:42:26 Epoch 17 | Batch 100/304 | Batch Loss: 0.524981
+[Info] 2025-06-10 23:42:29 Epoch 17 | Batch 200/304 | Batch Loss: 0.709487
+[Info] 2025-06-10 23:42:32 Epoch 17 | Batch 300/304 | Batch Loss: 0.671236
+[Info] 2025-06-10 23:42:32 Epoch 17 | Batch 304/304 | Batch Loss: 0.683406
+[Info] 2025-06-10 23:42:32 Validating after epoch 17 ...
+[Info] 2025-06-10 23:42:32 Validation 20/38 | Batch Loss: 0.048840
+[Info] 2025-06-10 23:42:32 Validation 38/38 | Batch Loss: 0.087075
+[Info] 2025-06-10 23:42:32 Epoch [17/200] Train Loss: 0.651377 | Val Loss: 0.095475
+[Info] 2025-06-10 23:42:32 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:42:32 Starting epoch 18/200 ...
+[Info] 2025-06-10 23:42:36 Epoch 18 | Batch 100/304 | Batch Loss: 0.674168
+[Info] 2025-06-10 23:42:39 Epoch 18 | Batch 200/304 | Batch Loss: 0.699046
+[Info] 2025-06-10 23:42:41 Epoch 18 | Batch 300/304 | Batch Loss: 0.620173
+[Info] 2025-06-10 23:42:42 Epoch 18 | Batch 304/304 | Batch Loss: 0.687669
+[Info] 2025-06-10 23:42:42 Validating after epoch 18 ...
+[Info] 2025-06-10 23:42:42 Validation 20/38 | Batch Loss: 0.040246
+[Info] 2025-06-10 23:42:42 Validation 38/38 | Batch Loss: 0.073937
+[Info] 2025-06-10 23:42:42 Epoch [18/200] Train Loss: 0.640366 | Val Loss: 0.082562
+[Info] 2025-06-10 23:42:42 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:42:42 Starting epoch 19/200 ...
+[Info] 2025-06-10 23:42:45 Epoch 19 | Batch 100/304 | Batch Loss: 0.605556
+[Info] 2025-06-10 23:42:48 Epoch 19 | Batch 200/304 | Batch Loss: 0.690592
+[Info] 2025-06-10 23:42:51 Epoch 19 | Batch 300/304 | Batch Loss: 0.667672
+[Info] 2025-06-10 23:42:51 Epoch 19 | Batch 304/304 | Batch Loss: 0.680806
+[Info] 2025-06-10 23:42:51 Validating after epoch 19 ...
+[Info] 2025-06-10 23:42:51 Validation 20/38 | Batch Loss: 0.031577
+[Info] 2025-06-10 23:42:51 Validation 38/38 | Batch Loss: 0.061195
+[Info] 2025-06-10 23:42:51 Epoch [19/200] Train Loss: 0.620674 | Val Loss: 0.069954
+[Info] 2025-06-10 23:42:51 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:42:51 Starting epoch 20/200 ...
+[Info] 2025-06-10 23:42:55 Epoch 20 | Batch 100/304 | Batch Loss: 0.612223
+[Info] 2025-06-10 23:42:58 Epoch 20 | Batch 200/304 | Batch Loss: 0.567549
+[Info] 2025-06-10 23:43:01 Epoch 20 | Batch 300/304 | Batch Loss: 0.477233
+[Info] 2025-06-10 23:43:01 Epoch 20 | Batch 304/304 | Batch Loss: 0.517500
+[Info] 2025-06-10 23:43:01 Validating after epoch 20 ...
+[Info] 2025-06-10 23:43:02 Validation 20/38 | Batch Loss: 0.025102
+[Info] 2025-06-10 23:43:02 Validation 38/38 | Batch Loss: 0.051248
+[Info] 2025-06-10 23:43:02 Epoch [20/200] Train Loss: 0.606231 | Val Loss: 0.059709
+[Info] 2025-06-10 23:43:02 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:43:02 Starting epoch 21/200 ...
+[Info] 2025-06-10 23:43:05 Epoch 21 | Batch 100/304 | Batch Loss: 0.671902
+[Info] 2025-06-10 23:43:08 Epoch 21 | Batch 200/304 | Batch Loss: 0.519963
+[Info] 2025-06-10 23:43:11 Epoch 21 | Batch 300/304 | Batch Loss: 0.590480
+[Info] 2025-06-10 23:43:11 Epoch 21 | Batch 304/304 | Batch Loss: 0.729189
+[Info] 2025-06-10 23:43:11 Validating after epoch 21 ...
+[Info] 2025-06-10 23:43:12 Validation 20/38 | Batch Loss: 0.022029
+[Info] 2025-06-10 23:43:12 Validation 38/38 | Batch Loss: 0.045915
+[Info] 2025-06-10 23:43:12 Epoch [21/200] Train Loss: 0.594631 | Val Loss: 0.054404
+[Info] 2025-06-10 23:43:12 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:43:12 Starting epoch 22/200 ...
+[Info] 2025-06-10 23:43:15 Epoch 22 | Batch 100/304 | Batch Loss: 0.652641
+[Info] 2025-06-10 23:43:18 Epoch 22 | Batch 200/304 | Batch Loss: 0.557425
+[Info] 2025-06-10 23:43:21 Epoch 22 | Batch 300/304 | Batch Loss: 0.493466
+[Info] 2025-06-10 23:43:21 Epoch 22 | Batch 304/304 | Batch Loss: 0.528838
+[Info] 2025-06-10 23:43:21 Validating after epoch 22 ...
+[Info] 2025-06-10 23:43:22 Validation 20/38 | Batch Loss: 0.018851
+[Info] 2025-06-10 23:43:22 Validation 38/38 | Batch Loss: 0.040999
+[Info] 2025-06-10 23:43:22 Epoch [22/200] Train Loss: 0.596442 | Val Loss: 0.049485
+[Info] 2025-06-10 23:43:22 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:43:22 Starting epoch 23/200 ...
+[Info] 2025-06-10 23:43:25 Epoch 23 | Batch 100/304 | Batch Loss: 0.520144
+[Info] 2025-06-10 23:43:28 Epoch 23 | Batch 200/304 | Batch Loss: 0.600990
+[Info] 2025-06-10 23:43:31 Epoch 23 | Batch 300/304 | Batch Loss: 0.592404
+[Info] 2025-06-10 23:43:31 Epoch 23 | Batch 304/304 | Batch Loss: 0.616727
+[Info] 2025-06-10 23:43:31 Validating after epoch 23 ...
+[Info] 2025-06-10 23:43:31 Validation 20/38 | Batch Loss: 0.015978
+[Info] 2025-06-10 23:43:32 Validation 38/38 | Batch Loss: 0.036535
+[Info] 2025-06-10 23:43:32 Epoch [23/200] Train Loss: 0.589180 | Val Loss: 0.045294
+[Info] 2025-06-10 23:43:32 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:43:32 Starting epoch 24/200 ...
+[Info] 2025-06-10 23:43:35 Epoch 24 | Batch 100/304 | Batch Loss: 0.520869
+[Info] 2025-06-10 23:43:38 Epoch 24 | Batch 200/304 | Batch Loss: 0.517204
+[Info] 2025-06-10 23:43:41 Epoch 24 | Batch 300/304 | Batch Loss: 0.567914
+[Info] 2025-06-10 23:43:41 Epoch 24 | Batch 304/304 | Batch Loss: 0.540396
+[Info] 2025-06-10 23:43:41 Validating after epoch 24 ...
+[Info] 2025-06-10 23:43:41 Validation 20/38 | Batch Loss: 0.013877
+[Info] 2025-06-10 23:43:41 Validation 38/38 | Batch Loss: 0.032943
+[Info] 2025-06-10 23:43:41 Epoch [24/200] Train Loss: 0.580808 | Val Loss: 0.041647
+[Info] 2025-06-10 23:43:41 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:43:41 Starting epoch 25/200 ...
+[Info] 2025-06-10 23:43:44 Epoch 25 | Batch 100/304 | Batch Loss: 0.519274
+[Info] 2025-06-10 23:43:47 Epoch 25 | Batch 200/304 | Batch Loss: 0.553823
+[Info] 2025-06-10 23:43:50 Epoch 25 | Batch 300/304 | Batch Loss: 0.574394
+[Info] 2025-06-10 23:43:51 Epoch 25 | Batch 304/304 | Batch Loss: 0.599654
+[Info] 2025-06-10 23:43:51 Validating after epoch 25 ...
+[Info] 2025-06-10 23:43:51 Validation 20/38 | Batch Loss: 0.012263
+[Info] 2025-06-10 23:43:51 Validation 38/38 | Batch Loss: 0.030323
+[Info] 2025-06-10 23:43:51 Epoch [25/200] Train Loss: 0.576871 | Val Loss: 0.038883
+[Info] 2025-06-10 23:43:51 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:43:51 Starting epoch 26/200 ...
+[Info] 2025-06-10 23:43:54 Epoch 26 | Batch 100/304 | Batch Loss: 0.557874
+[Info] 2025-06-10 23:43:57 Epoch 26 | Batch 200/304 | Batch Loss: 0.563551
+[Info] 2025-06-10 23:44:01 Epoch 26 | Batch 300/304 | Batch Loss: 0.543063
+[Info] 2025-06-10 23:44:01 Epoch 26 | Batch 304/304 | Batch Loss: 0.598678
+[Info] 2025-06-10 23:44:01 Validating after epoch 26 ...
+[Info] 2025-06-10 23:44:01 Validation 20/38 | Batch Loss: 0.011137
+[Info] 2025-06-10 23:44:01 Validation 38/38 | Batch Loss: 0.028168
+[Info] 2025-06-10 23:44:01 Epoch [26/200] Train Loss: 0.579869 | Val Loss: 0.036840
+[Info] 2025-06-10 23:44:01 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:44:01 Starting epoch 27/200 ...
+[Info] 2025-06-10 23:44:04 Epoch 27 | Batch 100/304 | Batch Loss: 0.640838
+[Info] 2025-06-10 23:44:07 Epoch 27 | Batch 200/304 | Batch Loss: 0.643674
+[Info] 2025-06-10 23:44:10 Epoch 27 | Batch 300/304 | Batch Loss: 0.567434
+[Info] 2025-06-10 23:44:10 Epoch 27 | Batch 304/304 | Batch Loss: 0.504130
+[Info] 2025-06-10 23:44:10 Validating after epoch 27 ...
+[Info] 2025-06-10 23:44:11 Validation 20/38 | Batch Loss: 0.010619
+[Info] 2025-06-10 23:44:11 Validation 38/38 | Batch Loss: 0.027339
+[Info] 2025-06-10 23:44:11 Epoch [27/200] Train Loss: 0.569988 | Val Loss: 0.035949
+[Info] 2025-06-10 23:44:11 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:44:11 Starting epoch 28/200 ...
+[Info] 2025-06-10 23:44:14 Epoch 28 | Batch 100/304 | Batch Loss: 0.601539
+[Info] 2025-06-10 23:44:17 Epoch 28 | Batch 200/304 | Batch Loss: 0.645451
+[Info] 2025-06-10 23:44:19 Epoch 28 | Batch 300/304 | Batch Loss: 0.519041
+[Info] 2025-06-10 23:44:20 Epoch 28 | Batch 304/304 | Batch Loss: 0.664686
+[Info] 2025-06-10 23:44:20 Validating after epoch 28 ...
+[Info] 2025-06-10 23:44:20 Validation 20/38 | Batch Loss: 0.010355
+[Info] 2025-06-10 23:44:20 Validation 38/38 | Batch Loss: 0.026881
+[Info] 2025-06-10 23:44:20 Epoch [28/200] Train Loss: 0.574422 | Val Loss: 0.035478
+[Info] 2025-06-10 23:44:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:44:20 Starting epoch 29/200 ...
+[Info] 2025-06-10 23:44:23 Epoch 29 | Batch 100/304 | Batch Loss: 0.559941
+[Info] 2025-06-10 23:44:26 Epoch 29 | Batch 200/304 | Batch Loss: 0.585923
+[Info] 2025-06-10 23:44:29 Epoch 29 | Batch 300/304 | Batch Loss: 0.528513
+[Info] 2025-06-10 23:44:29 Epoch 29 | Batch 304/304 | Batch Loss: 0.472049
+[Info] 2025-06-10 23:44:29 Validating after epoch 29 ...
+[Info] 2025-06-10 23:44:29 Validation 20/38 | Batch Loss: 0.010226
+[Info] 2025-06-10 23:44:29 Validation 38/38 | Batch Loss: 0.026631
+[Info] 2025-06-10 23:44:29 Epoch [29/200] Train Loss: 0.572292 | Val Loss: 0.035232
+[Info] 2025-06-10 23:44:29 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:44:29 Starting epoch 30/200 ...
+[Info] 2025-06-10 23:44:32 Epoch 30 | Batch 100/304 | Batch Loss: 0.620037
+[Info] 2025-06-10 23:44:36 Epoch 30 | Batch 200/304 | Batch Loss: 0.594830
+[Info] 2025-06-10 23:44:38 Epoch 30 | Batch 300/304 | Batch Loss: 0.512622
+[Info] 2025-06-10 23:44:39 Epoch 30 | Batch 304/304 | Batch Loss: 0.461604
+[Info] 2025-06-10 23:44:39 Validating after epoch 30 ...
+[Info] 2025-06-10 23:44:39 Validation 20/38 | Batch Loss: 0.010201
+[Info] 2025-06-10 23:44:39 Validation 38/38 | Batch Loss: 0.026587
+[Info] 2025-06-10 23:44:39 Epoch [30/200] Train Loss: 0.568925 | Val Loss: 0.035189
+[Info] 2025-06-10 23:44:39 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:44:39 Starting epoch 31/200 ...
+[Info] 2025-06-10 23:44:42 Epoch 31 | Batch 100/304 | Batch Loss: 0.664109
+[Info] 2025-06-10 23:44:45 Epoch 31 | Batch 200/304 | Batch Loss: 0.580593
+[Info] 2025-06-10 23:44:48 Epoch 31 | Batch 300/304 | Batch Loss: 0.552984
+[Info] 2025-06-10 23:44:48 Epoch 31 | Batch 304/304 | Batch Loss: 0.536684
+[Info] 2025-06-10 23:44:48 Validating after epoch 31 ...
+[Info] 2025-06-10 23:44:48 Validation 20/38 | Batch Loss: 0.010201
+[Info] 2025-06-10 23:44:48 Validation 38/38 | Batch Loss: 0.026587
+[Info] 2025-06-10 23:44:48 Epoch [31/200] Train Loss: 0.578023 | Val Loss: 0.035189
+[Info] 2025-06-10 23:44:48 Starting epoch 32/200 ...
+[Info] 2025-06-10 23:44:51 Epoch 32 | Batch 100/304 | Batch Loss: 0.455653
+[Info] 2025-06-10 23:44:54 Epoch 32 | Batch 200/304 | Batch Loss: 0.647208
+[Info] 2025-06-10 23:44:57 Epoch 32 | Batch 300/304 | Batch Loss: 0.499166
+[Info] 2025-06-10 23:44:57 Epoch 32 | Batch 304/304 | Batch Loss: 0.479840
+[Info] 2025-06-10 23:44:57 Validating after epoch 32 ...
+[Info] 2025-06-10 23:44:58 Validation 20/38 | Batch Loss: 0.010164
+[Info] 2025-06-10 23:44:58 Validation 38/38 | Batch Loss: 0.026529
+[Info] 2025-06-10 23:44:58 Epoch [32/200] Train Loss: 0.568343 | Val Loss: 0.035123
+[Info] 2025-06-10 23:44:58 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:44:58 Starting epoch 33/200 ...
+[Info] 2025-06-10 23:45:01 Epoch 33 | Batch 100/304 | Batch Loss: 0.550297
+[Info] 2025-06-10 23:45:04 Epoch 33 | Batch 200/304 | Batch Loss: 0.565321
+[Info] 2025-06-10 23:45:07 Epoch 33 | Batch 300/304 | Batch Loss: 0.545572
+[Info] 2025-06-10 23:45:07 Epoch 33 | Batch 304/304 | Batch Loss: 0.680920
+[Info] 2025-06-10 23:45:07 Validating after epoch 33 ...
+[Info] 2025-06-10 23:45:07 Validation 20/38 | Batch Loss: 0.010044
+[Info] 2025-06-10 23:45:07 Validation 38/38 | Batch Loss: 0.026273
+[Info] 2025-06-10 23:45:07 Epoch [33/200] Train Loss: 0.568422 | Val Loss: 0.034889
+[Info] 2025-06-10 23:45:07 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:45:07 Starting epoch 34/200 ...
+[Info] 2025-06-10 23:45:11 Epoch 34 | Batch 100/304 | Batch Loss: 0.570526
+[Info] 2025-06-10 23:45:13 Epoch 34 | Batch 200/304 | Batch Loss: 0.599020
+[Info] 2025-06-10 23:45:16 Epoch 34 | Batch 300/304 | Batch Loss: 0.644221
+[Info] 2025-06-10 23:45:16 Epoch 34 | Batch 304/304 | Batch Loss: 0.438413
+[Info] 2025-06-10 23:45:16 Validating after epoch 34 ...
+[Info] 2025-06-10 23:45:16 Validation 20/38 | Batch Loss: 0.009889
+[Info] 2025-06-10 23:45:17 Validation 38/38 | Batch Loss: 0.026061
+[Info] 2025-06-10 23:45:17 Epoch [34/200] Train Loss: 0.570774 | Val Loss: 0.034634
+[Info] 2025-06-10 23:45:17 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:45:17 Starting epoch 35/200 ...
+[Info] 2025-06-10 23:45:20 Epoch 35 | Batch 100/304 | Batch Loss: 0.500463
+[Info] 2025-06-10 23:45:23 Epoch 35 | Batch 200/304 | Batch Loss: 0.492726
+[Info] 2025-06-10 23:45:25 Epoch 35 | Batch 300/304 | Batch Loss: 0.558371
+[Info] 2025-06-10 23:45:25 Epoch 35 | Batch 304/304 | Batch Loss: 0.593518
+[Info] 2025-06-10 23:45:25 Validating after epoch 35 ...
+[Info] 2025-06-10 23:45:26 Validation 20/38 | Batch Loss: 0.009634
+[Info] 2025-06-10 23:45:26 Validation 38/38 | Batch Loss: 0.025621
+[Info] 2025-06-10 23:45:26 Epoch [35/200] Train Loss: 0.572704 | Val Loss: 0.034172
+[Info] 2025-06-10 23:45:26 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:45:26 Starting epoch 36/200 ...
+[Info] 2025-06-10 23:45:29 Epoch 36 | Batch 100/304 | Batch Loss: 0.487934
+[Info] 2025-06-10 23:45:32 Epoch 36 | Batch 200/304 | Batch Loss: 0.516594
+[Info] 2025-06-10 23:45:34 Epoch 36 | Batch 300/304 | Batch Loss: 0.467054
+[Info] 2025-06-10 23:45:34 Epoch 36 | Batch 304/304 | Batch Loss: 0.500617
+[Info] 2025-06-10 23:45:34 Validating after epoch 36 ...
+[Info] 2025-06-10 23:45:35 Validation 20/38 | Batch Loss: 0.009228
+[Info] 2025-06-10 23:45:35 Validation 38/38 | Batch Loss: 0.024995
+[Info] 2025-06-10 23:45:35 Epoch [36/200] Train Loss: 0.565326 | Val Loss: 0.033493
+[Info] 2025-06-10 23:45:35 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:45:35 Starting epoch 37/200 ...
+[Info] 2025-06-10 23:45:38 Epoch 37 | Batch 100/304 | Batch Loss: 0.570615
+[Info] 2025-06-10 23:45:41 Epoch 37 | Batch 200/304 | Batch Loss: 0.532481
+[Info] 2025-06-10 23:45:44 Epoch 37 | Batch 300/304 | Batch Loss: 0.592789
+[Info] 2025-06-10 23:45:44 Epoch 37 | Batch 304/304 | Batch Loss: 0.476181
+[Info] 2025-06-10 23:45:44 Validating after epoch 37 ...
+[Info] 2025-06-10 23:45:44 Validation 20/38 | Batch Loss: 0.008830
+[Info] 2025-06-10 23:45:44 Validation 38/38 | Batch Loss: 0.024139
+[Info] 2025-06-10 23:45:44 Epoch [37/200] Train Loss: 0.569379 | Val Loss: 0.032689
+[Info] 2025-06-10 23:45:44 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:45:44 Starting epoch 38/200 ...
+[Info] 2025-06-10 23:45:47 Epoch 38 | Batch 100/304 | Batch Loss: 0.497941
+[Info] 2025-06-10 23:45:50 Epoch 38 | Batch 200/304 | Batch Loss: 0.564805
+[Info] 2025-06-10 23:45:53 Epoch 38 | Batch 300/304 | Batch Loss: 0.461897
+[Info] 2025-06-10 23:45:53 Epoch 38 | Batch 304/304 | Batch Loss: 0.507415
+[Info] 2025-06-10 23:45:53 Validating after epoch 38 ...
+[Info] 2025-06-10 23:45:53 Validation 20/38 | Batch Loss: 0.008277
+[Info] 2025-06-10 23:45:53 Validation 38/38 | Batch Loss: 0.023190
+[Info] 2025-06-10 23:45:53 Epoch [38/200] Train Loss: 0.571120 | Val Loss: 0.031649
+[Info] 2025-06-10 23:45:53 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:45:53 Starting epoch 39/200 ...
+[Info] 2025-06-10 23:45:56 Epoch 39 | Batch 100/304 | Batch Loss: 0.547182
+[Info] 2025-06-10 23:45:59 Epoch 39 | Batch 200/304 | Batch Loss: 0.604757
+[Info] 2025-06-10 23:46:02 Epoch 39 | Batch 300/304 | Batch Loss: 0.547942
+[Info] 2025-06-10 23:46:02 Epoch 39 | Batch 304/304 | Batch Loss: 0.532663
+[Info] 2025-06-10 23:46:02 Validating after epoch 39 ...
+[Info] 2025-06-10 23:46:02 Validation 20/38 | Batch Loss: 0.007630
+[Info] 2025-06-10 23:46:02 Validation 38/38 | Batch Loss: 0.022046
+[Info] 2025-06-10 23:46:02 Epoch [39/200] Train Loss: 0.569889 | Val Loss: 0.030551
+[Info] 2025-06-10 23:46:03 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:46:03 Starting epoch 40/200 ...
+[Info] 2025-06-10 23:46:06 Epoch 40 | Batch 100/304 | Batch Loss: 0.577736
+[Info] 2025-06-10 23:46:08 Epoch 40 | Batch 200/304 | Batch Loss: 0.558464
+[Info] 2025-06-10 23:46:11 Epoch 40 | Batch 300/304 | Batch Loss: 0.534407
+[Info] 2025-06-10 23:46:11 Epoch 40 | Batch 304/304 | Batch Loss: 0.730545
+[Info] 2025-06-10 23:46:11 Validating after epoch 40 ...
+[Info] 2025-06-10 23:46:11 Validation 20/38 | Batch Loss: 0.007229
+[Info] 2025-06-10 23:46:11 Validation 38/38 | Batch Loss: 0.021163
+[Info] 2025-06-10 23:46:11 Epoch [40/200] Train Loss: 0.566237 | Val Loss: 0.029641
+[Info] 2025-06-10 23:46:11 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:46:11 Starting epoch 41/200 ...
+[Info] 2025-06-10 23:46:14 Epoch 41 | Batch 100/304 | Batch Loss: 0.575565
+[Info] 2025-06-10 23:46:17 Epoch 41 | Batch 200/304 | Batch Loss: 0.615070
+[Info] 2025-06-10 23:46:20 Epoch 41 | Batch 300/304 | Batch Loss: 0.515640
+[Info] 2025-06-10 23:46:20 Epoch 41 | Batch 304/304 | Batch Loss: 0.542609
+[Info] 2025-06-10 23:46:20 Validating after epoch 41 ...
+[Info] 2025-06-10 23:46:20 Validation 20/38 | Batch Loss: 0.006967
+[Info] 2025-06-10 23:46:20 Validation 38/38 | Batch Loss: 0.020580
+[Info] 2025-06-10 23:46:20 Epoch [41/200] Train Loss: 0.563107 | Val Loss: 0.029129
+[Info] 2025-06-10 23:46:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:46:20 Starting epoch 42/200 ...
+[Info] 2025-06-10 23:46:23 Epoch 42 | Batch 100/304 | Batch Loss: 0.460149
+[Info] 2025-06-10 23:46:26 Epoch 42 | Batch 200/304 | Batch Loss: 0.593607
+[Info] 2025-06-10 23:46:28 Epoch 42 | Batch 300/304 | Batch Loss: 0.527404
+[Info] 2025-06-10 23:46:28 Epoch 42 | Batch 304/304 | Batch Loss: 0.631830
+[Info] 2025-06-10 23:46:28 Validating after epoch 42 ...
+[Info] 2025-06-10 23:46:28 Validation 20/38 | Batch Loss: 0.006437
+[Info] 2025-06-10 23:46:29 Validation 38/38 | Batch Loss: 0.019664
+[Info] 2025-06-10 23:46:29 Epoch [42/200] Train Loss: 0.565896 | Val Loss: 0.028175
+[Info] 2025-06-10 23:46:29 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:46:29 Starting epoch 43/200 ...
+[Info] 2025-06-10 23:46:31 Epoch 43 | Batch 100/304 | Batch Loss: 0.536001
+[Info] 2025-06-10 23:46:34 Epoch 43 | Batch 200/304 | Batch Loss: 0.567810
+[Info] 2025-06-10 23:46:37 Epoch 43 | Batch 300/304 | Batch Loss: 0.588340
+[Info] 2025-06-10 23:46:37 Epoch 43 | Batch 304/304 | Batch Loss: 0.549197
+[Info] 2025-06-10 23:46:37 Validating after epoch 43 ...
+[Info] 2025-06-10 23:46:37 Validation 20/38 | Batch Loss: 0.005971
+[Info] 2025-06-10 23:46:37 Validation 38/38 | Batch Loss: 0.018590
+[Info] 2025-06-10 23:46:37 Epoch [43/200] Train Loss: 0.564269 | Val Loss: 0.027165
+[Info] 2025-06-10 23:46:37 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:46:37 Starting epoch 44/200 ...
+[Info] 2025-06-10 23:46:40 Epoch 44 | Batch 100/304 | Batch Loss: 0.585487
+[Info] 2025-06-10 23:46:43 Epoch 44 | Batch 200/304 | Batch Loss: 0.527914
+[Info] 2025-06-10 23:46:46 Epoch 44 | Batch 300/304 | Batch Loss: 0.502673
+[Info] 2025-06-10 23:46:46 Epoch 44 | Batch 304/304 | Batch Loss: 0.522436
+[Info] 2025-06-10 23:46:46 Validating after epoch 44 ...
+[Info] 2025-06-10 23:46:46 Validation 20/38 | Batch Loss: 0.005556
+[Info] 2025-06-10 23:46:46 Validation 38/38 | Batch Loss: 0.017890
+[Info] 2025-06-10 23:46:46 Epoch [44/200] Train Loss: 0.560711 | Val Loss: 0.026326
+[Info] 2025-06-10 23:46:46 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:46:46 Starting epoch 45/200 ...
+[Info] 2025-06-10 23:46:49 Epoch 45 | Batch 100/304 | Batch Loss: 0.643953
+[Info] 2025-06-10 23:46:52 Epoch 45 | Batch 200/304 | Batch Loss: 0.475746
+[Info] 2025-06-10 23:46:55 Epoch 45 | Batch 300/304 | Batch Loss: 0.603739
+[Info] 2025-06-10 23:46:55 Epoch 45 | Batch 304/304 | Batch Loss: 0.657147
+[Info] 2025-06-10 23:46:55 Validating after epoch 45 ...
+[Info] 2025-06-10 23:46:55 Validation 20/38 | Batch Loss: 0.005253
+[Info] 2025-06-10 23:46:56 Validation 38/38 | Batch Loss: 0.017092
+[Info] 2025-06-10 23:46:56 Epoch [45/200] Train Loss: 0.561244 | Val Loss: 0.025586
+[Info] 2025-06-10 23:46:56 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:46:56 Starting epoch 46/200 ...
+[Info] 2025-06-10 23:46:59 Epoch 46 | Batch 100/304 | Batch Loss: 0.633840
+[Info] 2025-06-10 23:47:02 Epoch 46 | Batch 200/304 | Batch Loss: 0.539376
+[Info] 2025-06-10 23:47:05 Epoch 46 | Batch 300/304 | Batch Loss: 0.504567
+[Info] 2025-06-10 23:47:05 Epoch 46 | Batch 304/304 | Batch Loss: 0.518758
+[Info] 2025-06-10 23:47:05 Validating after epoch 46 ...
+[Info] 2025-06-10 23:47:05 Validation 20/38 | Batch Loss: 0.005054
+[Info] 2025-06-10 23:47:05 Validation 38/38 | Batch Loss: 0.016643
+[Info] 2025-06-10 23:47:05 Epoch [46/200] Train Loss: 0.559654 | Val Loss: 0.025087
+[Info] 2025-06-10 23:47:05 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:47:05 Starting epoch 47/200 ...
+[Info] 2025-06-10 23:47:09 Epoch 47 | Batch 100/304 | Batch Loss: 0.585355
+[Info] 2025-06-10 23:47:12 Epoch 47 | Batch 200/304 | Batch Loss: 0.473345
+[Info] 2025-06-10 23:47:14 Epoch 47 | Batch 300/304 | Batch Loss: 0.503488
+[Info] 2025-06-10 23:47:15 Epoch 47 | Batch 304/304 | Batch Loss: 0.477409
+[Info] 2025-06-10 23:47:15 Validating after epoch 47 ...
+[Info] 2025-06-10 23:47:15 Validation 20/38 | Batch Loss: 0.004886
+[Info] 2025-06-10 23:47:15 Validation 38/38 | Batch Loss: 0.016220
+[Info] 2025-06-10 23:47:15 Epoch [47/200] Train Loss: 0.557106 | Val Loss: 0.024695
+[Info] 2025-06-10 23:47:15 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:47:15 Starting epoch 48/200 ...
+[Info] 2025-06-10 23:47:18 Epoch 48 | Batch 100/304 | Batch Loss: 0.578262
+[Info] 2025-06-10 23:47:21 Epoch 48 | Batch 200/304 | Batch Loss: 0.498547
+[Info] 2025-06-10 23:47:24 Epoch 48 | Batch 300/304 | Batch Loss: 0.546703
+[Info] 2025-06-10 23:47:24 Epoch 48 | Batch 304/304 | Batch Loss: 0.453321
+[Info] 2025-06-10 23:47:24 Validating after epoch 48 ...
+[Info] 2025-06-10 23:47:24 Validation 20/38 | Batch Loss: 0.004767
+[Info] 2025-06-10 23:47:24 Validation 38/38 | Batch Loss: 0.016013
+[Info] 2025-06-10 23:47:24 Epoch [48/200] Train Loss: 0.555055 | Val Loss: 0.024482
+[Info] 2025-06-10 23:47:24 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:47:24 Starting epoch 49/200 ...
+[Info] 2025-06-10 23:47:28 Epoch 49 | Batch 100/304 | Batch Loss: 0.628765
+[Info] 2025-06-10 23:47:31 Epoch 49 | Batch 200/304 | Batch Loss: 0.586606
+[Info] 2025-06-10 23:47:34 Epoch 49 | Batch 300/304 | Batch Loss: 0.493306
+[Info] 2025-06-10 23:47:34 Epoch 49 | Batch 304/304 | Batch Loss: 0.589479
+[Info] 2025-06-10 23:47:34 Validating after epoch 49 ...
+[Info] 2025-06-10 23:47:34 Validation 20/38 | Batch Loss: 0.004731
+[Info] 2025-06-10 23:47:34 Validation 38/38 | Batch Loss: 0.015962
+[Info] 2025-06-10 23:47:34 Epoch [49/200] Train Loss: 0.559119 | Val Loss: 0.024400
+[Info] 2025-06-10 23:47:34 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:47:34 Starting epoch 50/200 ...
+[Info] 2025-06-10 23:47:37 Epoch 50 | Batch 100/304 | Batch Loss: 0.612184
+[Info] 2025-06-10 23:47:40 Epoch 50 | Batch 200/304 | Batch Loss: 0.544457
+[Info] 2025-06-10 23:47:43 Epoch 50 | Batch 300/304 | Batch Loss: 0.577645
+[Info] 2025-06-10 23:47:43 Epoch 50 | Batch 304/304 | Batch Loss: 0.668144
+[Info] 2025-06-10 23:47:43 Validating after epoch 50 ...
+[Info] 2025-06-10 23:47:43 Validation 20/38 | Batch Loss: 0.004729
+[Info] 2025-06-10 23:47:44 Validation 38/38 | Batch Loss: 0.015943
+[Info] 2025-06-10 23:47:44 Epoch [50/200] Train Loss: 0.560165 | Val Loss: 0.024399
+[Info] 2025-06-10 23:47:44 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:47:44 Starting epoch 51/200 ...
+[Info] 2025-06-10 23:47:47 Epoch 51 | Batch 100/304 | Batch Loss: 0.582168
+[Info] 2025-06-10 23:47:50 Epoch 51 | Batch 200/304 | Batch Loss: 0.595959
+[Info] 2025-06-10 23:47:53 Epoch 51 | Batch 300/304 | Batch Loss: 0.584449
+[Info] 2025-06-10 23:47:53 Epoch 51 | Batch 304/304 | Batch Loss: 0.578268
+[Info] 2025-06-10 23:47:53 Validating after epoch 51 ...
+[Info] 2025-06-10 23:47:53 Validation 20/38 | Batch Loss: 0.004729
+[Info] 2025-06-10 23:47:53 Validation 38/38 | Batch Loss: 0.015943
+[Info] 2025-06-10 23:47:53 Epoch [51/200] Train Loss: 0.559677 | Val Loss: 0.024399
+[Info] 2025-06-10 23:47:53 Starting epoch 52/200 ...
+[Info] 2025-06-10 23:47:57 Epoch 52 | Batch 100/304 | Batch Loss: 0.594652
+[Info] 2025-06-10 23:48:00 Epoch 52 | Batch 200/304 | Batch Loss: 0.608511
+[Info] 2025-06-10 23:48:03 Epoch 52 | Batch 300/304 | Batch Loss: 0.462062
+[Info] 2025-06-10 23:48:03 Epoch 52 | Batch 304/304 | Batch Loss: 0.597236
+[Info] 2025-06-10 23:48:03 Validating after epoch 52 ...
+[Info] 2025-06-10 23:48:03 Validation 20/38 | Batch Loss: 0.004716
+[Info] 2025-06-10 23:48:03 Validation 38/38 | Batch Loss: 0.015913
+[Info] 2025-06-10 23:48:03 Epoch [52/200] Train Loss: 0.557339 | Val Loss: 0.024370
+[Info] 2025-06-10 23:48:03 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:48:03 Starting epoch 53/200 ...
+[Info] 2025-06-10 23:48:07 Epoch 53 | Batch 100/304 | Batch Loss: 0.480952
+[Info] 2025-06-10 23:48:10 Epoch 53 | Batch 200/304 | Batch Loss: 0.476721
+[Info] 2025-06-10 23:48:13 Epoch 53 | Batch 300/304 | Batch Loss: 0.539432
+[Info] 2025-06-10 23:48:13 Epoch 53 | Batch 304/304 | Batch Loss: 0.719281
+[Info] 2025-06-10 23:48:13 Validating after epoch 53 ...
+[Info] 2025-06-10 23:48:13 Validation 20/38 | Batch Loss: 0.004698
+[Info] 2025-06-10 23:48:13 Validation 38/38 | Batch Loss: 0.015840
+[Info] 2025-06-10 23:48:13 Epoch [53/200] Train Loss: 0.561744 | Val Loss: 0.024332
+[Info] 2025-06-10 23:48:13 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:48:13 Starting epoch 54/200 ...
+[Info] 2025-06-10 23:48:16 Epoch 54 | Batch 100/304 | Batch Loss: 0.680765
+[Info] 2025-06-10 23:48:19 Epoch 54 | Batch 200/304 | Batch Loss: 0.461234
+[Info] 2025-06-10 23:48:22 Epoch 54 | Batch 300/304 | Batch Loss: 0.533468
+[Info] 2025-06-10 23:48:22 Epoch 54 | Batch 304/304 | Batch Loss: 0.606208
+[Info] 2025-06-10 23:48:22 Validating after epoch 54 ...
+[Info] 2025-06-10 23:48:22 Validation 20/38 | Batch Loss: 0.004616
+[Info] 2025-06-10 23:48:23 Validation 38/38 | Batch Loss: 0.015635
+[Info] 2025-06-10 23:48:23 Epoch [54/200] Train Loss: 0.559085 | Val Loss: 0.024140
+[Info] 2025-06-10 23:48:23 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:48:23 Starting epoch 55/200 ...
+[Info] 2025-06-10 23:48:26 Epoch 55 | Batch 100/304 | Batch Loss: 0.610040
+[Info] 2025-06-10 23:48:29 Epoch 55 | Batch 200/304 | Batch Loss: 0.643166
+[Info] 2025-06-10 23:48:31 Epoch 55 | Batch 300/304 | Batch Loss: 0.514335
+[Info] 2025-06-10 23:48:32 Epoch 55 | Batch 304/304 | Batch Loss: 0.670330
+[Info] 2025-06-10 23:48:32 Validating after epoch 55 ...
+[Info] 2025-06-10 23:48:32 Validation 20/38 | Batch Loss: 0.004471
+[Info] 2025-06-10 23:48:32 Validation 38/38 | Batch Loss: 0.015341
+[Info] 2025-06-10 23:48:32 Epoch [55/200] Train Loss: 0.557640 | Val Loss: 0.023777
+[Info] 2025-06-10 23:48:32 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:48:32 Starting epoch 56/200 ...
+[Info] 2025-06-10 23:48:35 Epoch 56 | Batch 100/304 | Batch Loss: 0.484778
+[Info] 2025-06-10 23:48:38 Epoch 56 | Batch 200/304 | Batch Loss: 0.543149
+[Info] 2025-06-10 23:48:41 Epoch 56 | Batch 300/304 | Batch Loss: 0.527534
+[Info] 2025-06-10 23:48:41 Epoch 56 | Batch 304/304 | Batch Loss: 0.425180
+[Info] 2025-06-10 23:48:41 Validating after epoch 56 ...
+[Info] 2025-06-10 23:48:41 Validation 20/38 | Batch Loss: 0.004358
+[Info] 2025-06-10 23:48:42 Validation 38/38 | Batch Loss: 0.015038
+[Info] 2025-06-10 23:48:42 Epoch [56/200] Train Loss: 0.558155 | Val Loss: 0.023516
+[Info] 2025-06-10 23:48:42 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:48:42 Starting epoch 57/200 ...
+[Info] 2025-06-10 23:48:45 Epoch 57 | Batch 100/304 | Batch Loss: 0.544343
+[Info] 2025-06-10 23:48:48 Epoch 57 | Batch 200/304 | Batch Loss: 0.575667
+[Info] 2025-06-10 23:48:51 Epoch 57 | Batch 300/304 | Batch Loss: 0.524076
+[Info] 2025-06-10 23:48:51 Epoch 57 | Batch 304/304 | Batch Loss: 0.459542
+[Info] 2025-06-10 23:48:51 Validating after epoch 57 ...
+[Info] 2025-06-10 23:48:51 Validation 20/38 | Batch Loss: 0.004218
+[Info] 2025-06-10 23:48:51 Validation 38/38 | Batch Loss: 0.014770
+[Info] 2025-06-10 23:48:51 Epoch [57/200] Train Loss: 0.562393 | Val Loss: 0.023227
+[Info] 2025-06-10 23:48:51 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:48:51 Starting epoch 58/200 ...
+[Info] 2025-06-10 23:48:54 Epoch 58 | Batch 100/304 | Batch Loss: 0.531662
+[Info] 2025-06-10 23:48:57 Epoch 58 | Batch 200/304 | Batch Loss: 0.495131
+[Info] 2025-06-10 23:49:00 Epoch 58 | Batch 300/304 | Batch Loss: 0.598475
+[Info] 2025-06-10 23:49:00 Epoch 58 | Batch 304/304 | Batch Loss: 0.468966
+[Info] 2025-06-10 23:49:00 Validating after epoch 58 ...
+[Info] 2025-06-10 23:49:01 Validation 20/38 | Batch Loss: 0.004115
+[Info] 2025-06-10 23:49:01 Validation 38/38 | Batch Loss: 0.014429
+[Info] 2025-06-10 23:49:01 Epoch [58/200] Train Loss: 0.551682 | Val Loss: 0.022910
+[Info] 2025-06-10 23:49:01 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:49:01 Starting epoch 59/200 ...
+[Info] 2025-06-10 23:49:04 Epoch 59 | Batch 100/304 | Batch Loss: 0.612807
+[Info] 2025-06-10 23:49:07 Epoch 59 | Batch 200/304 | Batch Loss: 0.494091
+[Info] 2025-06-10 23:49:10 Epoch 59 | Batch 300/304 | Batch Loss: 0.652018
+[Info] 2025-06-10 23:49:10 Epoch 59 | Batch 304/304 | Batch Loss: 0.660573
+[Info] 2025-06-10 23:49:10 Validating after epoch 59 ...
+[Info] 2025-06-10 23:49:11 Validation 20/38 | Batch Loss: 0.003940
+[Info] 2025-06-10 23:49:11 Validation 38/38 | Batch Loss: 0.013995
+[Info] 2025-06-10 23:49:11 Epoch [59/200] Train Loss: 0.556346 | Val Loss: 0.022477
+[Info] 2025-06-10 23:49:11 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:49:11 Starting epoch 60/200 ...
+[Info] 2025-06-10 23:49:14 Epoch 60 | Batch 100/304 | Batch Loss: 0.454981
+[Info] 2025-06-10 23:49:17 Epoch 60 | Batch 200/304 | Batch Loss: 0.542041
+[Info] 2025-06-10 23:49:19 Epoch 60 | Batch 300/304 | Batch Loss: 0.595805
+[Info] 2025-06-10 23:49:20 Epoch 60 | Batch 304/304 | Batch Loss: 0.352879
+[Info] 2025-06-10 23:49:20 Validating after epoch 60 ...
+[Info] 2025-06-10 23:49:20 Validation 20/38 | Batch Loss: 0.003814
+[Info] 2025-06-10 23:49:20 Validation 38/38 | Batch Loss: 0.013533
+[Info] 2025-06-10 23:49:20 Epoch [60/200] Train Loss: 0.555368 | Val Loss: 0.022089
+[Info] 2025-06-10 23:49:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:49:20 Starting epoch 61/200 ...
+[Info] 2025-06-10 23:49:24 Epoch 61 | Batch 100/304 | Batch Loss: 0.498506
+[Info] 2025-06-10 23:49:27 Epoch 61 | Batch 200/304 | Batch Loss: 0.581488
+[Info] 2025-06-10 23:49:30 Epoch 61 | Batch 300/304 | Batch Loss: 0.550123
+[Info] 2025-06-10 23:49:30 Epoch 61 | Batch 304/304 | Batch Loss: 0.654555
+[Info] 2025-06-10 23:49:30 Validating after epoch 61 ...
+[Info] 2025-06-10 23:49:30 Validation 20/38 | Batch Loss: 0.003570
+[Info] 2025-06-10 23:49:30 Validation 38/38 | Batch Loss: 0.012911
+[Info] 2025-06-10 23:49:30 Epoch [61/200] Train Loss: 0.548121 | Val Loss: 0.021417
+[Info] 2025-06-10 23:49:30 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:49:30 Starting epoch 62/200 ...
+[Info] 2025-06-10 23:49:33 Epoch 62 | Batch 100/304 | Batch Loss: 0.558055
+[Info] 2025-06-10 23:49:37 Epoch 62 | Batch 200/304 | Batch Loss: 0.527235
+[Info] 2025-06-10 23:49:39 Epoch 62 | Batch 300/304 | Batch Loss: 0.568130
+[Info] 2025-06-10 23:49:40 Epoch 62 | Batch 304/304 | Batch Loss: 0.525639
+[Info] 2025-06-10 23:49:40 Validating after epoch 62 ...
+[Info] 2025-06-10 23:49:40 Validation 20/38 | Batch Loss: 0.003228
+[Info] 2025-06-10 23:49:40 Validation 38/38 | Batch Loss: 0.012353
+[Info] 2025-06-10 23:49:40 Epoch [62/200] Train Loss: 0.555396 | Val Loss: 0.020684
+[Info] 2025-06-10 23:49:40 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:49:40 Starting epoch 63/200 ...
+[Info] 2025-06-10 23:49:43 Epoch 63 | Batch 100/304 | Batch Loss: 0.511478
+[Info] 2025-06-10 23:49:46 Epoch 63 | Batch 200/304 | Batch Loss: 0.448166
+[Info] 2025-06-10 23:49:48 Epoch 63 | Batch 300/304 | Batch Loss: 0.546995
+[Info] 2025-06-10 23:49:49 Epoch 63 | Batch 304/304 | Batch Loss: 0.458681
+[Info] 2025-06-10 23:49:49 Validating after epoch 63 ...
+[Info] 2025-06-10 23:49:49 Validation 20/38 | Batch Loss: 0.003004
+[Info] 2025-06-10 23:49:49 Validation 38/38 | Batch Loss: 0.011632
+[Info] 2025-06-10 23:49:49 Epoch [63/200] Train Loss: 0.555093 | Val Loss: 0.019979
+[Info] 2025-06-10 23:49:49 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:49:49 Starting epoch 64/200 ...
+[Info] 2025-06-10 23:49:52 Epoch 64 | Batch 100/304 | Batch Loss: 0.496762
+[Info] 2025-06-10 23:49:55 Epoch 64 | Batch 200/304 | Batch Loss: 0.540482
+[Info] 2025-06-10 23:49:58 Epoch 64 | Batch 300/304 | Batch Loss: 0.560348
+[Info] 2025-06-10 23:49:58 Epoch 64 | Batch 304/304 | Batch Loss: 0.529624
+[Info] 2025-06-10 23:49:58 Validating after epoch 64 ...
+[Info] 2025-06-10 23:49:58 Validation 20/38 | Batch Loss: 0.002793
+[Info] 2025-06-10 23:49:59 Validation 38/38 | Batch Loss: 0.011019
+[Info] 2025-06-10 23:49:59 Epoch [64/200] Train Loss: 0.555292 | Val Loss: 0.019432
+[Info] 2025-06-10 23:49:59 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:49:59 Starting epoch 65/200 ...
+[Info] 2025-06-10 23:50:02 Epoch 65 | Batch 100/304 | Batch Loss: 0.672284
+[Info] 2025-06-10 23:50:05 Epoch 65 | Batch 200/304 | Batch Loss: 0.503991
+[Info] 2025-06-10 23:50:08 Epoch 65 | Batch 300/304 | Batch Loss: 0.557732
+[Info] 2025-06-10 23:50:08 Epoch 65 | Batch 304/304 | Batch Loss: 0.534386
+[Info] 2025-06-10 23:50:08 Validating after epoch 65 ...
+[Info] 2025-06-10 23:50:08 Validation 20/38 | Batch Loss: 0.002628
+[Info] 2025-06-10 23:50:08 Validation 38/38 | Batch Loss: 0.010484
+[Info] 2025-06-10 23:50:08 Epoch [65/200] Train Loss: 0.547844 | Val Loss: 0.018950
+[Info] 2025-06-10 23:50:08 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:50:08 Starting epoch 66/200 ...
+[Info] 2025-06-10 23:50:11 Epoch 66 | Batch 100/304 | Batch Loss: 0.541716
+[Info] 2025-06-10 23:50:14 Epoch 66 | Batch 200/304 | Batch Loss: 0.523537
+[Info] 2025-06-10 23:50:16 Epoch 66 | Batch 300/304 | Batch Loss: 0.554047
+[Info] 2025-06-10 23:50:16 Epoch 66 | Batch 304/304 | Batch Loss: 0.530230
+[Info] 2025-06-10 23:50:16 Validating after epoch 66 ...
+[Info] 2025-06-10 23:50:17 Validation 20/38 | Batch Loss: 0.002523
+[Info] 2025-06-10 23:50:17 Validation 38/38 | Batch Loss: 0.010160
+[Info] 2025-06-10 23:50:17 Epoch [66/200] Train Loss: 0.552658 | Val Loss: 0.018666
+[Info] 2025-06-10 23:50:17 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:50:17 Starting epoch 67/200 ...
+[Info] 2025-06-10 23:50:20 Epoch 67 | Batch 100/304 | Batch Loss: 0.470753
+[Info] 2025-06-10 23:50:22 Epoch 67 | Batch 200/304 | Batch Loss: 0.526911
+[Info] 2025-06-10 23:50:25 Epoch 67 | Batch 300/304 | Batch Loss: 0.488310
+[Info] 2025-06-10 23:50:25 Epoch 67 | Batch 304/304 | Batch Loss: 0.575854
+[Info] 2025-06-10 23:50:25 Validating after epoch 67 ...
+[Info] 2025-06-10 23:50:25 Validation 20/38 | Batch Loss: 0.002413
+[Info] 2025-06-10 23:50:25 Validation 38/38 | Batch Loss: 0.009874
+[Info] 2025-06-10 23:50:25 Epoch [67/200] Train Loss: 0.549013 | Val Loss: 0.018371
+[Info] 2025-06-10 23:50:25 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:50:25 Starting epoch 68/200 ...
+[Info] 2025-06-10 23:50:28 Epoch 68 | Batch 100/304 | Batch Loss: 0.534396
+[Info] 2025-06-10 23:50:31 Epoch 68 | Batch 200/304 | Batch Loss: 0.534565
+[Info] 2025-06-10 23:50:33 Epoch 68 | Batch 300/304 | Batch Loss: 0.498529
+[Info] 2025-06-10 23:50:33 Epoch 68 | Batch 304/304 | Batch Loss: 0.701428
+[Info] 2025-06-10 23:50:33 Validating after epoch 68 ...
+[Info] 2025-06-10 23:50:33 Validation 20/38 | Batch Loss: 0.002401
+[Info] 2025-06-10 23:50:34 Validation 38/38 | Batch Loss: 0.009773
+[Info] 2025-06-10 23:50:34 Epoch [68/200] Train Loss: 0.554925 | Val Loss: 0.018268
+[Info] 2025-06-10 23:50:34 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:50:34 Starting epoch 69/200 ...
+[Info] 2025-06-10 23:50:36 Epoch 69 | Batch 100/304 | Batch Loss: 0.523389
+[Info] 2025-06-10 23:50:39 Epoch 69 | Batch 200/304 | Batch Loss: 0.585644
+[Info] 2025-06-10 23:50:42 Epoch 69 | Batch 300/304 | Batch Loss: 0.552998
+[Info] 2025-06-10 23:50:42 Epoch 69 | Batch 304/304 | Batch Loss: 0.615179
+[Info] 2025-06-10 23:50:42 Validating after epoch 69 ...
+[Info] 2025-06-10 23:50:42 Validation 20/38 | Batch Loss: 0.002382
+[Info] 2025-06-10 23:50:43 Validation 38/38 | Batch Loss: 0.009688
+[Info] 2025-06-10 23:50:43 Epoch [69/200] Train Loss: 0.552731 | Val Loss: 0.018206
+[Info] 2025-06-10 23:50:43 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:50:43 Starting epoch 70/200 ...
+[Info] 2025-06-10 23:50:46 Epoch 70 | Batch 100/304 | Batch Loss: 0.611463
+[Info] 2025-06-10 23:50:49 Epoch 70 | Batch 200/304 | Batch Loss: 0.586187
+[Info] 2025-06-10 23:50:51 Epoch 70 | Batch 300/304 | Batch Loss: 0.538316
+[Info] 2025-06-10 23:50:51 Epoch 70 | Batch 304/304 | Batch Loss: 0.520672
+[Info] 2025-06-10 23:50:51 Validating after epoch 70 ...
+[Info] 2025-06-10 23:50:52 Validation 20/38 | Batch Loss: 0.002375
+[Info] 2025-06-10 23:50:52 Validation 38/38 | Batch Loss: 0.009673
+[Info] 2025-06-10 23:50:52 Epoch [70/200] Train Loss: 0.551067 | Val Loss: 0.018188
+[Info] 2025-06-10 23:50:52 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:50:52 Starting epoch 71/200 ...
+[Info] 2025-06-10 23:50:55 Epoch 71 | Batch 100/304 | Batch Loss: 0.607881
+[Info] 2025-06-10 23:50:58 Epoch 71 | Batch 200/304 | Batch Loss: 0.586354
+[Info] 2025-06-10 23:51:01 Epoch 71 | Batch 300/304 | Batch Loss: 0.560992
+[Info] 2025-06-10 23:51:01 Epoch 71 | Batch 304/304 | Batch Loss: 0.553552
+[Info] 2025-06-10 23:51:01 Validating after epoch 71 ...
+[Info] 2025-06-10 23:51:01 Validation 20/38 | Batch Loss: 0.002375
+[Info] 2025-06-10 23:51:01 Validation 38/38 | Batch Loss: 0.009673
+[Info] 2025-06-10 23:51:01 Epoch [71/200] Train Loss: 0.549694 | Val Loss: 0.018188
+[Info] 2025-06-10 23:51:01 Starting epoch 72/200 ...
+[Info] 2025-06-10 23:51:04 Epoch 72 | Batch 100/304 | Batch Loss: 0.530513
+[Info] 2025-06-10 23:51:07 Epoch 72 | Batch 200/304 | Batch Loss: 0.497512
+[Info] 2025-06-10 23:51:10 Epoch 72 | Batch 300/304 | Batch Loss: 0.533813
+[Info] 2025-06-10 23:51:10 Epoch 72 | Batch 304/304 | Batch Loss: 0.503573
+[Info] 2025-06-10 23:51:10 Validating after epoch 72 ...
+[Info] 2025-06-10 23:51:10 Validation 20/38 | Batch Loss: 0.002371
+[Info] 2025-06-10 23:51:10 Validation 38/38 | Batch Loss: 0.009656
+[Info] 2025-06-10 23:51:10 Epoch [72/200] Train Loss: 0.548938 | Val Loss: 0.018173
+[Info] 2025-06-10 23:51:10 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:51:10 Starting epoch 73/200 ...
+[Info] 2025-06-10 23:51:13 Epoch 73 | Batch 100/304 | Batch Loss: 0.630133
+[Info] 2025-06-10 23:51:16 Epoch 73 | Batch 200/304 | Batch Loss: 0.585365
+[Info] 2025-06-10 23:51:19 Epoch 73 | Batch 300/304 | Batch Loss: 0.585140
+[Info] 2025-06-10 23:51:19 Epoch 73 | Batch 304/304 | Batch Loss: 0.552136
+[Info] 2025-06-10 23:51:19 Validating after epoch 73 ...
+[Info] 2025-06-10 23:51:19 Validation 20/38 | Batch Loss: 0.002364
+[Info] 2025-06-10 23:51:20 Validation 38/38 | Batch Loss: 0.009607
+[Info] 2025-06-10 23:51:20 Epoch [73/200] Train Loss: 0.553646 | Val Loss: 0.018132
+[Info] 2025-06-10 23:51:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:51:20 Starting epoch 74/200 ...
+[Info] 2025-06-10 23:51:23 Epoch 74 | Batch 100/304 | Batch Loss: 0.480260
+[Info] 2025-06-10 23:51:26 Epoch 74 | Batch 200/304 | Batch Loss: 0.600812
+[Info] 2025-06-10 23:51:29 Epoch 74 | Batch 300/304 | Batch Loss: 0.565129
+[Info] 2025-06-10 23:51:29 Epoch 74 | Batch 304/304 | Batch Loss: 0.589256
+[Info] 2025-06-10 23:51:29 Validating after epoch 74 ...
+[Info] 2025-06-10 23:51:29 Validation 20/38 | Batch Loss: 0.002325
+[Info] 2025-06-10 23:51:29 Validation 38/38 | Batch Loss: 0.009486
+[Info] 2025-06-10 23:51:29 Epoch [74/200] Train Loss: 0.549177 | Val Loss: 0.018005
+[Info] 2025-06-10 23:51:29 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:51:29 Starting epoch 75/200 ...
+[Info] 2025-06-10 23:51:32 Epoch 75 | Batch 100/304 | Batch Loss: 0.565116
+[Info] 2025-06-10 23:51:35 Epoch 75 | Batch 200/304 | Batch Loss: 0.597182
+[Info] 2025-06-10 23:51:38 Epoch 75 | Batch 300/304 | Batch Loss: 0.514040
+[Info] 2025-06-10 23:51:38 Epoch 75 | Batch 304/304 | Batch Loss: 0.469529
+[Info] 2025-06-10 23:51:38 Validating after epoch 75 ...
+[Info] 2025-06-10 23:51:39 Validation 20/38 | Batch Loss: 0.002298
+[Info] 2025-06-10 23:51:39 Validation 38/38 | Batch Loss: 0.009391
+[Info] 2025-06-10 23:51:39 Epoch [75/200] Train Loss: 0.549829 | Val Loss: 0.017912
+[Info] 2025-06-10 23:51:39 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:51:39 Starting epoch 76/200 ...
+[Info] 2025-06-10 23:51:42 Epoch 76 | Batch 100/304 | Batch Loss: 0.500919
+[Info] 2025-06-10 23:51:45 Epoch 76 | Batch 200/304 | Batch Loss: 0.441113
+[Info] 2025-06-10 23:51:48 Epoch 76 | Batch 300/304 | Batch Loss: 0.533860
+[Info] 2025-06-10 23:51:48 Epoch 76 | Batch 304/304 | Batch Loss: 0.740532
+[Info] 2025-06-10 23:51:48 Validating after epoch 76 ...
+[Info] 2025-06-10 23:51:48 Validation 20/38 | Batch Loss: 0.002203
+[Info] 2025-06-10 23:51:48 Validation 38/38 | Batch Loss: 0.009150
+[Info] 2025-06-10 23:51:48 Epoch [76/200] Train Loss: 0.548845 | Val Loss: 0.017593
+[Info] 2025-06-10 23:51:48 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:51:48 Starting epoch 77/200 ...
+[Info] 2025-06-10 23:51:52 Epoch 77 | Batch 100/304 | Batch Loss: 0.476931
+[Info] 2025-06-10 23:51:54 Epoch 77 | Batch 200/304 | Batch Loss: 0.592971
+[Info] 2025-06-10 23:51:58 Epoch 77 | Batch 300/304 | Batch Loss: 0.549344
+[Info] 2025-06-10 23:51:58 Epoch 77 | Batch 304/304 | Batch Loss: 0.494528
+[Info] 2025-06-10 23:51:58 Validating after epoch 77 ...
+[Info] 2025-06-10 23:51:58 Validation 20/38 | Batch Loss: 0.002089
+[Info] 2025-06-10 23:51:58 Validation 38/38 | Batch Loss: 0.008821
+[Info] 2025-06-10 23:51:58 Epoch [77/200] Train Loss: 0.550342 | Val Loss: 0.017236
+[Info] 2025-06-10 23:51:58 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:51:58 Starting epoch 78/200 ...
+[Info] 2025-06-10 23:52:01 Epoch 78 | Batch 100/304 | Batch Loss: 0.501631
+[Info] 2025-06-10 23:52:04 Epoch 78 | Batch 200/304 | Batch Loss: 0.552065
+[Info] 2025-06-10 23:52:08 Epoch 78 | Batch 300/304 | Batch Loss: 0.597216
+[Info] 2025-06-10 23:52:08 Epoch 78 | Batch 304/304 | Batch Loss: 0.569068
+[Info] 2025-06-10 23:52:08 Validating after epoch 78 ...
+[Info] 2025-06-10 23:52:08 Validation 20/38 | Batch Loss: 0.001964
+[Info] 2025-06-10 23:52:08 Validation 38/38 | Batch Loss: 0.008343
+[Info] 2025-06-10 23:52:08 Epoch [78/200] Train Loss: 0.547709 | Val Loss: 0.016773
+[Info] 2025-06-10 23:52:08 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:52:08 Starting epoch 79/200 ...
+[Info] 2025-06-10 23:52:11 Epoch 79 | Batch 100/304 | Batch Loss: 0.470603
+[Info] 2025-06-10 23:52:14 Epoch 79 | Batch 200/304 | Batch Loss: 0.547764
+[Info] 2025-06-10 23:52:17 Epoch 79 | Batch 300/304 | Batch Loss: 0.516062
+[Info] 2025-06-10 23:52:17 Epoch 79 | Batch 304/304 | Batch Loss: 0.605554
+[Info] 2025-06-10 23:52:17 Validating after epoch 79 ...
+[Info] 2025-06-10 23:52:17 Validation 20/38 | Batch Loss: 0.001830
+[Info] 2025-06-10 23:52:17 Validation 38/38 | Batch Loss: 0.007924
+[Info] 2025-06-10 23:52:17 Epoch [79/200] Train Loss: 0.550294 | Val Loss: 0.016321
+[Info] 2025-06-10 23:52:17 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:52:17 Starting epoch 80/200 ...
+[Info] 2025-06-10 23:52:20 Epoch 80 | Batch 100/304 | Batch Loss: 0.491976
+[Info] 2025-06-10 23:52:23 Epoch 80 | Batch 200/304 | Batch Loss: 0.657943
+[Info] 2025-06-10 23:52:26 Epoch 80 | Batch 300/304 | Batch Loss: 0.516256
+[Info] 2025-06-10 23:52:26 Epoch 80 | Batch 304/304 | Batch Loss: 0.548078
+[Info] 2025-06-10 23:52:26 Validating after epoch 80 ...
+[Info] 2025-06-10 23:52:26 Validation 20/38 | Batch Loss: 0.001719
+[Info] 2025-06-10 23:52:26 Validation 38/38 | Batch Loss: 0.007325
+[Info] 2025-06-10 23:52:26 Epoch [80/200] Train Loss: 0.548348 | Val Loss: 0.015820
+[Info] 2025-06-10 23:52:26 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:52:26 Starting epoch 81/200 ...
+[Info] 2025-06-10 23:52:30 Epoch 81 | Batch 100/304 | Batch Loss: 0.605251
+[Info] 2025-06-10 23:52:33 Epoch 81 | Batch 200/304 | Batch Loss: 0.542900
+[Info] 2025-06-10 23:52:35 Epoch 81 | Batch 300/304 | Batch Loss: 0.408630
+[Info] 2025-06-10 23:52:36 Epoch 81 | Batch 304/304 | Batch Loss: 0.466192
+[Info] 2025-06-10 23:52:36 Validating after epoch 81 ...
+[Info] 2025-06-10 23:52:36 Validation 20/38 | Batch Loss: 0.001610
+[Info] 2025-06-10 23:52:36 Validation 38/38 | Batch Loss: 0.006864
+[Info] 2025-06-10 23:52:36 Epoch [81/200] Train Loss: 0.544726 | Val Loss: 0.015358
+[Info] 2025-06-10 23:52:36 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:52:36 Starting epoch 82/200 ...
+[Info] 2025-06-10 23:52:39 Epoch 82 | Batch 100/304 | Batch Loss: 0.463151
+[Info] 2025-06-10 23:52:42 Epoch 82 | Batch 200/304 | Batch Loss: 0.481631
+[Info] 2025-06-10 23:52:45 Epoch 82 | Batch 300/304 | Batch Loss: 0.632266
+[Info] 2025-06-10 23:52:45 Epoch 82 | Batch 304/304 | Batch Loss: 0.525238
+[Info] 2025-06-10 23:52:45 Validating after epoch 82 ...
+[Info] 2025-06-10 23:52:45 Validation 20/38 | Batch Loss: 0.001525
+[Info] 2025-06-10 23:52:45 Validation 38/38 | Batch Loss: 0.006426
+[Info] 2025-06-10 23:52:45 Epoch [82/200] Train Loss: 0.546075 | Val Loss: 0.014946
+[Info] 2025-06-10 23:52:45 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:52:45 Starting epoch 83/200 ...
+[Info] 2025-06-10 23:52:49 Epoch 83 | Batch 100/304 | Batch Loss: 0.608478
+[Info] 2025-06-10 23:52:52 Epoch 83 | Batch 200/304 | Batch Loss: 0.599769
+[Info] 2025-06-10 23:52:55 Epoch 83 | Batch 300/304 | Batch Loss: 0.579638
+[Info] 2025-06-10 23:52:55 Epoch 83 | Batch 304/304 | Batch Loss: 0.477403
+[Info] 2025-06-10 23:52:55 Validating after epoch 83 ...
+[Info] 2025-06-10 23:52:55 Validation 20/38 | Batch Loss: 0.001463
+[Info] 2025-06-10 23:52:55 Validation 38/38 | Batch Loss: 0.006204
+[Info] 2025-06-10 23:52:55 Epoch [83/200] Train Loss: 0.550936 | Val Loss: 0.014709
+[Info] 2025-06-10 23:52:55 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:52:55 Starting epoch 84/200 ...
+[Info] 2025-06-10 23:52:59 Epoch 84 | Batch 100/304 | Batch Loss: 0.626107
+[Info] 2025-06-10 23:53:02 Epoch 84 | Batch 200/304 | Batch Loss: 0.506493
+[Info] 2025-06-10 23:53:05 Epoch 84 | Batch 300/304 | Batch Loss: 0.516166
+[Info] 2025-06-10 23:53:05 Epoch 84 | Batch 304/304 | Batch Loss: 0.522323
+[Info] 2025-06-10 23:53:05 Validating after epoch 84 ...
+[Info] 2025-06-10 23:53:05 Validation 20/38 | Batch Loss: 0.001460
+[Info] 2025-06-10 23:53:05 Validation 38/38 | Batch Loss: 0.006068
+[Info] 2025-06-10 23:53:05 Epoch [84/200] Train Loss: 0.545159 | Val Loss: 0.014595
+[Info] 2025-06-10 23:53:05 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:53:05 Starting epoch 85/200 ...
+[Info] 2025-06-10 23:53:08 Epoch 85 | Batch 100/304 | Batch Loss: 0.563268
+[Info] 2025-06-10 23:53:12 Epoch 85 | Batch 200/304 | Batch Loss: 0.559438
+[Info] 2025-06-10 23:53:14 Epoch 85 | Batch 300/304 | Batch Loss: 0.517910
+[Info] 2025-06-10 23:53:14 Epoch 85 | Batch 304/304 | Batch Loss: 0.489612
+[Info] 2025-06-10 23:53:14 Validating after epoch 85 ...
+[Info] 2025-06-10 23:53:15 Validation 20/38 | Batch Loss: 0.001392
+[Info] 2025-06-10 23:53:15 Validation 38/38 | Batch Loss: 0.005725
+[Info] 2025-06-10 23:53:15 Epoch [85/200] Train Loss: 0.546457 | Val Loss: 0.014276
+[Info] 2025-06-10 23:53:15 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:53:15 Starting epoch 86/200 ...
+[Info] 2025-06-10 23:53:18 Epoch 86 | Batch 100/304 | Batch Loss: 0.558536
+[Info] 2025-06-10 23:53:21 Epoch 86 | Batch 200/304 | Batch Loss: 0.602503
+[Info] 2025-06-10 23:53:24 Epoch 86 | Batch 300/304 | Batch Loss: 0.577037
+[Info] 2025-06-10 23:53:24 Epoch 86 | Batch 304/304 | Batch Loss: 0.587177
+[Info] 2025-06-10 23:53:24 Validating after epoch 86 ...
+[Info] 2025-06-10 23:53:24 Validation 20/38 | Batch Loss: 0.001350
+[Info] 2025-06-10 23:53:24 Validation 38/38 | Batch Loss: 0.005595
+[Info] 2025-06-10 23:53:24 Epoch [86/200] Train Loss: 0.542611 | Val Loss: 0.014078
+[Info] 2025-06-10 23:53:24 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:53:24 Starting epoch 87/200 ...
+[Info] 2025-06-10 23:53:27 Epoch 87 | Batch 100/304 | Batch Loss: 0.520943
+[Info] 2025-06-10 23:53:30 Epoch 87 | Batch 200/304 | Batch Loss: 0.543944
+[Info] 2025-06-10 23:53:33 Epoch 87 | Batch 300/304 | Batch Loss: 0.590891
+[Info] 2025-06-10 23:53:33 Epoch 87 | Batch 304/304 | Batch Loss: 0.557763
+[Info] 2025-06-10 23:53:33 Validating after epoch 87 ...
+[Info] 2025-06-10 23:53:33 Validation 20/38 | Batch Loss: 0.001313
+[Info] 2025-06-10 23:53:33 Validation 38/38 | Batch Loss: 0.005444
+[Info] 2025-06-10 23:53:33 Epoch [87/200] Train Loss: 0.542783 | Val Loss: 0.013912
+[Info] 2025-06-10 23:53:33 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:53:33 Starting epoch 88/200 ...
+[Info] 2025-06-10 23:53:37 Epoch 88 | Batch 100/304 | Batch Loss: 0.524684
+[Info] 2025-06-10 23:53:40 Epoch 88 | Batch 200/304 | Batch Loss: 0.609911
+[Info] 2025-06-10 23:53:43 Epoch 88 | Batch 300/304 | Batch Loss: 0.625404
+[Info] 2025-06-10 23:53:43 Epoch 88 | Batch 304/304 | Batch Loss: 0.572297
+[Info] 2025-06-10 23:53:43 Validating after epoch 88 ...
+[Info] 2025-06-10 23:53:43 Validation 20/38 | Batch Loss: 0.001277
+[Info] 2025-06-10 23:53:43 Validation 38/38 | Batch Loss: 0.005350
+[Info] 2025-06-10 23:53:43 Epoch [88/200] Train Loss: 0.545353 | Val Loss: 0.013789
+[Info] 2025-06-10 23:53:43 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:53:43 Starting epoch 89/200 ...
+[Info] 2025-06-10 23:53:46 Epoch 89 | Batch 100/304 | Batch Loss: 0.516890
+[Info] 2025-06-10 23:53:49 Epoch 89 | Batch 200/304 | Batch Loss: 0.510558
+[Info] 2025-06-10 23:53:52 Epoch 89 | Batch 300/304 | Batch Loss: 0.639299
+[Info] 2025-06-10 23:53:52 Epoch 89 | Batch 304/304 | Batch Loss: 0.547733
+[Info] 2025-06-10 23:53:52 Validating after epoch 89 ...
+[Info] 2025-06-10 23:53:52 Validation 20/38 | Batch Loss: 0.001274
+[Info] 2025-06-10 23:53:52 Validation 38/38 | Batch Loss: 0.005295
+[Info] 2025-06-10 23:53:52 Epoch [89/200] Train Loss: 0.542232 | Val Loss: 0.013754
+[Info] 2025-06-10 23:53:52 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:53:52 Starting epoch 90/200 ...
+[Info] 2025-06-10 23:53:55 Epoch 90 | Batch 100/304 | Batch Loss: 0.483678
+[Info] 2025-06-10 23:53:58 Epoch 90 | Batch 200/304 | Batch Loss: 0.551343
+[Info] 2025-06-10 23:54:01 Epoch 90 | Batch 300/304 | Batch Loss: 0.633124
+[Info] 2025-06-10 23:54:01 Epoch 90 | Batch 304/304 | Batch Loss: 0.400959
+[Info] 2025-06-10 23:54:01 Validating after epoch 90 ...
+[Info] 2025-06-10 23:54:01 Validation 20/38 | Batch Loss: 0.001270
+[Info] 2025-06-10 23:54:01 Validation 38/38 | Batch Loss: 0.005287
+[Info] 2025-06-10 23:54:01 Epoch [90/200] Train Loss: 0.545345 | Val Loss: 0.013741
+[Info] 2025-06-10 23:54:01 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:54:01 Starting epoch 91/200 ...
+[Info] 2025-06-10 23:54:05 Epoch 91 | Batch 100/304 | Batch Loss: 0.548325
+[Info] 2025-06-10 23:54:08 Epoch 91 | Batch 200/304 | Batch Loss: 0.590827
+[Info] 2025-06-10 23:54:10 Epoch 91 | Batch 300/304 | Batch Loss: 0.558729
+[Info] 2025-06-10 23:54:10 Epoch 91 | Batch 304/304 | Batch Loss: 0.601582
+[Info] 2025-06-10 23:54:10 Validating after epoch 91 ...
+[Info] 2025-06-10 23:54:11 Validation 20/38 | Batch Loss: 0.001270
+[Info] 2025-06-10 23:54:11 Validation 38/38 | Batch Loss: 0.005287
+[Info] 2025-06-10 23:54:11 Epoch [91/200] Train Loss: 0.543786 | Val Loss: 0.013741
+[Info] 2025-06-10 23:54:11 Starting epoch 92/200 ...
+[Info] 2025-06-10 23:54:13 Epoch 92 | Batch 100/304 | Batch Loss: 0.535778
+[Info] 2025-06-10 23:54:16 Epoch 92 | Batch 200/304 | Batch Loss: 0.539149
+[Info] 2025-06-10 23:54:18 Epoch 92 | Batch 300/304 | Batch Loss: 0.498708
+[Info] 2025-06-10 23:54:18 Epoch 92 | Batch 304/304 | Batch Loss: 0.448353
+[Info] 2025-06-10 23:54:18 Validating after epoch 92 ...
+[Info] 2025-06-10 23:54:19 Validation 20/38 | Batch Loss: 0.001269
+[Info] 2025-06-10 23:54:19 Validation 38/38 | Batch Loss: 0.005282
+[Info] 2025-06-10 23:54:19 Epoch [92/200] Train Loss: 0.545910 | Val Loss: 0.013737
+[Info] 2025-06-10 23:54:19 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:54:19 Starting epoch 93/200 ...
+[Info] 2025-06-10 23:54:21 Epoch 93 | Batch 100/304 | Batch Loss: 0.574263
+[Info] 2025-06-10 23:54:24 Epoch 93 | Batch 200/304 | Batch Loss: 0.557642
+[Info] 2025-06-10 23:54:27 Epoch 93 | Batch 300/304 | Batch Loss: 0.583943
+[Info] 2025-06-10 23:54:27 Epoch 93 | Batch 304/304 | Batch Loss: 0.469545
+[Info] 2025-06-10 23:54:27 Validating after epoch 93 ...
+[Info] 2025-06-10 23:54:27 Validation 20/38 | Batch Loss: 0.001272
+[Info] 2025-06-10 23:54:27 Validation 38/38 | Batch Loss: 0.005271
+[Info] 2025-06-10 23:54:27 Epoch [93/200] Train Loss: 0.538243 | Val Loss: 0.013719
+[Info] 2025-06-10 23:54:27 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:54:27 Starting epoch 94/200 ...
+[Info] 2025-06-10 23:54:30 Epoch 94 | Batch 100/304 | Batch Loss: 0.492599
+[Info] 2025-06-10 23:54:33 Epoch 94 | Batch 200/304 | Batch Loss: 0.560968
+[Info] 2025-06-10 23:54:35 Epoch 94 | Batch 300/304 | Batch Loss: 0.563944
+[Info] 2025-06-10 23:54:35 Epoch 94 | Batch 304/304 | Batch Loss: 0.630992
+[Info] 2025-06-10 23:54:35 Validating after epoch 94 ...
+[Info] 2025-06-10 23:54:35 Validation 20/38 | Batch Loss: 0.001254
+[Info] 2025-06-10 23:54:36 Validation 38/38 | Batch Loss: 0.005187
+[Info] 2025-06-10 23:54:36 Epoch [94/200] Train Loss: 0.543794 | Val Loss: 0.013635
+[Info] 2025-06-10 23:54:36 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:54:36 Starting epoch 95/200 ...
+[Info] 2025-06-10 23:54:39 Epoch 95 | Batch 100/304 | Batch Loss: 0.570756
+[Info] 2025-06-10 23:54:42 Epoch 95 | Batch 200/304 | Batch Loss: 0.536990
+[Info] 2025-06-10 23:54:44 Epoch 95 | Batch 300/304 | Batch Loss: 0.608869
+[Info] 2025-06-10 23:54:45 Epoch 95 | Batch 304/304 | Batch Loss: 0.612799
+[Info] 2025-06-10 23:54:45 Validating after epoch 95 ...
+[Info] 2025-06-10 23:54:45 Validation 20/38 | Batch Loss: 0.001228
+[Info] 2025-06-10 23:54:45 Validation 38/38 | Batch Loss: 0.005055
+[Info] 2025-06-10 23:54:45 Epoch [95/200] Train Loss: 0.544258 | Val Loss: 0.013504
+[Info] 2025-06-10 23:54:45 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:54:45 Starting epoch 96/200 ...
+[Info] 2025-06-10 23:54:48 Epoch 96 | Batch 100/304 | Batch Loss: 0.538726
+[Info] 2025-06-10 23:54:51 Epoch 96 | Batch 200/304 | Batch Loss: 0.616127
+[Info] 2025-06-10 23:54:54 Epoch 96 | Batch 300/304 | Batch Loss: 0.562609
+[Info] 2025-06-10 23:54:54 Epoch 96 | Batch 304/304 | Batch Loss: 0.574219
+[Info] 2025-06-10 23:54:54 Validating after epoch 96 ...
+[Info] 2025-06-10 23:54:54 Validation 20/38 | Batch Loss: 0.001195
+[Info] 2025-06-10 23:54:54 Validation 38/38 | Batch Loss: 0.004946
+[Info] 2025-06-10 23:54:54 Epoch [96/200] Train Loss: 0.548736 | Val Loss: 0.013317
+[Info] 2025-06-10 23:54:54 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:54:54 Starting epoch 97/200 ...
+[Info] 2025-06-10 23:54:57 Epoch 97 | Batch 100/304 | Batch Loss: 0.445187
+[Info] 2025-06-10 23:55:00 Epoch 97 | Batch 200/304 | Batch Loss: 0.537866
+[Info] 2025-06-10 23:55:03 Epoch 97 | Batch 300/304 | Batch Loss: 0.662223
+[Info] 2025-06-10 23:55:03 Epoch 97 | Batch 304/304 | Batch Loss: 0.430063
+[Info] 2025-06-10 23:55:03 Validating after epoch 97 ...
+[Info] 2025-06-10 23:55:04 Validation 20/38 | Batch Loss: 0.001135
+[Info] 2025-06-10 23:55:04 Validation 38/38 | Batch Loss: 0.004747
+[Info] 2025-06-10 23:55:04 Epoch [97/200] Train Loss: 0.545056 | Val Loss: 0.013043
+[Info] 2025-06-10 23:55:04 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:55:04 Starting epoch 98/200 ...
+[Info] 2025-06-10 23:55:07 Epoch 98 | Batch 100/304 | Batch Loss: 0.548357
+[Info] 2025-06-10 23:55:10 Epoch 98 | Batch 200/304 | Batch Loss: 0.689990
+[Info] 2025-06-10 23:55:13 Epoch 98 | Batch 300/304 | Batch Loss: 0.536774
+[Info] 2025-06-10 23:55:13 Epoch 98 | Batch 304/304 | Batch Loss: 0.550128
+[Info] 2025-06-10 23:55:13 Validating after epoch 98 ...
+[Info] 2025-06-10 23:55:13 Validation 20/38 | Batch Loss: 0.001087
+[Info] 2025-06-10 23:55:13 Validation 38/38 | Batch Loss: 0.004489
+[Info] 2025-06-10 23:55:13 Epoch [98/200] Train Loss: 0.543407 | Val Loss: 0.012750
+[Info] 2025-06-10 23:55:13 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:55:13 Starting epoch 99/200 ...
+[Info] 2025-06-10 23:55:16 Epoch 99 | Batch 100/304 | Batch Loss: 0.512500
+[Info] 2025-06-10 23:55:19 Epoch 99 | Batch 200/304 | Batch Loss: 0.529813
+[Info] 2025-06-10 23:55:22 Epoch 99 | Batch 300/304 | Batch Loss: 0.524622
+[Info] 2025-06-10 23:55:22 Epoch 99 | Batch 304/304 | Batch Loss: 0.465476
+[Info] 2025-06-10 23:55:22 Validating after epoch 99 ...
+[Info] 2025-06-10 23:55:23 Validation 20/38 | Batch Loss: 0.001048
+[Info] 2025-06-10 23:55:23 Validation 38/38 | Batch Loss: 0.004254
+[Info] 2025-06-10 23:55:23 Epoch [99/200] Train Loss: 0.546261 | Val Loss: 0.012534
+[Info] 2025-06-10 23:55:23 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:55:23 Starting epoch 100/200 ...
+[Info] 2025-06-10 23:55:26 Epoch 100 | Batch 100/304 | Batch Loss: 0.610017
+[Info] 2025-06-10 23:55:29 Epoch 100 | Batch 200/304 | Batch Loss: 0.608234
+[Info] 2025-06-10 23:55:32 Epoch 100 | Batch 300/304 | Batch Loss: 0.535704
+[Info] 2025-06-10 23:55:32 Epoch 100 | Batch 304/304 | Batch Loss: 0.455003
+[Info] 2025-06-10 23:55:32 Validating after epoch 100 ...
+[Info] 2025-06-10 23:55:32 Validation 20/38 | Batch Loss: 0.001032
+[Info] 2025-06-10 23:55:32 Validation 38/38 | Batch Loss: 0.004116
+[Info] 2025-06-10 23:55:32 Epoch [100/200] Train Loss: 0.549647 | Val Loss: 0.012379
+[Info] 2025-06-10 23:55:32 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:55:32 Starting epoch 101/200 ...
+[Info] 2025-06-10 23:55:35 Epoch 101 | Batch 100/304 | Batch Loss: 0.524190
+[Info] 2025-06-10 23:55:38 Epoch 101 | Batch 200/304 | Batch Loss: 0.547318
+[Info] 2025-06-10 23:55:41 Epoch 101 | Batch 300/304 | Batch Loss: 0.524173
+[Info] 2025-06-10 23:55:41 Epoch 101 | Batch 304/304 | Batch Loss: 0.589920
+[Info] 2025-06-10 23:55:41 Validating after epoch 101 ...
+[Info] 2025-06-10 23:55:42 Validation 20/38 | Batch Loss: 0.000997
+[Info] 2025-06-10 23:55:42 Validation 38/38 | Batch Loss: 0.003963
+[Info] 2025-06-10 23:55:42 Epoch [101/200] Train Loss: 0.545289 | Val Loss: 0.012213
+[Info] 2025-06-10 23:55:42 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:55:42 Starting epoch 102/200 ...
+[Info] 2025-06-10 23:55:45 Epoch 102 | Batch 100/304 | Batch Loss: 0.499231
+[Info] 2025-06-10 23:55:48 Epoch 102 | Batch 200/304 | Batch Loss: 0.495717
+[Info] 2025-06-10 23:55:51 Epoch 102 | Batch 300/304 | Batch Loss: 0.591988
+[Info] 2025-06-10 23:55:51 Epoch 102 | Batch 304/304 | Batch Loss: 0.613994
+[Info] 2025-06-10 23:55:51 Validating after epoch 102 ...
+[Info] 2025-06-10 23:55:51 Validation 20/38 | Batch Loss: 0.000964
+[Info] 2025-06-10 23:55:51 Validation 38/38 | Batch Loss: 0.003808
+[Info] 2025-06-10 23:55:51 Epoch [102/200] Train Loss: 0.539741 | Val Loss: 0.012048
+[Info] 2025-06-10 23:55:51 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:55:51 Starting epoch 103/200 ...
+[Info] 2025-06-10 23:55:55 Epoch 103 | Batch 100/304 | Batch Loss: 0.534940
+[Info] 2025-06-10 23:55:58 Epoch 103 | Batch 200/304 | Batch Loss: 0.490112
+[Info] 2025-06-10 23:56:01 Epoch 103 | Batch 300/304 | Batch Loss: 0.574085
+[Info] 2025-06-10 23:56:01 Epoch 103 | Batch 304/304 | Batch Loss: 0.578599
+[Info] 2025-06-10 23:56:01 Validating after epoch 103 ...
+[Info] 2025-06-10 23:56:01 Validation 20/38 | Batch Loss: 0.000968
+[Info] 2025-06-10 23:56:01 Validation 38/38 | Batch Loss: 0.003669
+[Info] 2025-06-10 23:56:01 Epoch [103/200] Train Loss: 0.544176 | Val Loss: 0.011909
+[Info] 2025-06-10 23:56:01 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:56:01 Starting epoch 104/200 ...
+[Info] 2025-06-10 23:56:04 Epoch 104 | Batch 100/304 | Batch Loss: 0.517164
+[Info] 2025-06-10 23:56:08 Epoch 104 | Batch 200/304 | Batch Loss: 0.631080
+[Info] 2025-06-10 23:56:10 Epoch 104 | Batch 300/304 | Batch Loss: 0.600226
+[Info] 2025-06-10 23:56:11 Epoch 104 | Batch 304/304 | Batch Loss: 0.586990
+[Info] 2025-06-10 23:56:11 Validating after epoch 104 ...
+[Info] 2025-06-10 23:56:11 Validation 20/38 | Batch Loss: 0.000915
+[Info] 2025-06-10 23:56:11 Validation 38/38 | Batch Loss: 0.003449
+[Info] 2025-06-10 23:56:11 Epoch [104/200] Train Loss: 0.546643 | Val Loss: 0.011616
+[Info] 2025-06-10 23:56:11 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:56:11 Starting epoch 105/200 ...
+[Info] 2025-06-10 23:56:14 Epoch 105 | Batch 100/304 | Batch Loss: 0.500634
+[Info] 2025-06-10 23:56:17 Epoch 105 | Batch 200/304 | Batch Loss: 0.495652
+[Info] 2025-06-10 23:56:20 Epoch 105 | Batch 300/304 | Batch Loss: 0.449961
+[Info] 2025-06-10 23:56:20 Epoch 105 | Batch 304/304 | Batch Loss: 0.559047
+[Info] 2025-06-10 23:56:20 Validating after epoch 105 ...
+[Info] 2025-06-10 23:56:20 Validation 20/38 | Batch Loss: 0.000873
+[Info] 2025-06-10 23:56:20 Validation 38/38 | Batch Loss: 0.003265
+[Info] 2025-06-10 23:56:20 Epoch [105/200] Train Loss: 0.541419 | Val Loss: 0.011397
+[Info] 2025-06-10 23:56:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:56:20 Starting epoch 106/200 ...
+[Info] 2025-06-10 23:56:23 Epoch 106 | Batch 100/304 | Batch Loss: 0.526856
+[Info] 2025-06-10 23:56:26 Epoch 106 | Batch 200/304 | Batch Loss: 0.566941
+[Info] 2025-06-10 23:56:29 Epoch 106 | Batch 300/304 | Batch Loss: 0.566751
+[Info] 2025-06-10 23:56:29 Epoch 106 | Batch 304/304 | Batch Loss: 0.479670
+[Info] 2025-06-10 23:56:29 Validating after epoch 106 ...
+[Info] 2025-06-10 23:56:29 Validation 20/38 | Batch Loss: 0.000841
+[Info] 2025-06-10 23:56:29 Validation 38/38 | Batch Loss: 0.003156
+[Info] 2025-06-10 23:56:29 Epoch [106/200] Train Loss: 0.538648 | Val Loss: 0.011232
+[Info] 2025-06-10 23:56:29 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:56:29 Starting epoch 107/200 ...
+[Info] 2025-06-10 23:56:32 Epoch 107 | Batch 100/304 | Batch Loss: 0.548712
+[Info] 2025-06-10 23:56:35 Epoch 107 | Batch 200/304 | Batch Loss: 0.582923
+[Info] 2025-06-10 23:56:38 Epoch 107 | Batch 300/304 | Batch Loss: 0.582982
+[Info] 2025-06-10 23:56:38 Epoch 107 | Batch 304/304 | Batch Loss: 0.498306
+[Info] 2025-06-10 23:56:38 Validating after epoch 107 ...
+[Info] 2025-06-10 23:56:38 Validation 20/38 | Batch Loss: 0.000839
+[Info] 2025-06-10 23:56:39 Validation 38/38 | Batch Loss: 0.003087
+[Info] 2025-06-10 23:56:39 Epoch [107/200] Train Loss: 0.541883 | Val Loss: 0.011155
+[Info] 2025-06-10 23:56:39 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:56:39 Starting epoch 108/200 ...
+[Info] 2025-06-10 23:56:42 Epoch 108 | Batch 100/304 | Batch Loss: 0.582945
+[Info] 2025-06-10 23:56:45 Epoch 108 | Batch 200/304 | Batch Loss: 0.473979
+[Info] 2025-06-10 23:56:48 Epoch 108 | Batch 300/304 | Batch Loss: 0.499983
+[Info] 2025-06-10 23:56:48 Epoch 108 | Batch 304/304 | Batch Loss: 0.426468
+[Info] 2025-06-10 23:56:48 Validating after epoch 108 ...
+[Info] 2025-06-10 23:56:48 Validation 20/38 | Batch Loss: 0.000801
+[Info] 2025-06-10 23:56:48 Validation 38/38 | Batch Loss: 0.002999
+[Info] 2025-06-10 23:56:48 Epoch [108/200] Train Loss: 0.539773 | Val Loss: 0.011042
+[Info] 2025-06-10 23:56:48 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:56:48 Starting epoch 109/200 ...
+[Info] 2025-06-10 23:56:52 Epoch 109 | Batch 100/304 | Batch Loss: 0.486286
+[Info] 2025-06-10 23:56:54 Epoch 109 | Batch 200/304 | Batch Loss: 0.591659
+[Info] 2025-06-10 23:56:58 Epoch 109 | Batch 300/304 | Batch Loss: 0.582872
+[Info] 2025-06-10 23:56:58 Epoch 109 | Batch 304/304 | Batch Loss: 0.530292
+[Info] 2025-06-10 23:56:58 Validating after epoch 109 ...
+[Info] 2025-06-10 23:56:58 Validation 20/38 | Batch Loss: 0.000810
+[Info] 2025-06-10 23:56:58 Validation 38/38 | Batch Loss: 0.002995
+[Info] 2025-06-10 23:56:58 Epoch [109/200] Train Loss: 0.533897 | Val Loss: 0.011026
+[Info] 2025-06-10 23:56:58 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:56:58 Starting epoch 110/200 ...
+[Info] 2025-06-10 23:57:01 Epoch 110 | Batch 100/304 | Batch Loss: 0.404428
+[Info] 2025-06-10 23:57:04 Epoch 110 | Batch 200/304 | Batch Loss: 0.554055
+[Info] 2025-06-10 23:57:07 Epoch 110 | Batch 300/304 | Batch Loss: 0.525166
+[Info] 2025-06-10 23:57:07 Epoch 110 | Batch 304/304 | Batch Loss: 0.629905
+[Info] 2025-06-10 23:57:07 Validating after epoch 110 ...
+[Info] 2025-06-10 23:57:07 Validation 20/38 | Batch Loss: 0.000811
+[Info] 2025-06-10 23:57:07 Validation 38/38 | Batch Loss: 0.002990
+[Info] 2025-06-10 23:57:07 Epoch [110/200] Train Loss: 0.533781 | Val Loss: 0.011023
+[Info] 2025-06-10 23:57:07 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:57:07 Starting epoch 111/200 ...
+[Info] 2025-06-10 23:57:10 Epoch 111 | Batch 100/304 | Batch Loss: 0.553716
+[Info] 2025-06-10 23:57:13 Epoch 111 | Batch 200/304 | Batch Loss: 0.623930
+[Info] 2025-06-10 23:57:16 Epoch 111 | Batch 300/304 | Batch Loss: 0.569777
+[Info] 2025-06-10 23:57:16 Epoch 111 | Batch 304/304 | Batch Loss: 0.701807
+[Info] 2025-06-10 23:57:16 Validating after epoch 111 ...
+[Info] 2025-06-10 23:57:16 Validation 20/38 | Batch Loss: 0.000811
+[Info] 2025-06-10 23:57:16 Validation 38/38 | Batch Loss: 0.002990
+[Info] 2025-06-10 23:57:16 Epoch [111/200] Train Loss: 0.548236 | Val Loss: 0.011023
+[Info] 2025-06-10 23:57:16 Starting epoch 112/200 ...
+[Info] 2025-06-10 23:57:19 Epoch 112 | Batch 100/304 | Batch Loss: 0.568904
+[Info] 2025-06-10 23:57:22 Epoch 112 | Batch 200/304 | Batch Loss: 0.484701
+[Info] 2025-06-10 23:57:25 Epoch 112 | Batch 300/304 | Batch Loss: 0.501132
+[Info] 2025-06-10 23:57:25 Epoch 112 | Batch 304/304 | Batch Loss: 0.552009
+[Info] 2025-06-10 23:57:25 Validating after epoch 112 ...
+[Info] 2025-06-10 23:57:25 Validation 20/38 | Batch Loss: 0.000809
+[Info] 2025-06-10 23:57:25 Validation 38/38 | Batch Loss: 0.002986
+[Info] 2025-06-10 23:57:25 Epoch [112/200] Train Loss: 0.545283 | Val Loss: 0.011017
+[Info] 2025-06-10 23:57:25 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:57:25 Starting epoch 113/200 ...
+[Info] 2025-06-10 23:57:28 Epoch 113 | Batch 100/304 | Batch Loss: 0.686394
+[Info] 2025-06-10 23:57:31 Epoch 113 | Batch 200/304 | Batch Loss: 0.561066
+[Info] 2025-06-10 23:57:34 Epoch 113 | Batch 300/304 | Batch Loss: 0.528640
+[Info] 2025-06-10 23:57:34 Epoch 113 | Batch 304/304 | Batch Loss: 0.585348
+[Info] 2025-06-10 23:57:34 Validating after epoch 113 ...
+[Info] 2025-06-10 23:57:34 Validation 20/38 | Batch Loss: 0.000809
+[Info] 2025-06-10 23:57:34 Validation 38/38 | Batch Loss: 0.002981
+[Info] 2025-06-10 23:57:34 Epoch [113/200] Train Loss: 0.546573 | Val Loss: 0.011007
+[Info] 2025-06-10 23:57:34 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:57:34 Starting epoch 114/200 ...
+[Info] 2025-06-10 23:57:37 Epoch 114 | Batch 100/304 | Batch Loss: 0.557576
+[Info] 2025-06-10 23:57:40 Epoch 114 | Batch 200/304 | Batch Loss: 0.585486
+[Info] 2025-06-10 23:57:43 Epoch 114 | Batch 300/304 | Batch Loss: 0.617961
+[Info] 2025-06-10 23:57:43 Epoch 114 | Batch 304/304 | Batch Loss: 0.460814
+[Info] 2025-06-10 23:57:43 Validating after epoch 114 ...
+[Info] 2025-06-10 23:57:43 Validation 20/38 | Batch Loss: 0.000804
+[Info] 2025-06-10 23:57:43 Validation 38/38 | Batch Loss: 0.002955
+[Info] 2025-06-10 23:57:43 Epoch [114/200] Train Loss: 0.544103 | Val Loss: 0.010978
+[Info] 2025-06-10 23:57:43 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:57:43 Starting epoch 115/200 ...
+[Info] 2025-06-10 23:57:46 Epoch 115 | Batch 100/304 | Batch Loss: 0.480600
+[Info] 2025-06-10 23:57:49 Epoch 115 | Batch 200/304 | Batch Loss: 0.593893
+[Info] 2025-06-10 23:57:52 Epoch 115 | Batch 300/304 | Batch Loss: 0.530035
+[Info] 2025-06-10 23:57:52 Epoch 115 | Batch 304/304 | Batch Loss: 0.656971
+[Info] 2025-06-10 23:57:52 Validating after epoch 115 ...
+[Info] 2025-06-10 23:57:52 Validation 20/38 | Batch Loss: 0.000791
+[Info] 2025-06-10 23:57:53 Validation 38/38 | Batch Loss: 0.002906
+[Info] 2025-06-10 23:57:53 Epoch [115/200] Train Loss: 0.544715 | Val Loss: 0.010891
+[Info] 2025-06-10 23:57:53 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:57:53 Starting epoch 116/200 ...
+[Info] 2025-06-10 23:57:56 Epoch 116 | Batch 100/304 | Batch Loss: 0.480906
+[Info] 2025-06-10 23:57:59 Epoch 116 | Batch 200/304 | Batch Loss: 0.542306
+[Info] 2025-06-10 23:58:02 Epoch 116 | Batch 300/304 | Batch Loss: 0.484997
+[Info] 2025-06-10 23:58:02 Epoch 116 | Batch 304/304 | Batch Loss: 0.390164
+[Info] 2025-06-10 23:58:02 Validating after epoch 116 ...
+[Info] 2025-06-10 23:58:03 Validation 20/38 | Batch Loss: 0.000760
+[Info] 2025-06-10 23:58:03 Validation 38/38 | Batch Loss: 0.002766
+[Info] 2025-06-10 23:58:03 Epoch [116/200] Train Loss: 0.541292 | Val Loss: 0.010742
+[Info] 2025-06-10 23:58:03 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:58:03 Starting epoch 117/200 ...
+[Info] 2025-06-10 23:58:06 Epoch 117 | Batch 100/304 | Batch Loss: 0.409839
+[Info] 2025-06-10 23:58:09 Epoch 117 | Batch 200/304 | Batch Loss: 0.443111
+[Info] 2025-06-10 23:58:12 Epoch 117 | Batch 300/304 | Batch Loss: 0.458961
+[Info] 2025-06-10 23:58:12 Epoch 117 | Batch 304/304 | Batch Loss: 0.606581
+[Info] 2025-06-10 23:58:12 Validating after epoch 117 ...
+[Info] 2025-06-10 23:58:12 Validation 20/38 | Batch Loss: 0.000744
+[Info] 2025-06-10 23:58:12 Validation 38/38 | Batch Loss: 0.002641
+[Info] 2025-06-10 23:58:12 Epoch [117/200] Train Loss: 0.537705 | Val Loss: 0.010551
+[Info] 2025-06-10 23:58:12 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:58:12 Starting epoch 118/200 ...
+[Info] 2025-06-10 23:58:15 Epoch 118 | Batch 100/304 | Batch Loss: 0.539054
+[Info] 2025-06-10 23:58:18 Epoch 118 | Batch 200/304 | Batch Loss: 0.504158
+[Info] 2025-06-10 23:58:21 Epoch 118 | Batch 300/304 | Batch Loss: 0.560345
+[Info] 2025-06-10 23:58:21 Epoch 118 | Batch 304/304 | Batch Loss: 0.499289
+[Info] 2025-06-10 23:58:21 Validating after epoch 118 ...
+[Info] 2025-06-10 23:58:21 Validation 20/38 | Batch Loss: 0.000705
+[Info] 2025-06-10 23:58:21 Validation 38/38 | Batch Loss: 0.002518
+[Info] 2025-06-10 23:58:21 Epoch [118/200] Train Loss: 0.536618 | Val Loss: 0.010338
+[Info] 2025-06-10 23:58:21 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:58:21 Starting epoch 119/200 ...
+[Info] 2025-06-10 23:58:24 Epoch 119 | Batch 100/304 | Batch Loss: 0.549341
+[Info] 2025-06-10 23:58:27 Epoch 119 | Batch 200/304 | Batch Loss: 0.480083
+[Info] 2025-06-10 23:58:31 Epoch 119 | Batch 300/304 | Batch Loss: 0.524852
+[Info] 2025-06-10 23:58:31 Epoch 119 | Batch 304/304 | Batch Loss: 0.583142
+[Info] 2025-06-10 23:58:31 Validating after epoch 119 ...
+[Info] 2025-06-10 23:58:31 Validation 20/38 | Batch Loss: 0.000701
+[Info] 2025-06-10 23:58:31 Validation 38/38 | Batch Loss: 0.002376
+[Info] 2025-06-10 23:58:31 Epoch [119/200] Train Loss: 0.541547 | Val Loss: 0.010130
+[Info] 2025-06-10 23:58:31 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:58:31 Starting epoch 120/200 ...
+[Info] 2025-06-10 23:58:34 Epoch 120 | Batch 100/304 | Batch Loss: 0.533649
+[Info] 2025-06-10 23:58:37 Epoch 120 | Batch 200/304 | Batch Loss: 0.579513
+[Info] 2025-06-10 23:58:40 Epoch 120 | Batch 300/304 | Batch Loss: 0.494777
+[Info] 2025-06-10 23:58:40 Epoch 120 | Batch 304/304 | Batch Loss: 0.405604
+[Info] 2025-06-10 23:58:40 Validating after epoch 120 ...
+[Info] 2025-06-10 23:58:40 Validation 20/38 | Batch Loss: 0.000680
+[Info] 2025-06-10 23:58:40 Validation 38/38 | Batch Loss: 0.002255
+[Info] 2025-06-10 23:58:40 Epoch [120/200] Train Loss: 0.540824 | Val Loss: 0.009959
+[Info] 2025-06-10 23:58:40 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:58:40 Starting epoch 121/200 ...
+[Info] 2025-06-10 23:58:44 Epoch 121 | Batch 100/304 | Batch Loss: 0.498554
+[Info] 2025-06-10 23:58:47 Epoch 121 | Batch 200/304 | Batch Loss: 0.470979
+[Info] 2025-06-10 23:58:50 Epoch 121 | Batch 300/304 | Batch Loss: 0.635387
+[Info] 2025-06-10 23:58:50 Epoch 121 | Batch 304/304 | Batch Loss: 0.510559
+[Info] 2025-06-10 23:58:50 Validating after epoch 121 ...
+[Info] 2025-06-10 23:58:50 Validation 20/38 | Batch Loss: 0.000604
+[Info] 2025-06-10 23:58:50 Validation 38/38 | Batch Loss: 0.002093
+[Info] 2025-06-10 23:58:50 Epoch [121/200] Train Loss: 0.541148 | Val Loss: 0.009671
+[Info] 2025-06-10 23:58:50 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:58:50 Starting epoch 122/200 ...
+[Info] 2025-06-10 23:58:53 Epoch 122 | Batch 100/304 | Batch Loss: 0.543119
+[Info] 2025-06-10 23:58:57 Epoch 122 | Batch 200/304 | Batch Loss: 0.458056
+[Info] 2025-06-10 23:59:00 Epoch 122 | Batch 300/304 | Batch Loss: 0.640714
+[Info] 2025-06-10 23:59:00 Epoch 122 | Batch 304/304 | Batch Loss: 0.574334
+[Info] 2025-06-10 23:59:00 Validating after epoch 122 ...
+[Info] 2025-06-10 23:59:01 Validation 20/38 | Batch Loss: 0.000620
+[Info] 2025-06-10 23:59:01 Validation 38/38 | Batch Loss: 0.001978
+[Info] 2025-06-10 23:59:01 Epoch [122/200] Train Loss: 0.539842 | Val Loss: 0.009520
+[Info] 2025-06-10 23:59:01 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:59:01 Starting epoch 123/200 ...
+[Info] 2025-06-10 23:59:04 Epoch 123 | Batch 100/304 | Batch Loss: 0.549900
+[Info] 2025-06-10 23:59:07 Epoch 123 | Batch 200/304 | Batch Loss: 0.518904
+[Info] 2025-06-10 23:59:10 Epoch 123 | Batch 300/304 | Batch Loss: 0.500271
+[Info] 2025-06-10 23:59:10 Epoch 123 | Batch 304/304 | Batch Loss: 0.484424
+[Info] 2025-06-10 23:59:10 Validating after epoch 123 ...
+[Info] 2025-06-10 23:59:10 Validation 20/38 | Batch Loss: 0.000573
+[Info] 2025-06-10 23:59:11 Validation 38/38 | Batch Loss: 0.001855
+[Info] 2025-06-10 23:59:11 Epoch [123/200] Train Loss: 0.534886 | Val Loss: 0.009321
+[Info] 2025-06-10 23:59:11 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:59:11 Starting epoch 124/200 ...
+[Info] 2025-06-10 23:59:14 Epoch 124 | Batch 100/304 | Batch Loss: 0.476898
+[Info] 2025-06-10 23:59:17 Epoch 124 | Batch 200/304 | Batch Loss: 0.539244
+[Info] 2025-06-10 23:59:20 Epoch 124 | Batch 300/304 | Batch Loss: 0.484693
+[Info] 2025-06-10 23:59:20 Epoch 124 | Batch 304/304 | Batch Loss: 0.457316
+[Info] 2025-06-10 23:59:20 Validating after epoch 124 ...
+[Info] 2025-06-10 23:59:20 Validation 20/38 | Batch Loss: 0.000547
+[Info] 2025-06-10 23:59:20 Validation 38/38 | Batch Loss: 0.001755
+[Info] 2025-06-10 23:59:20 Epoch [124/200] Train Loss: 0.536723 | Val Loss: 0.009170
+[Info] 2025-06-10 23:59:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:59:20 Starting epoch 125/200 ...
+[Info] 2025-06-10 23:59:24 Epoch 125 | Batch 100/304 | Batch Loss: 0.551270
+[Info] 2025-06-10 23:59:27 Epoch 125 | Batch 200/304 | Batch Loss: 0.416116
+[Info] 2025-06-10 23:59:30 Epoch 125 | Batch 300/304 | Batch Loss: 0.558977
+[Info] 2025-06-10 23:59:30 Epoch 125 | Batch 304/304 | Batch Loss: 0.502646
+[Info] 2025-06-10 23:59:30 Validating after epoch 125 ...
+[Info] 2025-06-10 23:59:30 Validation 20/38 | Batch Loss: 0.000521
+[Info] 2025-06-10 23:59:30 Validation 38/38 | Batch Loss: 0.001680
+[Info] 2025-06-10 23:59:30 Epoch [125/200] Train Loss: 0.536244 | Val Loss: 0.009011
+[Info] 2025-06-10 23:59:30 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:59:30 Starting epoch 126/200 ...
+[Info] 2025-06-10 23:59:34 Epoch 126 | Batch 100/304 | Batch Loss: 0.468152
+[Info] 2025-06-10 23:59:37 Epoch 126 | Batch 200/304 | Batch Loss: 0.565186
+[Info] 2025-06-10 23:59:40 Epoch 126 | Batch 300/304 | Batch Loss: 0.444623
+[Info] 2025-06-10 23:59:40 Epoch 126 | Batch 304/304 | Batch Loss: 0.634074
+[Info] 2025-06-10 23:59:40 Validating after epoch 126 ...
+[Info] 2025-06-10 23:59:40 Validation 20/38 | Batch Loss: 0.000514
+[Info] 2025-06-10 23:59:40 Validation 38/38 | Batch Loss: 0.001618
+[Info] 2025-06-10 23:59:40 Epoch [126/200] Train Loss: 0.538887 | Val Loss: 0.008906
+[Info] 2025-06-10 23:59:40 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:59:40 Starting epoch 127/200 ...
+[Info] 2025-06-10 23:59:44 Epoch 127 | Batch 100/304 | Batch Loss: 0.491154
+[Info] 2025-06-10 23:59:47 Epoch 127 | Batch 200/304 | Batch Loss: 0.565503
+[Info] 2025-06-10 23:59:50 Epoch 127 | Batch 300/304 | Batch Loss: 0.465865
+[Info] 2025-06-10 23:59:50 Epoch 127 | Batch 304/304 | Batch Loss: 0.451960
+[Info] 2025-06-10 23:59:50 Validating after epoch 127 ...
+[Info] 2025-06-10 23:59:50 Validation 20/38 | Batch Loss: 0.000507
+[Info] 2025-06-10 23:59:50 Validation 38/38 | Batch Loss: 0.001575
+[Info] 2025-06-10 23:59:50 Epoch [127/200] Train Loss: 0.536996 | Val Loss: 0.008844
+[Info] 2025-06-10 23:59:50 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-10 23:59:50 Starting epoch 128/200 ...
+[Info] 2025-06-10 23:59:53 Epoch 128 | Batch 100/304 | Batch Loss: 0.542169
+[Info] 2025-06-10 23:59:56 Epoch 128 | Batch 200/304 | Batch Loss: 0.623105
+[Info] 2025-06-11 00:00:00 Epoch 128 | Batch 300/304 | Batch Loss: 0.581467
+[Info] 2025-06-11 00:00:00 Epoch 128 | Batch 304/304 | Batch Loss: 0.683513
+[Info] 2025-06-11 00:00:00 Validating after epoch 128 ...
+[Info] 2025-06-11 00:00:00 Validation 20/38 | Batch Loss: 0.000499
+[Info] 2025-06-11 00:00:00 Validation 38/38 | Batch Loss: 0.001555
+[Info] 2025-06-11 00:00:00 Epoch [128/200] Train Loss: 0.539304 | Val Loss: 0.008798
+[Info] 2025-06-11 00:00:00 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:00:00 Starting epoch 129/200 ...
+[Info] 2025-06-11 00:00:03 Epoch 129 | Batch 100/304 | Batch Loss: 0.538636
+[Info] 2025-06-11 00:00:07 Epoch 129 | Batch 200/304 | Batch Loss: 0.531511
+[Info] 2025-06-11 00:00:09 Epoch 129 | Batch 300/304 | Batch Loss: 0.560899
+[Info] 2025-06-11 00:00:10 Epoch 129 | Batch 304/304 | Batch Loss: 0.439585
+[Info] 2025-06-11 00:00:10 Validating after epoch 129 ...
+[Info] 2025-06-11 00:00:10 Validation 20/38 | Batch Loss: 0.000501
+[Info] 2025-06-11 00:00:10 Validation 38/38 | Batch Loss: 0.001552
+[Info] 2025-06-11 00:00:10 Epoch [129/200] Train Loss: 0.541586 | Val Loss: 0.008794
+[Info] 2025-06-11 00:00:10 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:00:10 Starting epoch 130/200 ...
+[Info] 2025-06-11 00:00:13 Epoch 130 | Batch 100/304 | Batch Loss: 0.488687
+[Info] 2025-06-11 00:00:16 Epoch 130 | Batch 200/304 | Batch Loss: 0.602502
+[Info] 2025-06-11 00:00:19 Epoch 130 | Batch 300/304 | Batch Loss: 0.545719
+[Info] 2025-06-11 00:00:19 Epoch 130 | Batch 304/304 | Batch Loss: 0.541172
+[Info] 2025-06-11 00:00:19 Validating after epoch 130 ...
+[Info] 2025-06-11 00:00:19 Validation 20/38 | Batch Loss: 0.000499
+[Info] 2025-06-11 00:00:19 Validation 38/38 | Batch Loss: 0.001549
+[Info] 2025-06-11 00:00:19 Epoch [130/200] Train Loss: 0.542736 | Val Loss: 0.008789
+[Info] 2025-06-11 00:00:19 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:00:19 Starting epoch 131/200 ...
+[Info] 2025-06-11 00:00:22 Epoch 131 | Batch 100/304 | Batch Loss: 0.606180
+[Info] 2025-06-11 00:00:25 Epoch 131 | Batch 200/304 | Batch Loss: 0.579450
+[Info] 2025-06-11 00:00:28 Epoch 131 | Batch 300/304 | Batch Loss: 0.574035
+[Info] 2025-06-11 00:00:28 Epoch 131 | Batch 304/304 | Batch Loss: 0.669195
+[Info] 2025-06-11 00:00:28 Validating after epoch 131 ...
+[Info] 2025-06-11 00:00:29 Validation 20/38 | Batch Loss: 0.000499
+[Info] 2025-06-11 00:00:29 Validation 38/38 | Batch Loss: 0.001549
+[Info] 2025-06-11 00:00:29 Epoch [131/200] Train Loss: 0.542877 | Val Loss: 0.008789
+[Info] 2025-06-11 00:00:29 Starting epoch 132/200 ...
+[Info] 2025-06-11 00:00:31 Epoch 132 | Batch 100/304 | Batch Loss: 0.486475
+[Info] 2025-06-11 00:00:34 Epoch 132 | Batch 200/304 | Batch Loss: 0.640522
+[Info] 2025-06-11 00:00:37 Epoch 132 | Batch 300/304 | Batch Loss: 0.482865
+[Info] 2025-06-11 00:00:37 Epoch 132 | Batch 304/304 | Batch Loss: 0.488869
+[Info] 2025-06-11 00:00:37 Validating after epoch 132 ...
+[Info] 2025-06-11 00:00:37 Validation 20/38 | Batch Loss: 0.000498
+[Info] 2025-06-11 00:00:37 Validation 38/38 | Batch Loss: 0.001547
+[Info] 2025-06-11 00:00:37 Epoch [132/200] Train Loss: 0.537860 | Val Loss: 0.008784
+[Info] 2025-06-11 00:00:37 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:00:37 Starting epoch 133/200 ...
+[Info] 2025-06-11 00:00:41 Epoch 133 | Batch 100/304 | Batch Loss: 0.556520
+[Info] 2025-06-11 00:00:44 Epoch 133 | Batch 200/304 | Batch Loss: 0.599258
+[Info] 2025-06-11 00:00:47 Epoch 133 | Batch 300/304 | Batch Loss: 0.467502
+[Info] 2025-06-11 00:00:47 Epoch 133 | Batch 304/304 | Batch Loss: 0.622693
+[Info] 2025-06-11 00:00:47 Validating after epoch 133 ...
+[Info] 2025-06-11 00:00:47 Validation 20/38 | Batch Loss: 0.000495
+[Info] 2025-06-11 00:00:47 Validation 38/38 | Batch Loss: 0.001541
+[Info] 2025-06-11 00:00:47 Epoch [133/200] Train Loss: 0.537525 | Val Loss: 0.008773
+[Info] 2025-06-11 00:00:47 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:00:47 Starting epoch 134/200 ...
+[Info] 2025-06-11 00:00:51 Epoch 134 | Batch 100/304 | Batch Loss: 0.472001
+[Info] 2025-06-11 00:00:54 Epoch 134 | Batch 200/304 | Batch Loss: 0.481642
+[Info] 2025-06-11 00:00:56 Epoch 134 | Batch 300/304 | Batch Loss: 0.514813
+[Info] 2025-06-11 00:00:57 Epoch 134 | Batch 304/304 | Batch Loss: 0.526683
+[Info] 2025-06-11 00:00:57 Validating after epoch 134 ...
+[Info] 2025-06-11 00:00:57 Validation 20/38 | Batch Loss: 0.000488
+[Info] 2025-06-11 00:00:57 Validation 38/38 | Batch Loss: 0.001529
+[Info] 2025-06-11 00:00:57 Epoch [134/200] Train Loss: 0.535989 | Val Loss: 0.008746
+[Info] 2025-06-11 00:00:57 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:00:57 Starting epoch 135/200 ...
+[Info] 2025-06-11 00:01:00 Epoch 135 | Batch 100/304 | Batch Loss: 0.473338
+[Info] 2025-06-11 00:01:03 Epoch 135 | Batch 200/304 | Batch Loss: 0.656039
+[Info] 2025-06-11 00:01:06 Epoch 135 | Batch 300/304 | Batch Loss: 0.551497
+[Info] 2025-06-11 00:01:06 Epoch 135 | Batch 304/304 | Batch Loss: 0.537542
+[Info] 2025-06-11 00:01:06 Validating after epoch 135 ...
+[Info] 2025-06-11 00:01:06 Validation 20/38 | Batch Loss: 0.000487
+[Info] 2025-06-11 00:01:07 Validation 38/38 | Batch Loss: 0.001521
+[Info] 2025-06-11 00:01:07 Epoch [135/200] Train Loss: 0.536579 | Val Loss: 0.008722
+[Info] 2025-06-11 00:01:07 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:01:07 Starting epoch 136/200 ...
+[Info] 2025-06-11 00:01:10 Epoch 136 | Batch 100/304 | Batch Loss: 0.522582
+[Info] 2025-06-11 00:01:13 Epoch 136 | Batch 200/304 | Batch Loss: 0.547687
+[Info] 2025-06-11 00:01:15 Epoch 136 | Batch 300/304 | Batch Loss: 0.463713
+[Info] 2025-06-11 00:01:16 Epoch 136 | Batch 304/304 | Batch Loss: 0.477012
+[Info] 2025-06-11 00:01:16 Validating after epoch 136 ...
+[Info] 2025-06-11 00:01:16 Validation 20/38 | Batch Loss: 0.000479
+[Info] 2025-06-11 00:01:16 Validation 38/38 | Batch Loss: 0.001502
+[Info] 2025-06-11 00:01:16 Epoch [136/200] Train Loss: 0.536899 | Val Loss: 0.008662
+[Info] 2025-06-11 00:01:16 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:01:16 Starting epoch 137/200 ...
+[Info] 2025-06-11 00:01:19 Epoch 137 | Batch 100/304 | Batch Loss: 0.474376
+[Info] 2025-06-11 00:01:22 Epoch 137 | Batch 200/304 | Batch Loss: 0.540162
+[Info] 2025-06-11 00:01:25 Epoch 137 | Batch 300/304 | Batch Loss: 0.611018
+[Info] 2025-06-11 00:01:25 Epoch 137 | Batch 304/304 | Batch Loss: 0.561731
+[Info] 2025-06-11 00:01:25 Validating after epoch 137 ...
+[Info] 2025-06-11 00:01:25 Validation 20/38 | Batch Loss: 0.000475
+[Info] 2025-06-11 00:01:25 Validation 38/38 | Batch Loss: 0.001479
+[Info] 2025-06-11 00:01:25 Epoch [137/200] Train Loss: 0.535829 | Val Loss: 0.008592
+[Info] 2025-06-11 00:01:25 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:01:25 Starting epoch 138/200 ...
+[Info] 2025-06-11 00:01:28 Epoch 138 | Batch 100/304 | Batch Loss: 0.578656
+[Info] 2025-06-11 00:01:31 Epoch 138 | Batch 200/304 | Batch Loss: 0.502305
+[Info] 2025-06-11 00:01:34 Epoch 138 | Batch 300/304 | Batch Loss: 0.501197
+[Info] 2025-06-11 00:01:34 Epoch 138 | Batch 304/304 | Batch Loss: 0.618930
+[Info] 2025-06-11 00:01:34 Validating after epoch 138 ...
+[Info] 2025-06-11 00:01:34 Validation 20/38 | Batch Loss: 0.000463
+[Info] 2025-06-11 00:01:34 Validation 38/38 | Batch Loss: 0.001439
+[Info] 2025-06-11 00:01:34 Epoch [138/200] Train Loss: 0.540740 | Val Loss: 0.008522
+[Info] 2025-06-11 00:01:34 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:01:34 Starting epoch 139/200 ...
+[Info] 2025-06-11 00:01:38 Epoch 139 | Batch 100/304 | Batch Loss: 0.577448
+[Info] 2025-06-11 00:01:41 Epoch 139 | Batch 200/304 | Batch Loss: 0.567730
+[Info] 2025-06-11 00:01:43 Epoch 139 | Batch 300/304 | Batch Loss: 0.510457
+[Info] 2025-06-11 00:01:43 Epoch 139 | Batch 304/304 | Batch Loss: 0.531196
+[Info] 2025-06-11 00:01:43 Validating after epoch 139 ...
+[Info] 2025-06-11 00:01:44 Validation 20/38 | Batch Loss: 0.000462
+[Info] 2025-06-11 00:01:44 Validation 38/38 | Batch Loss: 0.001411
+[Info] 2025-06-11 00:01:44 Epoch [139/200] Train Loss: 0.541073 | Val Loss: 0.008458
+[Info] 2025-06-11 00:01:44 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:01:44 Starting epoch 140/200 ...
+[Info] 2025-06-11 00:01:47 Epoch 140 | Batch 100/304 | Batch Loss: 0.430829
+[Info] 2025-06-11 00:01:50 Epoch 140 | Batch 200/304 | Batch Loss: 0.568978
+[Info] 2025-06-11 00:01:52 Epoch 140 | Batch 300/304 | Batch Loss: 0.450041
+[Info] 2025-06-11 00:01:53 Epoch 140 | Batch 304/304 | Batch Loss: 0.449310
+[Info] 2025-06-11 00:01:53 Validating after epoch 140 ...
+[Info] 2025-06-11 00:01:53 Validation 20/38 | Batch Loss: 0.000438
+[Info] 2025-06-11 00:01:53 Validation 38/38 | Batch Loss: 0.001355
+[Info] 2025-06-11 00:01:53 Epoch [140/200] Train Loss: 0.532105 | Val Loss: 0.008359
+[Info] 2025-06-11 00:01:53 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:01:53 Starting epoch 141/200 ...
+[Info] 2025-06-11 00:01:56 Epoch 141 | Batch 100/304 | Batch Loss: 0.542961
+[Info] 2025-06-11 00:01:59 Epoch 141 | Batch 200/304 | Batch Loss: 0.402274
+[Info] 2025-06-11 00:02:02 Epoch 141 | Batch 300/304 | Batch Loss: 0.460213
+[Info] 2025-06-11 00:02:02 Epoch 141 | Batch 304/304 | Batch Loss: 0.527083
+[Info] 2025-06-11 00:02:02 Validating after epoch 141 ...
+[Info] 2025-06-11 00:02:03 Validation 20/38 | Batch Loss: 0.000417
+[Info] 2025-06-11 00:02:03 Validation 38/38 | Batch Loss: 0.001312
+[Info] 2025-06-11 00:02:03 Epoch [141/200] Train Loss: 0.538540 | Val Loss: 0.008250
+[Info] 2025-06-11 00:02:03 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:02:03 Starting epoch 142/200 ...
+[Info] 2025-06-11 00:02:06 Epoch 142 | Batch 100/304 | Batch Loss: 0.416838
+[Info] 2025-06-11 00:02:09 Epoch 142 | Batch 200/304 | Batch Loss: 0.574639
+[Info] 2025-06-11 00:02:11 Epoch 142 | Batch 300/304 | Batch Loss: 0.575116
+[Info] 2025-06-11 00:02:11 Epoch 142 | Batch 304/304 | Batch Loss: 0.466689
+[Info] 2025-06-11 00:02:11 Validating after epoch 142 ...
+[Info] 2025-06-11 00:02:12 Validation 20/38 | Batch Loss: 0.000414
+[Info] 2025-06-11 00:02:12 Validation 38/38 | Batch Loss: 0.001280
+[Info] 2025-06-11 00:02:12 Epoch [142/200] Train Loss: 0.539353 | Val Loss: 0.008176
+[Info] 2025-06-11 00:02:12 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:02:12 Starting epoch 143/200 ...
+[Info] 2025-06-11 00:02:15 Epoch 143 | Batch 100/304 | Batch Loss: 0.498547
+[Info] 2025-06-11 00:02:17 Epoch 143 | Batch 200/304 | Batch Loss: 0.473759
+[Info] 2025-06-11 00:02:20 Epoch 143 | Batch 300/304 | Batch Loss: 0.514319
+[Info] 2025-06-11 00:02:20 Epoch 143 | Batch 304/304 | Batch Loss: 0.448832
+[Info] 2025-06-11 00:02:20 Validating after epoch 143 ...
+[Info] 2025-06-11 00:02:20 Validation 20/38 | Batch Loss: 0.000412
+[Info] 2025-06-11 00:02:20 Validation 38/38 | Batch Loss: 0.001267
+[Info] 2025-06-11 00:02:20 Epoch [143/200] Train Loss: 0.539662 | Val Loss: 0.008115
+[Info] 2025-06-11 00:02:20 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:02:20 Starting epoch 144/200 ...
+[Info] 2025-06-11 00:02:24 Epoch 144 | Batch 100/304 | Batch Loss: 0.680024
+[Info] 2025-06-11 00:02:26 Epoch 144 | Batch 200/304 | Batch Loss: 0.663572
+[Info] 2025-06-11 00:02:29 Epoch 144 | Batch 300/304 | Batch Loss: 0.488873
+[Info] 2025-06-11 00:02:29 Epoch 144 | Batch 304/304 | Batch Loss: 0.498586
+[Info] 2025-06-11 00:02:29 Validating after epoch 144 ...
+[Info] 2025-06-11 00:02:29 Validation 20/38 | Batch Loss: 0.000396
+[Info] 2025-06-11 00:02:29 Validation 38/38 | Batch Loss: 0.001229
+[Info] 2025-06-11 00:02:29 Epoch [144/200] Train Loss: 0.536570 | Val Loss: 0.008022
+[Info] 2025-06-11 00:02:29 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:02:29 Starting epoch 145/200 ...
+[Info] 2025-06-11 00:02:32 Epoch 145 | Batch 100/304 | Batch Loss: 0.535551
+[Info] 2025-06-11 00:02:35 Epoch 145 | Batch 200/304 | Batch Loss: 0.641379
+[Info] 2025-06-11 00:02:38 Epoch 145 | Batch 300/304 | Batch Loss: 0.510152
+[Info] 2025-06-11 00:02:38 Epoch 145 | Batch 304/304 | Batch Loss: 0.587566
+[Info] 2025-06-11 00:02:38 Validating after epoch 145 ...
+[Info] 2025-06-11 00:02:38 Validation 20/38 | Batch Loss: 0.000390
+[Info] 2025-06-11 00:02:38 Validation 38/38 | Batch Loss: 0.001196
+[Info] 2025-06-11 00:02:38 Epoch [145/200] Train Loss: 0.535422 | Val Loss: 0.007964
+[Info] 2025-06-11 00:02:38 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:02:38 Starting epoch 146/200 ...
+[Info] 2025-06-11 00:02:41 Epoch 146 | Batch 100/304 | Batch Loss: 0.498030
+[Info] 2025-06-11 00:02:44 Epoch 146 | Batch 200/304 | Batch Loss: 0.652189
+[Info] 2025-06-11 00:02:47 Epoch 146 | Batch 300/304 | Batch Loss: 0.461801
+[Info] 2025-06-11 00:02:47 Epoch 146 | Batch 304/304 | Batch Loss: 0.443567
+[Info] 2025-06-11 00:02:47 Validating after epoch 146 ...
+[Info] 2025-06-11 00:02:47 Validation 20/38 | Batch Loss: 0.000393
+[Info] 2025-06-11 00:02:47 Validation 38/38 | Batch Loss: 0.001180
+[Info] 2025-06-11 00:02:47 Epoch [146/200] Train Loss: 0.529506 | Val Loss: 0.007944
+[Info] 2025-06-11 00:02:47 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:02:47 Starting epoch 147/200 ...
+[Info] 2025-06-11 00:02:50 Epoch 147 | Batch 100/304 | Batch Loss: 0.505014
+[Info] 2025-06-11 00:02:53 Epoch 147 | Batch 200/304 | Batch Loss: 0.634226
+[Info] 2025-06-11 00:02:56 Epoch 147 | Batch 300/304 | Batch Loss: 0.597598
+[Info] 2025-06-11 00:02:56 Epoch 147 | Batch 304/304 | Batch Loss: 0.532743
+[Info] 2025-06-11 00:02:56 Validating after epoch 147 ...
+[Info] 2025-06-11 00:02:56 Validation 20/38 | Batch Loss: 0.000392
+[Info] 2025-06-11 00:02:57 Validation 38/38 | Batch Loss: 0.001178
+[Info] 2025-06-11 00:02:57 Epoch [147/200] Train Loss: 0.536159 | Val Loss: 0.007914
+[Info] 2025-06-11 00:02:57 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:02:57 Starting epoch 148/200 ...
+[Info] 2025-06-11 00:03:00 Epoch 148 | Batch 100/304 | Batch Loss: 0.481474
+[Info] 2025-06-11 00:03:03 Epoch 148 | Batch 200/304 | Batch Loss: 0.468523
+[Info] 2025-06-11 00:03:06 Epoch 148 | Batch 300/304 | Batch Loss: 0.613481
+[Info] 2025-06-11 00:03:06 Epoch 148 | Batch 304/304 | Batch Loss: 0.571300
+[Info] 2025-06-11 00:03:06 Validating after epoch 148 ...
+[Info] 2025-06-11 00:03:06 Validation 20/38 | Batch Loss: 0.000387
+[Info] 2025-06-11 00:03:06 Validation 38/38 | Batch Loss: 0.001166
+[Info] 2025-06-11 00:03:06 Epoch [148/200] Train Loss: 0.537643 | Val Loss: 0.007889
+[Info] 2025-06-11 00:03:06 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:03:06 Starting epoch 149/200 ...
+[Info] 2025-06-11 00:03:09 Epoch 149 | Batch 100/304 | Batch Loss: 0.531108
+[Info] 2025-06-11 00:03:13 Epoch 149 | Batch 200/304 | Batch Loss: 0.553937
+[Info] 2025-06-11 00:03:15 Epoch 149 | Batch 300/304 | Batch Loss: 0.617329
+[Info] 2025-06-11 00:03:16 Epoch 149 | Batch 304/304 | Batch Loss: 0.493531
+[Info] 2025-06-11 00:03:16 Validating after epoch 149 ...
+[Info] 2025-06-11 00:03:16 Validation 20/38 | Batch Loss: 0.000379
+[Info] 2025-06-11 00:03:16 Validation 38/38 | Batch Loss: 0.001155
+[Info] 2025-06-11 00:03:16 Epoch [149/200] Train Loss: 0.540824 | Val Loss: 0.007871
+[Info] 2025-06-11 00:03:16 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:03:16 Starting epoch 150/200 ...
+[Info] 2025-06-11 00:03:19 Epoch 150 | Batch 100/304 | Batch Loss: 0.521081
+[Info] 2025-06-11 00:03:22 Epoch 150 | Batch 200/304 | Batch Loss: 0.475965
+[Info] 2025-06-11 00:03:25 Epoch 150 | Batch 300/304 | Batch Loss: 0.539193
+[Info] 2025-06-11 00:03:25 Epoch 150 | Batch 304/304 | Batch Loss: 0.545072
+[Info] 2025-06-11 00:03:25 Validating after epoch 150 ...
+[Info] 2025-06-11 00:03:26 Validation 20/38 | Batch Loss: 0.000383
+[Info] 2025-06-11 00:03:26 Validation 38/38 | Batch Loss: 0.001157
+[Info] 2025-06-11 00:03:26 Epoch [150/200] Train Loss: 0.536440 | Val Loss: 0.007874
+[Info] 2025-06-11 00:03:26 Starting epoch 151/200 ...
+[Info] 2025-06-11 00:03:29 Epoch 151 | Batch 100/304 | Batch Loss: 0.569031
+[Info] 2025-06-11 00:03:32 Epoch 151 | Batch 200/304 | Batch Loss: 0.520359
+[Info] 2025-06-11 00:03:34 Epoch 151 | Batch 300/304 | Batch Loss: 0.692910
+[Info] 2025-06-11 00:03:35 Epoch 151 | Batch 304/304 | Batch Loss: 0.662554
+[Info] 2025-06-11 00:03:35 Validating after epoch 151 ...
+[Info] 2025-06-11 00:03:35 Validation 20/38 | Batch Loss: 0.000383
+[Info] 2025-06-11 00:03:35 Validation 38/38 | Batch Loss: 0.001157
+[Info] 2025-06-11 00:03:35 Epoch [151/200] Train Loss: 0.533237 | Val Loss: 0.007874
+[Info] 2025-06-11 00:03:35 Starting epoch 152/200 ...
+[Info] 2025-06-11 00:03:38 Epoch 152 | Batch 100/304 | Batch Loss: 0.545850
+[Info] 2025-06-11 00:03:41 Epoch 152 | Batch 200/304 | Batch Loss: 0.537922
+[Info] 2025-06-11 00:03:44 Epoch 152 | Batch 300/304 | Batch Loss: 0.549282
+[Info] 2025-06-11 00:03:44 Epoch 152 | Batch 304/304 | Batch Loss: 0.612012
+[Info] 2025-06-11 00:03:44 Validating after epoch 152 ...
+[Info] 2025-06-11 00:03:44 Validation 20/38 | Batch Loss: 0.000382
+[Info] 2025-06-11 00:03:44 Validation 38/38 | Batch Loss: 0.001156
+[Info] 2025-06-11 00:03:44 Epoch [152/200] Train Loss: 0.536085 | Val Loss: 0.007871
+[Info] 2025-06-11 00:03:44 Starting epoch 153/200 ...
+[Info] 2025-06-11 00:03:48 Epoch 153 | Batch 100/304 | Batch Loss: 0.554763
+[Info] 2025-06-11 00:03:51 Epoch 153 | Batch 200/304 | Batch Loss: 0.476730
+[Info] 2025-06-11 00:03:54 Epoch 153 | Batch 300/304 | Batch Loss: 0.604274
+[Info] 2025-06-11 00:03:54 Epoch 153 | Batch 304/304 | Batch Loss: 0.483102
+[Info] 2025-06-11 00:03:54 Validating after epoch 153 ...
+[Info] 2025-06-11 00:03:54 Validation 20/38 | Batch Loss: 0.000384
+[Info] 2025-06-11 00:03:54 Validation 38/38 | Batch Loss: 0.001152
+[Info] 2025-06-11 00:03:54 Epoch [153/200] Train Loss: 0.538335 | Val Loss: 0.007867
+[Info] 2025-06-11 00:03:54 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:03:54 Starting epoch 154/200 ...
+[Info] 2025-06-11 00:03:57 Epoch 154 | Batch 100/304 | Batch Loss: 0.553212
+[Info] 2025-06-11 00:04:00 Epoch 154 | Batch 200/304 | Batch Loss: 0.549949
+[Info] 2025-06-11 00:04:04 Epoch 154 | Batch 300/304 | Batch Loss: 0.523908
+[Info] 2025-06-11 00:04:04 Epoch 154 | Batch 304/304 | Batch Loss: 0.507820
+[Info] 2025-06-11 00:04:04 Validating after epoch 154 ...
+[Info] 2025-06-11 00:04:04 Validation 20/38 | Batch Loss: 0.000372
+[Info] 2025-06-11 00:04:04 Validation 38/38 | Batch Loss: 0.001141
+[Info] 2025-06-11 00:04:04 Epoch [154/200] Train Loss: 0.534165 | Val Loss: 0.007836
+[Info] 2025-06-11 00:04:04 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:04:04 Starting epoch 155/200 ...
+[Info] 2025-06-11 00:04:07 Epoch 155 | Batch 100/304 | Batch Loss: 0.492549
+[Info] 2025-06-11 00:04:10 Epoch 155 | Batch 200/304 | Batch Loss: 0.578059
+[Info] 2025-06-11 00:04:13 Epoch 155 | Batch 300/304 | Batch Loss: 0.589957
+[Info] 2025-06-11 00:04:13 Epoch 155 | Batch 304/304 | Batch Loss: 0.567195
+[Info] 2025-06-11 00:04:13 Validating after epoch 155 ...
+[Info] 2025-06-11 00:04:13 Validation 20/38 | Batch Loss: 0.000375
+[Info] 2025-06-11 00:04:14 Validation 38/38 | Batch Loss: 0.001143
+[Info] 2025-06-11 00:04:14 Epoch [155/200] Train Loss: 0.534512 | Val Loss: 0.007814
+[Info] 2025-06-11 00:04:14 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:04:14 Starting epoch 156/200 ...
+[Info] 2025-06-11 00:04:17 Epoch 156 | Batch 100/304 | Batch Loss: 0.563914
+[Info] 2025-06-11 00:04:20 Epoch 156 | Batch 200/304 | Batch Loss: 0.489885
+[Info] 2025-06-11 00:04:23 Epoch 156 | Batch 300/304 | Batch Loss: 0.573696
+[Info] 2025-06-11 00:04:23 Epoch 156 | Batch 304/304 | Batch Loss: 0.463055
+[Info] 2025-06-11 00:04:23 Validating after epoch 156 ...
+[Info] 2025-06-11 00:04:23 Validation 20/38 | Batch Loss: 0.000380
+[Info] 2025-06-11 00:04:23 Validation 38/38 | Batch Loss: 0.001134
+[Info] 2025-06-11 00:04:23 Epoch [156/200] Train Loss: 0.543271 | Val Loss: 0.007784
+[Info] 2025-06-11 00:04:23 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:04:23 Starting epoch 157/200 ...
+[Info] 2025-06-11 00:04:26 Epoch 157 | Batch 100/304 | Batch Loss: 0.551021
+[Info] 2025-06-11 00:04:29 Epoch 157 | Batch 200/304 | Batch Loss: 0.539801
+[Info] 2025-06-11 00:04:32 Epoch 157 | Batch 300/304 | Batch Loss: 0.506793
+[Info] 2025-06-11 00:04:32 Epoch 157 | Batch 304/304 | Batch Loss: 0.554031
+[Info] 2025-06-11 00:04:32 Validating after epoch 157 ...
+[Info] 2025-06-11 00:04:32 Validation 20/38 | Batch Loss: 0.000367
+[Info] 2025-06-11 00:04:32 Validation 38/38 | Batch Loss: 0.001103
+[Info] 2025-06-11 00:04:32 Epoch [157/200] Train Loss: 0.536026 | Val Loss: 0.007724
+[Info] 2025-06-11 00:04:32 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:04:32 Starting epoch 158/200 ...
+[Info] 2025-06-11 00:04:35 Epoch 158 | Batch 100/304 | Batch Loss: 0.527319
+[Info] 2025-06-11 00:04:38 Epoch 158 | Batch 200/304 | Batch Loss: 0.613876
+[Info] 2025-06-11 00:04:41 Epoch 158 | Batch 300/304 | Batch Loss: 0.536563
+[Info] 2025-06-11 00:04:41 Epoch 158 | Batch 304/304 | Batch Loss: 0.509577
+[Info] 2025-06-11 00:04:41 Validating after epoch 158 ...
+[Info] 2025-06-11 00:04:41 Validation 20/38 | Batch Loss: 0.000372
+[Info] 2025-06-11 00:04:41 Validation 38/38 | Batch Loss: 0.001089
+[Info] 2025-06-11 00:04:41 Epoch [158/200] Train Loss: 0.541068 | Val Loss: 0.007701
+[Info] 2025-06-11 00:04:42 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:04:42 Starting epoch 159/200 ...
+[Info] 2025-06-11 00:04:44 Epoch 159 | Batch 100/304 | Batch Loss: 0.483186
+[Info] 2025-06-11 00:04:47 Epoch 159 | Batch 200/304 | Batch Loss: 0.620933
+[Info] 2025-06-11 00:04:50 Epoch 159 | Batch 300/304 | Batch Loss: 0.526515
+[Info] 2025-06-11 00:04:50 Epoch 159 | Batch 304/304 | Batch Loss: 0.559020
+[Info] 2025-06-11 00:04:50 Validating after epoch 159 ...
+[Info] 2025-06-11 00:04:51 Validation 20/38 | Batch Loss: 0.000354
+[Info] 2025-06-11 00:04:51 Validation 38/38 | Batch Loss: 0.001058
+[Info] 2025-06-11 00:04:51 Epoch [159/200] Train Loss: 0.536653 | Val Loss: 0.007612
+[Info] 2025-06-11 00:04:51 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:04:51 Starting epoch 160/200 ...
+[Info] 2025-06-11 00:04:54 Epoch 160 | Batch 100/304 | Batch Loss: 0.534100
+[Info] 2025-06-11 00:04:57 Epoch 160 | Batch 200/304 | Batch Loss: 0.606935
+[Info] 2025-06-11 00:05:00 Epoch 160 | Batch 300/304 | Batch Loss: 0.476032
+[Info] 2025-06-11 00:05:00 Epoch 160 | Batch 304/304 | Batch Loss: 0.645130
+[Info] 2025-06-11 00:05:00 Validating after epoch 160 ...
+[Info] 2025-06-11 00:05:00 Validation 20/38 | Batch Loss: 0.000351
+[Info] 2025-06-11 00:05:00 Validation 38/38 | Batch Loss: 0.001007
+[Info] 2025-06-11 00:05:00 Epoch [160/200] Train Loss: 0.538883 | Val Loss: 0.007518
+[Info] 2025-06-11 00:05:00 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:05:00 Starting epoch 161/200 ...
+[Info] 2025-06-11 00:05:03 Epoch 161 | Batch 100/304 | Batch Loss: 0.537934
+[Info] 2025-06-11 00:05:07 Epoch 161 | Batch 200/304 | Batch Loss: 0.593840
+[Info] 2025-06-11 00:05:09 Epoch 161 | Batch 300/304 | Batch Loss: 0.467685
+[Info] 2025-06-11 00:05:09 Epoch 161 | Batch 304/304 | Batch Loss: 0.636761
+[Info] 2025-06-11 00:05:09 Validating after epoch 161 ...
+[Info] 2025-06-11 00:05:10 Validation 20/38 | Batch Loss: 0.000335
+[Info] 2025-06-11 00:05:10 Validation 38/38 | Batch Loss: 0.000963
+[Info] 2025-06-11 00:05:10 Epoch [161/200] Train Loss: 0.537730 | Val Loss: 0.007357
+[Info] 2025-06-11 00:05:10 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:05:10 Starting epoch 162/200 ...
+[Info] 2025-06-11 00:05:13 Epoch 162 | Batch 100/304 | Batch Loss: 0.522005
+[Info] 2025-06-11 00:05:16 Epoch 162 | Batch 200/304 | Batch Loss: 0.467482
+[Info] 2025-06-11 00:05:19 Epoch 162 | Batch 300/304 | Batch Loss: 0.521720
+[Info] 2025-06-11 00:05:19 Epoch 162 | Batch 304/304 | Batch Loss: 0.482095
+[Info] 2025-06-11 00:05:19 Validating after epoch 162 ...
+[Info] 2025-06-11 00:05:19 Validation 20/38 | Batch Loss: 0.000308
+[Info] 2025-06-11 00:05:19 Validation 38/38 | Batch Loss: 0.000919
+[Info] 2025-06-11 00:05:19 Epoch [162/200] Train Loss: 0.540303 | Val Loss: 0.007217
+[Info] 2025-06-11 00:05:19 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:05:19 Starting epoch 163/200 ...
+[Info] 2025-06-11 00:05:22 Epoch 163 | Batch 100/304 | Batch Loss: 0.498614
+[Info] 2025-06-11 00:05:25 Epoch 163 | Batch 200/304 | Batch Loss: 0.424155
+[Info] 2025-06-11 00:05:28 Epoch 163 | Batch 300/304 | Batch Loss: 0.609196
+[Info] 2025-06-11 00:05:28 Epoch 163 | Batch 304/304 | Batch Loss: 0.505726
+[Info] 2025-06-11 00:05:28 Validating after epoch 163 ...
+[Info] 2025-06-11 00:05:28 Validation 20/38 | Batch Loss: 0.000285
+[Info] 2025-06-11 00:05:28 Validation 38/38 | Batch Loss: 0.000844
+[Info] 2025-06-11 00:05:28 Epoch [163/200] Train Loss: 0.536836 | Val Loss: 0.007069
+[Info] 2025-06-11 00:05:28 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:05:28 Starting epoch 164/200 ...
+[Info] 2025-06-11 00:05:31 Epoch 164 | Batch 100/304 | Batch Loss: 0.564205
+[Info] 2025-06-11 00:05:34 Epoch 164 | Batch 200/304 | Batch Loss: 0.544196
+[Info] 2025-06-11 00:05:37 Epoch 164 | Batch 300/304 | Batch Loss: 0.423893
+[Info] 2025-06-11 00:05:37 Epoch 164 | Batch 304/304 | Batch Loss: 0.435696
+[Info] 2025-06-11 00:05:37 Validating after epoch 164 ...
+[Info] 2025-06-11 00:05:38 Validation 20/38 | Batch Loss: 0.000283
+[Info] 2025-06-11 00:05:38 Validation 38/38 | Batch Loss: 0.000824
+[Info] 2025-06-11 00:05:38 Epoch [164/200] Train Loss: 0.535272 | Val Loss: 0.006989
+[Info] 2025-06-11 00:05:38 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:05:38 Starting epoch 165/200 ...
+[Info] 2025-06-11 00:05:41 Epoch 165 | Batch 100/304 | Batch Loss: 0.442402
+[Info] 2025-06-11 00:05:44 Epoch 165 | Batch 200/304 | Batch Loss: 0.490408
+[Info] 2025-06-11 00:05:47 Epoch 165 | Batch 300/304 | Batch Loss: 0.489021
+[Info] 2025-06-11 00:05:47 Epoch 165 | Batch 304/304 | Batch Loss: 0.545705
+[Info] 2025-06-11 00:05:47 Validating after epoch 165 ...
+[Info] 2025-06-11 00:05:47 Validation 20/38 | Batch Loss: 0.000271
+[Info] 2025-06-11 00:05:47 Validation 38/38 | Batch Loss: 0.000791
+[Info] 2025-06-11 00:05:47 Epoch [165/200] Train Loss: 0.531967 | Val Loss: 0.006876
+[Info] 2025-06-11 00:05:47 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:05:47 Starting epoch 166/200 ...
+[Info] 2025-06-11 00:05:50 Epoch 166 | Batch 100/304 | Batch Loss: 0.658501
+[Info] 2025-06-11 00:05:53 Epoch 166 | Batch 200/304 | Batch Loss: 0.520079
+[Info] 2025-06-11 00:05:56 Epoch 166 | Batch 300/304 | Batch Loss: 0.609165
+[Info] 2025-06-11 00:05:56 Epoch 166 | Batch 304/304 | Batch Loss: 0.521158
+[Info] 2025-06-11 00:05:56 Validating after epoch 166 ...
+[Info] 2025-06-11 00:05:56 Validation 20/38 | Batch Loss: 0.000279
+[Info] 2025-06-11 00:05:56 Validation 38/38 | Batch Loss: 0.000788
+[Info] 2025-06-11 00:05:56 Epoch [166/200] Train Loss: 0.537226 | Val Loss: 0.006839
+[Info] 2025-06-11 00:05:56 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:05:56 Starting epoch 167/200 ...
+[Info] 2025-06-11 00:05:59 Epoch 167 | Batch 100/304 | Batch Loss: 0.596739
+[Info] 2025-06-11 00:06:02 Epoch 167 | Batch 200/304 | Batch Loss: 0.629792
+[Info] 2025-06-11 00:06:05 Epoch 167 | Batch 300/304 | Batch Loss: 0.525025
+[Info] 2025-06-11 00:06:06 Epoch 167 | Batch 304/304 | Batch Loss: 0.444523
+[Info] 2025-06-11 00:06:06 Validating after epoch 167 ...
+[Info] 2025-06-11 00:06:06 Validation 20/38 | Batch Loss: 0.000269
+[Info] 2025-06-11 00:06:06 Validation 38/38 | Batch Loss: 0.000771
+[Info] 2025-06-11 00:06:06 Epoch [167/200] Train Loss: 0.531789 | Val Loss: 0.006795
+[Info] 2025-06-11 00:06:06 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:06:06 Starting epoch 168/200 ...
+[Info] 2025-06-11 00:06:09 Epoch 168 | Batch 100/304 | Batch Loss: 0.645559
+[Info] 2025-06-11 00:06:13 Epoch 168 | Batch 200/304 | Batch Loss: 0.477169
+[Info] 2025-06-11 00:06:16 Epoch 168 | Batch 300/304 | Batch Loss: 0.579936
+[Info] 2025-06-11 00:06:16 Epoch 168 | Batch 304/304 | Batch Loss: 0.480788
+[Info] 2025-06-11 00:06:16 Validating after epoch 168 ...
+[Info] 2025-06-11 00:06:16 Validation 20/38 | Batch Loss: 0.000266
+[Info] 2025-06-11 00:06:16 Validation 38/38 | Batch Loss: 0.000769
+[Info] 2025-06-11 00:06:16 Epoch [168/200] Train Loss: 0.531382 | Val Loss: 0.006780
+[Info] 2025-06-11 00:06:16 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:06:16 Starting epoch 169/200 ...
+[Info] 2025-06-11 00:06:20 Epoch 169 | Batch 100/304 | Batch Loss: 0.531673
+[Info] 2025-06-11 00:06:23 Epoch 169 | Batch 200/304 | Batch Loss: 0.469007
+[Info] 2025-06-11 00:06:25 Epoch 169 | Batch 300/304 | Batch Loss: 0.555099
+[Info] 2025-06-11 00:06:25 Epoch 169 | Batch 304/304 | Batch Loss: 0.615569
+[Info] 2025-06-11 00:06:25 Validating after epoch 169 ...
+[Info] 2025-06-11 00:06:25 Validation 20/38 | Batch Loss: 0.000266
+[Info] 2025-06-11 00:06:26 Validation 38/38 | Batch Loss: 0.000767
+[Info] 2025-06-11 00:06:26 Epoch [169/200] Train Loss: 0.537412 | Val Loss: 0.006775
+[Info] 2025-06-11 00:06:26 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:06:26 Starting epoch 170/200 ...
+[Info] 2025-06-11 00:06:28 Epoch 170 | Batch 100/304 | Batch Loss: 0.587808
+[Info] 2025-06-11 00:06:31 Epoch 170 | Batch 200/304 | Batch Loss: 0.556921
+[Info] 2025-06-11 00:06:34 Epoch 170 | Batch 300/304 | Batch Loss: 0.616166
+[Info] 2025-06-11 00:06:34 Epoch 170 | Batch 304/304 | Batch Loss: 0.532765
+[Info] 2025-06-11 00:06:34 Validating after epoch 170 ...
+[Info] 2025-06-11 00:06:34 Validation 20/38 | Batch Loss: 0.000266
+[Info] 2025-06-11 00:06:34 Validation 38/38 | Batch Loss: 0.000767
+[Info] 2025-06-11 00:06:34 Epoch [170/200] Train Loss: 0.535908 | Val Loss: 0.006773
+[Info] 2025-06-11 00:06:34 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:06:34 Starting epoch 171/200 ...
+[Info] 2025-06-11 00:06:38 Epoch 171 | Batch 100/304 | Batch Loss: 0.554849
+[Info] 2025-06-11 00:06:41 Epoch 171 | Batch 200/304 | Batch Loss: 0.576674
+[Info] 2025-06-11 00:06:43 Epoch 171 | Batch 300/304 | Batch Loss: 0.486054
+[Info] 2025-06-11 00:06:43 Epoch 171 | Batch 304/304 | Batch Loss: 0.440223
+[Info] 2025-06-11 00:06:43 Validating after epoch 171 ...
+[Info] 2025-06-11 00:06:44 Validation 20/38 | Batch Loss: 0.000266
+[Info] 2025-06-11 00:06:44 Validation 38/38 | Batch Loss: 0.000767
+[Info] 2025-06-11 00:06:44 Epoch [171/200] Train Loss: 0.532847 | Val Loss: 0.006773
+[Info] 2025-06-11 00:06:44 Starting epoch 172/200 ...
+[Info] 2025-06-11 00:06:47 Epoch 172 | Batch 100/304 | Batch Loss: 0.492708
+[Info] 2025-06-11 00:06:49 Epoch 172 | Batch 200/304 | Batch Loss: 0.502513
+[Info] 2025-06-11 00:06:52 Epoch 172 | Batch 300/304 | Batch Loss: 0.581520
+[Info] 2025-06-11 00:06:52 Epoch 172 | Batch 304/304 | Batch Loss: 0.533823
+[Info] 2025-06-11 00:06:52 Validating after epoch 172 ...
+[Info] 2025-06-11 00:06:52 Validation 20/38 | Batch Loss: 0.000265
+[Info] 2025-06-11 00:06:53 Validation 38/38 | Batch Loss: 0.000765
+[Info] 2025-06-11 00:06:53 Epoch [172/200] Train Loss: 0.537244 | Val Loss: 0.006771
+[Info] 2025-06-11 00:06:53 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:06:53 Starting epoch 173/200 ...
+[Info] 2025-06-11 00:06:56 Epoch 173 | Batch 100/304 | Batch Loss: 0.432066
+[Info] 2025-06-11 00:06:59 Epoch 173 | Batch 200/304 | Batch Loss: 0.474821
+[Info] 2025-06-11 00:07:02 Epoch 173 | Batch 300/304 | Batch Loss: 0.607069
+[Info] 2025-06-11 00:07:02 Epoch 173 | Batch 304/304 | Batch Loss: 0.722882
+[Info] 2025-06-11 00:07:02 Validating after epoch 173 ...
+[Info] 2025-06-11 00:07:02 Validation 20/38 | Batch Loss: 0.000266
+[Info] 2025-06-11 00:07:02 Validation 38/38 | Batch Loss: 0.000762
+[Info] 2025-06-11 00:07:02 Epoch [173/200] Train Loss: 0.538902 | Val Loss: 0.006765
+[Info] 2025-06-11 00:07:02 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:07:02 Starting epoch 174/200 ...
+[Info] 2025-06-11 00:07:06 Epoch 174 | Batch 100/304 | Batch Loss: 0.513223
+[Info] 2025-06-11 00:07:09 Epoch 174 | Batch 200/304 | Batch Loss: 0.466518
+[Info] 2025-06-11 00:07:12 Epoch 174 | Batch 300/304 | Batch Loss: 0.508538
+[Info] 2025-06-11 00:07:12 Epoch 174 | Batch 304/304 | Batch Loss: 0.573904
+[Info] 2025-06-11 00:07:12 Validating after epoch 174 ...
+[Info] 2025-06-11 00:07:13 Validation 20/38 | Batch Loss: 0.000261
+[Info] 2025-06-11 00:07:13 Validation 38/38 | Batch Loss: 0.000754
+[Info] 2025-06-11 00:07:13 Epoch [174/200] Train Loss: 0.533673 | Val Loss: 0.006750
+[Info] 2025-06-11 00:07:13 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:07:13 Starting epoch 175/200 ...
+[Info] 2025-06-11 00:07:16 Epoch 175 | Batch 100/304 | Batch Loss: 0.477182
+[Info] 2025-06-11 00:07:20 Epoch 175 | Batch 200/304 | Batch Loss: 0.509077
+[Info] 2025-06-11 00:07:22 Epoch 175 | Batch 300/304 | Batch Loss: 0.632554
+[Info] 2025-06-11 00:07:23 Epoch 175 | Batch 304/304 | Batch Loss: 0.495542
+[Info] 2025-06-11 00:07:23 Validating after epoch 175 ...
+[Info] 2025-06-11 00:07:23 Validation 20/38 | Batch Loss: 0.000262
+[Info] 2025-06-11 00:07:23 Validation 38/38 | Batch Loss: 0.000750
+[Info] 2025-06-11 00:07:23 Epoch [175/200] Train Loss: 0.533689 | Val Loss: 0.006737
+[Info] 2025-06-11 00:07:23 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:07:23 Starting epoch 176/200 ...
+[Info] 2025-06-11 00:07:26 Epoch 176 | Batch 100/304 | Batch Loss: 0.538925
+[Info] 2025-06-11 00:07:29 Epoch 176 | Batch 200/304 | Batch Loss: 0.533936
+[Info] 2025-06-11 00:07:32 Epoch 176 | Batch 300/304 | Batch Loss: 0.437677
+[Info] 2025-06-11 00:07:32 Epoch 176 | Batch 304/304 | Batch Loss: 0.560932
+[Info] 2025-06-11 00:07:32 Validating after epoch 176 ...
+[Info] 2025-06-11 00:07:32 Validation 20/38 | Batch Loss: 0.000263
+[Info] 2025-06-11 00:07:32 Validation 38/38 | Batch Loss: 0.000748
+[Info] 2025-06-11 00:07:32 Epoch [176/200] Train Loss: 0.537901 | Val Loss: 0.006718
+[Info] 2025-06-11 00:07:32 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:07:32 Starting epoch 177/200 ...
+[Info] 2025-06-11 00:07:35 Epoch 177 | Batch 100/304 | Batch Loss: 0.416695
+[Info] 2025-06-11 00:07:39 Epoch 177 | Batch 200/304 | Batch Loss: 0.563354
+[Info] 2025-06-11 00:07:42 Epoch 177 | Batch 300/304 | Batch Loss: 0.542745
+[Info] 2025-06-11 00:07:42 Epoch 177 | Batch 304/304 | Batch Loss: 0.457101
+[Info] 2025-06-11 00:07:42 Validating after epoch 177 ...
+[Info] 2025-06-11 00:07:42 Validation 20/38 | Batch Loss: 0.000254
+[Info] 2025-06-11 00:07:42 Validation 38/38 | Batch Loss: 0.000734
+[Info] 2025-06-11 00:07:42 Epoch [177/200] Train Loss: 0.535281 | Val Loss: 0.006668
+[Info] 2025-06-11 00:07:42 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:07:42 Starting epoch 178/200 ...
+[Info] 2025-06-11 00:07:45 Epoch 178 | Batch 100/304 | Batch Loss: 0.588951
+[Info] 2025-06-11 00:07:48 Epoch 178 | Batch 200/304 | Batch Loss: 0.487145
+[Info] 2025-06-11 00:07:52 Epoch 178 | Batch 300/304 | Batch Loss: 0.511082
+[Info] 2025-06-11 00:07:52 Epoch 178 | Batch 304/304 | Batch Loss: 0.533504
+[Info] 2025-06-11 00:07:52 Validating after epoch 178 ...
+[Info] 2025-06-11 00:07:52 Validation 20/38 | Batch Loss: 0.000245
+[Info] 2025-06-11 00:07:52 Validation 38/38 | Batch Loss: 0.000717
+[Info] 2025-06-11 00:07:52 Epoch [178/200] Train Loss: 0.531407 | Val Loss: 0.006636
+[Info] 2025-06-11 00:07:52 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:07:52 Starting epoch 179/200 ...
+[Info] 2025-06-11 00:07:55 Epoch 179 | Batch 100/304 | Batch Loss: 0.550173
+[Info] 2025-06-11 00:07:59 Epoch 179 | Batch 200/304 | Batch Loss: 0.572944
+[Info] 2025-06-11 00:08:01 Epoch 179 | Batch 300/304 | Batch Loss: 0.465698
+[Info] 2025-06-11 00:08:02 Epoch 179 | Batch 304/304 | Batch Loss: 0.573142
+[Info] 2025-06-11 00:08:02 Validating after epoch 179 ...
+[Info] 2025-06-11 00:08:02 Validation 20/38 | Batch Loss: 0.000247
+[Info] 2025-06-11 00:08:02 Validation 38/38 | Batch Loss: 0.000702
+[Info] 2025-06-11 00:08:02 Epoch [179/200] Train Loss: 0.537230 | Val Loss: 0.006570
+[Info] 2025-06-11 00:08:02 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:08:02 Starting epoch 180/200 ...
+[Info] 2025-06-11 00:08:06 Epoch 180 | Batch 100/304 | Batch Loss: 0.545542
+[Info] 2025-06-11 00:08:09 Epoch 180 | Batch 200/304 | Batch Loss: 0.512329
+[Info] 2025-06-11 00:08:12 Epoch 180 | Batch 300/304 | Batch Loss: 0.562180
+[Info] 2025-06-11 00:08:12 Epoch 180 | Batch 304/304 | Batch Loss: 0.588145
+[Info] 2025-06-11 00:08:12 Validating after epoch 180 ...
+[Info] 2025-06-11 00:08:12 Validation 20/38 | Batch Loss: 0.000235
+[Info] 2025-06-11 00:08:12 Validation 38/38 | Batch Loss: 0.000681
+[Info] 2025-06-11 00:08:12 Epoch [180/200] Train Loss: 0.539186 | Val Loss: 0.006515
+[Info] 2025-06-11 00:08:12 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:08:12 Starting epoch 181/200 ...
+[Info] 2025-06-11 00:08:15 Epoch 181 | Batch 100/304 | Batch Loss: 0.585324
+[Info] 2025-06-11 00:08:18 Epoch 181 | Batch 200/304 | Batch Loss: 0.547848
+[Info] 2025-06-11 00:08:21 Epoch 181 | Batch 300/304 | Batch Loss: 0.494087
+[Info] 2025-06-11 00:08:21 Epoch 181 | Batch 304/304 | Batch Loss: 0.464485
+[Info] 2025-06-11 00:08:21 Validating after epoch 181 ...
+[Info] 2025-06-11 00:08:21 Validation 20/38 | Batch Loss: 0.000236
+[Info] 2025-06-11 00:08:22 Validation 38/38 | Batch Loss: 0.000672
+[Info] 2025-06-11 00:08:22 Epoch [181/200] Train Loss: 0.538132 | Val Loss: 0.006470
+[Info] 2025-06-11 00:08:22 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:08:22 Starting epoch 182/200 ...
+[Info] 2025-06-11 00:08:25 Epoch 182 | Batch 100/304 | Batch Loss: 0.372431
+[Info] 2025-06-11 00:08:28 Epoch 182 | Batch 200/304 | Batch Loss: 0.586821
+[Info] 2025-06-11 00:08:30 Epoch 182 | Batch 300/304 | Batch Loss: 0.532822
+[Info] 2025-06-11 00:08:30 Epoch 182 | Batch 304/304 | Batch Loss: 0.591099
+[Info] 2025-06-11 00:08:30 Validating after epoch 182 ...
+[Info] 2025-06-11 00:08:30 Validation 20/38 | Batch Loss: 0.000231
+[Info] 2025-06-11 00:08:31 Validation 38/38 | Batch Loss: 0.000659
+[Info] 2025-06-11 00:08:31 Epoch [182/200] Train Loss: 0.529180 | Val Loss: 0.006408
+[Info] 2025-06-11 00:08:31 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:08:31 Starting epoch 183/200 ...
+[Info] 2025-06-11 00:08:34 Epoch 183 | Batch 100/304 | Batch Loss: 0.637268
+[Info] 2025-06-11 00:08:37 Epoch 183 | Batch 200/304 | Batch Loss: 0.570450
+[Info] 2025-06-11 00:08:40 Epoch 183 | Batch 300/304 | Batch Loss: 0.544578
+[Info] 2025-06-11 00:08:40 Epoch 183 | Batch 304/304 | Batch Loss: 0.626371
+[Info] 2025-06-11 00:08:40 Validating after epoch 183 ...
+[Info] 2025-06-11 00:08:40 Validation 20/38 | Batch Loss: 0.000236
+[Info] 2025-06-11 00:08:40 Validation 38/38 | Batch Loss: 0.000662
+[Info] 2025-06-11 00:08:40 Epoch [183/200] Train Loss: 0.536529 | Val Loss: 0.006382
+[Info] 2025-06-11 00:08:40 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:08:40 Starting epoch 184/200 ...
+[Info] 2025-06-11 00:08:43 Epoch 184 | Batch 100/304 | Batch Loss: 0.646509
+[Info] 2025-06-11 00:08:46 Epoch 184 | Batch 200/304 | Batch Loss: 0.503101
+[Info] 2025-06-11 00:08:49 Epoch 184 | Batch 300/304 | Batch Loss: 0.544603
+[Info] 2025-06-11 00:08:49 Epoch 184 | Batch 304/304 | Batch Loss: 0.644555
+[Info] 2025-06-11 00:08:49 Validating after epoch 184 ...
+[Info] 2025-06-11 00:08:49 Validation 20/38 | Batch Loss: 0.000230
+[Info] 2025-06-11 00:08:49 Validation 38/38 | Batch Loss: 0.000650
+[Info] 2025-06-11 00:08:49 Epoch [184/200] Train Loss: 0.540732 | Val Loss: 0.006343
+[Info] 2025-06-11 00:08:49 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:08:49 Starting epoch 185/200 ...
+[Info] 2025-06-11 00:08:53 Epoch 185 | Batch 100/304 | Batch Loss: 0.546325
+[Info] 2025-06-11 00:08:56 Epoch 185 | Batch 200/304 | Batch Loss: 0.562437
+[Info] 2025-06-11 00:08:59 Epoch 185 | Batch 300/304 | Batch Loss: 0.543216
+[Info] 2025-06-11 00:08:59 Epoch 185 | Batch 304/304 | Batch Loss: 0.517690
+[Info] 2025-06-11 00:08:59 Validating after epoch 185 ...
+[Info] 2025-06-11 00:08:59 Validation 20/38 | Batch Loss: 0.000221
+[Info] 2025-06-11 00:08:59 Validation 38/38 | Batch Loss: 0.000634
+[Info] 2025-06-11 00:08:59 Epoch [185/200] Train Loss: 0.541661 | Val Loss: 0.006286
+[Info] 2025-06-11 00:08:59 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:08:59 Starting epoch 186/200 ...
+[Info] 2025-06-11 00:09:03 Epoch 186 | Batch 100/304 | Batch Loss: 0.455461
+[Info] 2025-06-11 00:09:06 Epoch 186 | Batch 200/304 | Batch Loss: 0.458055
+[Info] 2025-06-11 00:09:09 Epoch 186 | Batch 300/304 | Batch Loss: 0.538274
+[Info] 2025-06-11 00:09:09 Epoch 186 | Batch 304/304 | Batch Loss: 0.551110
+[Info] 2025-06-11 00:09:09 Validating after epoch 186 ...
+[Info] 2025-06-11 00:09:09 Validation 20/38 | Batch Loss: 0.000216
+[Info] 2025-06-11 00:09:09 Validation 38/38 | Batch Loss: 0.000622
+[Info] 2025-06-11 00:09:09 Epoch [186/200] Train Loss: 0.531810 | Val Loss: 0.006250
+[Info] 2025-06-11 00:09:09 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:09:09 Starting epoch 187/200 ...
+[Info] 2025-06-11 00:09:13 Epoch 187 | Batch 100/304 | Batch Loss: 0.524870
+[Info] 2025-06-11 00:09:16 Epoch 187 | Batch 200/304 | Batch Loss: 0.516031
+[Info] 2025-06-11 00:09:19 Epoch 187 | Batch 300/304 | Batch Loss: 0.614617
+[Info] 2025-06-11 00:09:19 Epoch 187 | Batch 304/304 | Batch Loss: 0.477609
+[Info] 2025-06-11 00:09:19 Validating after epoch 187 ...
+[Info] 2025-06-11 00:09:19 Validation 20/38 | Batch Loss: 0.000215
+[Info] 2025-06-11 00:09:19 Validation 38/38 | Batch Loss: 0.000616
+[Info] 2025-06-11 00:09:19 Epoch [187/200] Train Loss: 0.534953 | Val Loss: 0.006230
+[Info] 2025-06-11 00:09:19 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:09:19 Starting epoch 188/200 ...
+[Info] 2025-06-11 00:09:23 Epoch 188 | Batch 100/304 | Batch Loss: 0.495480
+[Info] 2025-06-11 00:09:26 Epoch 188 | Batch 200/304 | Batch Loss: 0.525839
+[Info] 2025-06-11 00:09:29 Epoch 188 | Batch 300/304 | Batch Loss: 0.590931
+[Info] 2025-06-11 00:09:29 Epoch 188 | Batch 304/304 | Batch Loss: 0.559973
+[Info] 2025-06-11 00:09:29 Validating after epoch 188 ...
+[Info] 2025-06-11 00:09:29 Validation 20/38 | Batch Loss: 0.000215
+[Info] 2025-06-11 00:09:29 Validation 38/38 | Batch Loss: 0.000617
+[Info] 2025-06-11 00:09:29 Epoch [188/200] Train Loss: 0.542956 | Val Loss: 0.006218
+[Info] 2025-06-11 00:09:29 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:09:29 Starting epoch 189/200 ...
+[Info] 2025-06-11 00:09:33 Epoch 189 | Batch 100/304 | Batch Loss: 0.548768
+[Info] 2025-06-11 00:09:36 Epoch 189 | Batch 200/304 | Batch Loss: 0.537136
+[Info] 2025-06-11 00:09:39 Epoch 189 | Batch 300/304 | Batch Loss: 0.506809
+[Info] 2025-06-11 00:09:39 Epoch 189 | Batch 304/304 | Batch Loss: 0.344442
+[Info] 2025-06-11 00:09:39 Validating after epoch 189 ...
+[Info] 2025-06-11 00:09:39 Validation 20/38 | Batch Loss: 0.000213
+[Info] 2025-06-11 00:09:39 Validation 38/38 | Batch Loss: 0.000610
+[Info] 2025-06-11 00:09:39 Epoch [189/200] Train Loss: 0.537756 | Val Loss: 0.006207
+[Info] 2025-06-11 00:09:39 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:09:39 Starting epoch 190/200 ...
+[Info] 2025-06-11 00:09:42 Epoch 190 | Batch 100/304 | Batch Loss: 0.507487
+[Info] 2025-06-11 00:09:45 Epoch 190 | Batch 200/304 | Batch Loss: 0.418979
+[Info] 2025-06-11 00:09:48 Epoch 190 | Batch 300/304 | Batch Loss: 0.622382
+[Info] 2025-06-11 00:09:48 Epoch 190 | Batch 304/304 | Batch Loss: 0.478728
+[Info] 2025-06-11 00:09:48 Validating after epoch 190 ...
+[Info] 2025-06-11 00:09:48 Validation 20/38 | Batch Loss: 0.000213
+[Info] 2025-06-11 00:09:48 Validation 38/38 | Batch Loss: 0.000609
+[Info] 2025-06-11 00:09:48 Epoch [190/200] Train Loss: 0.534868 | Val Loss: 0.006207
+[Info] 2025-06-11 00:09:48 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:09:48 Starting epoch 191/200 ...
+[Info] 2025-06-11 00:09:51 Epoch 191 | Batch 100/304 | Batch Loss: 0.533429
+[Info] 2025-06-11 00:09:54 Epoch 191 | Batch 200/304 | Batch Loss: 0.609095
+[Info] 2025-06-11 00:09:57 Epoch 191 | Batch 300/304 | Batch Loss: 0.534424
+[Info] 2025-06-11 00:09:57 Epoch 191 | Batch 304/304 | Batch Loss: 0.424976
+[Info] 2025-06-11 00:09:57 Validating after epoch 191 ...
+[Info] 2025-06-11 00:09:57 Validation 20/38 | Batch Loss: 0.000213
+[Info] 2025-06-11 00:09:57 Validation 38/38 | Batch Loss: 0.000609
+[Info] 2025-06-11 00:09:57 Epoch [191/200] Train Loss: 0.535709 | Val Loss: 0.006207
+[Info] 2025-06-11 00:09:57 Starting epoch 192/200 ...
+[Info] 2025-06-11 00:10:00 Epoch 192 | Batch 100/304 | Batch Loss: 0.513046
+[Info] 2025-06-11 00:10:03 Epoch 192 | Batch 200/304 | Batch Loss: 0.489581
+[Info] 2025-06-11 00:10:06 Epoch 192 | Batch 300/304 | Batch Loss: 0.497013
+[Info] 2025-06-11 00:10:06 Epoch 192 | Batch 304/304 | Batch Loss: 0.614170
+[Info] 2025-06-11 00:10:06 Validating after epoch 192 ...
+[Info] 2025-06-11 00:10:07 Validation 20/38 | Batch Loss: 0.000213
+[Info] 2025-06-11 00:10:07 Validation 38/38 | Batch Loss: 0.000609
+[Info] 2025-06-11 00:10:07 Epoch [192/200] Train Loss: 0.538843 | Val Loss: 0.006206
+[Info] 2025-06-11 00:10:07 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:10:07 Starting epoch 193/200 ...
+[Info] 2025-06-11 00:10:10 Epoch 193 | Batch 100/304 | Batch Loss: 0.539497
+[Info] 2025-06-11 00:10:13 Epoch 193 | Batch 200/304 | Batch Loss: 0.518958
+[Info] 2025-06-11 00:10:16 Epoch 193 | Batch 300/304 | Batch Loss: 0.557779
+[Info] 2025-06-11 00:10:16 Epoch 193 | Batch 304/304 | Batch Loss: 0.489317
+[Info] 2025-06-11 00:10:16 Validating after epoch 193 ...
+[Info] 2025-06-11 00:10:16 Validation 20/38 | Batch Loss: 0.000210
+[Info] 2025-06-11 00:10:16 Validation 38/38 | Batch Loss: 0.000604
+[Info] 2025-06-11 00:10:16 Epoch [193/200] Train Loss: 0.532164 | Val Loss: 0.006196
+[Info] 2025-06-11 00:10:16 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:10:16 Starting epoch 194/200 ...
+[Info] 2025-06-11 00:10:19 Epoch 194 | Batch 100/304 | Batch Loss: 0.465123
+[Info] 2025-06-11 00:10:22 Epoch 194 | Batch 200/304 | Batch Loss: 0.576390
+[Info] 2025-06-11 00:10:25 Epoch 194 | Batch 300/304 | Batch Loss: 0.515401
+[Info] 2025-06-11 00:10:25 Epoch 194 | Batch 304/304 | Batch Loss: 0.563987
+[Info] 2025-06-11 00:10:25 Validating after epoch 194 ...
+[Info] 2025-06-11 00:10:26 Validation 20/38 | Batch Loss: 0.000212
+[Info] 2025-06-11 00:10:26 Validation 38/38 | Batch Loss: 0.000601
+[Info] 2025-06-11 00:10:26 Epoch [194/200] Train Loss: 0.532616 | Val Loss: 0.006189
+[Info] 2025-06-11 00:10:26 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:10:26 Starting epoch 195/200 ...
+[Info] 2025-06-11 00:10:29 Epoch 195 | Batch 100/304 | Batch Loss: 0.490337
+[Info] 2025-06-11 00:10:32 Epoch 195 | Batch 200/304 | Batch Loss: 0.599364
+[Info] 2025-06-11 00:10:34 Epoch 195 | Batch 300/304 | Batch Loss: 0.562530
+[Info] 2025-06-11 00:10:35 Epoch 195 | Batch 304/304 | Batch Loss: 0.436883
+[Info] 2025-06-11 00:10:35 Validating after epoch 195 ...
+[Info] 2025-06-11 00:10:35 Validation 20/38 | Batch Loss: 0.000210
+[Info] 2025-06-11 00:10:35 Validation 38/38 | Batch Loss: 0.000595
+[Info] 2025-06-11 00:10:35 Epoch [195/200] Train Loss: 0.530003 | Val Loss: 0.006164
+[Info] 2025-06-11 00:10:35 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:10:35 Starting epoch 196/200 ...
+[Info] 2025-06-11 00:10:38 Epoch 196 | Batch 100/304 | Batch Loss: 0.518925
+[Info] 2025-06-11 00:10:41 Epoch 196 | Batch 200/304 | Batch Loss: 0.534969
+[Info] 2025-06-11 00:10:44 Epoch 196 | Batch 300/304 | Batch Loss: 0.496497
+[Info] 2025-06-11 00:10:44 Epoch 196 | Batch 304/304 | Batch Loss: 0.461927
+[Info] 2025-06-11 00:10:44 Validating after epoch 196 ...
+[Info] 2025-06-11 00:10:45 Validation 20/38 | Batch Loss: 0.000210
+[Info] 2025-06-11 00:10:45 Validation 38/38 | Batch Loss: 0.000587
+[Info] 2025-06-11 00:10:45 Epoch [196/200] Train Loss: 0.533972 | Val Loss: 0.006154
+[Info] 2025-06-11 00:10:45 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:10:45 Starting epoch 197/200 ...
+[Info] 2025-06-11 00:10:48 Epoch 197 | Batch 100/304 | Batch Loss: 0.495047
+[Info] 2025-06-11 00:10:51 Epoch 197 | Batch 200/304 | Batch Loss: 0.461749
+[Info] 2025-06-11 00:10:54 Epoch 197 | Batch 300/304 | Batch Loss: 0.666016
+[Info] 2025-06-11 00:10:54 Epoch 197 | Batch 304/304 | Batch Loss: 0.475548
+[Info] 2025-06-11 00:10:54 Validating after epoch 197 ...
+[Info] 2025-06-11 00:10:54 Validation 20/38 | Batch Loss: 0.000214
+[Info] 2025-06-11 00:10:54 Validation 38/38 | Batch Loss: 0.000600
+[Info] 2025-06-11 00:10:54 Epoch [197/200] Train Loss: 0.540636 | Val Loss: 0.006133
+[Info] 2025-06-11 00:10:54 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:10:54 Starting epoch 198/200 ...
+[Info] 2025-06-11 00:10:58 Epoch 198 | Batch 100/304 | Batch Loss: 0.514262
+[Info] 2025-06-11 00:11:01 Epoch 198 | Batch 200/304 | Batch Loss: 0.600366
+[Info] 2025-06-11 00:11:04 Epoch 198 | Batch 300/304 | Batch Loss: 0.553316
+[Info] 2025-06-11 00:11:04 Epoch 198 | Batch 304/304 | Batch Loss: 0.628419
+[Info] 2025-06-11 00:11:04 Validating after epoch 198 ...
+[Info] 2025-06-11 00:11:05 Validation 20/38 | Batch Loss: 0.000211
+[Info] 2025-06-11 00:11:05 Validation 38/38 | Batch Loss: 0.000588
+[Info] 2025-06-11 00:11:05 Epoch [198/200] Train Loss: 0.534829 | Val Loss: 0.006099
+[Info] 2025-06-11 00:11:05 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:11:05 Starting epoch 199/200 ...
+[Info] 2025-06-11 00:11:08 Epoch 199 | Batch 100/304 | Batch Loss: 0.512006
+[Info] 2025-06-11 00:11:12 Epoch 199 | Batch 200/304 | Batch Loss: 0.648901
+[Info] 2025-06-11 00:11:15 Epoch 199 | Batch 300/304 | Batch Loss: 0.573274
+[Info] 2025-06-11 00:11:15 Epoch 199 | Batch 304/304 | Batch Loss: 0.560260
+[Info] 2025-06-11 00:11:15 Validating after epoch 199 ...
+[Info] 2025-06-11 00:11:15 Validation 20/38 | Batch Loss: 0.000197
+[Info] 2025-06-11 00:11:15 Validation 38/38 | Batch Loss: 0.000556
+[Info] 2025-06-11 00:11:15 Epoch [199/200] Train Loss: 0.540787 | Val Loss: 0.006027
+[Info] 2025-06-11 00:11:15 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:11:15 Starting epoch 200/200 ...
+[Info] 2025-06-11 00:11:19 Epoch 200 | Batch 100/304 | Batch Loss: 0.547540
+[Info] 2025-06-11 00:11:22 Epoch 200 | Batch 200/304 | Batch Loss: 0.542981
+[Info] 2025-06-11 00:11:26 Epoch 200 | Batch 300/304 | Batch Loss: 0.607312
+[Info] 2025-06-11 00:11:26 Epoch 200 | Batch 304/304 | Batch Loss: 0.518977
+[Info] 2025-06-11 00:11:26 Validating after epoch 200 ...
+[Info] 2025-06-11 00:11:26 Validation 20/38 | Batch Loss: 0.000196
+[Info] 2025-06-11 00:11:26 Validation 38/38 | Batch Loss: 0.000547
+[Info] 2025-06-11 00:11:26 Epoch [200/200] Train Loss: 0.538578 | Val Loss: 0.005975
+[Info] 2025-06-11 00:11:26 Best model saved at training\trained_models\transformerpi0fast_233910062025.pth!
+[Info] 2025-06-11 00:11:26 Loading best model for final test evaluation...
+[Info] 2025-06-11 00:11:27 Final Test Loss: 0.006140
+[Info] 2025-06-11 00:11:28 Loss curve saved to training\loss_pics\transformerpi0fast_233910062025.png
+[Info] 2025-06-11 00:11:28 Training finished. Total time: 0:31:41.385171

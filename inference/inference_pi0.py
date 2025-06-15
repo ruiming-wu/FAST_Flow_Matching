@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
-from models.transformer_pi0 import TransformerPi0
+from model.transformer_pi0 import TransformerPi0
 
 def infer_pi0_action_sequence(model_path, state_vec, chunk_len=50, device='cpu', num_steps=10):
     # 超参数（需与训练一致）
@@ -49,7 +49,7 @@ def infer_pi0_action_sequence(model_path, state_vec, chunk_len=50, device='cpu',
 
 # ====== 用法示例 ======
 if __name__ == "__main__":
-    model_path = "training/trained_models/transformerpi0_134404062025.pth"
+    model_path = "train/trained_models/transformerpi0_134404062025.pth"
     current_state = np.array([0.005, 0.0, -0.01, 0.0])
     pred_actions = infer_pi0_action_sequence(model_path, current_state, chunk_len=50, device='cuda' if torch.cuda.is_available() else 'cpu')
     print("Predicted action sequence shape:", pred_actions.shape)
