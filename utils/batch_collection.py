@@ -1,6 +1,6 @@
 import os
 import time
 
-for idx in range(60, 101):
+for idx in range(501, 1001):
     os.system(f"python -m data_collection.main --idx {idx}")
-    time.sleep(5.0)
+    time.sleep(3.0)
