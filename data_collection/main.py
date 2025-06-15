@@ -58,7 +58,7 @@ if __name__ == "__main__":
         time_sleep=0.0
     )
 
-    # 3. 拆分并保存轨迹
+    # 3. 保存轨迹
     save_trajectory(obs_arr, act_arr, idx, "data/trajs")
 
     # 4. 保存参数和初始状态
