@@ -12,29 +12,20 @@ def run_pi0_in_env(
     device='cpu',
     render=False,
     random_init=True,
-    seed=None,
     replan_interval=16
 ):
     # 环境初始化
-    env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode="human" if render else None)
-    if seed is not None:
-        env.reset(seed=seed)
-        np.random.seed(seed)
-        torch.manual_seed(seed)
-    else:
-        env.reset()
-
-    # 随机化初始状态
+    env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.1, render_mode="human" if render else None)
+    obs, _ = env.reset()
     if random_init:
-        theta = np.random.uniform(-0.01, 0.01)
-        theta_dot = np.random.uniform(-0.01, 0.01)
-        init_state = {
-            "qpos": np.array([0.0, theta]),
-            "qvel": np.array([0.0, theta_dot])
-        }
-        obs, _ = env.reset(options={"qpos": init_state["qpos"], "qvel": init_state["qvel"]})
+        qpos = np.random.uniform(-0.5, 0.5, size=env.unwrapped.data.qpos.shape)
+        qvel = np.random.uniform(-0.5, 0.5, size=env.unwrapped.data.qvel.shape)
+        env.unwrapped.set_state(qpos, qvel)
+        obs = np.concatenate([env.unwrapped.data.qpos, env.unwrapped.data.qvel]).ravel()
     else:
-        obs, _ = env.reset()
+        env.unwrapped.set_state(np.array([0.0, 0.0]), np.array([0.0, 0.0]))
+        obs = np.concatenate([env.unwrapped.data.qpos, env.unwrapped.data.qvel]).ravel()
+    print("Initial observation:", obs)
 
     obs_list, act_list, reward_list = [], [], []
     t = 0
@@ -93,13 +84,12 @@ def run_pi0_in_env(
     print(f"Total reward: {reward_arr.sum():.2f}")
 
 if __name__ == "__main__":
-    model_path = "train/trained_models/transformerpi0_222107062025.pth"
+    model_path = "train/trained_models/tinypi0_194916062025.pth"
     run_pi0_in_env(
         model_path=model_path,
         chunk_len=50,
         device='cuda' if torch.cuda.is_available() else 'cpu',
         render=True,         # True可视化环境
         random_init=True,    # True为随机初始状态
-        seed=None,           # 可指定随机种子
-        replan_interval=25   # 每16步重新推理一次
+        replan_interval=10   # 每25步重新推理一次
     )
