@@ -20,7 +20,7 @@ A small-scale control modeling project comparing FAST with original action chunk
 
 ## 🧪 Simulation Setup
 
-We use the **Gymnasium MuJoCo `InvertedPendulum-v5`** environment, with custom modifications for better control and data diversity:
+Use the **Gymnasium MuJoCo `InvertedPendulum-v5`** environment, with custom modifications for better control and data diversity:
 
 ### Environment Modifications
 - **Angle threshold**: increased from ±0.2 rad → **±0.5 rad**
@@ -36,7 +36,7 @@ We use the **Gymnasium MuJoCo `InvertedPendulum-v5`** environment, with custom m
 ### Trajectory Generation
 - **Length**: 100 time steps (~2 seconds)
 - **Stabilization**: pole angle `theta` typically converges to 0 within ~50 steps
-- **Action noise**: final PID output perturbed by **±0.02 N** to simulate actuation uncertainty and environment noise
+- **Action noise**: final PID output perturbed by **±0.02 N** to simulate actuation uncertainty and environment noise, but only record the original PID output as training data
 - **Randomized initial states**:
   - Cart position ∈ [-0.5 m, 0.5 m]
   - Cart velocity ∈ [-0.5 m/s, 0.5 m/s]
