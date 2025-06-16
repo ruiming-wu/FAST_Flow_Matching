@@ -18,32 +18,26 @@ A small-scale control modeling project comparing FAST with original action chunk
 - **π₀.₅: A Vision-Language-Action Model with Open-World Generalization**  
   https://arxiv.org/abs/2504.16054
 
-## 🧪 Simulation Setup
+## 📁 Repository Structure
 
-Use the **Gymnasium MuJoCo `InvertedPendulum-v5`** environment, with custom modifications for better control and data diversity:
+This repository is organized into several main modules, each responsible for a specific aspect of the project:
 
-### Environment Modifications
-- **Angle threshold**: increased from ±0.2 rad → **±0.5 rad**
-- **Cart position range**: from [-1.0, 1.0] → **[-10.0, 10.0]**  
+- **data/**  
+  Collected trajectory data, parameters, and visualizations.  
 
-### Controller Design
-- **Nested PID structure**:
-  - **Outer loop**: keeps cart velocity at 0 → outputs desired pole angle ∈ [-0.3 rad, 0.3 rad]
-  - **Inner loop**: minimizes angle error → outputs final force ∈ [-3 N, 3 N]
-- **Base parameters** (subject to random perturbation ±10% during data collection):
-  - Kp1 = -3.0, Ki1 = -0.01, Kd1 = -0.15, Kp2 = 0.08, Ki2 = 0.05, Kd2 = 0.0
+- **data_collection/**  
+  Scripts and utilities for generating and saving control trajectories using PID controllers.  
 
-### Trajectory Generation
-- **Length**: 100 time steps (~2 seconds)
-- **Stabilization**: pole angle `theta` typically converges to 0 within ~50 steps
-- **Action noise**: final PID output perturbed by **±0.02 N** to simulate actuation uncertainty and environment noise, but only record the original PID output as training data
-- **Randomized initial states**:
-  - Cart position ∈ [-0.5 m, 0.5 m]
-  - Cart velocity ∈ [-0.5 m/s, 0.5 m/s]
-  - Pole angle ∈ [-0.5 rad, 0.5 rad]
-  - Pole angular velocity ∈ [-0.5 rad/s, 0.5 rad/s]
+- **inference/**  
+  Code for running inference and evaluation with trained models. 
 
-### Storage
-- Each trajectory is stored as a `.npy` file, named using a 4-digit index (e.g., `0001.npy`)
-- Files are saved under the `./data/` directory
+- **model/**  
+  Model definitions, including Transformer architectures for sequence modeling and flow matching.  
 
+- **train/**  
+  Training scripts, logs, and checkpoints for model optimization and evaluation.  
+
+- **utils/**  
+  Helpful scripts.
+
+Each module contains a dedicated README with further explanations and usage instructions.
