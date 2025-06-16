@@ -1,22 +1,18 @@
-import os
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.fftpack import dct, idct
 
-trajs_dir = "data/trajs"
 
-for fname in os.listdir(trajs_dir):
-    if fname.endswith(".npy"):
-        path = os.path.join(trajs_dir, fname)
-        try:
-            arr = np.load(path)
-            if arr.shape != (100, 5):
-                print(f"文件 {fname} 形状为 {arr.shape}，不是 (100, 5)")
-            else:
-                last20_mean = np.mean(arr[-20:, 1])
-                if abs(last20_mean) >= 0.01:
-                    print(f"文件 {fname} 后20行第2列均值为 {last20_mean:.4f}，绝对值不小于0.01")
-        except Exception as e:
-            print(f"文件 {fname} 加载失败，错误信息：{e}")
+x = np.random.randn(8)
+y1 = dct(x)               # 默认 norm=None
+y2 = dct(x, norm='ortho') # 正交归一化
 
-print("批量检查完成。")
+# 逆变换
+x1 = idct(y1)             # 不能还原原信号
+x2 = idct(y2, norm='ortho') # 可以精确还原原信号
 
+print("Original signal:", x)
+print("DCT (default norm):", y1)
+print("DCT (ortho norm):", y2)
+print("IDCT (default norm):", x1)
+print("IDCT (ortho norm):", x2)

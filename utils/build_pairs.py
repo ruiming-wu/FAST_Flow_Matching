@@ -1,0 +1,26 @@
+import os
+import numpy as np
+
+trajs_dir = "data/trajs"
+all_states = []
+all_action_chunks = []
+
+for fname in os.listdir(trajs_dir):
+    if fname.endswith(".npy"):
+        arr = np.load(os.path.join(trajs_dir, fname))  # shape: (100, 5)
+        states = arr[:, :4]      # (100, 4)
+        actions = arr[:, 4]      # (100,)
+
+        # 构造26个训练对：每隔2步采样，状态i预测动作i:i+50
+        for i in range(0, 51, 2):  # i = 0, 2, ..., 50
+            state = states[i]              # (4,)
+            action_chunk = actions[i:i+50] # (50,)
+            if action_chunk.shape[0] == 50:
+                all_states.append(state)
+                all_action_chunks.append(action_chunk)
+
+all_states = np.stack(all_states, axis=0)              # (104000, 4)
+all_action_chunks = np.stack(all_action_chunks, axis=0) # (104000, 50)
+
+np.savez("data/training_pairs_original.npz", state=all_states, action_chunk=all_action_chunks)
+print(f"Saved: {all_states.shape[0]} pairs to data/training_pairs_original.npz")
