@@ -8,8 +8,8 @@ class TransformerPi0FAST(nn.Module):
                  num_layers=4,          # number of transformer layers
                  num_heads=4,           # number of attention heads
                  ff_dim=256,            # feedforward hidden dimension
-                 vocab_size=1024,       # token vocabulary size
-                 max_seq_len=64):       # max token sequence length
+                 vocab_size=256,       # token vocabulary size
+                 max_seq_len=25):       # max token sequence length
         super().__init__()
 
         # state embedding

@@ -6,7 +6,7 @@ GAMMA = 10
 data = np.load("data/training_pairs_original.npz")
 action_chunks = data["action_chunk"]  # (N, 50)
 
-special_tokens = ["[BOS]", "[EOS]"]
+special_tokens = ["[BOS]", "[EOS]", "[PAD]", "[UNK]"]
 corpus_path = "fast/tokenizer/fast_tokenizer_corpus.txt"
 vocab_path = "fast/tokenizer/fast_tokenizer_base_vocab.txt"
 

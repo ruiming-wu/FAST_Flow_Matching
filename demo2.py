@@ -1,40 +1,23 @@
-import json
+import numpy as np
 
-# 加载分词器
-with open("fast/tokenizer/fast_tokenizer.json", "r", encoding="utf-8") as f:
-    tokenizer = json.load(f)
-vocab2id = tokenizer["vocab"]
-vocab = set(vocab2id.keys())
+data = np.load("data/training_pairs_fast.npz")
+token_seq = data["token_seq"]  # shape: (N, L)
 
-# 按照 vocab 长度从大到小排序，保证贪心优先匹配长token
-sorted_vocab = sorted(vocab, key=lambda x: -len(x.split(',')))
+# 统计平均长度（不计入0, 1, 2, 3）
+ignore_set = {0, 1, 2, 3}
+lengths = []
+count_dict = {0: 0, 1: 0, 2: 0, 3: 0}
 
-def encode(sequence, sorted_vocab):
-    tokens = sequence.strip().split()
-    result = []
-    i = 0
-    while i < len(tokens):
-        matched = False
-        # 最长优先匹配
-        for l in range(len(tokens), 0, -1):
-            candidate = ",".join(tokens[i:i+l])
-            if candidate in sorted_vocab:
-                result.append(candidate)
-                i += l
-                matched = True
-                break
-        if not matched:
-            # fallback: 单个token
-            result.append(tokens[i])
-            i += 1
-    return result
+for row in token_seq:
+    # 统计特殊值出现次数
+    for v in count_dict:
+        count_dict[v] += np.sum(row == v)
+    # 统计有效长度
+    valid = [x for x in row if x not in ignore_set]
+    lengths.append(len(valid))
 
-# 测试序列
-test_seq = "[BOS] 0 -1 -1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 [EOS]"
-encoded_tokens = encode(test_seq, sorted_vocab)
-encoded_ids = [vocab2id.get(tok, vocab2id.get("[UNK]", -1)) for tok in encoded_tokens]
+avg_len = sum(lengths) / len(lengths) if lengths else 0
 
-# 打印
-print("原始序列:", test_seq)
-print("编码结果（token）:", encoded_tokens)
-print("编码结果（id）:", encoded_ids)
+print(f"token_seq 平均有效长度（不计0,1,2,3）: {avg_len:.6f}")
+for v in count_dict:
+    print(f"token_seq 中 {v} 出现次数: {count_dict[v]}")
