@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # 1. 随机扰动PID参数
     base_params = {
         "Kp1": -3.0, "Ki1": -0.01, "Kd1": -0.15,
-        "Kp2": 0.08, "Ki2": 0.05, "Kd2": 0.0
+        "Kp2": 0.08, "Ki2": 0.05, "Kd2": 0.001
     }
     scale1 = np.random.uniform(0.9, 1.1)
     scale2 = np.random.uniform(0.9, 1.1)
@@ -54,6 +54,7 @@ if __name__ == "__main__":
         Kp2=pid_params["Kp2"], Ki2=pid_params["Ki2"], Kd2=pid_params["Kd2"],
         render=False,
         rand_init=True,
+        rand_init_scale=0.5,
         max_steps=100,
         time_sleep=0.0
     )

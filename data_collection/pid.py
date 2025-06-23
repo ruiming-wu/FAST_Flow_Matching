@@ -29,4 +29,4 @@ class PIDController:
         self.prev_error = error
 
         action = self.Kp * error + self.Ki * self.integral + self.Kd * derivative
-        return np.array([action], dtype=np.float32)
+        return np.array(action, dtype=np.float32).reshape(-1)
