@@ -11,27 +11,25 @@ def run_pi0_in_env(
     chunk_len=50,
     device='cpu',
     render=False,
-    random_init=True,
-    replan_interval=16
+    rand_init=False,
+    rand_init_scale=0.5,
+    replan_interval=25,
+    max_steps=200,
+    time_sleep=0.02
 ):
-    # 环境初始化
-    env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.1, render_mode="human" if render else None)
-    obs, _ = env.reset()
-    if random_init:
-        qpos = np.random.uniform(-0.5, 0.5, size=env.unwrapped.data.qpos.shape)
-        qvel = np.random.uniform(-0.5, 0.5, size=env.unwrapped.data.qvel.shape)
-        env.unwrapped.set_state(qpos, qvel)
-        obs = np.concatenate([env.unwrapped.data.qpos, env.unwrapped.data.qvel]).ravel()
+    if rand_init:
+        env = gym.make("InvertedPendulum-v5", reset_noise_scale=rand_init_scale, render_mode="human" if render else None)
     else:
-        env.unwrapped.set_state(np.array([0.0, 0.0]), np.array([0.0, 0.0]))
-        obs = np.concatenate([env.unwrapped.data.qpos, env.unwrapped.data.qvel]).ravel()
+        env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode="human" if render else None)
+    obs, _ = env.reset()
+
     print("Initial observation:", obs)
 
-    obs_list, act_list, reward_list = [], [], []
+    obs_list, act_list = [], []
     t = 0
     done = False
 
-    while not done and t < 1000:  # 最多执行1000步，防止死循环
+    while not done and t < max_steps:  # 最多执行1000步，防止死循环
         # 重新推理动作序列
         state_vec = obs[:4]
         actions = infer_pi0_action_sequence(
@@ -45,8 +43,7 @@ def run_pi0_in_env(
             action = actions[i]
             obs_list.append(obs)
             act_list.append(action)
-            obs, reward, terminated, truncated, info = env.step(action)
-            reward_list.append(reward)
+            obs, _, terminated, truncated, _ = env.step(action)
             t += 1
             if render:
                 env.render()
@@ -54,13 +51,12 @@ def run_pi0_in_env(
                 print(f"Episode finished at step {t}")
                 done = True
                 break
-            time.sleep(0.05)
+            time.sleep(time_sleep)
 
     env.close()
 
     obs_arr = np.array(obs_list)
     act_arr = np.array(act_list)
-    reward_arr = np.array(reward_list)
 
     # 可视化
     plt.figure(figsize=(10, 4))
@@ -81,15 +77,16 @@ def run_pi0_in_env(
     plt.tight_layout()
     plt.show()
 
-    print(f"Total reward: {reward_arr.sum():.2f}")
-
 if __name__ == "__main__":
-    model_path = "train/trained_models/tinypi0_194916062025.pth"
+    model_path = "train/trained_models/tinypi0_20250620_0133.pth"
     run_pi0_in_env(
         model_path=model_path,
         chunk_len=50,
         device='cuda' if torch.cuda.is_available() else 'cpu',
-        render=True,         # True可视化环境
-        random_init=True,    # True为随机初始状态
-        replan_interval=10   # 每25步重新推理一次
+        render=True,
+        rand_init=True,
+        rand_init_scale=0.5,  
+        replan_interval=10,
+        max_steps=400,
+        time_sleep=0.02
     )
