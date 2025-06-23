@@ -61,7 +61,7 @@ def train_pi0():
     os.makedirs(model_dir, exist_ok=True)
     os.makedirs(loss_pic_dir, exist_ok=True)
 
-    time_str = start_time.strftime("%H%M%d%m%Y")
+    time_str = start_time.strftime("%Y%m%d_%H%M")
     model_name = "tinypi0"
 
     name = f"{model_name}_{time_str}"
