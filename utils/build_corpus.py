@@ -38,4 +38,4 @@ with open(vocab_path, 'w', encoding='utf-8') as f:
     for token in vocab:
         f.write(token + '\n')
 
-print(f"Base vocab size: {len(vocab)}")
+# print(f"Base vocab size: {len(vocab)}")
