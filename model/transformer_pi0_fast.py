@@ -5,11 +5,12 @@ class TransformerPi0FAST(nn.Module):
     def __init__(self,
                  state_dim=4,           # state dimension
                  embed_dim=128,         # transformer embedding dimension
-                 num_layers=4,          # number of transformer layers
-                 num_heads=4,           # number of attention heads
+                 num_layers=8,          # number of transformer layers
+                 num_heads=8,           # number of attention heads
                  ff_dim=256,            # feedforward hidden dimension
                  vocab_size=256,       # token vocabulary size
-                 max_seq_len=25):       # max token sequence length
+                 max_seq_len=25,        # max token sequence length
+                 padding_id=2):         # padding token id
         super().__init__()
 
         # state embedding
@@ -17,7 +18,7 @@ class TransformerPi0FAST(nn.Module):
         self.state_dropout = nn.Dropout(0.1)
 
         # token embedding and position embedding
-        self.token_embedding = nn.Embedding(vocab_size, embed_dim)
+        self.token_embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=padding_id)
         self.position_embedding = nn.Embedding(max_seq_len, embed_dim)
 
         # decoder-only transformer
