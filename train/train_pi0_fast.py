@@ -16,8 +16,8 @@ class Pi0FastDataset(Dataset):
         data = np.load(npz_path)
         self.states = data["state"]            # (N, 4)
         self.tokens = data["token_seq"]        # (N, L)
-        # 构造padding mask：非-1为1，-1为0
-        self.attn_mask = (self.tokens != -1).astype(np.int64)
+        # 构造padding mask：非2为1，2为0
+        self.attn_mask = (self.tokens != 2).astype(np.int64)
 
     def __len__(self):
         return len(self.states)
@@ -38,8 +38,9 @@ def train_pi0_fast():
     vocab_size = 256
     max_seq_len = 25
     embed_dim = 128
-    num_epochs = 20
+    num_epochs = 200
     batch_size = 128
+    padding_id = 2
     lr = 2e-4
 
     start_time = datetime.now()
@@ -76,7 +77,8 @@ def train_pi0_fast():
     model = TransformerPi0FAST(state_dim=state_dim,
                                 embed_dim=embed_dim,
                                 vocab_size=vocab_size,
-                                max_seq_len=max_seq_len)
+                                max_seq_len=max_seq_len,
+                                padding_id=padding_id)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.to(device)
     log_print(f"Model initialized: {model.__class__.__name__}")
@@ -99,7 +101,7 @@ def train_pi0_fast():
 
     # Opimizer
     optimizer = optim.AdamW(model.parameters(), lr=lr)
-    criterion = nn.CrossEntropyLoss(ignore_index=-1)  # 忽略padding
+    criterion = nn.CrossEntropyLoss(ignore_index=2)  # 忽略padding
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.6, patience=6)
 
     train_loss_list = []
@@ -131,9 +133,6 @@ def train_pi0_fast():
             optimizer.step()
             total_loss += loss.item()
 
-            if (batch_idx + 1) % 50 == 0:
-                log_print(f"[Epoch {epoch + 1}/{num_epochs}] Batch {batch_idx + 1}/{len(train_loader)}: Loss = {loss.item():.6f}")
-
         avg_train_loss = total_loss / len(train_loader)
         train_loss_list.append(avg_train_loss)
 
@@ -146,12 +145,15 @@ def train_pi0_fast():
                 states_batch = states_batch.to(device)
                 token_seqs_batch = token_seqs_batch.to(device)
                 attn_mask_batch = attn_mask_batch.to(device)
-                targets_batch = targets_batch.to(device)
 
-                logits = model(states_batch, token_seqs_batch, attn_mask_batch)
-                logits = logits.view(-1, logits.size(-1))
-                targets_batch = targets_batch.view(-1)
-                loss = criterion(logits, targets_batch)
+                input_seq = token_seqs_batch[:, :-1]
+                target_seq = token_seqs_batch[:, 1:]
+                input_mask = attn_mask_batch[:, :-1]
+
+                logits = model(states_batch, input_seq, input_mask)
+                logits = logits.reshape(-1, logits.size(-1))
+                target_seq = target_seq.reshape(-1)
+                loss = criterion(logits, target_seq)
                 val_loss += loss.item()
 
         avg_val_loss = val_loss / len(val_loader)
@@ -185,12 +187,15 @@ def train_pi0_fast():
             states_batch = states_batch.to(device)
             token_seqs_batch = token_seqs_batch.to(device)
             attn_mask_batch = attn_mask_batch.to(device)
-            targets_batch = targets_batch.to(device)
 
-            logits = model(states_batch, token_seqs_batch, attn_mask_batch)
-            logits = logits.view(-1, logits.size(-1))
-            targets_batch = targets_batch.view(-1)
-            loss = criterion(logits, targets_batch)
+            input_seq = token_seqs_batch[:, :-1]
+            target_seq = token_seqs_batch[:, 1:]
+            input_mask = attn_mask_batch[:, :-1]
+
+            logits = model(states_batch, input_seq, input_mask)
+            logits = logits.reshape(-1, logits.size(-1))
+            target_seq = target_seq.reshape(-1)
+            loss = criterion(logits, target_seq)
             test_loss += loss.item()
 
     avg_test_loss = test_loss / len(test_loader)
