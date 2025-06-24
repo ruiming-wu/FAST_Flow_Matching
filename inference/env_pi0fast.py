@@ -4,11 +4,16 @@ import torch
 import matplotlib.pyplot as plt
 import gymnasium as gym
 
-from inference.inference_pi0 import infer_pi0_action_sequence
+from inference.inference_pi0fast import infer_pi0fast_token_sequence
+from fast.decoder import decoder
+from scipy.fftpack import idct
+from utils.build_corpus import GAMMA
 
-def run_pi0_in_env(
+def run_pi0fast_in_env(
     model_path,
+    tokenizer_path,
     chunk_len=50,
+    max_seq_len=25,
     device='cpu',
     render=False,
     rand_init=False,
@@ -30,17 +35,28 @@ def run_pi0_in_env(
     done = False
 
     while not done and t < max_steps:
-        # 重新推理动作序列
+        # 重新推理token序列
         state_vec = obs[:4]
-        actions = infer_pi0_action_sequence(
+        tokens = infer_pi0fast_token_sequence(
             model_path,
             state_vec,
-            chunk_len=chunk_len,
+            max_seq_len=max_seq_len,
             device=device
-        )  # (chunk_len, 1)
+        )  # 含BOS/EOS
+
+        # 解码为int序列
+        token_ints = decoder(tokens, tokenizer_path)
+        # 补齐到chunk_len
+        if len(token_ints) < chunk_len:
+            token_ints = token_ints + [0] * (chunk_len - len(token_ints))
+        token_ints = token_ints[:chunk_len]
+
+        # 逆量化与逆DCT
+        quantized = np.array(token_ints) / GAMMA
+        pred_action = idct(quantized, norm='ortho')[:chunk_len]
 
         for i in range(replan_interval):
-            action = actions[i]
+            action = np.array([pred_action[i]])
             obs_list.append(obs)
             act_list.append(action)
             obs, _, terminated, truncated, _ = env.step(action)
@@ -56,7 +72,7 @@ def run_pi0_in_env(
     env.close()
 
     obs_arr = np.array(obs_list)
-    act_arr = np.array(act_list)
+    act_arr = np.array(act_list).squeeze(-1)
 
     # 可视化
     plt.figure(figsize=(10, 4))
@@ -78,15 +94,18 @@ def run_pi0_in_env(
     plt.show()
 
 if __name__ == "__main__":
-    model_path = "train/trained_models/tinypi0_20250620_0133.pth"
-    run_pi0_in_env(
+    model_path = "train/trained_models/tinypi0fast_20250624_1631.pth"
+    tokenizer_path = "fast/tokenizer/fast_tokenizer.json"
+    run_pi0fast_in_env(
         model_path=model_path,
+        tokenizer_path=tokenizer_path,
         chunk_len=50,
+        max_seq_len=25,
         device='cuda' if torch.cuda.is_available() else 'cpu',
         render=True,
         rand_init=True,
-        rand_init_scale=0.5,  
+        rand_init_scale=0.5,
         replan_interval=10,
         max_steps=400,
-        time_sleep=0.02
+        time_sleep=0.05
     )
