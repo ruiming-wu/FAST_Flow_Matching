@@ -26,6 +26,8 @@ def run_pi0fast_in_env(
         env = gym.make("InvertedPendulum-v5", reset_noise_scale=rand_init_scale, render_mode="human" if render else None)
     else:
         env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode="human" if render else None)
+    # # Wrap the environment to record video every 10 episodes
+    # env = gym.wrappers.RecordVideo(env, "./vid", episode_trigger=lambda episode_id: episode_id % max_steps ==  0)
     obs, _ = env.reset()
 
     print("Initial observation:", obs)
@@ -94,7 +96,7 @@ def run_pi0fast_in_env(
     plt.show()
 
 if __name__ == "__main__":
-    model_path = "train/trained_models/tinypi0fast_20250624_1631.pth"
+    model_path = "train/trained_models/tinypi0fast_20250624_0911.pth"
     tokenizer_path = "fast/tokenizer/fast_tokenizer.json"
     run_pi0fast_in_env(
         model_path=model_path,
@@ -106,6 +108,6 @@ if __name__ == "__main__":
         rand_init=True,
         rand_init_scale=0.5,
         replan_interval=10,
-        max_steps=400,
-        time_sleep=0.05
+        max_steps=200,
+        time_sleep=0.02
     )

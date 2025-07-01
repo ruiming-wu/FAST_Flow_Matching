@@ -17,8 +17,8 @@ def infer_pi0fast_token_sequence(model_path, state_vec, max_seq_len=25, device='
     # 超参数（需与训练一致）
     state_dim = 4
     embed_dim = 128
-    num_layers = 8
-    num_heads = 8
+    num_layers = 4
+    num_heads = 4
     ff_dim = 256
     vocab_size = 256
 
