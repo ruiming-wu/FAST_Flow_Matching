@@ -5,8 +5,8 @@ class TransformerPi0FAST(nn.Module):
     def __init__(self,
                  state_dim=4,           # state dimension
                  embed_dim=128,         # transformer embedding dimension
-                 num_layers=8,          # number of transformer layers
-                 num_heads=8,           # number of attention heads
+                 num_layers=4,          # number of transformer layers
+                 num_heads=4,           # number of attention heads
                  ff_dim=256,            # feedforward hidden dimension
                  vocab_size=256,       # token vocabulary size
                  max_seq_len=25,        # max token sequence length
