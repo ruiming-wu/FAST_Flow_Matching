@@ -22,11 +22,12 @@ def run_pi0fast_in_env(
     max_steps=200,
     time_sleep=0.02
 ):
+    # Create environment with or without random initial state
     if rand_init:
         env = gym.make("InvertedPendulum-v5", reset_noise_scale=rand_init_scale, render_mode="human" if render else None)
     else:
         env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode="human" if render else None)
-    # # Wrap the environment to record video every 10 episodes
+    # # Uncomment to record video every 10 episodes
     # env = gym.wrappers.RecordVideo(env, "./vid", episode_trigger=lambda episode_id: episode_id % max_steps ==  0)
     obs, _ = env.reset()
 
@@ -37,23 +38,23 @@ def run_pi0fast_in_env(
     done = False
 
     while not done and t < max_steps:
-        # 重新推理token序列
+        # Re-infer token sequence at each replan interval
         state_vec = obs[:4]
         tokens = infer_pi0fast_token_sequence(
             model_path,
             state_vec,
             max_seq_len=max_seq_len,
             device=device
-        )  # 含BOS/EOS
+        )  # includes BOS/EOS
 
-        # 解码为int序列
+        # Decode to integer sequence
         token_ints = decoder(tokens, tokenizer_path)
-        # 补齐到chunk_len
+        # Pad to chunk_len if needed
         if len(token_ints) < chunk_len:
             token_ints = token_ints + [0] * (chunk_len - len(token_ints))
         token_ints = token_ints[:chunk_len]
 
-        # 逆量化与逆DCT
+        # Dequantize and inverse DCT
         quantized = np.array(token_ints) / GAMMA
         pred_action = idct(quantized, norm='ortho')[:chunk_len]
 
@@ -76,7 +77,7 @@ def run_pi0fast_in_env(
     obs_arr = np.array(obs_list)
     act_arr = np.array(act_list).squeeze(-1)
 
-    # 可视化
+    # Visualization
     plt.figure(figsize=(10, 4))
     plt.subplot(1, 2, 1)
     plt.plot(act_arr, marker='o')
@@ -96,6 +97,7 @@ def run_pi0fast_in_env(
     plt.show()
 
 if __name__ == "__main__":
+    # Example usage
     model_path = "train/trained_models/tinypi0fast_20250624_0911.pth"
     tokenizer_path = "fast/tokenizer/fast_tokenizer.json"
     run_pi0fast_in_env(

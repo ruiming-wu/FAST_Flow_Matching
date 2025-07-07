@@ -20,12 +20,11 @@ def evaluate_pi0fast_models_on_env(
     device='cuda' if torch.cuda.is_available() else 'cpu',
     rand_init=True,
     rand_init_scale=0.5,
-    rand_noise=False,
-    rand_noise_scale=0.01,
+    rand_noise_scale=0.0,
     replan_interval=10,
     verbose=True
 ):
-    # 1. 收集所有模型
+    # 1. Collect all model files
     model_files = [os.path.join(model_dir, f) for f in os.listdir(model_dir) if f.startswith(model_prefix) and f.endswith(".pth")]
     model_files.sort()
     n_models = len(model_files)
@@ -35,7 +34,7 @@ def evaluate_pi0fast_models_on_env(
     if verbose:
         print(f"Found {n_models} models, each will run {runs_per_model} times.")
 
-    # 2. 记录结果
+    # 2. Record results
     all_theta = []
     all_theta_dot = []
     all_cart_vel = []
@@ -55,7 +54,7 @@ def evaluate_pi0fast_models_on_env(
             done = False
             t = 0
             while not done and t < steps_per_run:
-                # 推理token序列
+                # Infer token sequence
                 state_vec = obs[:4]
                 tokens = infer_pi0fast_token_sequence(
                     model_path,
@@ -64,7 +63,7 @@ def evaluate_pi0fast_models_on_env(
                     device=device
                 )
                 token_ints = decoder(tokens, tokenizer_path)
-                # 补齐到chunk_len
+                # Pad to chunk_len if needed
                 if len(token_ints) < chunk_len:
                     token_ints = token_ints + [0] * (chunk_len - len(token_ints))
                 token_ints = token_ints[:chunk_len]
@@ -73,8 +72,7 @@ def evaluate_pi0fast_models_on_env(
 
                 for i in range(replan_interval):
                     action = np.array([pred_action[i]])
-                    if rand_noise:
-                        action += np.random.uniform(-rand_noise_scale, rand_noise_scale, size=action.shape)
+                    action += np.random.uniform(-rand_noise_scale, rand_noise_scale, size=action.shape)
                     action = np.clip(action, -3.0, 3.0)
                     obs, _, terminated, truncated, _ = env.step(action)
                     theta_traj.append(obs[1])
@@ -85,7 +83,7 @@ def evaluate_pi0fast_models_on_env(
                         done = True
                         break
             env.close()
-            # 补齐长度
+            # Pad to fixed length
             if len(theta_traj) < steps_per_run:
                 theta_traj += [np.nan] * (steps_per_run - len(theta_traj))
                 theta_dot_traj += [np.nan] * (steps_per_run - len(theta_dot_traj))
@@ -96,11 +94,11 @@ def evaluate_pi0fast_models_on_env(
             all_cart_vel.append(cart_vel_traj)
             all_success.append(int(t == steps_per_run))
             all_model_idx.append(model_idx)
-            # 收敛步数
+            # Convergence step
             converge_step = get_converge_step_from_theta(np.array(theta_traj), max_len=steps_per_run)
             all_converge_step.append(converge_step)
 
-    # 3. 汇总为array
+    # 3. Convert to arrays
     all_theta = np.array(all_theta)
     all_theta_dot = np.array(all_theta_dot)
     all_cart_vel = np.array(all_cart_vel)
@@ -108,7 +106,7 @@ def evaluate_pi0fast_models_on_env(
     all_converge_step = np.array(all_converge_step)
     all_model_idx = np.array(all_model_idx)
 
-    # 4. 统计指标
+    # 4. Statistics
     success_rate = np.mean(all_success)
     avg_converge_step = np.nanmean(all_converge_step)
     converge_rate = np.mean(all_converge_step < steps_per_run)
@@ -119,9 +117,9 @@ def evaluate_pi0fast_models_on_env(
     print(f"Success rate (full {steps_per_run} steps): {success_rate*100:.2f}%")
     print(f"Converge rate (theta): {converge_rate*100:.2f}%")
     print(f"Average converge step: {avg_converge_step:.2f}")
-    print(f"cart velocity over all runs: {mean_cart_vel:.4f} ± {std_cart_vel:.4f}")
+    print(f"Cart velocity over all runs: {mean_cart_vel:.4f} ± {std_cart_vel:.4f}")
 
-    # 每个模型的表现
+    # Per-model statistics
     for i, model_path in enumerate(model_files):
         model_mask = (all_model_idx == i)
         print(f"Model {os.path.basename(model_path)}: success {all_success[model_mask].mean()*100:.1f}%, "
@@ -129,7 +127,7 @@ def evaluate_pi0fast_models_on_env(
               f"avg converge step {np.nanmean(all_converge_step[model_mask]):.1f}, "
               f"cart vel {np.nanmean(all_cart_vel[model_mask]):.4f} ± {np.nanstd(all_cart_vel[model_mask]):.4f}")
 
-    # 统计平均收敛步数（只统计真正收敛的）
+    # Average convergence step (only for runs that actually converged)
     valid_converge = all_converge_step[all_converge_step < steps_per_run]
     if len(valid_converge) > 0:
         avg_converge_step = np.nanmean(valid_converge)
@@ -161,15 +159,14 @@ if __name__ == "__main__":
         model_dir="train/trained_models",
         model_prefix="tinypi0fast_",
         tokenizer_path="fast/tokenizer/fast_tokenizer.json",
-        total_runs=50,
+        total_runs=1000,
         steps_per_run=100,
         chunk_len=50,
         max_seq_len=25,
         device='cuda' if torch.cuda.is_available() else 'cpu',
         rand_init=True,
         rand_init_scale=0.5,
-        rand_noise=False,
-        rand_noise_scale=0.03,
-        replan_interval=10,
+        rand_noise_scale=0.05,
+        replan_interval=15,
         verbose=True
     )

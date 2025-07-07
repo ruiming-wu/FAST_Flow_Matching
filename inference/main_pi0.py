@@ -19,7 +19,7 @@ def evaluate_models_on_env(
     replan_interval=10,
     verbose=True
 ):
-    # 1. 收集所有模型
+    # 1. Collect all model files
     model_files = [os.path.join(model_dir, f) for f in os.listdir(model_dir) if f.startswith(model_prefix) and f.endswith(".pth")]
     model_files.sort()
     n_models = len(model_files)
@@ -29,11 +29,11 @@ def evaluate_models_on_env(
     if verbose:
         print(f"Found {n_models} models, each will run {runs_per_model} times.")
 
-    # 2. 记录结果
-    all_theta = []  # 每次模拟的theta轨迹 (run_idx, steps)
+    # 2. Record results
+    all_theta = []      # theta trajectory for each run (run_idx, steps)
     all_theta_dot = []
-    all_cart_vel = []  # 新增：每轮cart速度序列
-    all_success = []  # 1=成功, 0=失败
+    all_cart_vel = []   # cart velocity sequence for each run
+    all_success = []    # 1=success, 0=failure
     all_converge_step = []
     all_model_idx = []
 
@@ -41,7 +41,7 @@ def evaluate_models_on_env(
         if verbose:
             print(f"Evaluating model {model_path} ...")
         for run in tqdm(range(runs_per_model), disable=not verbose):
-            # 环境初始化
+            # Initialize environment
             env = gym.make("InvertedPendulum-v5", reset_noise_scale=rand_init_scale if rand_init else 0.0)
             obs, _ = env.reset()
             theta_traj = []
@@ -50,7 +50,7 @@ def evaluate_models_on_env(
             done = False
             t = 0
             while not done and t < steps_per_run:
-                # 推理动作序列
+                # Infer action sequence
                 state_vec = obs[:4]
                 actions = infer_pi0_action_sequence(
                     model_path,
@@ -71,7 +71,7 @@ def evaluate_models_on_env(
                         done = True
                         break
             env.close()
-            # 补齐长度
+            # Pad to fixed length
             if len(theta_traj) < steps_per_run:
                 theta_traj += [np.nan] * (steps_per_run - len(theta_traj))
                 theta_dot_traj += [np.nan] * (steps_per_run - len(theta_dot_traj))
@@ -82,20 +82,19 @@ def evaluate_models_on_env(
             all_cart_vel.append(cart_vel_traj)
             all_success.append(int(t == steps_per_run))
             all_model_idx.append(model_idx)
-            # 收敛步数
+            # Convergence step
             converge_step = get_converge_step_from_theta(np.array(theta_traj), max_len=steps_per_run)
             all_converge_step.append(converge_step)
 
-    # 3. 汇总为array
-    all_theta = np.array(all_theta)  # (total_runs, steps_per_run)
+    # 3. Convert to arrays
+    all_theta = np.array(all_theta)        # (total_runs, steps_per_run)
     all_theta_dot = np.array(all_theta_dot)
     all_cart_vel = np.array(all_cart_vel)
     all_success = np.array(all_success)
     all_converge_step = np.array(all_converge_step)
-    print('Converge steps:', all_converge_step)
     all_model_idx = np.array(all_model_idx)
 
-    # 4. 统计指标
+    # 4. Statistics
     success_rate = np.mean(all_success)
     avg_converge_step = np.nanmean(all_converge_step)
     converge_rate = np.mean(all_converge_step < steps_per_run)
@@ -106,9 +105,9 @@ def evaluate_models_on_env(
     print(f"Success rate (full {steps_per_run} steps): {success_rate*100:.2f}%")
     print(f"Converge rate (theta): {converge_rate*100:.2f}%")
     print(f"Average converge step: {avg_converge_step:.2f}")
-    print(f"cart velocity over all runs: {mean_cart_vel:.4f} ± {std_cart_vel:.4f}")
+    print(f"Cart velocity over all runs: {mean_cart_vel:.4f} ± {std_cart_vel:.4f}")
 
-    # 每个模型的表现
+    # Per-model statistics
     for i, model_path in enumerate(model_files):
         model_mask = (all_model_idx == i)
         print(f"Model {os.path.basename(model_path)}: success {all_success[model_mask].mean()*100:.1f}%, "
@@ -116,7 +115,7 @@ def evaluate_models_on_env(
               f"avg converge step {np.nanmean(all_converge_step[model_mask]):.1f}, "
               f"cart vel {np.nanmean(all_cart_vel[model_mask]):.4f} ± {np.nanstd(all_cart_vel[model_mask]):.4f}")
 
-    # 统计平均收敛步数（只统计真正收敛的）
+    # Average convergence step (only for runs that actually converged)
     valid_converge = all_converge_step[all_converge_step < steps_per_run]
     if len(valid_converge) > 0:
         avg_converge_step = np.nanmean(valid_converge)
@@ -124,7 +123,7 @@ def evaluate_models_on_env(
     else:
         print("No successful convergence in any run.")
 
-    # 返回所有数据，便于后续分析
+    # Return all data for further analysis
     return {
         "theta": all_theta,
         "theta_dot": all_theta_dot,
@@ -138,7 +137,7 @@ def evaluate_models_on_env(
 def get_converge_step_from_theta(theta_arr, max_len, threshold=0.02, min_len=10):
     # theta_arr: (steps,)
     if len(theta_arr) < min_len:
-        return np.nan  # 不足最小长度，无法判断收敛
+        return np.nan
     for i in range(len(theta_arr) - min_len + 1):
         window = theta_arr[i:i+min_len]
         if np.all(np.abs(window) < threshold):

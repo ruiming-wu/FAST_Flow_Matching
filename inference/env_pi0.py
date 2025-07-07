@@ -17,11 +17,12 @@ def run_pi0_in_env(
     max_steps=200,
     time_sleep=0.02
 ):
+    # Create environment with or without random initial state
     if rand_init:
         env = gym.make("InvertedPendulum-v5", reset_noise_scale=rand_init_scale, render_mode="human" if render else None)
     else:
         env = gym.make("InvertedPendulum-v5", reset_noise_scale=0.0, render_mode="human" if render else None)
-    # # Wrap the environment to record video every 10 episodes
+    # # Uncomment to record video every 10 episodes
     # env = gym.wrappers.RecordVideo(env, "./vid", episode_trigger=lambda episode_id: episode_id % max_steps ==  0)
     obs, _ = env.reset()
 
@@ -32,7 +33,7 @@ def run_pi0_in_env(
     done = False
 
     while not done and t < max_steps:
-        # 重新推理动作序列
+        # Re-infer action sequence at each replan interval
         state_vec = obs[:4]
         actions = infer_pi0_action_sequence(
             model_path,
@@ -60,7 +61,7 @@ def run_pi0_in_env(
     obs_arr = np.array(obs_list)
     act_arr = np.array(act_list)
 
-    # 可视化
+    # Visualization
     plt.figure(figsize=(10, 4))
     plt.subplot(1, 2, 1)
     plt.plot(act_arr, marker='o')
@@ -80,6 +81,7 @@ def run_pi0_in_env(
     plt.show()
 
 if __name__ == "__main__":
+    # Example usage
     model_path = "train/trained_models/tinypi0_20250620_0133.pth"
     run_pi0_in_env(
         model_path=model_path,
