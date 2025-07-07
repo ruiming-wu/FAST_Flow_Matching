@@ -12,9 +12,12 @@ from model.transformer_pi0 import TransformerPi0
 # ========== Flow Matching Loss ==========
 
 def flow_matching_loss(model, state, noisy_action, time_t, gt_action):
+    """
+    Compute the flow matching loss for the model.
+    """
     x_t = (1 - time_t) * noisy_action + time_t * gt_action  # (B, T, action_dim)
     target_flow = gt_action - noisy_action                  # (B, T, action_dim)
-    pred_flow = model(state, x_t, time_t)                  # (B, T, action_dim)
+    pred_flow = model(state, x_t, time_t)                   # (B, T, action_dim)
     loss = nn.functional.mse_loss(pred_flow, target_flow)
     return loss
 
@@ -53,7 +56,7 @@ def train_pi0():
 
     start_time = datetime.now()
 
-    # file setup
+    # Directory setup
     log_dir = os.path.join("train", "logs")
     model_dir = os.path.join("train", "trained_models")
     loss_pic_dir = os.path.join("train", "loss_pics")
@@ -164,7 +167,7 @@ def train_pi0():
             log_print(f"No improvement for {early_stop_patience} epochs. Early stopping at epoch {epoch + 1}.")
             break
 
-        # 学习率调度
+        # Learning rate scheduling
         scheduler.step(avg_val_loss)
 
     # Final test evaluation
@@ -183,7 +186,7 @@ def train_pi0():
     avg_test_loss = test_loss / len(test_loader)
     log_print(f"Final Test Loss: {avg_test_loss:.6f}")
 
-    # ====== 绘制loss曲线并保存 ======
+    # ====== Plot and save loss curves ======
     plt.figure(figsize=(8, 5))
     plt.plot(train_loss_list, label="Train Loss")
     plt.plot(val_loss_list, label="Val Loss")

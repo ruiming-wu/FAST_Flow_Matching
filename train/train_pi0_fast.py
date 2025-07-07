@@ -16,7 +16,7 @@ class Pi0FastDataset(Dataset):
         data = np.load(npz_path)
         self.states = data["state"]            # (N, 4)
         self.tokens = data["token_seq"]        # (N, L)
-        # 构造padding mask：非2为1，2为0
+        # Build padding mask: 1 for non-padding, 0 for padding (id=2)
         self.attn_mask = (self.tokens != 2).astype(np.int64)
 
     def __len__(self):
@@ -45,7 +45,7 @@ def train_pi0_fast():
 
     start_time = datetime.now()
 
-    # file setup
+    # Directory setup
     log_dir = os.path.join("train", "logs")
     model_dir = os.path.join("train", "trained_models")
     loss_pic_dir = os.path.join("train", "loss_pics")
@@ -99,9 +99,9 @@ def train_pi0_fast():
     val_loader = DataLoader(val_set, batch_size=batch_size, shuffle=False)
     test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=False)
 
-    # Opimizer
+    # Optimizer
     optimizer = optim.AdamW(model.parameters(), lr=lr)
-    criterion = nn.CrossEntropyLoss(ignore_index=2)  # 忽略padding
+    criterion = nn.CrossEntropyLoss(ignore_index=2)  # Ignore padding
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.6, patience=6)
 
     train_loss_list = []
@@ -120,7 +120,7 @@ def train_pi0_fast():
             token_seqs_batch = token_seqs_batch.to(device)
             attn_mask_batch = attn_mask_batch.to(device)
 
-            # 构造输入和目标（自回归：输入为[:-1]，目标为[1:]）
+            # Build input and target for autoregressive modeling: input is seq[:-1], target is seq[1:]
             input_seq = token_seqs_batch[:, :-1]
             target_seq = token_seqs_batch[:, 1:]
             input_mask = attn_mask_batch[:, :-1]
@@ -201,7 +201,7 @@ def train_pi0_fast():
     avg_test_loss = test_loss / len(test_loader)
     log_print(f"Final Test Loss: {avg_test_loss:.6f}")
 
-    # ====== 绘制loss曲线并保存 ======
+    # ====== Plot and save loss curves ======
     plt.figure(figsize=(8, 5))
     plt.plot(train_loss_list, label="Train Loss")
     plt.plot(val_loss_list, label="Val Loss")
