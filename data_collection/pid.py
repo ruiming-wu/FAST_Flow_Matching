@@ -4,8 +4,6 @@ class PIDController:
     def __init__(self, Kp=1.0, Ki=0.0, Kd=0.0):
         """
         Kp, Ki, Kd: params for PID controller
-        setpoint: target value to maintain
-        direction: 1 for positive control, -1 for negative control
         """
         self.Kp = Kp
         self.Ki = Ki
@@ -19,7 +17,8 @@ class PIDController:
 
     def get_action(self, current_value, set_value, dt=0.02):
         """
-        current_value: current measurement (e.g., angle or position)
+        current_value: current measurement (e.g., angle, velocity or position)
+        set_value: desired value to reach (e.g., target angle, velocity or position)
         dt: time step for derivative calculation
         return: action to apply
         """

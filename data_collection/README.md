@@ -17,9 +17,10 @@ To prevent early truncation during trajectory generation, following modification
 
 - **pid.py**  
   - Purpose: General PID controller class, supports arbitrary setpoints and can be used for nested control.
-  - Key Parameters:
-    - `Kp, Ki, Kd`: PID gains
-    - `get_action(current_value, set_value, dt)`: Returns the control output
+  - Key Methods:
+    - `__init__(Kp, Ki, Kd)`: Initialize PID gains.
+    - `reset()`: Reset integral and previous error.
+    - `get_action(current_value, set_value, dt)`: Returns the control output as a numpy array.
 
 - **env_pid.py**  
   - Purpose: Interacts with the Gymnasium MuJoCo `InvertedPendulum-v5` environment using (nested) PID controllers, collects trajectories, and provides visualization.
@@ -29,12 +30,20 @@ To prevent early truncation during trajectory generation, following modification
     - `rand_init`: Whether to randomize the initial state (range: ±0.5)
     - `max_steps`: Number of steps per trajectory
     - `time_sleep`: Simulation step interval (can be set to 0 for fast collection)
+  - Returns:  
+    - `obs_arr`: Collected state trajectory (N, 4)
+    - `act_arr`: Collected action sequence (N,)
+    - `fig`: Matplotlib figure object for visualization
 
-- **main.py**  
-  - Purpose: Main script for batch trajectory collection, supports command-line arguments, and automatically saves trajectories, parameters and plots.
-  - Key Parameters:
-    - `--idx`: Collection index (used for file naming, --idx 327: 0327.npy/txt/png)
-    - Trajectory saving, parameter randomization range can be adjusted
+- **main_pid.py**  
+  - Purpose: Main script for batch trajectory collection, supports command-line arguments, and automatically saves trajectories, parameters, and plots.
+  - Key Features:
+    - Randomly perturbs PID parameters for each trajectory.
+    - Saves trajectory data (`.npy`), PID parameters and initial state (`.txt`), and trajectory plots (`.png`) to corresponding folders.
+    - Usage example:
+      ```bash
+      python -m data_collection.main_pid --idx 1
+      ```
 
 ---
 
@@ -58,7 +67,7 @@ To prevent early truncation during trajectory generation, following modification
 
 ```bash
 # Collect a single trajectory
-python -m data_collection.main --idx 1
+python -m data_collection.main_pid --idx 1
 
 # Batch collection (use script in ./utils/, need to change the range manually in this script)
 python -m utils.batch_collection

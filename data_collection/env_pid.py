@@ -13,6 +13,7 @@ def run_pid_in_env(
     max_steps=200,
     time_sleep=0.02
 ):
+    # Initialize the environment according to the parameters
     if rand_init:
         env = gym.make("InvertedPendulum-v5", reset_noise_scale=rand_init_scale, render_mode="human" if render else None)
     else:
@@ -21,6 +22,7 @@ def run_pid_in_env(
 
     print("Initial observation:", obs)
 
+    # Initialize nested PID controllers
     vel_pid = PIDController(Kp=Kp2, Ki=Ki2, Kd=Kd2)
     angel_pid = PIDController(Kp=Kp1, Ki=Ki1, Kd=Kd1)
     vel_pid.reset()
@@ -40,9 +42,11 @@ def run_pid_in_env(
         obs_list.append(obs)
         act_list.append(action.item())
         theta_ref_list.append(theta_ref.item())
-      
+
+        # Add huge disturbance every 200 steps
         if t % 200 == 0 and t != 0:
             action += np.random.uniform(-3.0, 3.0, size=action.shape)
+        # Add small noise to the action every step
         action += np.random.uniform(-0.05, 0.05, size=action.shape)
         action = np.clip(action, -3.0, 3.0)
 
@@ -61,6 +65,7 @@ def run_pid_in_env(
     act_list = np.array(act_list).reshape(-1)
     theta_ref_list = np.array(theta_ref_list).reshape(-1)
 
+    # Plot theta, theta_dot, pos, vel and action
     fig = plt.figure(figsize=(12, 8))
 
     plt.subplot(3, 1, 1)
@@ -95,6 +100,7 @@ def run_pid_in_env(
     return obs_arr, act_list, fig
 
 if __name__ == "__main__":
+    #example usage
     run_pid_in_env(
         Kp1=-3.00, Ki1=-0.01, Kd1=-0.15,
         Kp2=0.08, Ki2=0.05, Kd2=0.001,
