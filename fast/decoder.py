@@ -2,11 +2,11 @@ import json
 
 def decoder(ids, tokenizer_path, skip_special_tokens=False):
     """
-    将id序列解码为token（字符串），再将token按逗号分割为int，返回一个int列表
-    :param ids: List[int]，token id序列
-    :param tokenizer_path: str，分词器json文件路径
-    :param skip_special_tokens: 是否跳过特殊符号
-    :return: List[int]，解码后的int列表
+    Decode a sequence of token ids to tokens (strings), then split tokens by comma and convert to int, returning an int list.
+    :param ids: List[int], token id sequence
+    :param tokenizer_path: str, path to tokenizer json file
+    :param skip_special_tokens: whether to skip special tokens
+    :return: List[int], decoded int list
     """
     with open(tokenizer_path, "r", encoding="utf-8") as f:
         vocab = json.load(f)["vocab"]
@@ -17,22 +17,20 @@ def decoder(ids, tokenizer_path, skip_special_tokens=False):
         token = id2token.get(idx, "[UNK]")
         if skip_special_tokens and token in special_tokens:
             continue
-        # 跳过特殊符号
         if token in special_tokens:
             continue
-        # 逗号分割为int
         for t in token.split(","):
             t = t.strip()
-            if t:  # 跳过空字符串
+            if t:
                 try:
                     result.append(int(t))
                 except ValueError:
-                    pass  # 跳过无法转为int的token
+                    pass
     return result
 
-# 示例用法
+# Example usage
 if __name__ == "__main__":
-    ids = [0, 52, 148, 107, 143, 114, 1]
+    ids = [0, 52, 148, 107, 143, 114, 1, 2, 2, 2, 2]
     decoded = decoder(ids, "fast/tokenizer/fast_tokenizer.json")
     print("Decoded int list:", decoded)
     print("length of decoded list:", len(decoded))

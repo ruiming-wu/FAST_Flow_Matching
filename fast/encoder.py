@@ -2,10 +2,10 @@ import json
 
 def encoder(sequence, tokenizer_path, unk_token="[UNK]"):
     """
-    加载分词器并对输入序列进行编码，返回token序列和id序列
-    :param sequence: str，空格分隔的token序列
-    :param tokenizer_path: str，分词器json文件路径
-    :param unk_token: str，未知token的标识
+    Load the tokenizer and encode the input sequence, returning the token sequence and id sequence.
+    :param sequence: str, space-separated token sequence
+    :param tokenizer_path: str, path to the tokenizer json file
+    :param unk_token: str, identifier for unknown tokens
     :return: (tokens, ids)
     """
     with open(tokenizer_path, "r", encoding="utf-8") as f:
@@ -34,9 +34,9 @@ def encoder(sequence, tokenizer_path, unk_token="[UNK]"):
             i += 1
     return tokens, ids
 
-# 示例用法
+# Example usage
 if __name__ == "__main__":
     test_seq = "[BOS] -1 1 0 1 1 2 2 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 [EOS]"
     tokens, ids = encoder(test_seq, "fast/tokenizer/fast_tokenizer.json")
-    print("编码结果（token）:", tokens)
-    print("编码结果（id）:", ids)
+    print("Encoded tokens:", tokens)
+    print("Encoded ids:", ids)
