@@ -27,11 +27,6 @@ for fname in os.listdir(trajs_dir):
                 print(f"File {fname} has the shape {arr.shape}, not (100, 5)")
                 wrong_shape_count += 1
             else:
-                # last25 = np.array(arr[-25:, 1]) + 0.00166666
-                # if not np.all(np.abs(last25) < 0.03):
-                #     print(f"File {fname} not converged, some values over threshold 0.02")
-                #     over_threshold_count += 1
-                # else:
                 step = get_converge_step(arr)
                 if step == 100:
                     print(f"File {fname} not converged, step {step} >= 90")
@@ -45,5 +40,5 @@ avg_converge_step = np.mean(converge_steps) if converge_steps else 0
 print("Batch check completed.")
 print(f"Total files checked: {count}")
 print(f"Files with wrong shape: {wrong_shape_count}")
-print(f"Files with mean value over threshold: {over_threshold_count}")
+print(f"Files not converged: {over_threshold_count}")
 print(f"Average converge step: {avg_converge_step:.2f}")

@@ -25,11 +25,11 @@ with open(corpus_path, "w", encoding='utf-8') as f:
         f.write(line + "\n")
         vocab_set.update(tokens)
 
-# 强制加入特殊token
+# Ensure special tokens are included
 for tok in special_tokens:
     vocab_set.add(tok)
 
-# 排序（特殊token优先，其余按数字排序）
+# Sort (special tokens first, then numbers)
 vocab = [tok for tok in special_tokens]
 vocab += sorted([tok for tok in vocab_set if tok not in special_tokens],
                 key=lambda x: (not x.lstrip('-').isdigit(), int(x) if x.lstrip('-').isdigit() else x))
@@ -37,5 +37,3 @@ vocab += sorted([tok for tok in vocab_set if tok not in special_tokens],
 with open(vocab_path, 'w', encoding='utf-8') as f:
     for token in vocab:
         f.write(token + '\n')
-
-# print(f"Base vocab size: {len(vocab)}")
