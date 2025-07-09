@@ -19,9 +19,9 @@ The `data_collection` module provides:
 To prevent early truncation during trajectory generation, the following modifications were made:
 
 - **Angle threshold**: increased from ±0.2 rad → **±pi/4 rad**
-  - to achieve this, you need to go to ./Lib/site-packages/gymnasium/envs/mujoco/inverted_pendulum_v5.py and change this threshold in the **step** function of the **InvertedPendulumEnv**
+  - to achieve this, you need to go to ./Lib/site-packages/gymnasium/envs/mujoco/inverted_pendulum_v5.py and change this threshold in the **step** function of the **InvertedPendulumEnv** class
 - **Cart position range**: from [-1.0, 1.0] → **[-10.0, 10.0]**
-  - to achieve this, you need to go to ./Lib/site-packages/gymnasium/envs/mujoco/assets/inverted_pendulum.xml and change this range in the <mujoco>-<worldbody>-<body>-<joint>-range
+  - to achieve this, you need to go to ./Lib/site-packages/gymnasium/envs/mujoco/assets/inverted_pendulum.xml and change this range in the `<mujoco>-<worldbody>-<body>-<joint>-range`
 
 ---
 
@@ -54,7 +54,7 @@ To prevent early truncation during trajectory generation, the following modifica
     - Saves trajectory data (`.npy`), PID parameters and initial state (`.txt`), and trajectory plots (`.png`) to corresponding folders.
     - Usage example:
       ```bash
-      python -m data_collection.main_pid --idx 1
+      python -m data_collection.main_pid --idx 4001
       ```
 
 ---
@@ -79,7 +79,7 @@ To prevent early truncation during trajectory generation, the following modifica
 
 ```bash
 # Collect a single trajectory
-python -m data_collection.main_pid --idx 1
+python -m data_collection.main_pid --idx 4001
 
 # Batch collection (use script in ./utils/, need to change the range manually in this script)
 python -m utils.batch_collection
