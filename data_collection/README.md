@@ -1,12 +1,22 @@
 # 📦 data_collection Module
 
-This directory provides scripts and tools for collecting trajectories in the Inverted Pendulum MuJoCo environment, supporting PID control and batch data generation for downstream model training and evaluation.
+This directory contains scripts and tools for collecting trajectories in the Inverted Pendulum MuJoCo environment, supporting PID control and batch data generation for downstream model training and evaluation.
+
+---
+
+## Overview
+
+The `data_collection` module provides:
+- A general-purpose PID controller implementation.
+- Scripts for interacting with the MuJoCo environment and collecting state-action trajectories.
+- Batch collection utilities for generating large datasets for model training.
+- Storage and visualization of collected data and parameters.
 
 ---
 
 ## Environment Modifications
 
-To prevent early truncation during trajectory generation, following modifications were made:
+To prevent early truncation during trajectory generation, the following modifications were made:
 
 - **Angle threshold**: increased from ±0.2 rad → **±0.5 rad**
 - **Cart position range**: from [-1.0, 1.0] → **[-10.0, 10.0]**
@@ -71,3 +81,4 @@ python -m data_collection.main_pid --idx 1
 
 # Batch collection (use script in ./utils/, need to change the range manually in this script)
 python -m utils.batch_collection
+```

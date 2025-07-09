@@ -38,6 +38,18 @@ The `utils` module provides scripts for:
   - Purpose: Converts action sequences into quantized DCT coefficients, builds the corpus for tokenizer training, and generates the base vocabulary file.
   - Output: Saves `fast/tokenizer/fast_tokenizer_corpus.txt` and `fast/tokenizer/fast_tokenizer_base_vocab.txt`.
 
+- **time_pi0.py**  
+  - Purpose: Benchmarks the inference time of the original pi0 model, including model loading, action reconstruction, and per-step inference. Supports batch statistics for all pi0 models in the `train/trained_models` directory.
+  - Output: Prints detailed timing statistics (mean, std) for each model and overall.
+
+- **time_pi0fast.py**  
+  - Purpose: Benchmarks the inference time of the pi0-FAST model, including model loading, token generation, and per-step inference. Supports batch statistics for all pi0fast models in the `train/trained_models` directory.
+  - Output: Prints detailed timing statistics (mean, std) for each model and overall.
+
+- **show_inference.py**  
+  - Purpose: Visualizes and compares the predicted action sequences from both pi0 and pi0-FAST models against the ground truth, and displays MAE/MSE metrics on the plot.
+  - Output: Shows a matplotlib plot and prints MAE/MSE values for both models.
+
 ---
 
 ## Typical Workflow
@@ -56,6 +68,12 @@ The `utils` module provides scripts for:
 
 5. **Build Training Pairs for pi0-FAST**  
    Use `build_pairs_fast.py` to encode the corpus and create tokenized training pairs for the FAST model.
+
+6. **Benchmark Inference Speed**  
+   Use `time_pi0.py` and `time_pi0fast.py` to evaluate and compare the inference speed of the original and FAST models across all trained checkpoints.
+
+7. **Visualize Model Predictions**  
+   Use `show_inference.py` to plot and compare the predicted actions and error metrics of both models for a selected data chunk.
 
 ---
 

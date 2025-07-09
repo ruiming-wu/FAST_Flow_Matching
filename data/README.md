@@ -4,6 +4,16 @@ This folder contains all datasets and processed files for the Inverted Pendulum 
 
 ---
 
+## Overview
+
+The `data` folder serves as the central storage for all raw and processed data used throughout the project. It includes:
+- Raw trajectory data collected from the MuJoCo environment.
+- PID parameters and initial states for each trajectory.
+- Visualization images for qualitative analysis.
+- Training pairs for both the original pi0 and the pi0fast models.
+
+---
+
 ## Data Generation Details
 
 - **Parameter Randomization:**  
@@ -42,6 +52,19 @@ This folder contains all datasets and processed files for the Inverted Pendulum 
 
 - **training_pairs_fast.npz**  
   Contains 100000 training pairs, each consisting of an initial state (`state`, shape: [N, 4]) and a compressed/quantized action representation (`action_chunk`, shape: [N, 25]) suitable for the pi0fast model. Actions are quantized and compressed for efficient modeling.
+
+---
+
+## Typical Workflow
+
+1. **Collect Trajectories**  
+   Use the scripts in the `data_collection` module to generate and save raw trajectory data, PID parameters, and visualization images.
+
+2. **Check and Process Data**  
+   Use the scripts in the `utils` module to verify data quality, build training pairs, and prepare data for model training.
+
+3. **Train and Evaluate Models**  
+   Use the processed training pairs (`training_pairs_original.npz` and `training_pairs_fast.npz`) for supervised learning and evaluation of both the original and FAST models.
 
 ---
 
