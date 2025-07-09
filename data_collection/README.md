@@ -18,8 +18,10 @@ The `data_collection` module provides:
 
 To prevent early truncation during trajectory generation, the following modifications were made:
 
-- **Angle threshold**: increased from ±0.2 rad → **±0.5 rad**
+- **Angle threshold**: increased from ±0.2 rad → **±pi/4 rad**
+  - to achieve this, you need to go to ./Lib/site-packages/gymnasium/envs/mujoco/inverted_pendulum_v5.py and change this threshold in the **step** function of the **InvertedPendulumEnv**
 - **Cart position range**: from [-1.0, 1.0] → **[-10.0, 10.0]**
+  - to achieve this, you need to go to ./Lib/site-packages/gymnasium/envs/mujoco/assets/inverted_pendulum.xml and change this range in the <mujoco>-<worldbody>-<body>-<joint>-range
 
 ---
 
